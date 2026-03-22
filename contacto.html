@@ -2,20 +2,97 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Contacto | Aurora Web Studio</title>
-<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet" href="styles.css?v=6">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<h1>Contacto</h1>
+<header class="header">
+  <div class="container nav">
+    <img src="image.jpg" class="logo">
 
-<form action="https://formspree.io/f/tu-id" method="POST">
-  <input type="text" name="nombre" placeholder="Nombre" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <textarea name="mensaje" placeholder="Cuéntanos tu proyecto"></textarea>
-  <button type="submit">Enviar</button>
-</form>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="contact-hero">
+  <div class="container">
+    <h1 class="fade-up">Hablemos de tu proyecto</h1>
+    <p class="fade-up delay">Cuéntanos qué necesitas y te responderemos en menos de 24h</p>
+  </div>
+</section>
+
+<!-- FORM + INFO -->
+<section class="contact-section container">
+
+  <div class="contact-grid">
+
+    <!-- FORMULARIO -->
+    <form action="https://formspree.io/f/tu-id-aqui" method="POST" class="contact-form fade-left">
+
+      <label>Nombre</label>
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="tu@email.com" required>
+
+      <label>Cuéntanos tu proyecto</label>
+      <textarea name="mensaje" rows="5" placeholder="Ej: Necesito una web para mi clínica..." required></textarea>
+
+      <button type="submit" class="btn">Enviar mensaje</button>
+
+    </form>
+
+    <!-- INFO -->
+    <div class="contact-info fade-right">
+      <h3>¿Prefieres hablar directamente?</h3>
+
+      <p>También puedes escribirnos por WhatsApp o email.</p>
+
+      <a href="#" class="btn">WhatsApp</a>
+
+      <p class="mail">hola@aurorawebstudio.com</p>
+
+      <div class="contact-box">
+        <strong>Respuesta rápida</strong>
+        <p>Respondemos en menos de 24h</p>
+      </div>
+
+      <div class="contact-box">
+        <strong>Sin compromiso</strong>
+        <p>Te asesoramos gratis</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Tu web puede generar más clientes</h2>
+  <a href="#" class="btn">Escríbenos ahora</a>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Aurora Web Studio</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
