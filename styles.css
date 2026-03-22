@@ -518,3 +518,70 @@ button.loading span {
   text-align: center;
   margin-top: 50px;
 }
+/* EMAIL PRO */
+.contact-email-pro {
+  background: linear-gradient(135deg, #ffffff, #f7f9fc);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.contact-email-pro:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+}
+
+/* HEADER */
+.email-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.email-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.email-status {
+  font-size: 12px;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+/* EMAIL BOX */
+.email-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.email-icon {
+  font-size: 18px;
+}
+
+.email-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+  transition: 0.3s;
+}
+
+.email-link:hover {
+  color: #4f46e5;
+}
+
+/* NOTE */
+.email-note {
+  font-size: 0.9rem;
+  color: #666;
+}
