@@ -1,13 +1,4 @@
-// menú móvil
-const btn = document.getElementById("menu-btn");
-const menu = document.getElementById("menu");
-
-btn.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
-
-// animaciones scroll
-const elements = document.querySelectorAll(".fade-in");
+const elements = document.querySelectorAll(".fade-up, .fade-left, .fade-right");
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
