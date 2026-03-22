@@ -3,14 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aurora Web Studio</title>
-  <style>
-    body { font-family: Arial; background: #111; color: white; text-align: center; padding: 50px; }
-    h1 { color: #00ff9d; }
-  </style>
+  <meta name="description" content="Aurora Web Studio - Agencia de diseño web en Madrid. Creamos páginas ultrarrápidas para academias, ópticas, inmobiliarias, clínicas y restaurantes. +180% visitas garantizado. Revisión gratuita.">
+  <meta name="keywords" content="diseño web Madrid, agencia diseño web Madrid, crear página web Madrid, diseño web para academias Madrid, diseño web ópticas Madrid">
+  <meta name="author" content="Aurora Web Studio">
+  <title>Diseño Web Madrid | Aurora Web Studio - Páginas rápidas y que venden</title>
+  
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Diseño Web Madrid | Aurora Web Studio">
+  <meta property="og:description" content="Agencia especializada en webs para negocios locales en Madrid. Resultados reales.">
+  <meta property="og:image" content="https://picsum.photos/id/1015/1200/630">
+  <meta property="og:url" content="https://aurora-web-estudio.pages.dev">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Schema Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aurora Web Studio",
+    "description": "Agencia de diseño y desarrollo web en Madrid",
+    "url": "https://aurora-web-estudio.pages.dev",
+    "telephone": "+34 612 345 678",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Ejemplo 123",
+      "addressLocality": "Madrid",
+      "postalCode": "28001",
+      "addressCountry": "ES"
+    }
+  }
+  </script>
+
+  <!-- Tailwind CDN + config de colores Aurora -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      content: [],
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            accent: '#7c3aed',
+            dark: '#0f172a'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="favicon.ico">
 </head>
-<body>
-  <h1>¡Hola! Claro que si LIDERES</h1>
-  <p>Naim Marica de mierda.</p>
+<body class="bg-white text-gray-900 font-sans">
+  <!-- HEADER -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-violet-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">A</div>
+        <div>
+          <span class="text-2xl font-bold tracking-tight">Aurora</span>
+          <span class="text-2xl font-light text-violet-600">Web Studio</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex gap-8 text-lg">
+        <a href="/" class="hover:text-violet-600 transition">Inicio</a>
+        <a href="servicios.html" class="hover:text-violet-600 transition">Servicios</a>
+        <a href="portafolio.html" class="hover:text-violet-600 transition">Portafolio</a>
+        <a href="nosotros.html" class="hover:text-violet-600 transition">Nosotros</a>
+        <a href="contacto.html" class="hover:text-violet-600 transition">Contacto</a>
+      </nav>
+      <a href="https://wa.me/34612345678" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-violet-600 to-blue-600 text-white py-24">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+        Tu negocio merece<br>una web que <span class="text-yellow-300">venda 24/7</span>
+      </h1>
+      <p class="text-2xl max-w-2xl mx-auto mb-10">Diseño web ultrarrápido en Madrid para academias, ópticas, inmobiliarias, clínicas y restaurantes.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contacto.html" class="bg-white text-violet-700 px-10 py-4 rounded-2xl font-semibold text-xl hover:scale-105 transition">Pide revisión gratuita</a>
+        <a href="https://wa.me/34612345678" target="_blank" class="border-2 border-white px-10 py-4 rounded-2xl font-semibold text-xl hover:bg-white hover:text-violet-700 transition">Hablar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
+      <div><div class="text-5xl font-bold text-violet-600">+180%</div><div class="text-lg">visitas promedio</div></div>
+      <div><div class="text-5xl font-bold text-violet-600">+45%</div><div class="text-lg">contactos nuevos</div></div>
+      <div><div class="text-5xl font-bold text-violet-600">9</div><div class="text-lg">proyectos entregados</div></div>
+      <div><div class="text-5xl font-bold text-violet-600">100%</div><div class="text-lg">clientes felices</div></div>
+    </div>
+  </section>
+
+  <!-- PORTAFOLIO TEASER -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Casos de éxito reales en Madrid</h2>
+      <div class="grid md:grid-cols-3 gap-8" id="teaser-portfolio">
+        <!-- JS llenará aquí o puedes poner cards estáticas -->
+      </div>
+      <div class="text-center mt-12">
+        <a href="portafolio.html" class="inline-block bg-violet-600 text-white px-10 py-4 rounded-2xl font-semibold text-xl">Ver todos los proyectos →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="bg-dark text-white py-20 text-center">
+    <h2 class="text-4xl font-bold mb-6">¿Listo para que tu negocio crezca online?</h2>
+    <a href="contacto.html" class="inline-block bg-white text-dark px-12 py-5 rounded-3xl font-bold text-2xl">Solicitar revisión gratuita ahora</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-2xl font-bold mb-2">Aurora Web Studio © 2026</p>
+      <p class="text-sm opacity-70">Diseño web profesional en Madrid • Hecho con ❤️ y velocidad Cloudflare</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/34612345678" target="_blank" class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition text-3xl z-50">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
