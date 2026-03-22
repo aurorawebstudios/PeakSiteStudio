@@ -431,3 +431,90 @@ button.loading span {
 .icon {
   font-size: 20px;
 }
+.results-section {
+  padding: 100px 20px;
+  background: #f8f9fc;
+}
+
+.results-header {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.results-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.results-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* GRID */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.result-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  transition: 0.4s;
+  border: 1px solid #eee;
+}
+
+.result-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* CONTENT */
+.result-content h3 {
+  margin-bottom: 10px;
+}
+
+.result-desc {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* METRICS */
+.result-metrics {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.result-metrics div {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-metrics strong {
+  font-size: 1.5rem;
+  color: #4f46e5;
+}
+
+.result-metrics span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* LINK */
+.result-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+/* CTA */
+.results-cta {
+  text-align: center;
+  margin-top: 50px;
+}
