@@ -1,0 +1,6 @@
+{
+  "name": "Aurora Web Studio",
+  "short_name": "Aurora",
+  "start_url": "/",
+  "display": "standalone"
+}
