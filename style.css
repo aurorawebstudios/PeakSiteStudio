@@ -1,31 +1,17 @@
 :root {
   --primary: #1e3a8a;
   --accent: #7c3aed;
-  --bg: #f9fafb;
-  --text: #111;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  font-family: Arial;
+  margin: 0;
 }
 
 .container {
   width: 90%;
   max-width: 1100px;
   margin: auto;
-}
-
-.header {
-  background: white;
-  padding: 15px 0;
 }
 
 .nav {
@@ -37,27 +23,17 @@ body {
 nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: var(--text);
-}
-
-.btn {
-  background: var(--primary);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
 }
 
 .hero {
-  padding: 100px 0;
   text-align: center;
+  padding: 100px 0;
 }
 
 .btn-primary {
   background: var(--accent);
   color: white;
-  padding: 12px 20px;
-  display: inline-block;
-  margin-top: 20px;
+  padding: 10px;
 }
 
 .grid {
@@ -66,15 +42,12 @@ nav a {
 }
 
 @media(min-width:768px){
-  .grid {
-    grid-template-columns: repeat(3,1fr);
-  }
+  .grid {grid-template-columns: repeat(3,1fr);}
 }
 
 .card {
-  background: white;
+  background: #f4f4f4;
   padding: 10px;
-  border-radius: 10px;
 }
 
 .whatsapp {
