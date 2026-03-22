@@ -265,3 +265,87 @@ h2 {
   margin-top: 15px;
   border-radius: 10px;
 }
+/* INPUT PRO */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #888;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  color: #7b5cff;
+  background: white;
+  padding: 0 5px;
+}
+
+/* ERROR */
+.error {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.input-error input,
+.input-error textarea {
+  border-color: red;
+}
+
+.input-error .error {
+  display: block;
+}
+
+/* BOTÓN LOADING */
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  display: none;
+  margin-left: 10px;
+}
+
+button.loading .loader {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+button.loading span {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* SUCCESS */
+.success-msg {
+  color: green;
+  display: none;
+  margin-top: 15px;
+}
