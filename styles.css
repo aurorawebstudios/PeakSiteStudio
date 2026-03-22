@@ -139,3 +139,71 @@ h2 {
   text-align: center;
   font-weight: 500;
 }
+/* SPLIT SECTION */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.split img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* BENEFITS */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+/* ANIMACIONES TIPO APPLE */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: 0.8s ease;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.delay {
+  transition-delay: 0.2s;
+}
+
+.delay2 {
+  transition-delay: 0.4s;
+}
+
+/* HERO ANIMADO */
+.hero-animate h1 {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
