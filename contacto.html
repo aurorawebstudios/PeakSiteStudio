@@ -6,7 +6,7 @@
 
 <title>Contacto | Aurora Web Studio</title>
 
-<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="styles.css?v=7">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -31,61 +31,67 @@
 <section class="contact-hero">
   <div class="container">
     <h1 class="fade-up">Hablemos de tu proyecto</h1>
-    <p class="fade-up delay">Cuéntanos qué necesitas y te responderemos en menos de 24h</p>
+    <p class="fade-up delay">Te respondemos en menos de 24h</p>
   </div>
 </section>
 
-<!-- FORM + INFO -->
-<section class="contact-section container">
+<!-- CONTACT -->
+<section class="container contact-section">
 
   <div class="contact-grid">
 
-    <!-- FORMULARIO -->
-    <form action="https://formspree.io/f/tu-id-aqui" method="POST" class="contact-form fade-left">
+    <!-- FORM -->
+    <form id="contactForm" class="contact-form fade-left">
 
-      <label>Nombre</label>
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <div class="input-group">
+        <input type="text" id="nombre" required>
+        <label>Nombre</label>
+        <span class="error">Campo obligatorio</span>
+      </div>
 
-      <label>Email</label>
-      <input type="email" name="email" placeholder="tu@gmail.com" required>
+      <div class="input-group">
+        <input type="email" id="email" required>
+        <label>Email</label>
+        <span class="error">Email no válido</span>
+      </div>
 
-      <label>Cuéntanos tu proyecto</label>
-      <textarea name="mensaje" rows="5" placeholder="Ej: Necesito una web para mi clínica..." required></textarea>
+      <div class="input-group">
+        <textarea id="mensaje" required></textarea>
+        <label>Cuéntanos tu proyecto</label>
+        <span class="error">Escribe tu mensaje</span>
+      </div>
 
-      <button type="submit" class="btn">Enviar mensaje</button>
+      <button type="submit" class="btn" id="submitBtn">
+        <span>Enviar mensaje</span>
+        <div class="loader"></div>
+      </button>
+
+      <p class="success-msg">✔ Mensaje enviado correctamente</p>
 
     </form>
 
     <!-- INFO -->
     <div class="contact-info fade-right">
-      <h3>¿Prefieres hablar directamente?</h3>
+      <h3>También puedes contactarnos directamente</h3>
 
-      <p>También puedes escribirnos por WhatsApp o email.</p>
-
-      <a href="#" class="btn">WhatsApp</a>
+      <a href="https://wa.me/666397895" class="btn whatsapp-btn">
+        WhatsApp directo
+      </a>
 
       <p class="mail">aurorawebestudio@gmail.com</p>
 
       <div class="contact-box">
-        <strong>Respuesta rápida</strong>
-        <p>Respondemos en menos de 24h</p>
+        ⚡ Respuesta rápida en menos de 24h
       </div>
 
       <div class="contact-box">
-        <strong>Sin compromiso</strong>
-        <p>Te asesoramos gratis</p>
+        🎯 Asesoramiento gratuito
       </div>
 
     </div>
 
   </div>
 
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <h2>Tu web puede generar más clientes</h2>
-  <a href="#" class="btn">Escríbenos ahora</a>
 </section>
 
 <footer class="footer">
