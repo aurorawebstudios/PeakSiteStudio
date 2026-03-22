@@ -360,3 +360,13 @@ button.loading span {
 .service-box:hover {
   transform: translateY(-5px);
 }
+.image {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  transition: 0.4s;
+}
+
+.image:hover {
+  transform: scale(1.03);
+}
