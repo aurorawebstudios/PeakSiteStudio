@@ -673,3 +673,24 @@ button.loading span {
   padding: 4px 10px;
   border-radius: 20px;
 }
+/* FIX ULTRA IMPORTANTE */
+
+.portfolio-premium img {
+  display: block;
+  max-width: 100%;
+}
+
+.project-image {
+  height: 260px !important;
+}
+
+.project-image img {
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Evita que imágenes gigantes rompan todo */
+img {
+  max-width: 100%;
+  height: auto;
+}
