@@ -130,3 +130,12 @@ nav {
   display: flex;
   align-items: center;
 }
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.card {
+  text-align: center;
+  font-weight: 500;
+}
