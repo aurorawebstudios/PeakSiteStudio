@@ -349,3 +349,14 @@ button.loading span {
   display: none;
   margin-top: 15px;
 }
+.service-box {
+  background: white;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
