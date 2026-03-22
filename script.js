@@ -1,1 +1,6 @@
-console.log("Aurora Web funcionando");
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
