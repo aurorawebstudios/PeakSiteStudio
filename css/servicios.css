@@ -1,0 +1,9 @@
+/* (Realmente usas lo mismo que inicio, pero si separas servicios) */
+
+.services .grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
