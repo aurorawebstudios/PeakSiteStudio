@@ -1,0 +1,32 @@
+.about-hero {
+  background: linear-gradient(135deg, #0a0f2c, #1a1f4b);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.about-values {
+  padding: 80px 20px;
+}
+
+.values-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.team-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.team-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+}
