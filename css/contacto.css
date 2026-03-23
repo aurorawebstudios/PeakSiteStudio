@@ -233,3 +233,55 @@ button.loading span {
   font-size: 0.9rem;
   color: #666;
 }
+/* ===== FOOTER PREMIUM ===== */
+
+.footer-pro {
+  background: #0b0d12;
+  color: #aaa;
+  padding: 80px 20px 40px;
+  margin-top: 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-pro h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.footer-pro a {
+  display: block;
+  text-decoration: none;
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.footer-pro a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
