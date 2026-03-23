@@ -340,3 +340,6 @@ section {
   margin-left: 20px;
   padding-bottom: 10px; /* 👈 clave */
 }
+.brand {
+  text-decoration: none;
+}
