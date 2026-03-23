@@ -29,10 +29,21 @@
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
 
-<select onchange="changeLang(this.value)">
-  <option value="es">ES</option>
-  <option value="en">EN</option>
-</select>
+  <div class="lang-switch">
+    <div class="lang-selected" onclick="toggleLang()">
+      <img src="images/es.png" alt="ES">
+      <span>ES</span>
+    </div>
+
+    <div class="lang-dropdown" id="langDropdown">
+      <div onclick="changeLang('es')">
+        <img src="images/es.png"> Español
+      </div>
+      <div onclick="changeLang('en')">
+        <img src="images/en.png"> English
+      </div>
+    </div>
+  </div>
     </nav>
   </div>
 </header>
