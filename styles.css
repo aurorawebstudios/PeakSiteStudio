@@ -317,3 +317,14 @@ section {
 .lang-dropdown.active {
   display: block;
 }
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.lang-dropdown.show {
+  display: block;
+}
