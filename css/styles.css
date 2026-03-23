@@ -123,3 +123,63 @@ img {
   display: flex;
   justify-content: space-between;
 }
+.lang-switch {
+  position: relative;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* Botón visible */
+.lang-selected {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 14px;
+}
+
+/* Bandera */
+.lang-selected img {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+}
+
+/* Dropdown */
+.lang-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: none;
+  min-width: 140px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.lang-dropdown div {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.lang-dropdown div:hover {
+  background: #f5f5f5;
+}
+
+.lang-dropdown img {
+  width: 20px;
+  height: 14px;
+}
+
+/* Mostrar dropdown */
+.lang-switch.active .lang-dropdown {
+  display: block;
+}
