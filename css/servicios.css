@@ -96,15 +96,15 @@
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  gap: 20px; /* mejor que margin-left individual */
+  gap: 20px;
+  margin-right: 20px; /* espacio antes del idioma */
 }
 
 .lang-switch {
-  margin-left: 0; /* elimina cualquier margen extra */
+  /* nada especial, irá justo después del menú */
 }
