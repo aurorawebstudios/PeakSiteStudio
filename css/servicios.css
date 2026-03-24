@@ -108,8 +108,3 @@
 .lang-switch {
   margin-left: 0; /* elimina cualquier margen extra */
 }
-
-.menu {
-  display: flex;
-  align-items: center;
-}
