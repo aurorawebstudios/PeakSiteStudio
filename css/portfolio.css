@@ -193,3 +193,20 @@ nav {
   border-radius: 3px;
   object-fit: cover;
 }
+.brand {
+  display: flex;
+  align-items: center; /* 🔥 centra verticalmente */
+  gap: 5px; /* espacio entre logo y texto */
+}
+
+.logo {
+  height: 24px; /* 👈 tamaño ideal */
+  width: auto;
+  display: block;
+}
+
+.brand-name {
+  font-size: 16px; /* 👈 tamaño equilibrado */
+  font-weight: 500;
+  line-height: 1; /* 🔥 evita que baje el texto */
+}
