@@ -2,205 +2,158 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Nosotros | Peak Sites</title>
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="shortcut icon" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
+  <title>Nosotros | Peak Site Studio</title>
+  <link rel="icon" href="favicon.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/nosotros.css">
-
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/nosotros.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <!-- NAV -->
 <header class="header">
   <div class="container nav">
-
     <a href="index.html">
-      <img src="image.png" class="logo">
+      <img src="image.png" class="logo" alt="Peak Site Studio">
     </a>
-
     <nav>
-      <a href="/">Inicio</a>
-      <a href="/servicios.html">Servicios</a>
-      <a href="/portafolio.html">Portafolio</a>
-      <a href="/nosotros.html" class="active">Nosotros</a>
-      <a href="/contacto.html">Contacto</a>
-      
-    <!-- ← Mueve el language switcher AQUÍ, como último elemento del menú -->
-    <div class="lang-switch">
-      <div class="lang-current">
-        <img src="/banderas/es.png">
-        <span>ES</span>
-        <span class="arrow">▾</span>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="nosotros.html" class="active">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+
+      <div class="lang-switch">
+        <div class="lang-current">
+          <img src="/banderas/es.png" alt="Español">
+          <span>ES</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="lang-menu">
+          <a href="/" class="lang-option">
+            <img src="/banderas/es.png" alt=""> Español
+          </a>
+          <a href="/en/" class="lang-option">
+            <img src="/banderas/en.png" alt=""> English
+          </a>
+        </div>
       </div>
       
-      <div class="lang-menu">
-        <a href="/" class="lang-option">
-          <img src="/banderas/es.png"> Español
-        </a>
-        <a href="/en/" class="lang-option">
-          <img src="/banderas/en.png"> English
-        </a>
-  </div>
-        
-</div>
-<button id="themeToggle" class="theme-toggle">🌙</button>
-  </nav>
-
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+    </nav>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="about-hero">
   <div class="container">
-    <h1>No somos una agencia más</h1>
-    <p>Creamos webs que convierten visitas en clientes reales.</p>
+    <h1>Llevamos tu negocio <span class="highlight">a la cima</span> del mundo digital</h1>
+    <p>En Peak Site Studio no solo creamos páginas web.<br>
+       Creamos la cumbre desde donde tu empresa domina su sector.</p>
+    <a href="contacto.html" class="btn-primary">Subir a la cima juntos</a>
   </div>
 </section>
 
-<!-- HISTORIA / VALOR -->
-<section class="about-intro container">
-  <div class="about-text">
-    <h2>Diseñamos con un objetivo claro: que vendas más</h2>
+<!-- HISTORIA / INTRO -->
+<section class="about-intro container split">
+  <div class="text">
+    <h2>La cima no se alcanza por casualidad</h2>
     <p>
-      Mientras muchas agencias se centran en hacer webs bonitas, nosotros nos centramos en algo mucho más importante: resultados.
+      Peak Site Studio nació con una idea clara: ayudar a las empresas a dejar de estar perdidas en el valle digital 
+      y llegar a la cumbre de su industria.
     </p>
     <p>
-      En Peak Sites ayudamos a negocios locales a transformar su presencia online en una máquina de generar clientes.
+      Combinamos diseño impactante, desarrollo rápido y estrategia de conversión para que tu web no solo se vea bien, 
+      sino que realmente genere resultados: más clientes, más ventas y más autoridad.
     </p>
     <p>
-      Cada web que creamos está pensada estratégicamente para atraer, convencer y convertir.
+      Porque en la cima no hay espacio para webs mediocres.
     </p>
   </div>
-
+  
   <div class="about-image">
-    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop">
+    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop" 
+         alt="Montaña nevada - La cima">
   </div>
 </section>
 
 <!-- VALORES -->
 <section class="about-values">
-  <div class="container values-grid">
-
-    <div class="value">
-      <h3>🚀 Enfoque en resultados</h3>
-      <p>No diseñamos webs por diseño. Diseñamos para generar ingresos.</p>
+  <div class="container">
+    <h2 class="section-title">Lo que nos lleva a la cima</h2>
+    
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>🏔️ Excelencia en cada detalle</h3>
+        <p>No aceptamos lo bueno. Buscamos siempre la mejor versión posible de tu proyecto. La cima exige perfección.</p>
+      </div>
+      <div class="value-card">
+        <h3>⚡ Velocidad de vanguardia</h3>
+        <p>Páginas ultrarrápidas, optimizadas y preparadas para posicionarse en los primeros lugares de Google.</p>
+      </div>
+      <div class="value-card">
+        <h3>🎯 Diseñadas para convertir</h3>
+        <p>Cada elemento tiene un propósito: captar atención, generar confianza y cerrar ventas.</p>
+      </div>
+      <div class="value-card">
+        <h3>🤝 Acompañamiento hasta la cumbre</h3>
+        <p>Desde la primera idea hasta mucho después del lanzamiento, estamos contigo en todo el ascenso.</p>
+      </div>
     </div>
-
-    <div class="value">
-      <h3>⚡ Velocidad y rendimiento</h3>
-      <p>Webs rápidas, optimizadas y preparadas para convertir.</p>
-    </div>
-
-    <div class="value">
-      <h3>🎯 Estrategia real</h3>
-      <p>Cada sección tiene un propósito: captar clientes.</p>
-    </div>
-
   </div>
 </section>
 
-<!-- EQUIPO -->
-<section class="team container">
-
-  <div class="team-header">
-    <h2>El equipo detrás de Peak Sites</h2>
-    <p>4 especialistas enfocados en hacer crecer tu negocio</p>
-  </div>
-
-  <div class="team-grid">
-
-    <div class="team-card">
-      <h3>Aarón</h3>
-      <span>Desarrollo & Estrategia</span>
-      <p>Encargado de construir webs optimizadas que convierten tráfico en clientes.</p>
-    </div>
-
-    <div class="team-card">
-      <h3>Youssef</h3>
-      <span>Diseño UX/UI</span>
-      <p>Diseña experiencias que guían al usuario hasta la conversión.</p>
-    </div>
-
-    <div class="team-card">
-      <h3>César</h3>
-      <span>Marketing & Copy</span>
-      <p>Convierte ideas en mensajes que venden y generan confianza.</p>
-    </div>
-
-    <div class="team-card">
-      <h3>Naim</h3>
-      <span>Optimización & Rendimiento</span>
-      <p>Se asegura de que cada web cargue rápido y funcione perfecta.</p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CTA -->
+<!-- CTA FINAL -->
 <section class="cta">
   <div class="container">
-    <h2>Tu competencia ya está mejorando su web</h2>
-    <a href="contacto.html" class="btn">Empieza ahora</a>
+    <h2>¿Estás listo para llegar más alto?</h2>
+    <p>Deja que Peak Site Studio eleve tu negocio a su máximo potencial.</p>
+    <a href="contacto.html" class="btn-primary">Solicitar presupuesto sin compromiso</a>
   </div>
 </section>
 
 <footer class="footer-pro">
-
   <div class="container footer-grid">
-
     <div>
       <h4>Soluciones</h4>
-      <a href="#">Brand & Experience</a>
-      <a href="#">Tech & Platforms</a>
-      <a href="#">Growth & Marketing</a>
-      <a href="#">Strategy & Automation</a>
+      <a href="#">Páginas Web Premium</a>
+      <a href="#">Tiendas Online</a>
+      <a href="#">SEO & Posicionamiento</a>
+      <a href="#">Mantenimiento Web</a>
     </div>
-
     <div>
       <h4>Recursos</h4>
-      <a href="portafolio.html">Casos de éxito</a>
-      <a href="#">Guías y recursos</a>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="#">Casos de éxito</a>
       <a href="#">Blog</a>
     </div>
-
     <div>
       <h4>Empresa</h4>
-      <a href="#">Servicios</a>
+      <a href="servicios.html">Servicios</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
-      <a href="#">Partners</a>
     </div>
-
     <div>
       <h4>Legal</h4>
       <a href="#">Aviso legal</a>
       <a href="#">Política de privacidad</a>
       <a href="#">Política de cookies</a>
-      <a href="#">Preferencias de cookies</a>
     </div>
-
     <div>
       <h4>Conectar</h4>
       <a href="#">Instagram ↗</a>
       <a href="mailto:info@peaksitestudio.com">info@peaksitestudio.com</a>
     </div>
-
   </div>
-
+  
   <div class="footer-bottom container">
     <p>© 2026 Peak Site Studio. Todos los derechos reservados.</p>
+    <p>Hecho con pasión en la cima</p>
   </div>
-
 </footer>
-  
-<script src="/script.js"></script>
 
+<script src="/script.js"></script>
 </body>
 </html>
