@@ -211,24 +211,109 @@ nav {
   font-weight: 500;
   line-height: 1; /* 🔥 evita que baje el texto */
 }
-/* Dark mode support para el selector */
+/* ============================================= */
+/*  LANGUAGE SWITCHER - FORZADO (igual que Inicio) */
+/* ============================================= */
+
+.lang-switch {
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+  z-index: 100;
+}
+
+.lang-current {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.lang-current:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.lang-current img {
+  width: 24px !important;
+  height: 16px !important;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.arrow {
+  font-size: 19px !important;
+  line-height: 1;
+  margin-left: 2px;
+}
+
+/* Dropdown */
+.lang-menu {
+  position: absolute !important;
+  top: 100% !important;
+  right: 0 !important;
+  margin-top: 8px !important;
+  background: white !important;
+  border: 1px solid #ddd !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+  display: none !important;
+  min-width: 180px !important;
+  padding: 8px 0 !important;
+  z-index: 9999 !important;
+}
+
+.lang-switch:hover .lang-menu {
+  display: block !important;
+}
+
+.lang-option {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px !important;
+  color: #222 !important;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.lang-option:hover {
+  background: #f1f3f5 !important;
+}
+
+.lang-option img {
+  width: 24px !important;
+  height: 16px !important;
+  border-radius: 3px;
+}
+
+/* Dark mode */
 body.dark .lang-current {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08) !important;
+  border-color: rgba(255,255,255,0.15) !important;
 }
 
 body.dark .lang-current:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255,255,255,0.20) !important;
 }
 
 body.dark .lang-menu {
-  background: #161a22;
-  border-color: #333;
+  background: #1f252f !important;
+  border-color: #444 !important;
 }
 
 body.dark .lang-option {
-  color: #eee;
+  color: #eee !important;
 }
 
 body.dark .lang-option:hover {
-  background: #222;
+  background: #2a323f !important;
 }
