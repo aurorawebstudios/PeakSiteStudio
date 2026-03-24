@@ -75,7 +75,14 @@ body.dark nav a {
 }
 
 .logo {
-  height: 40px;
+  height: 48px;               /* Ajusta según el tamaño de tu logo */
+  width: auto;
+  flex-shrink: 0;             /* Evita que se encoja */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .brand {
