@@ -58,7 +58,7 @@ section {
   align-items: center;
   gap: 0px;
   padding-left: 0px;        /* Logo más a la izquierda */
-  padding-right: 30px;             /* ← Cambia este número según quieras */
+  padding-right: 0px;             /* ← Cambia este número según quieras */
   width: 100%;
 }
 
