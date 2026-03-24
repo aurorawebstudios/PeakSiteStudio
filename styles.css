@@ -86,7 +86,11 @@ body.dark nav a {
 }
 
 .brand {
+  display: flex;
+  align-items: center;        /* Esto es lo más importante */
+  gap: 12px;                  /* Espacio entre logo e texto */
   text-decoration: none;
+  color: inherit;
 }
 
 /* ===== BUTTONS ===== */
