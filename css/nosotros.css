@@ -5,10 +5,11 @@
   padding: 100px 20px;
 }
 
-.about-intro {
+.split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 40px;
+  align-items: center;
 }
 
 .about-values {
@@ -81,4 +82,14 @@
     gap: 10px;
     text-align: center;
   }
+}
+.text {
+  max-width: 500px;
+  line-height: 1.6;
+}
+.text p {
+  word-break: normal;
+}
+.text p {
+  word-break: normal;
 }
