@@ -82,3 +82,28 @@ window.addEventListener('DOMContentLoaded', () => {
     window.location.href = '/';
   }
 });
+// ==========================
+// DARK MODE
+// ==========================
+const toggleBtn = document.getElementById("themeToggle");
+
+// Detectar preferencia guardada o del sistema
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+  document.body.classList.add("dark");
+} else if (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.body.classList.add("dark");
+}
+
+// Toggle manual
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  const isDark = document.body.classList.contains("dark");
+
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+
+  // Cambiar icono
+  toggleBtn.textContent = isDark ? "☀️" : "🌙";
+});
