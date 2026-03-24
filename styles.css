@@ -371,3 +371,15 @@ body.dark .results-header h2 {
 body.dark .results-header p {
   color: var(--text-soft);
 }
+.brand-name {
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: -0.5px;
+  line-height: 1;             /* Importante para centrar verticalmente */
+  color: inherit;
+}
+body.dark .brand-name {
+  background: linear-gradient(90deg, #ffffff, #a0b8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
