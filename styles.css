@@ -57,7 +57,7 @@ section {
   justify-content: space-between;
   align-items: center;
   gap: 70px;
-  padding-left: 0px;              /* ← Cambia este número según quieras */
+  padding-left: 200px;              /* ← Cambia este número según quieras */
   width: 100%;
 }
 
