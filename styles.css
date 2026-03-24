@@ -79,7 +79,7 @@ body.dark nav a {
 }
 
 .logo {
-  height: 30px;               /* Ajusta según el tamaño de tu logo */
+  height: 28px;               /* Ajusta según el tamaño de tu logo */
   width: auto;
   flex-shrink: 0;             /* Evita que se encoja */
   transition: transform 0.3s ease;
@@ -377,8 +377,8 @@ body.dark .results-header p {
 }
 .brand-name {
   font-weight: 300;
-  font-size: 1.45rem;
-  letter-spacing: -0,5px;
+  font-size: 16px;
+  letter-spacing: 0px;
   line-height: 1;             /* Importante para centrar verticalmente */
   color: inherit;
 }
