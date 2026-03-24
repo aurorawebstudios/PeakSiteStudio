@@ -1,255 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Servicios de Diseño Web | Peak Sites</title>
-<meta name="description" content="Servicios de diseño web profesional: tiendas online, páginas corporativas y optimización web. Precios claros y enfocados en resultados.">
-
-<!-- Favicon principal (para pestañas del navegador y Google) -->
-<link rel="icon" type="image/png" href="/peaksitelogo.png" sizes="512x512">
-
-<!-- Apple Touch Icon (para iPhone/iPad cuando se guarda en pantalla de inicio) -->
-<link rel="apple-touch-icon" href="/peaksitelogo.png">
-
-<link rel="stylesheet" href="/styles.css">
-<link rel="stylesheet" href="/inicio.css">
-<link rel="stylesheet" href="/servicios.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<link rel="canonical" href="https://peaksitestudio.com/servicios.html">
-
-<meta name="robots" content="index, follow">
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "LocalBusiness",
- "name": "Peak Sites",
- "url": "https://peaksitestudio.com",
- "email": "info@peaksitestudio.com",
- "description": "Agencia de diseño web enfocada en resultados y conversión"
-}
-</script>
-
+  <meta charset="UTF-8">
+  <title>Servicios | Peak Site Studio</title>
+  <meta name="description" content="Servicios de diseño web profesional: páginas corporativas, tiendas online y optimización. Creamos webs que generan resultados reales.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/nosotros.css">   <!-- Usamos el mismo CSS que en Nosotros -->
+  <link rel="stylesheet" href="css/servicios.css">   <!-- CSS específico de servicios (lo crearemos) -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<!-- HEADER -->
+<!-- NAV -->
 <header class="header">
-<div class="container nav">
+  <div class="container nav">
+    <a href="index.html">
+      <img src="image.png" class="logo" alt="Peak Site Studio">
+    </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html" class="active">Servicios</a>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
 
-  <a href="/servicios" class="brand">
-    <img src="logo11.png" class="logo" alt="Peak Site Studio">
-    <span class="brand-name">PeakSites</span>
-  </a>
-
-<div class="nav-right">
-  <nav class="menu">
-    <a href="/">Inicio</a>
-    <a href="/servicios.html">Servicios</a>
-    <a href="/portafolio.html">Portafolio</a>
-    <a href="/nosotros.html">Nosotros</a>
-    <a href="/contacto.html">Contacto</a>
-    
-    <!-- ← Mueve el language switcher AQUÍ, como último elemento del menú -->
-    <div class="lang-switch">
-      <div class="lang-current">
-        <img src="/banderas/es.png">
-        <span>ES</span>
-        <span class="arrow">▾</span>
+      <div class="lang-switch">
+        <div class="lang-current">
+          <img src="/banderas/es.png" alt="">
+          <span>ES</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="lang-menu">
+          <a href="/" class="lang-option">Español</a>
+          <a href="/en/" class="lang-option">English</a>
+        </div>
       </div>
       
-      <div class="lang-menu">
-        <a href="/" class="lang-option">
-          <img src="/banderas/es.png"> Español
-        </a>
-        <a href="/en/" class="lang-option">
-          <img src="/banderas/en.png"> English
-        </a>
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+    </nav>
   </div>
-        
-</div>
-<button id="themeToggle" class="theme-toggle">🌙</button>
-  </nav>
-</div>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="about-hero">   <!-- Usamos la misma clase que en Nosotros -->
   <div class="container">
-    <h1>Servicios de diseño web enfocados en resultados</h1>
-    <p>No vendemos webs. Creamos herramientas que generan clientes.</p>
+    <h1>Servicios que <span class="highlight">llevan tu negocio a la cima</span></h1>
+    <p>No solo creamos webs bonitas.<br> Creamos herramientas digitales que generan clientes y ventas.</p>
+    <a href="contacto.html" class="btn-primary">Quiero subir a la cima</a>
   </div>
 </section>
 
-<section class="container" style="margin-top:80px;">
-  <h2 style="text-align:center;">Comparativa de servicios</h2>
+<!-- SERVICIOS PRINCIPALES -->
+<section class="services-section">
+  <div class="container">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    
+    <div class="services-grid">
+      
+      <!-- Servicio 1 -->
+      <div class="service-card">
+        <div class="service-icon">🏔️</div>
+        <h3>Web Profesional</h3>
+        <p>Diseño moderno, rápido y optimizado para convertir visitantes en clientes. Ideal para empresas, clínicas, abogados e inmobiliarias.</p>
+        <ul>
+          <li>Diseño único y responsive</li>
+          <li>Optimización SEO básica</li>
+          <li>Formulario de contacto y WhatsApp</li>
+          <li>Velocidad de carga premium</li>
+        </ul>
+        <div class="price">Desde <strong>800€</strong></div>
+      </div>
 
-  <div class="pricing-table">
+      <!-- Servicio 2 -->
+      <div class="service-card featured">
+        <div class="service-icon">🛒</div>
+        <h3>Tienda Online (eCommerce)</h3>
+        <p>Tiendas profesionales preparadas para vender 24/7. Integración con pasarelas de pago y gestión fácil de productos.</p>
+        <ul>
+          <li>Diseño enfocado en ventas</li>
+          <li>Pagos seguros (Stripe, PayPal, etc.)</li>
+          <li>Gestión de inventario</li>
+          <li>Optimización de conversión</li>
+        </ul>
+        <div class="price">Desde <strong>1.200€</strong></div>
+      </div>
 
-    <div class="plan">
-      <h3>Web profesional</h3>
-      <p class="price">800€</p>
-      <ul>
-        <li>✔ Diseño profesional</li>
-        <li>✔ Responsive</li>
-        <li>✔ SEO básico</li>
-      </ul>
+      <!-- Servicio 3 -->
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Mejora y Optimización</h3>
+        <p>Analizamos tu web actual y la transformamos para que cargue más rápido, convierta mejor y se vea profesional.</p>
+        <ul>
+          <li>Rediseño completo</li>
+          <li>Mejora de velocidad</li>
+          <li>Optimización UX/UI</li>
+          <li>Estrategia de conversión</li>
+        </ul>
+        <div class="price">Desde <strong>500€</strong></div>
+      </div>
     </div>
-
-    <div class="plan featured">
-      <h3>Tienda online</h3>
-      <p class="price">1200€</p>
-      <ul>
-        <li>✔ Todo incluido</li>
-        <li>✔ Pagos integrados</li>
-        <li>✔ Optimización ventas</li>
-      </ul>
-    </div>
-
-    <div class="plan">
-      <h3>Optimización</h3>
-      <p class="price">500€</p>
-      <ul>
-        <li>✔ Mejora velocidad</li>
-        <li>✔ Rediseño</li>
-        <li>✔ CRO</li>
-      </ul>
-    </div>
-
   </div>
-</section>
-
-<!-- PLANES -->
-<section class="container">
-
-  <h2 style="text-align:center; margin-bottom:50px;">Nuestros servicios</h2>
-
-  <div class="results-grid">
-
-    <!-- WEB CORPORATIVA -->
-    <div class="result-card">
-      <h3>Web profesional</h3>
-      <p class="result-desc">
-        Diseño web para empresas, clínicas, inmobiliarias o negocios que quieren captar clientes online.
-      </p>
-
-      <ul>
-        <li>✔ Diseño moderno y profesional</li>
-        <li>✔ Optimización para conversión</li>
-        <li>✔ Adaptado a móvil</li>
-        <li>✔ SEO básico incluido</li>
-      </ul>
-
-      <h3 style="margin-top:20px;">Desde 800€</h3>
-    </div>
-
-    <!-- TIENDA ONLINE -->
-    <div class="result-card">
-      <h3>Tienda online (eCommerce)</h3>
-      <p class="result-desc">
-        Creamos tiendas online preparadas para vender desde el primer día.
-      </p>
-
-      <ul>
-        <li>✔ Sistema de pagos integrado</li>
-        <li>✔ Gestión de productos</li>
-        <li>✔ Diseño enfocado en ventas</li>
-        <li>✔ Optimización móvil</li>
-      </ul>
-
-      <h3 style="margin-top:20px;">Desde 1200€</h3>
-    </div>
-
-    <!-- OPTIMIZACIÓN -->
-    <div class="result-card">
-      <h3>Mejora de web existente</h3>
-      <p class="result-desc">
-        Analizamos tu web actual y la transformamos para que convierta más clientes.
-      </p>
-
-      <ul>
-        <li>✔ Rediseño visual</li>
-        <li>✔ Mejora de velocidad</li>
-        <li>✔ Optimización UX/UI</li>
-        <li>✔ Estrategia de conversión</li>
-      </ul>
-
-      <h3 style="margin-top:20px;">500€ - 600€</h3>
-    </div>
-
-  </div>
-
 </section>
 
 <!-- MANTENIMIENTO -->
-<section class="container" style="margin-top:80px;">
-
-  <div class="result-card" style="text-align:center; max-width:700px; margin:auto;">
-    <h2>Mantenimiento web mensual</h2>
-    <p>
-      Nos encargamos de que tu web funcione siempre perfecta, segura y actualizada.
-    </p>
-
-    <ul style="text-align:left; margin-top:20px;">
-      <li>✔ Actualizaciones y seguridad</li>
-      <li>✔ Copias de seguridad</li>
-      <li>✔ Soporte técnico</li>
-      <li>✔ Pequeños cambios incluidos</li>
-    </ul>
-
-    <h3 style="margin-top:20px;">Desde 50€/mes</h3>
+<section class="maintenance-section">
+  <div class="container">
+    <div class="maintenance-card">
+      <h2>Mantenimiento Web Mensual</h2>
+      <p>Nos encargamos de que tu web siempre esté rápida, segura y actualizada. Tú solo preocúpate de tu negocio.</p>
+      <ul>
+        <li>Actualizaciones y parches de seguridad</li>
+        <li>Copias de seguridad semanales</li>
+        <li>Soporte técnico prioritario</li>
+        <li>Pequeños cambios y ajustes incluidos</li>
+      </ul>
+      <div class="price">Desde <strong>50€ / mes</strong></div>
+      <a href="contacto.html" class="btn-primary">Contratar mantenimiento</a>
+    </div>
   </div>
-
 </section>
 
-<!-- CTA -->
-<section class="container" style="text-align:center; margin-top:80px;">
-  <h2>¿Listo para mejorar tu web?</h2>
-  <a href="/contacto.html" class="btn">Solicitar presupuesto</a>
+<!-- CTA FINAL -->
+<section class="cta">
+  <div class="container">
+    <h2>¿Cuál es el siguiente paso para tu negocio?</h2>
+    <p>Cuéntanos tu proyecto y te preparamos una propuesta a medida.</p>
+    <a href="contacto.html" class="btn-primary">Solicitar presupuesto gratis</a>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer-pro">
-
   <div class="container footer-grid">
-
     <div>
-      <h4>Servicios</h4>
-      <a href="#">Diseño web</a>
-      <a href="#">Tiendas online</a>
-      <a href="#">Optimización web</a>
+      <h4>Soluciones</h4>
+      <a href="servicios.html">Web Profesional</a>
+      <a href="#">Tienda Online</a>
+      <a href="#">Optimización Web</a>
       <a href="#">Mantenimiento</a>
     </div>
-
     <div>
       <h4>Empresa</h4>
-      <a href="/nosotros.html">Nosotros</a>
-      <a href="/contacto.html">Contacto</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="contacto.html">Contacto</a>
     </div>
-
     <div>
       <h4>Legal</h4>
       <a href="#">Aviso legal</a>
       <a href="#">Privacidad</a>
       <a href="#">Cookies</a>
     </div>
-
     <div>
-      <h4>Contacto</h4>
+      <h4>Conectar</h4>
+      <a href="#">Instagram ↗</a>
       <a href="mailto:info@peaksitestudio.com">info@peaksitestudio.com</a>
     </div>
-
   </div>
-
   <div class="footer-bottom container">
-    <p>© 2026 Peak Sites. Todos los derechos reservados.</p>
+    <p>© 2026 Peak Site Studio. Todos los derechos reservados.</p>
+    <p>Hecho con pasión en la cima</p>
   </div>
-
 </footer>
+
 <script src="/script.js"></script>
 </body>
 </html>
