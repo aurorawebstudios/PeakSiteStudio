@@ -102,8 +102,14 @@
 .menu {
   display: flex;
   align-items: center;
+  gap: 20px; /* mejor que margin-left individual */
 }
 
-.menu a {
-  margin-left: 20px;
+.lang-switch {
+  margin-left: 0; /* elimina cualquier margen extra */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
 }
