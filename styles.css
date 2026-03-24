@@ -340,3 +340,11 @@ body.dark .theme-toggle:hover {
     text-align: center;
   }
 }
+/* FIX TEXTO RESULTS EN DARK */
+body.dark .results-header h2 {
+  color: var(--text);
+}
+
+body.dark .results-header p {
+  color: var(--text-soft);
+}
