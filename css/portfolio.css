@@ -114,9 +114,7 @@ nav {
 /* ==================== LANGUAGE SWITCHER ==================== */
 .lang-switch {
   position: relative;
-  display: inline-block;
-  cursor: pointer;
-  margin-left: 15px;
+  margin-left: 12px;
 }
 
 .lang-current {
@@ -129,8 +127,10 @@ nav {
   color: white;
   font-weight: 500;
   font-size: 15px;
+  cursor: pointer;
   transition: all 0.2s;
   white-space: nowrap;
+  user-select: none;
 }
 
 .lang-current:hover {
@@ -147,7 +147,8 @@ nav {
 .arrow {
   font-size: 18px;
   line-height: 1;
-  margin-left: 4px;
+  margin-left: 3px;
+  transition: transform 0.2s;
 }
 
 /* Dropdown */
@@ -161,7 +162,7 @@ nav {
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   display: none;
-  min-width: 160px;
+  min-width: 170px;
   overflow: hidden;
   z-index: 1000;
   padding: 6px 0;
@@ -209,4 +210,25 @@ nav {
   font-size: 16px; /* 👈 tamaño equilibrado */
   font-weight: 500;
   line-height: 1; /* 🔥 evita que baje el texto */
+}
+/* Dark mode support para el selector */
+body.dark .lang-current {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .lang-current:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+body.dark .lang-menu {
+  background: #161a22;
+  border-color: #333;
+}
+
+body.dark .lang-option {
+  color: #eee;
+}
+
+body.dark .lang-option:hover {
+  background: #222;
 }
