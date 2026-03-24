@@ -348,3 +348,43 @@ section {
   opacity: 1 !important;
   transform: none !important;
 }
+/* ===== THEME TOGGLE BUTTON ===== */
+.theme-toggle {
+  margin-left: 15px;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  background: #f3f4f6;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  --bg: #0b0d12;
+  --text: #f1f1f1;
+}
+
+/* Ajustes específicos */
+body.dark .header {
+  background: #111;
+}
+
+body.dark nav a {
+  color: #eee;
+}
+
+body.dark .card,
+body.dark .result-card {
+  background: #161a22;
+  border: 1px solid #222;
+}
+
+body.dark .footer-pro {
+  background: #050507;
+}
