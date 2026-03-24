@@ -56,8 +56,8 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 70px;
-  padding-left: 200px;              /* ← Cambia este número según quieras */
+  gap: 0px;
+  padding-left: 0px;              /* ← Cambia este número según quieras */
   width: 100%;
 }
 
