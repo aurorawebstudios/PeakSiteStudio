@@ -109,3 +109,64 @@
 .menu a {
   margin-left: 0; /* evita conflictos */
 }
+/* Dentro del menú, todos los elementos en fila */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;           /* espacio entre enlaces y entre el último enlace y el idioma */
+}
+
+/* El language switcher ya no necesita estar en .nav-right separado */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;   /* importante para que el dropdown .lang-menu salga bien */
+}
+
+/* Opcional: hacer que el selector de idioma se vea un poco distinto (como un botón) */
+.lang-current {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.lang-current:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* El dropdown del idioma */
+.lang-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  display: none;
+  min-width: 140px;
+  z-index: 100;
+  padding: 8px 0;
+}
+
+.lang-switch:hover .lang-menu,
+.lang-switch:focus-within .lang-menu {
+  display: block;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.lang-option:hover {
+  background: #f5f5f5;
+}
