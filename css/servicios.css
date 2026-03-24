@@ -96,15 +96,16 @@
 .nav-right {
   display: flex;
   align-items: center;
+  gap: 20px;
+  margin-left: auto; /* 🔥 CLAVE */
 }
 
 .menu {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-right: 20px; /* espacio antes del idioma */
 }
 
-.lang-switch {
-  /* nada especial, irá justo después del menú */
+.menu a {
+  margin-left: 0; /* evita conflictos */
 }
