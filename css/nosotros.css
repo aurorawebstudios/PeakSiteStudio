@@ -1,6 +1,6 @@
 /* =============================================
    NOSOTROS.CSS - Peak Site Studio
-   Tema: Oscuro Premium + Cima
+   Versión Minimalista y Profesional - 2026
 ============================================= */
 
 * {
@@ -10,164 +10,189 @@
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   background: #0a0f2c;
   color: #e0e0e0;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* ===================== HERO ===================== */
 .about-hero {
-  background: linear-gradient(135deg, #0a0f2c, #1a1f4b);
+  background: linear-gradient(rgba(10, 15, 44, 0.75), rgba(10, 15, 44, 0.85)), 
+              url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
   color: white;
   text-align: center;
-  padding: 140px 20px 100px;
+  padding: 160px 20px 120px;
   position: relative;
   overflow: hidden;
 }
 
-.about-hero::before {
+.about-hero::after {
   content: '';
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: url('https://via.placeholder.com/1920x1080/0a0f2c/1a1f4b?text=Peak+Mountain') center/cover no-repeat;
-  opacity: 0.15;
-  z-index: 0;
-}
-
-.about-hero > * {
-  position: relative;
-  z-index: 1;
+  height: 40%;
+  background: linear-gradient(transparent, #0a0f2c);
 }
 
 .about-hero h1 {
-  font-size: 3.8rem;
-  margin-bottom: 20px;
-  line-height: 1.1;
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .highlight {
-  color: #00d4ff;
-  position: relative;
+  background: linear-gradient(90deg, #00f5ff, #00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .about-hero p {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  opacity: 0.9;
+  font-size: 1.35rem;
+  max-width: 720px;
+  margin: 0 auto 40px;
+  opacity: 0.95;
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #00d4ff, #0099cc);
-  color: white;
-  padding: 16px 40px;
+  background: linear-gradient(90deg, #00f5ff, #0099ff);
+  color: #0a0f2c;
+  padding: 18px 48px;
   border: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
+  border-radius: 60px;
+  font-size: 1.15rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
   text-decoration: none;
   display: inline-block;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
 }
 
 .btn-primary:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 245, 255, 0.45);
 }
 
-/* ===================== SECCIONES ===================== */
-section {
-  padding: 100px 20px;
+/* ===================== SECCIÓN HISTORIA MINIMALISTA ===================== */
+.about-story {
+  padding: 120px 20px;
+  background: #0a0f2c;
 }
 
-.split {
+.story-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 80px;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
-.text {
+.story-text h2 {
+  font-size: 2.9rem;
+  line-height: 1.1;
+  color: white;
+  margin-bottom: 32px;
+}
+
+.story-text .lead {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin-bottom: 28px;
+}
+
+.story-text p {
+  font-size: 1.15rem;
+  color: #b0b0c0;
+  margin-bottom: 24px;
   max-width: 520px;
 }
 
-.text h2 {
+.story-text .final {
+  font-size: 1.2rem;
+  color: #00f5ff;
+  font-weight: 600;
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ===================== VALORES ===================== */
+.about-values {
+  background: #0f1429;
+  padding: 110px 20px;
+}
+
+.section-title {
+  text-align: center;
   font-size: 2.6rem;
-  margin-bottom: 25px;
+  margin-bottom: 60px;
   color: white;
 }
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .value-card {
-  background: rgba(255,255,255,0.05);
-  padding: 35px 25px;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 212, 255, 0.1);
-  transition: all 0.3s;
+  background: rgba(255,255,255,0.04);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 245, 255, 0.15);
+  transition: all 0.4s ease;
 }
 
 .value-card:hover {
-  transform: translateY(-10px);
-  border-color: #00d4ff;
+  transform: translateY(-12px);
+  border-color: #00f5ff;
+  background: rgba(255,255,255,0.07);
 }
 
 .value-card h3 {
-  color: #00d4ff;
-  margin-bottom: 15px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #00f5ff;
 }
 
-/* ===================== EQUIPO ===================== */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.team-card {
-  background: #111827;
-  padding: 30px 25px;
-  border-radius: 16px;
+/* ===================== CTA ===================== */
+.cta {
+  background: linear-gradient(135deg, #0a0f2c, #1a2540);
   text-align: center;
-  transition: all 0.3s;
+  padding: 100px 20px;
 }
 
-.team-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-.team-card img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
+.cta h2 {
+  font-size: 2.7rem;
   margin-bottom: 20px;
-  border: 4px solid #00d4ff;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
 }
 
 /* ===================== FOOTER ===================== */
 .footer-pro {
-  background: #0b0d12;
+  background: #080b14;
   color: #aaa;
-  padding: 100px 20px 40px;
-  margin-top: 80px;
+  padding: 100px 20px 50px;
 }
 
 .footer-grid {
@@ -180,65 +205,45 @@ section {
 
 .footer-pro h4 {
   color: white;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-size: 15px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .footer-pro a {
   display: block;
   color: #888;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   transition: color 0.3s;
 }
 
 .footer-pro a:hover {
-  color: #00d4ff;
+  color: #00f5ff;
 }
 
 .footer-bottom {
-  border-top: 1px solid #222;
-  padding-top: 25px;
+  border-top: 1px solid #1f2538;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
+  font-size: 14px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* ===================== RESPONSIVE ===================== */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .about-hero h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
-  
-  .split {
+  .story-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 60px;
   }
-  
   .footer-bottom {
     flex-direction: column;
     gap: 15px;
     text-align: center;
   }
-}
-/* Imagen cartoon en el hero - más pequeña y moderna */
-.hero-image-cartoon {
-  max-width: 380px;           /* ← Aquí controlas el tamaño (puedes poner 320px o 450px) */
-  margin: 40px auto;
-  padding: 10px;
-}
-
-.hero-image-cartoon img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0, 245, 255, 0.25);
-  transition: transform 0.4s ease;
-}
-
-.hero-image-cartoon img:hover {
-  transform: scale(1.05);
 }
