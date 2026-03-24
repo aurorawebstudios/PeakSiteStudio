@@ -87,3 +87,23 @@
   font-size: 28px;
   margin: 20px 0;
 }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  margin-left: 20px;
+}
