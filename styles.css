@@ -372,8 +372,8 @@ body.dark .results-header p {
   color: var(--text-soft);
 }
 .brand-name {
-  font-weight: 700;
-  font-size: 1.55rem;
+  font-weight: 600;
+  font-size: 1.45rem;
   letter-spacing: -0.5px;
   line-height: 1;             /* Importante para centrar verticalmente */
   color: inherit;
