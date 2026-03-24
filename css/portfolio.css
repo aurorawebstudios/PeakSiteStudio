@@ -116,7 +116,7 @@ nav {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  margin-left: 15px;        /* espacio entre "Contacto" y el selector */
+  margin-left: 15px;
 }
 
 .lang-current {
