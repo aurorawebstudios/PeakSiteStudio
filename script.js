@@ -11,11 +11,6 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(el => observer.observe(el));
 
-// FORM PRO
-const form = document.getElementById("contactForm");
-const btn = document.getElementById("submitBtn");
-
-form.addEventListener("submit", function(e) {
   e.preventDefault();
 
   let valid = true;
@@ -81,4 +76,15 @@ window.addEventListener('DOMContentLoaded', () => {
   if (lang === 'es' && window.location.pathname.startsWith('/en')) {
     window.location.href = '/';
   }
+  const elements = document.querySelectorAll('.fade-up, .fade-left');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
 });
