@@ -62,3 +62,23 @@ const observer = new IntersectionObserver(entries => {
 });
 
 elements.forEach(el => observer.observe(el));
+// Guardar idioma al hacer click
+document.querySelectorAll('.lang-option').forEach(link => {
+  link.addEventListener('click', function () {
+    const lang = this.getAttribute('href').includes('/en') ? 'en' : 'es';
+    localStorage.setItem('lang', lang);
+  });
+});
+
+// Redirección automática según idioma guardado
+window.addEventListener('DOMContentLoaded', () => {
+  const lang = localStorage.getItem('lang');
+
+  if (lang === 'en' && !window.location.pathname.startsWith('/en')) {
+    window.location.href = '/en/';
+  }
+
+  if (lang === 'es' && window.location.pathname.startsWith('/en')) {
+    window.location.href = '/';
+  }
+});
