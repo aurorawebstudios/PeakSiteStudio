@@ -343,3 +343,8 @@ section {
 .brand {
   text-decoration: none;
 }
+.fade-up,
+.fade-left {
+  opacity: 1 !important;
+  transform: none !important;
+}
