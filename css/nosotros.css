@@ -224,3 +224,21 @@ section {
     text-align: center;
   }
 }
+/* Imagen cartoon en el hero - más pequeña y moderna */
+.hero-image-cartoon {
+  max-width: 380px;           /* ← Aquí controlas el tamaño (puedes poner 320px o 450px) */
+  margin: 40px auto;
+  padding: 10px;
+}
+
+.hero-image-cartoon img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 245, 255, 0.25);
+  transition: transform 0.4s ease;
+}
+
+.hero-image-cartoon img:hover {
+  transform: scale(1.05);
+}
