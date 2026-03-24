@@ -88,7 +88,7 @@ body.dark nav a {
 .brand {
   display: flex;
   align-items: center;        /* Esto es lo más importante */
-  gap: 3px;                  /* Espacio entre logo e texto */
+  gap: 1px;                  /* Espacio entre logo e texto */
   text-decoration: none;
   color: inherit;
 }
