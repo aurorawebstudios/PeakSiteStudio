@@ -1,257 +1,229 @@
 /* =============================================
-   SERVICIOS.CSS - Peak Site Studio
-   Versión actualizada y coherente con Nosotros
+   SERVICIOS.CSS - Peak Site Studio (Versión Moderna)
 ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
 
-/* ====================== HERO ====================== */
-.about-hero {
-  background: linear-gradient(rgba(10,15,44,0.78), rgba(10,15,44,0.85)), 
-              url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 170px 20px 130px;
-  position: relative;
-  overflow: hidden;
+body {
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
-.about-hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 35%;
-  background: linear-gradient(transparent, #0a0f2c);
+/* ====================== HERO MODERNO ====================== */
+.about-hero {
+  background: linear-gradient(rgba(8, 12, 35, 0.82), rgba(8, 12, 35, 0.88)), 
+              url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2025&auto=format&fit=crop') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 180px 20px 140px;
+  position: relative;
 }
 
 .about-hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.9rem;
-  line-height: 1.08;
-  margin-bottom: 22px;
-  max-width: 920px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 4.1rem;
+  line-height: 1.05;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -1.5px;
 }
 
 .about-hero p {
-  font-size: 1.32rem;
-  max-width: 720px;
-  margin: 0 auto 45px;
-  opacity: 0.93;
+  font-size: 1.38rem;
+  max-width: 740px;
+  margin: 0 auto 50px;
+  opacity: 0.92;
+  font-weight: 400;
 }
 
-/* ====================== SECCIÓN SERVICIOS ====================== */
+/* ====================== SERVICIOS - TARJETAS MODERNAS ====================== */
 .services-section {
-  padding: 120px 20px;
+  padding: 130px 20px;
   background: #0a0f2c;
 }
 
 .section-title {
   font-family: 'Playfair Display', serif;
   text-align: center;
-  font-size: 2.75rem;
-  margin-bottom: 75px;
+  font-size: 2.85rem;
+  margin-bottom: 80px;
   color: white;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 40px;
-  max-width: 1280px;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 45px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
 .service-card {
-  background: rgba(255,255,255,0.045);
-  padding: 48px 38px;
-  border-radius: 22px;
-  border: 1px solid rgba(0, 245, 255, 0.12);
-  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(12px);
+  padding: 52px 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 245, 255, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
-  position: relative;
 }
 
 .service-card:hover {
-  transform: translateY(-16px);
+  transform: translateY(-20px);
   border-color: #00f5ff;
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 25px 60px rgba(0, 245, 255, 0.15);
 }
 
 .service-card.featured {
   border: 2px solid #00f5ff;
-  background: rgba(0, 245, 255, 0.06);
+  background: rgba(0, 245, 255, 0.08);
+  transform: scale(1.04);
 }
 
-.service-card.featured::before {
-  content: "MÁS POPULAR";
-  position: absolute;
-  top: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #00f5ff;
-  color: #0a0f2c;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 7px 24px;
-  border-radius: 30px;
-  letter-spacing: 1px;
+.service-card.featured:hover {
+  transform: scale(1.06) translateY(-20px);
 }
 
 .service-icon {
-  font-size: 3.5rem;
-  margin-bottom: 24px;
+  font-size: 3.8rem;
+  margin-bottom: 28px;
+  display: block;
 }
 
 .service-card h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.9rem;
-  margin-bottom: 18px;
+  font-size: 2rem;
+  margin-bottom: 20px;
   color: white;
 }
 
 .service-card p {
-  color: #b0b0c0;
-  margin-bottom: 28px;
-  line-height: 1.65;
+  color: #a8b0c0;
+  line-height: 1.7;
+  margin-bottom: 32px;
 }
 
 .service-card ul {
   list-style: none;
-  padding: 0;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 
 .service-card ul li {
-  padding: 9px 0;
+  padding: 10px 0;
   color: #ddd;
   position: relative;
-  padding-left: 30px;
+  padding-left: 32px;
 }
 
 .service-card ul li::before {
-  content: "✔";
+  content: "✓";
   color: #00f5ff;
   position: absolute;
   left: 0;
-  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .price {
-  font-size: 1.65rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   color: #00f5ff;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 /* ====================== MANTENIMIENTO ====================== */
 .maintenance-section {
-  padding: 110px 20px;
+  padding: 120px 20px;
   background: #0f1429;
 }
 
 .maintenance-card {
-  max-width: 780px;
+  max-width: 760px;
   margin: 0 auto;
   background: rgba(255,255,255,0.04);
-  padding: 65px 55px;
-  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  padding: 70px 60px;
+  border-radius: 28px;
   border: 1px solid rgba(0,245,255,0.15);
   text-align: center;
 }
 
 .maintenance-card h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.65rem;
-  margin-bottom: 22px;
+  font-size: 2.7rem;
+  margin-bottom: 24px;
 }
 
 .maintenance-card p {
-  font-size: 1.22rem;
-  color: #b0b0c0;
-  max-width: 540px;
-  margin: 0 auto 35px;
-}
-
-.maintenance-card ul {
-  display: inline-block;
-  text-align: left;
-  margin-bottom: 45px;
-}
-
-.maintenance-card ul li {
-  padding: 11px 0;
-  color: #ddd;
+  font-size: 1.25rem;
+  color: #b0b8cc;
+  margin-bottom: 40px;
 }
 
 /* ====================== BOTÓN ====================== */
 .btn-primary {
-  background: linear-gradient(90deg, #00f5ff, #0099ff);
+  background: linear-gradient(90deg, #00f5ff, #00b8ff);
   color: #0a0f2c;
-  padding: 18px 50px;
+  padding: 19px 52px;
   border-radius: 60px;
-  font-size: 1.16rem;
+  font-size: 1.18rem;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
   transition: all 0.4s ease;
-  box-shadow: 0 10px 30px rgba(0, 245, 255, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 245, 255, 0.3);
 }
 
 .btn-primary:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 18px 40px rgba(0, 245, 255, 0.45);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 45px rgba(0, 245, 255, 0.45);
 }
 
 /* ====================== CTA ====================== */
 .cta {
-  background: linear-gradient(135deg, #0a0f2c, #1a2540);
+  background: linear-gradient(135deg, #0a0f2c, #1a2645);
   text-align: center;
-  padding: 120px 20px;
+  padding: 130px 20px;
 }
 
 .cta h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.75rem;
-  margin-bottom: 20px;
+  font-size: 2.8rem;
+  margin-bottom: 24px;
 }
 
 .cta p {
-  font-size: 1.25rem;
-  max-width: 620px;
-  margin: 0 auto 45px;
-  opacity: 0.9;
+  font-size: 1.3rem;
+  max-width: 640px;
+  margin: 0 auto 50px;
+  color: #b0b8cc;
 }
 
 /* ====================== FOOTER ====================== */
 .footer-pro {
   background: #080b14;
   color: #aaa;
-  padding: 100px 20px 50px;
+  padding: 110px 20px 60px;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto 60px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 45px;
+  max-width: 1250px;
+  margin: 0 auto 70px;
 }
 
 .footer-pro h4 {
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-size: 15px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .footer-pro a {
   display: block;
   color: #888;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   transition: color 0.3s;
 }
 
@@ -260,31 +232,20 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid #1f2538;
-  padding-top: 30px;
+  border-top: 1px solid #222;
+  padding-top: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
-/* ====================== RESPONSIVE ====================== */
-@media (max-width: 868px) {
-  .about-hero h1 {
-    font-size: 2.95rem;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-  .maintenance-card {
-    padding: 45px 30px;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
+/* Responsive */
+@media (max-width: 900px) {
+  .about-hero h1 { font-size: 3.1rem; }
+  .services-grid { grid-template-columns: 1fr; gap: 35px; }
+  .maintenance-card { padding: 50px 35px; }
+  .footer-bottom { flex-direction: column; gap: 18px; text-align: center; }
 }
