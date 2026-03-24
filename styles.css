@@ -128,6 +128,15 @@ h1, h2, h3, h4 {
   color: var(--text);
 }
 
+/* EXCEPCIÓN HERO */
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4,
+.hero p {
+  color: white;
+}
+
 /* ===== BENEFITS ===== */
 .benefits {
   display: grid;
