@@ -51,3 +51,14 @@ form.addEventListener("submit", function(e) {
     document.querySelector(".success-msg").style.display = "block";
   }, 1500);
 });
+const elements = document.querySelectorAll('.fade-up, .fade-left');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
