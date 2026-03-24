@@ -79,7 +79,7 @@ body.dark nav a {
 }
 
 .logo {
-  height: 28px;               /* Ajusta según el tamaño de tu logo */
+  height: 22px;               /* Ajusta según el tamaño de tu logo */
   width: auto;
   flex-shrink: 0;             /* Evita que se encoja */
   transition: transform 0.3s ease;
@@ -92,7 +92,7 @@ body.dark nav a {
 .brand {
   display: flex;
   align-items: center;        /* Esto es lo más importante */
-  gap: 10px;                  /* Espacio entre logo e texto */
+  gap: 5px;                  /* Espacio entre logo e texto */
   text-decoration: none;
   color: inherit;
 }
