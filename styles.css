@@ -124,7 +124,10 @@ p {
   color: var(--text-soft);
 }
 
-h1, h2, h3, h4 {
+section:not(.hero) h1,
+section:not(.hero) h2,
+section:not(.hero) h3,
+section:not(.hero) h4 {
   color: var(--text);
 }
 
