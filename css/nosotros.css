@@ -99,3 +99,15 @@
   gap: 10px;
   margin-left: 20px;
 }
+nav {
+  position: relative;
+  z-index: 10;
+}
+
+.lang-menu {
+  z-index: 999;
+}
+
+.header {
+  overflow: visible;
+}
