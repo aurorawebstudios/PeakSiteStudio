@@ -87,6 +87,17 @@ window.addEventListener('DOMContentLoaded', () => {
 // ==========================
 const toggleBtn = document.getElementById("themeToggle");
 
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    const isDark = document.body.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    toggleBtn.textContent = isDark ? "☀️" : "🌙";
+  });
+}
+
 // Detectar preferencia guardada o del sistema
 const savedTheme = localStorage.getItem("theme");
 
