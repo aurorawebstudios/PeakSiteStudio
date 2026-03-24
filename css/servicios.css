@@ -1,236 +1,277 @@
-/* ====================== HEADER ====================== */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
+/* =============================================
+   SERVICIOS.CSS - Peak Site Studio
+   Estilo coherente con la página de Nosotros
+============================================= */
 
-.brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-  gap: 12px;
-  transition: opacity 0.3s;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
 
-.brand:hover {
-  opacity: 0.9;
-}
-
-.logo {
-  height: 48px;           /* Tamaño ideal para el nuevo logo */
-  width: auto;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.06);
-}
-
-.brand-name {
-  font-weight: 700;
-  font-size: 1.45rem;
-  letter-spacing: -0.6px;
-  background: linear-gradient(90deg, #ffffff, #c3c3ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ====================== MENU Y LANGUAGE SWITCHER ====================== */
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.menu a {
-  color: #ddd;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.menu a:hover {
+/* ====================== HERO (igual que en Nosotros) ====================== */
+.about-hero {
+  background: linear-gradient(rgba(10,15,44,0.8), rgba(10,15,44,0.85)), 
+              url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000') center/cover no-repeat;
   color: white;
-}
-
-/* Language Switcher */
-.lang-switch {
-  position: relative;
-  cursor: pointer;
-}
-
-.lang-current {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.08);
-  transition: all 0.3s;
-}
-
-.lang-current:hover {
-  background: rgba(255,255,255,0.15);
-}
-
-.lang-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: #1a1f2e;
-  border: 1px solid #333;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  display: none;
-  min-width: 160px;
-  z-index: 1000;
-  padding: 8px 0;
-  margin-top: 8px;
-}
-
-.lang-switch:hover .lang-menu,
-.lang-switch:focus-within .lang-menu {
-  display: block;
-}
-
-.lang-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  color: #ccc;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.lang-option:hover {
-  background: rgba(123, 92, 255, 0.2);
-  color: white;
-}
-
-/* ====================== PRICING TABLE ====================== */
-.pricing-table {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.plan {
-  background: #0f111a;
-  color: #ddd;
-  padding: 40px 30px;
-  border-radius: 20px;
   text-align: center;
+  padding: 160px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.about-hero p {
+  font-size: 1.35rem;
+  max-width: 720px;
+  margin: 0 auto 40px;
+  opacity: 0.95;
+}
+
+/* ====================== SECCIÓN SERVICIOS ====================== */
+.services-section {
+  padding: 110px 20px;
+  background: #0a0f2c;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 70px;
+  color: white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.04);
+  padding: 45px 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 245, 255, 0.12);
   transition: all 0.4s ease;
-  border: 1px solid #222;
+  height: 100%;
 }
 
-.plan:hover {
-  transform: translateY(-12px);
-  border-color: #7b5cff;
-  box-shadow: 0 20px 40px rgba(123, 92, 255, 0.15);
+.service-card:hover {
+  transform: translateY(-15px);
+  border-color: #00f5ff;
+  background: rgba(255,255,255,0.07);
 }
 
-.featured {
-  border: 2px solid #7b5cff;
-  transform: scale(1.06);
-  background: #131725;
+.service-card.featured {
+  border: 2px solid #00f5ff;
+  background: rgba(0, 245, 255, 0.05);
   position: relative;
 }
 
-.featured::before {
+.service-card.featured::before {
   content: "MÁS POPULAR";
   position: absolute;
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background: #7b5cff;
-  color: white;
-  font-size: 12px;
+  background: #00f5ff;
+  color: #0a0f2c;
+  font-size: 13px;
   font-weight: 700;
-  padding: 4px 18px;
-  border-radius: 20px;
-  letter-spacing: 0.5px;
+  padding: 6px 22px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+}
+
+.service-icon {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.85rem;
+  margin-bottom: 18px;
+  color: white;
+}
+
+.service-card p {
+  color: #b0b0c0;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.service-card ul li {
+  padding: 8px 0;
+  color: #ddd;
+  position: relative;
+  padding-left: 28px;
+}
+
+.service-card ul li::before {
+  content: "✔";
+  color: #00f5ff;
+  position: absolute;
+  left: 0;
 }
 
 .price {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: white;
-  margin: 20px 0 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #00f5ff;
+  margin-top: 10px;
 }
 
-/* ====================== FOOTER ====================== */
+/* ====================== SECCIÓN MANTENIMIENTO ====================== */
+.maintenance-section {
+  padding: 100px 20px;
+  background: #0f1429;
+}
+
+.maintenance-card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.04);
+  padding: 60px 50px;
+  border-radius: 24px;
+  border: 1px solid rgba(0,245,255,0.15);
+  text-align: center;
+}
+
+.maintenance-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.maintenance-card p {
+  font-size: 1.2rem;
+  color: #b0b0c0;
+  max-width: 520px;
+  margin: 0 auto 30px;
+}
+
+.maintenance-card ul {
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.maintenance-card ul li {
+  padding: 10px 0;
+  color: #ddd;
+}
+
+/* ====================== BOTÓN ====================== */
+.btn-primary {
+  background: linear-gradient(90deg, #00f5ff, #0099ff);
+  color: #0a0f2c;
+  padding: 18px 48px;
+  border: none;
+  border-radius: 60px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 245, 255, 0.45);
+}
+
+/* ====================== CTA ====================== */
+.cta {
+  background: linear-gradient(135deg, #0a0f2c, #1a2540);
+  text-align: center;
+  padding: 110px 20px;
+}
+
+.cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
+}
+
+/* ====================== FOOTER (mismo que en Nosotros) ====================== */
 .footer-pro {
-  background: #0b0d12;
+  background: #080b14;
   color: #aaa;
-  padding: 90px 20px 50px;
-  margin-top: 100px;
+  padding: 100px 20px 50px;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 50px;
-  margin-bottom: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
 }
 
 .footer-pro h4 {
   color: white;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-size: 15px;
-  font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .footer-pro a {
   display: block;
   color: #888;
-  text-decoration: none;
-  margin-bottom: 11px;
-  font-size: 14.5px;
+  margin-bottom: 12px;
   transition: color 0.3s;
 }
 
 .footer-pro a:hover {
-  color: #7b5cff;
+  color: #00f5ff;
 }
 
 .footer-bottom {
-  border-top: 1px solid #222;
-  padding-top: 25px;
+  border-top: 1px solid #1f2538;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13.5px;
-  color: #666;
+  font-size: 14px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 868px) {
+  .about-hero h1 {
+    font-size: 3rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .maintenance-card {
+    padding: 40px 30px;
+  }
   .footer-bottom {
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
     text-align: center;
   }
-  
-.brand {
-  display: flex;
-  align-items: center; /* 🔥 centra verticalmente */
-  gap: 5px; /* espacio entre logo y texto */
-}
-
-.logo {
-  height: 24px; /* 👈 tamaño ideal */
-  width: auto;
-  display: block;
-}
-
-.brand-name {
-  font-size: 16px; /* 👈 tamaño equilibrado */
-  font-weight: 500;
-  line-height: 1; /* 🔥 evita que baje el texto */
 }
