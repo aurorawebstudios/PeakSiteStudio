@@ -6,9 +6,8 @@
   max-width: 1250px;
   margin: 0 auto;
 }
-
 .service-card {
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(12px);
   padding: 48px 35px 40px;
   border-radius: 24px;
@@ -19,68 +18,57 @@
   text-align: center;
   height: 100%;
 }
-
 .service-card:hover {
   transform: translateY(-18px);
   border-color: #00d4ff;
   box-shadow: 0 25px 50px rgba(0, 212, 255, 0.15);
 }
-
 .service-card.featured {
   border: 2px solid #00d4ff;
   background: rgba(0, 212, 255, 0.10);
   transform: scale(1.04);
 }
-
 .service-card.featured:hover {
   transform: scale(1.06) translateY(-18px);
 }
-
 .service-icon {
   font-size: 3.5rem;
   margin-bottom: 22px;
 }
-
 .service-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.92rem;
   margin-bottom: 18px;
   min-height: 58px;
 }
-
 .service-desc {
   color: #b8c4e0;
   margin-bottom: 28px;
   min-height: 85px;
 }
-
 .service-card ul {
   text-align: left;
   margin-bottom: 35px;
   flex-grow: 1;
 }
-
 .service-card ul li {
   padding: 8px 0;
   color: #e0e6f5;
   position: relative;
   padding-left: 28px;
 }
-
 .service-card ul li::before {
   content: "✓";
   color: #00d4ff;
   position: absolute;
   left: 0;
 }
-
 .price {
   font-size: 2.15rem;
   font-weight: 700;
   color: #00d4ff;
   margin: 15px 0 25px;
 }
-
 .btn-card {
   background: linear-gradient(90deg, #00d4ff, #0099ff);
   color: #0a0f2c;
@@ -91,7 +79,6 @@
   margin-top: auto;
   transition: all 0.3s;
 }
-
 .btn-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 212, 255, 0.35);
@@ -101,7 +88,6 @@
 @media (max-width: 992px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 640px) {
   .services-grid { grid-template-columns: 1fr; }
 }
@@ -112,23 +98,19 @@
   max-width: 1280px;
   margin: 0 auto 90px;
 }
-
 .maintenance-section {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
-
 .maintenance-card {
   max-width: 520px;
   width: 100%;
   padding: 48px 40px;
 }
-
 .maintenance-card .service-desc {
   min-height: 90px;
 }
-
 .price-month {
   font-size: 1.1rem;
   font-weight: 400;
@@ -141,19 +123,17 @@
   border-color: #00d4ff;
   box-shadow: 0 25px 50px rgba(0, 212, 255, 0.15);
 }
-
 .service-card.featured:hover {
   transform: scale(1.05) translateY(-18px);
 }
 
-/* ====================== FIX TEXTOS ====================== */
+/* ====================== FIX TEXTOS - PROFESIONAL Y COHERENTE ====================== */
 .about-hero h1,
 .about-hero p,
 .section-title,
 h2, h3 {
   color: #fff !important;
 }
-
 body.dark .about-hero h1,
 body.dark .about-hero p,
 body.dark .section-title,
@@ -161,33 +141,28 @@ body.dark h2,
 body.dark h3 {
   color: var(--text) !important;
 }
-
 body.dark p,
 body.dark span,
 body.dark li {
   color: var(--text-soft);
 }
-
 body.dark h1,
 body.dark h2,
 body.dark h3,
 body.dark h4 {
   color: var(--text);
 }
-
 body.dark a {
   color: var(--text);
 }
 
-/* ====================== LANG SWITCH - GLOW AZUL SOLO EN HOVER (versión forzada para Chrome) ====================== */
+/* ====================== LANG SWITCH (mantengo tu versión actualizada) ====================== */
 .lang-switch {
   position: relative;
   display: inline-block;
   margin-left: 12px;
   z-index: 100;
 }
-
-/* Estado normal - SIN glow */
 .lang-current {
   display: flex !important;
   align-items: center;
@@ -205,23 +180,17 @@ body.dark a {
   transition: all 0.2s ease !important;
   outline: none !important;
 }
-
-/* GLOW AZUL SOLO cuando el mouse está DIRECTAMENTE sobre .lang-current */
 .lang-current:hover {
   background: #1a2338 !important;
   border: 2px solid #00d4ff !important;
-  box-shadow: 
+  box-shadow:
     0 0 0 4px rgba(0, 212, 255, 0.25) !important,
     0 6px 20px rgba(0, 212, 255, 0.45) !important;
 }
-
-/* Cuando el mouse toca CUALQUIER parte del .lang-switch (incluido menú), FORZAMOS quitar el glow */
 .lang-switch:hover .lang-current {
   border: 2px solid transparent !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
-
-/* Menú desplegable */
 .lang-menu {
   position: absolute;
   top: 100%;
@@ -236,19 +205,15 @@ body.dark a {
   padding: 8px 0;
   z-index: 9999;
 }
-
 .lang-switch:hover .lang-menu {
   display: block;
 }
-
-/* Resto sin cambios */
 .flag-wrapper {
   display: inline-flex;
   padding: 2px;
   background: transparent;
   border: none;
 }
-
 .lang-current img,
 .lang-option img {
   width: 26px;
@@ -256,13 +221,11 @@ body.dark a {
   object-fit: cover;
   border-radius: 3px;
 }
-
 .arrow {
   font-size: 19px;
   line-height: 1;
   color: #ffffff;
 }
-
 .lang-option {
   display: flex;
   align-items: center;
@@ -272,11 +235,9 @@ body.dark a {
   text-decoration: none;
   font-size: 15px;
 }
-
 .lang-option:hover {
   background: #2a323f;
 }
-
 body.dark .lang-menu {
   background: #1f252f;
   border-color: #444;
