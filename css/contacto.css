@@ -477,11 +477,20 @@ body.dark .benefit p {
 body.dark .success-msg {
   color: #22c55e;
 }
-/* ===== FIX BENEFICIOS EN LIGHT MODE ===== */
+/* ===== BENEFICIOS - LIGHT MODE ===== */
 .benefit strong {
   color: #111;
 }
 
 .benefit p {
   color: #666;
+}
+
+/* ===== BENEFICIOS - DARK MODE ===== */
+body.dark .benefit strong {
+  color: #f1f1f1;
+}
+
+body.dark .benefit p {
+  color: var(--text-soft);
 }
