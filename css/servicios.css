@@ -130,56 +130,79 @@
 .service-card.featured:hover {
   transform: scale(1.05) translateY(-18px);
 }
-/* ====================== LANG SWITCH FIX ====================== */
+/* ====================== LANG SWITCH - VERSIÓN CORREGIDA (Light + Dark) ====================== */
 
-/* Contenedor de la bandera - fondo siempre visible */
-.flag-wrapper {
-  display: inline-block;
-  padding: 2px;
-  background: #fff;           /* Fondo blanco para modo claro */
-  border-radius: 2px;
-  border: 1px solid #ddd;     /* Borde sutil */
-  line-height: 0;
-}
-
-.lang-current img {
-  width: 24px;
-  height: 16px;
-  object-fit: cover;
-  display: block;
-  border-radius: 2px;
-}
-
-/* Ajuste para modo oscuro */
-body.dark .flag-wrapper {
-  background: #1f252f;        /* Fondo oscuro similar al tema */
-  border-color: #555;
-}
-
-/* Estilos generales del selector (mejorados) */
 .lang-switch {
   position: relative;
   display: inline-block;
   margin-left: 12px;
+  z-index: 100;
 }
 
 .lang-current {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
+  gap: 7px;
+  padding: 6px 14px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.12);
-  color: white;
+  color: #222;                    /* Texto oscuro en modo claro */
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
+  white-space: nowrap;
   transition: all 0.2s;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .lang-current:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Bandera con fondo seguro */
+.flag-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.lang-current img,
+.lang-option img {
+  width: 26px;
+  height: 17px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Flecha */
+.arrow {
+  font-size: 18px;
+  line-height: 1;
+  margin-left: 2px;
+  color: inherit;   /* Hereda el color del texto */
+}
+
+/* ====================== DARK MODE ====================== */
+
+body.dark .lang-current {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;               /* Texto blanco en modo oscuro */
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark .lang-current:hover {
+  background: rgba(255, 255, 255, 0.20);
+}
+
+body.dark .flag-wrapper {
+  background-color: #2c3340;
+  border-color: #555;
 }
 
 /* Menú desplegable */
@@ -188,7 +211,7 @@ body.dark .flag-wrapper {
   top: 100%;
   right: 0;
   margin-top: 6px;
-  background: white;
+  background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -214,23 +237,6 @@ body.dark .flag-wrapper {
 
 .lang-option:hover {
   background: #f1f3f5;
-}
-
-.lang-option img {
-  width: 24px;
-  height: 16px;
-  object-fit: cover;
-  border-radius: 2px;
-}
-
-/* Dark mode para el selector completo */
-body.dark .lang-current {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.15);
-}
-
-body.dark .lang-current:hover {
-  background: rgba(255,255,255,0.20);
 }
 
 body.dark .lang-menu {
