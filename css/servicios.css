@@ -130,3 +130,118 @@
 .service-card.featured:hover {
   transform: scale(1.05) translateY(-18px);
 }
+/* ====================== LANG SWITCH FIX ====================== */
+
+/* Contenedor de la bandera - fondo siempre visible */
+.flag-wrapper {
+  display: inline-block;
+  padding: 2px;
+  background: #fff;           /* Fondo blanco para modo claro */
+  border-radius: 2px;
+  border: 1px solid #ddd;     /* Borde sutil */
+  line-height: 0;
+}
+
+.lang-current img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Ajuste para modo oscuro */
+body.dark .flag-wrapper {
+  background: #1f252f;        /* Fondo oscuro similar al tema */
+  border-color: #555;
+}
+
+/* Estilos generales del selector (mejorados) */
+.lang-switch {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.lang-current {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.lang-current:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Menú desplegable */
+.lang-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 6px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: none;
+  min-width: 180px;
+  padding: 8px 0;
+  z-index: 9999;
+}
+
+.lang-switch:hover .lang-menu {
+  display: block;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  color: #222;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.lang-option:hover {
+  background: #f1f3f5;
+}
+
+.lang-option img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Dark mode para el selector completo */
+body.dark .lang-current {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.15);
+}
+
+body.dark .lang-current:hover {
+  background: rgba(255,255,255,0.20);
+}
+
+body.dark .lang-menu {
+  background: #1f252f;
+  border-color: #444;
+}
+
+body.dark .lang-option {
+  color: #eee;
+}
+
+body.dark .lang-option:hover {
+  background: #2a323f;
+}
