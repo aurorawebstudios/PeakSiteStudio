@@ -203,23 +203,4 @@ body.dark .theme-toggle:hover {
     text-align: center;
   }
 }
-/* FIX TEXTO RESULTS EN DARK */
-body.dark .results-header h2 {
-  color: var(--text);
-}
 
-body.dark .results-header p {
-  color: var(--text-soft);
-}
-.brand-name {
-  font-weight: 300;
-  font-size: 16px;
-  letter-spacing: 0px;
-  line-height: 1;             /* Importante para centrar verticalmente */
-  color: inherit;
-}
-body.dark .brand-name {
-  background: linear-gradient(90deg, #ffffff, #a0b8ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
