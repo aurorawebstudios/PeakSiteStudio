@@ -150,7 +150,7 @@
   transform: scale(1.05) translateY(-18px);
 }
 
-/* ====================== FIX DARK MODE (CLAVE) ====================== */
+/* ====================== FIX DARK MODE (igual que en la página de Inicio) ====================== */
 body.dark p,
 body.dark span,
 body.dark li {
@@ -168,7 +168,7 @@ body.dark a {
   color: var(--text);
 }
 
-/* ====================== LANG SWITCH - CORREGIDO ====================== */
+/* ====================== LANG SWITCH ====================== */
 .lang-switch {
   position: relative;
   display: inline-block;
@@ -183,7 +183,7 @@ body.dark a {
   padding: 6px 14px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.12);
-  color: #222;                    /* Texto oscuro en modo claro */
+  color: #222;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
@@ -222,7 +222,7 @@ body.dark a {
   color: inherit;
 }
 
-/* Dark mode para lang switch */
+/* Dark mode lang switch */
 body.dark .lang-current {
   background: rgba(255,255,255,0.08);
   color: #ffffff;
@@ -238,7 +238,6 @@ body.dark .flag-wrapper {
   border-color: #555;
 }
 
-/* Menú desplegable */
 .lang-menu {
   position: absolute;
   top: 100%;
