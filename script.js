@@ -96,14 +96,22 @@ if (savedTheme === "dark") {
   document.body.classList.add("dark");
 }
 
+/* Ajustar icono al cargar */
+const isDarkInit = document.body.classList.contains("dark");
+if (toggleBtn) {
+  toggleBtn.textContent = isDarkInit ? "☀️" : "🌙";
+}
+
 // Toggle manual
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
 
-  const isDark = document.body.classList.contains("dark");
+    const isDark = document.body.classList.contains("dark");
 
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 
-  // Cambiar icono
-  toggleBtn.textContent = isDark ? "☀️" : "🌙";
-});
+    // Cambiar icono
+    toggleBtn.textContent = isDark ? "☀️" : "🌙";
+  });
+}
