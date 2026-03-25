@@ -187,3 +187,6 @@ body.light .maintenance-card .service-desc {
     grid-template-columns: 1fr; 
   }
 }
+body.light h2.section-title {
+  color: #0f172a !important;
+}
