@@ -145,19 +145,19 @@ body.dark h4 {
 body.dark a {
   color: var(--text);
 }
-/* ===== LANG SWITCH - VERSIÓN CORREGIDA (solo lo necesario) ===== */
+/* ===== LANG SWITCH - VERSIÓN CORREGIDA Y ESTABLE ===== */
 .lang-switch {
   position: relative;
   display: inline-block;
   margin-left: 12px;
-  z-index: 100;
+  z-index: 200;               /* más alto para evitar que quede debajo de otros elementos */
 }
 
 .lang-current {
   display: flex !important;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px !important;
+  padding: 8px 14px !important;   /* un poco más de padding para cerrar huecos */
   border-radius: 8px !important;
   background: rgba(255, 255, 255, 0.12) !important;
   color: white !important;
@@ -186,12 +186,12 @@ body.dark a {
   margin-left: 2px;
 }
 
-/* === APERTURA DEL MENÚ (lo más importante) === */
+/* Menú desplegable - más pegado y con "puente" para evitar que se cierre */
 .lang-menu {
   position: absolute !important;
   top: 100% !important;
   right: 0 !important;
-  margin-top: 4px !important;   /* más pegado para evitar que se cierre */
+  margin-top: 2px !important;     /* muy pegado */
   background: white !important;
   border: 1px solid #ddd !important;
   border-radius: 10px !important;
@@ -206,6 +206,7 @@ body.dark a {
   display: block !important;
 }
 
+/* Opciones */
 .lang-option {
   display: flex !important;
   align-items: center;
