@@ -1,50 +1,40 @@
-/* =============================================
-   SERVICIOS.CSS - Peak Site Studio (Versión Moderna)
-============================================= */
+/* SERVICIOS.CSS - Versión Moderna con Colores Más Claros */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
 
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-}
-
-/* ====================== HERO MODERNO ====================== */
+/* HERO - Nueva foto moderna + colores más claros */
 .about-hero {
-  background: linear-gradient(rgba(8, 12, 35, 0.82), rgba(8, 12, 35, 0.88)), 
-              url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2025&auto=format&fit=crop') center/cover no-repeat;
+  background: linear-gradient(rgba(15, 23, 50, 0.75), rgba(15, 23, 50, 0.82)), 
+              url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 180px 20px 140px;
-  position: relative;
 }
 
 .about-hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 4.1rem;
   line-height: 1.05;
-  font-weight: 700;
-  margin-bottom: 24px;
-  letter-spacing: -1.5px;
+  margin-bottom: 26px;
 }
 
 .about-hero p {
-  font-size: 1.38rem;
-  max-width: 740px;
+  font-size: 1.4rem;
+  max-width: 760px;
   margin: 0 auto 50px;
-  opacity: 0.92;
-  font-weight: 400;
+  opacity: 0.95;
 }
 
-/* ====================== SERVICIOS - TARJETAS MODERNAS ====================== */
+/* Resto del CSS (tarjetas más claras) */
 .services-section {
   padding: 130px 20px;
-  background: #0a0f2c;
+  background: #0f162e;
 }
 
 .section-title {
   font-family: 'Playfair Display', serif;
   text-align: center;
-  font-size: 2.85rem;
+  font-size: 2.9rem;
   margin-bottom: 80px;
   color: white;
 }
@@ -58,194 +48,88 @@ body {
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.035);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   padding: 52px 40px;
   border-radius: 24px;
-  border: 1px solid rgba(0, 245, 255, 0.1);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 100%;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.5s ease;
 }
 
 .service-card:hover {
   transform: translateY(-20px);
-  border-color: #00f5ff;
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 25px 60px rgba(0, 245, 255, 0.15);
+  border-color: #00e0ff;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .service-card.featured {
-  border: 2px solid #00f5ff;
-  background: rgba(0, 245, 255, 0.08);
-  transform: scale(1.04);
+  border: 2px solid #00e0ff;
+  background: rgba(0, 224, 255, 0.1);
 }
 
-.service-card.featured:hover {
-  transform: scale(1.06) translateY(-20px);
-}
-
-.service-icon {
-  font-size: 3.8rem;
-  margin-bottom: 28px;
-  display: block;
-}
+.service-icon { font-size: 3.8rem; margin-bottom: 28px; }
 
 .service-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   margin-bottom: 20px;
-  color: white;
 }
 
 .service-card p {
-  color: #a8b0c0;
+  color: #d0d6e6;
   line-height: 1.7;
   margin-bottom: 32px;
 }
 
-.service-card ul {
-  list-style: none;
-  margin-bottom: 38px;
-}
-
 .service-card ul li {
   padding: 10px 0;
-  color: #ddd;
-  position: relative;
+  color: #e0e6f5;
   padding-left: 32px;
+  position: relative;
 }
 
 .service-card ul li::before {
   content: "✓";
-  color: #00f5ff;
+  color: #00e0ff;
   position: absolute;
   left: 0;
-  font-size: 1.1rem;
 }
 
 .price {
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 700;
-  color: #00f5ff;
-  margin-top: 10px;
+  color: #00e0ff;
 }
 
-/* ====================== MANTENIMIENTO ====================== */
+/* Mantenimiento y CTA */
 .maintenance-section {
   padding: 120px 20px;
-  background: #0f1429;
+  background: #121a38;
 }
 
 .maintenance-card {
-  max-width: 760px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.09);
   backdrop-filter: blur(10px);
   padding: 70px 60px;
   border-radius: 28px;
-  border: 1px solid rgba(0,245,255,0.15);
+  border: 1px solid rgba(255,255,255,0.12);
   text-align: center;
 }
 
-.maintenance-card h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.7rem;
-  margin-bottom: 24px;
-}
-
-.maintenance-card p {
-  font-size: 1.25rem;
-  color: #b0b8cc;
-  margin-bottom: 40px;
-}
-
-/* ====================== BOTÓN ====================== */
 .btn-primary {
-  background: linear-gradient(90deg, #00f5ff, #00b8ff);
+  background: linear-gradient(90deg, #00e0ff, #00aaff);
   color: #0a0f2c;
   padding: 19px 52px;
   border-radius: 60px;
   font-size: 1.18rem;
   font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.4s ease;
-  box-shadow: 0 12px 35px rgba(0, 245, 255, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 20px 45px rgba(0, 245, 255, 0.45);
 }
 
-/* ====================== CTA ====================== */
-.cta {
-  background: linear-gradient(135deg, #0a0f2c, #1a2645);
-  text-align: center;
-  padding: 130px 20px;
-}
-
-.cta h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  margin-bottom: 24px;
-}
-
-.cta p {
-  font-size: 1.3rem;
-  max-width: 640px;
-  margin: 0 auto 50px;
-  color: #b0b8cc;
-}
-
-/* ====================== FOOTER ====================== */
+/* Footer más claro */
 .footer-pro {
-  background: #080b14;
-  color: #aaa;
-  padding: 110px 20px 60px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 45px;
-  max-width: 1250px;
-  margin: 0 auto 70px;
-}
-
-.footer-pro h4 {
-  color: white;
-  margin-bottom: 22px;
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-
-.footer-pro a {
-  display: block;
-  color: #888;
-  margin-bottom: 13px;
-  transition: color 0.3s;
-}
-
-.footer-pro a:hover {
-  color: #00f5ff;
-}
-
-.footer-bottom {
-  border-top: 1px solid #222;
-  padding-top: 35px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-  max-width: 1250px;
-  margin: 0 auto;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .about-hero h1 { font-size: 3.1rem; }
-  .services-grid { grid-template-columns: 1fr; gap: 35px; }
-  .maintenance-card { padding: 50px 35px; }
-  .footer-bottom { flex-direction: column; gap: 18px; text-align: center; }
+  background: #0a0f24;
 }
