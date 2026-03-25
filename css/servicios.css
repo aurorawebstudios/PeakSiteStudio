@@ -1,31 +1,45 @@
-/* SERVICIOS.CSS - Versión Moderna con Colores Más Claros */
+/* =============================================
+   SERVICIOS.CSS - Peak Site Studio (Colores más claros + Cima)
+============================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
 
-/* HERO - Nueva foto moderna + colores más claros */
+/* HERO - Foto de cima moderna */
 .about-hero {
-  background: linear-gradient(rgba(15, 23, 50, 0.75), rgba(15, 23, 50, 0.82)), 
-              url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+  background: linear-gradient(rgba(10, 15, 40, 0.68), rgba(10, 15, 40, 0.78)), 
+              url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
   color: white;
   text-align: center;
-  padding: 180px 20px 140px;
+  padding: 185px 20px 145px;
+  position: relative;
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(transparent, #0a0f2c);
 }
 
 .about-hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 4.1rem;
+  font-size: 4.15rem;
   line-height: 1.05;
   margin-bottom: 26px;
+  letter-spacing: -1px;
 }
 
 .about-hero p {
   font-size: 1.4rem;
   max-width: 760px;
   margin: 0 auto 50px;
-  opacity: 0.95;
+  opacity: 0.94;
 }
 
-/* Resto del CSS (tarjetas más claras) */
+/* Tarjetas con colores más claros */
 .services-section {
   padding: 130px 20px;
   background: #0f162e;
@@ -48,26 +62,29 @@
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(12px);
   padding: 52px 40px;
   border-radius: 24px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
   transition: all 0.5s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-20px);
-  border-color: #00e0ff;
-  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-18px);
+  border-color: #00d4ff;
+  background: rgba(255, 255, 255, 0.13);
 }
 
 .service-card.featured {
-  border: 2px solid #00e0ff;
-  background: rgba(0, 224, 255, 0.1);
+  border: 2px solid #00d4ff;
+  background: rgba(0, 212, 255, 0.12);
 }
 
-.service-icon { font-size: 3.8rem; margin-bottom: 28px; }
+.service-icon {
+  font-size: 3.8rem;
+  margin-bottom: 28px;
+}
 
 .service-card h3 {
   font-family: 'Playfair Display', serif;
@@ -76,7 +93,7 @@
 }
 
 .service-card p {
-  color: #d0d6e6;
+  color: #d0d6e8;
   line-height: 1.7;
   margin-bottom: 32px;
 }
@@ -90,7 +107,7 @@
 
 .service-card ul li::before {
   content: "✓";
-  color: #00e0ff;
+  color: #00d4ff;
   position: absolute;
   left: 0;
 }
@@ -98,10 +115,10 @@
 .price {
   font-size: 2.1rem;
   font-weight: 700;
-  color: #00e0ff;
+  color: #00d4ff;
 }
 
-/* Mantenimiento y CTA */
+/* Mantenimiento */
 .maintenance-section {
   padding: 120px 20px;
   background: #121a38;
@@ -116,8 +133,9 @@
   text-align: center;
 }
 
+/* Botón */
 .btn-primary {
-  background: linear-gradient(90deg, #00e0ff, #00aaff);
+  background: linear-gradient(90deg, #00d4ff, #0099ff);
   color: #0a0f2c;
   padding: 19px 52px;
   border-radius: 60px;
@@ -129,7 +147,13 @@
   transform: translateY(-8px) scale(1.05);
 }
 
-/* Footer más claro */
+/* CTA y Footer */
+.cta {
+  background: linear-gradient(135deg, #0f162e, #1a2645);
+  text-align: center;
+  padding: 130px 20px;
+}
+
 .footer-pro {
   background: #0a0f24;
 }
