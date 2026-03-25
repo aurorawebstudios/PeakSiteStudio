@@ -179,7 +179,7 @@ body.dark a {
   color: var(--text);
 }
 
-/* ====================== LANG SWITCH - BORDE AZUL SOLO EN HOVER ====================== */
+/* ====================== LANG SWITCH - BORDE AZUL SOLO EN HOVER (sin glow permanente) ====================== */
 .lang-switch {
   position: relative;
   display: inline-block;
@@ -187,7 +187,7 @@ body.dark a {
   z-index: 100;
 }
 
-/* Selector principal (sin borde azul por defecto) */
+/* Estado normal - SIN borde azul */
 .lang-current {
   display: flex;
   align-items: center;
@@ -200,20 +200,20 @@ body.dark a {
   font-size: 15px;
   cursor: pointer;
   white-space: nowrap;
-  border: 2px solid transparent;           /* ← Importante: transparente por defecto */
+  border: 2px solid transparent;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: all 0.25s ease;
 }
 
-/* Borde + glow azul SOLO cuando pasas el mouse directamente por encima */
+/* Borde + glow azul SOLO mientras el mouse está encima del selector */
 .lang-current:hover {
   background: #1a2338;
   border: 2px solid #00d4ff;
-  box-shadow: 0 6px 16px rgba(0, 212, 255, 0.35);
-  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.25), 
+              0 6px 16px rgba(0, 212, 255, 0.35);
 }
 
-/* Cuando el menú se abre (hover en todo el contenedor), quitamos el borde azul */
+/* Cuando el mouse está sobre el contenedor completo (menú abierto), quitamos el glow azul */
 .lang-switch:hover .lang-current {
   border: 2px solid transparent;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -239,7 +239,7 @@ body.dark a {
   display: block;
 }
 
-/* Estilos de banderas y opciones (sin cambios) */
+/* Estilos de banderas y opciones */
 .flag-wrapper {
   display: inline-flex;
   padding: 2px;
@@ -275,7 +275,7 @@ body.dark a {
   background: #2a323f;
 }
 
-/* Modo oscuro (por si usas dark mode) */
+/* Modo oscuro */
 body.dark .lang-menu {
   background: #1f252f;
   border-color: #444;
