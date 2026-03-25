@@ -3,20 +3,13 @@
   --primary: #0a0f2c;
   --accent: #7b5cff;
   --accent2: #00d4ff;
-  --bg: #f7f9fc;
-  --text: #1a1a1a;
-  --text-soft: #666;
-  --card-bg: #ffffff;
-  --border: #eee;
-}
-/* ===== DARK MODE ===== */
-body.dark {
-  --bg: #0b0d12;
+  --bg: #0a0f2c;           /* Cambiado a oscuro para coherencia */
   --text: #f1f1f1;
-  --text-soft: #aaa;
-  --card-bg: #161a22;
-  --border: #222;
+  --text-soft: #b0b0c0;
+  --card-bg: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.12);
 }
+
 /* ===== RESET ===== */
 * {
   margin: 0;
@@ -27,7 +20,9 @@ body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.7;
 }
+
 /* ===== LAYOUT ===== */
 .container {
   width: 90%;
@@ -37,18 +32,17 @@ body {
 section {
   padding: 80px 0;
 }
+
 /* ===== HEADER / NAV ===== */
 .header {
-  background: var(--card-bg);
+  background: rgba(10,15,44,0.95);
   padding: 15px 0;
+  backdrop-filter: blur(10px);
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
   width: 100%;
 }
 nav {
@@ -58,12 +52,10 @@ nav {
 }
 nav a {
   text-decoration: none;
-  color: var(--primary);
+  color: #fff;
   font-weight: 500;
 }
-body.dark nav a {
-  color: #eee;
-}
+
 /* LOGO + BRAND */
 .logo {
   height: 22px;
@@ -88,43 +80,49 @@ body.dark nav a {
   line-height: 1;
   color: inherit;
 }
-body.dark .brand-name {
-  background: linear-gradient(90deg, #ffffff, #a0b8ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 25px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color: white;
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  color: #0a0f2c;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
 }
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.35);
+}
+
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(135deg, #0a0f2c, #1a1f4b);
+  background: linear-gradient(135deg, #0a0f2c, #1a2540);
   color: white;
   text-align: center;
-  padding: 120px 20px;
+  padding: 140px 20px 100px;
 }
 h1 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
+  line-height: 1.1;
 }
+
 /* ===== SPLIT ===== */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 60px;
   align-items: center;
 }
 .image {
   width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
+
 /* ===== TEXT ===== */
 p {
   color: var(--text-soft);
@@ -133,31 +131,26 @@ section:not(.hero) h1,
 section:not(.hero) h2,
 section:not(.hero) h3,
 section:not(.hero) h4 {
-  color: var(--text);
+  color: #fff;
 }
-/* EXCEPCIÓN HERO */
-.hero h1,
-.hero h2,
-.hero h3,
-.hero h4,
-.hero p {
-  color: white;
-}
+
 /* ===== BENEFITS ===== */
 .benefits {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 25px;
   text-align: center;
 }
 .card {
-  background: var(--card-bg);
-  padding: 25px;
-  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  padding: 30px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
 }
+
 /* ===== RESULTS ===== */
 .results-section {
-  background: var(--bg);
+  background: #0a0f2c;
 }
 .results-header {
   text-align: center;
@@ -168,13 +161,13 @@ section:not(.hero) h4 {
 .results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  gap: 30px;
 }
 .result-card {
-  background: var(--card-bg);
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 .result-desc,
 .result-metrics span {
@@ -182,28 +175,26 @@ section:not(.hero) h4 {
 }
 .result-metrics {
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  margin: 20px 0;
 }
+
 /* ===== THEME BUTTON ===== */
 .theme-toggle {
   height: 32px;
   width: 32px;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 6px;
   background: none;
   cursor: pointer;
   transition: 0.3s;
+  color: #fff;
 }
 .theme-toggle:hover {
-  background: #f3f4f6;
+  background: rgba(255,255,255,0.1);
 }
-body.dark .theme-toggle {
-  border: 1px solid #333;
-}
-body.dark .theme-toggle:hover {
-  background: #222;
-}
-/* ===== FIX DARK MODE (CLAVE) ===== */
+
+/* ===== FIX DARK MODE ===== */
 body.dark p,
 body.dark span,
 body.dark li {
@@ -218,7 +209,8 @@ body.dark h4 {
 body.dark a {
   color: var(--text);
 }
-/* ===== LANG SWITCH ===== */
+
+/* ===== LANG SWITCH (ya lo tienes correcto) ===== */
 .lang-switch {
   position: relative;
   display: inline-block;
@@ -245,9 +237,7 @@ body.dark a {
 .lang-current:hover {
   background: #1a2338 !important;
   border: 2px solid #00d4ff !important;
-  box-shadow:
-    0 0 0 4px rgba(0, 212, 255, 0.25) !important,
-    0 6px 20px rgba(0, 212, 255, 0.45) !important;
+  box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.25), 0 6px 20px rgba(0, 212, 255, 0.45) !important;
 }
 .lang-switch:hover .lang-current {
   border: 2px solid transparent !important;
@@ -300,20 +290,10 @@ body.dark a {
 .lang-option:hover {
   background: #2a323f;
 }
-body.dark .lang-menu {
-  background: #1f252f;
-  border-color: #444;
-}
-body.dark .lang-option {
-  color: #eee;
-}
-body.dark .lang-option:hover {
-  background: #2a323f;
-}
 
 /* ===== FOOTER ===== */
 .footer-pro {
-  background: #0b0d12;
+  background: #080b14;
   color: #aaa;
   padding: 80px 20px 40px;
   margin-top: 80px;
@@ -338,7 +318,7 @@ body.dark .lang-option:hover {
   transition: 0.3s;
 }
 .footer-pro a:hover {
-  color: white;
+  color: #00d4ff;
 }
 .footer-bottom {
   border-top: 1px solid #222;
@@ -348,7 +328,6 @@ body.dark .lang-option:hover {
   align-items: center;
   font-size: 13px;
 }
-/* RESPONSIVE FOOTER */
 @media (max-width: 768px) {
   .footer-bottom {
     flex-direction: column;
