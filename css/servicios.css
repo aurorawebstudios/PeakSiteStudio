@@ -179,7 +179,7 @@ body.dark a {
   color: var(--text);
 }
 
-/* ====================== LANG SWITCH - GLOW AZUL SOLO EN HOVER (versión Chrome-proof) ====================== */
+/* ====================== LANG SWITCH - GLOW AZUL SOLO EN HOVER (versión forzada para Chrome) ====================== */
 .lang-switch {
   position: relative;
   display: inline-block;
@@ -187,9 +187,9 @@ body.dark a {
   z-index: 100;
 }
 
-/* Estado NORMAL - sin ningún glow */
+/* Estado normal - SIN glow */
 .lang-current {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
@@ -200,25 +200,25 @@ body.dark a {
   font-size: 15px;
   cursor: pointer;
   white-space: nowrap;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s ease;
-  outline: none;               /* elimina outline azul del navegador */
+  border: 2px solid transparent !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
 }
 
-/* GLOW AZUL SOLO cuando el ratón está exactamente sobre .lang-current */
+/* GLOW AZUL SOLO cuando el mouse está DIRECTAMENTE sobre .lang-current */
 .lang-current:hover {
-  background: #1a2338;
-  border: 2px solid #00d4ff;
+  background: #1a2338 !important;
+  border: 2px solid #00d4ff !important;
   box-shadow: 
-    0 0 0 4px rgba(0, 212, 255, 0.25),
-    0 6px 20px rgba(0, 212, 255, 0.45);
+    0 0 0 4px rgba(0, 212, 255, 0.25) !important,
+    0 6px 20px rgba(0, 212, 255, 0.45) !important;
 }
 
-/* Cuando el ratón está sobre todo el .lang-switch (incluido el menú), FORZAMOS quitar el glow */
+/* Cuando el mouse toca CUALQUIER parte del .lang-switch (incluido menú), FORZAMOS quitar el glow */
 .lang-switch:hover .lang-current {
-  border-color: transparent;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;   /* !important para Chrome */
+  border: 2px solid transparent !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Menú desplegable */
@@ -241,7 +241,7 @@ body.dark a {
   display: block;
 }
 
-/* Resto de estilos (sin cambios) */
+/* Resto sin cambios */
 .flag-wrapper {
   display: inline-flex;
   padding: 2px;
@@ -277,7 +277,6 @@ body.dark a {
   background: #2a323f;
 }
 
-/* Modo oscuro */
 body.dark .lang-menu {
   background: #1f252f;
   border-color: #444;
