@@ -72,7 +72,7 @@ body.dark nav a {
 
 /* LOGO + BRAND */
 .logo {
-  height: 22px;
+  height: 28px;
   width: auto;
   flex-shrink: 0;
   transition: transform 0.3s ease;
