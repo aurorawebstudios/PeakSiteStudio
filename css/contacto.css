@@ -410,3 +410,70 @@ body.dark .lang-option {
 body.dark .lang-option:hover {
   background: #2a323f;
 }
+/* ===== FIX DARK MODE CONTACTO ===== */
+body.dark .contact-subtitle {
+  color: var(--text-soft);
+}
+
+/* INPUTS */
+body.dark .input-group input,
+body.dark .input-group textarea {
+  background: #161a22;
+  border: 1px solid #333;
+  color: #f1f1f1;
+}
+
+body.dark .input-group label {
+  color: #aaa;
+}
+
+/* LABEL flotante */
+body.dark .input-group input:focus + label,
+body.dark .input-group textarea:focus + label,
+body.dark .input-group input:valid + label,
+body.dark .input-group textarea:valid + label {
+  background: #161a22;
+  color: var(--accent);
+}
+
+/* BOTÓN ENVIAR */
+body.dark .contact-form .btn {
+  color: white;
+}
+
+/* EMAIL BOX */
+body.dark .contact-email-pro {
+  background: #161a22;
+  border: 1px solid #222;
+}
+
+body.dark .email-box {
+  background: #0f1218;
+  border: 1px solid #222;
+}
+
+body.dark .email-link {
+  color: #f1f1f1;
+}
+
+body.dark .email-label {
+  color: #aaa;
+}
+
+body.dark .email-note {
+  color: var(--text-soft);
+}
+
+/* BENEFICIOS */
+body.dark .benefit {
+  background: #161a22;
+}
+
+body.dark .benefit p {
+  color: var(--text-soft);
+}
+
+/* SUCCESS */
+body.dark .success-msg {
+  color: #22c55e;
+}
