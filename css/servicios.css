@@ -169,57 +169,107 @@ body.dark a {
   color: var(--text);
 }
 
-/* dropdown idioma en oscuro */
+/* ===== LANG SWITCH - VERSIÓN FUERTE (para que funcione en todas las páginas) ===== */
+.lang-switch {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+  z-index: 100;
+}
+
+.lang-current {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  user-select: none;
+}
+
+.lang-current:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.lang-current img {
+  width: 24px !important;
+  height: 16px !important;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.arrow {
+  font-size: 19px !important;
+  line-height: 1;
+  margin-left: 2px;
+}
+
+/* === LO QUE HACE QUE SE ABRA EL MENÚ === */
+.lang-menu {
+  position: absolute !important;
+  top: 100% !important;
+  right: 0 !important;
+  margin-top: 8px !important;
+  background: white !important;
+  border: 1px solid #ddd !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+  display: none !important;
+  min-width: 180px !important;
+  padding: 8px 0 !important;
+  z-index: 9999 !important;
+}
+
+.lang-switch:hover .lang-menu {
+  display: block !important;   /* ← Esto abre el menú */
+}
+
+.lang-option {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px !important;
+  color: #222 !important;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.lang-option:hover {
+  background: #f1f3f5 !important;
+}
+
+.lang-option img {
+  width: 24px !important;
+  height: 16px !important;
+  border-radius: 3px;
+}
+
+/* Dark mode */
+body.dark .lang-current {
+  background: rgba(255,255,255,0.08) !important;
+  border-color: rgba(255,255,255,0.15) !important;
+}
+
+body.dark .lang-current:hover {
+  background: rgba(255,255,255,0.20) !important;
+}
+
 body.dark .lang-menu {
-  background: #161a22;
+  background: #1f252f !important;
+  border-color: #444 !important;
 }
 
 body.dark .lang-option {
-  color: #eee;
+  color: #eee !important;
 }
 
 body.dark .lang-option:hover {
-  background: #222;
-}
-
-/* botón en oscuro */
-body.dark .theme-toggle {
-  border: 1px solid #333;
-}
-
-body.dark .theme-toggle:hover {
-  background: #222;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .split {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-}
-/* Dropdown - Esto es lo que hace que se abra al pasar el ratón */
-.lang-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 8px;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  display: none;           /* ← Empieza oculto */
-  min-width: 180px;
-  padding: 8px 0;
-  z-index: 9999;
-}
-
-/* Esto es lo que hace que se muestre cuando pasas el ratón */
-.lang-switch:hover .lang-menu {
-  display: block;          /* ← Aquí se abre el menú */
+  background: #2a323f !important;
 }
