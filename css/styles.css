@@ -1,10 +1,29 @@
-/* ===== VARIABLES ===== */
+/* ===== LIGHT MODE (DEFAULT) ===== */
 :root {
   --primary: #0a0f2c;
   --accent: #7b5cff;
   --accent2: #00d4ff;
+
   --bg: #f7f9fc;
-  --text: #1a1a1a;
+  --bg-soft: #ffffff;
+
+  --text: #111827;
+  --text-soft: #6b7280;
+
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  --bg: #0b0f1a;
+  --bg-soft: #121826;
+
+  --text: #f1f5f9;
+  --text-soft: #9ca3af;
+
+  --card-bg: #121826;
+  --border: #1f2937;
 }
 
 /* ===== RESET ===== */
@@ -22,7 +41,7 @@ body {
 
 /* ===== NAV ===== */
 .header {
-  background: white;
+  background: var(--card-bg);
   padding: 15px 0;
 }
 
@@ -108,7 +127,7 @@ section {
 }
 
 .card {
-  background: white;
+  background: var(--card-bg);
   padding: 25px;
   border-radius: 12px;
 }
@@ -116,7 +135,7 @@ section {
 /* ===== RESULTS ===== */
 .results-section {
   padding: 100px 20px;
-  background: #f8f9fc;
+  background: var(--bg);
 }
 
 .results-header {
@@ -133,10 +152,10 @@ section {
 }
 
 .result-card {
-  background: white;
+  background: var(--card-bg);
   padding: 30px;
   border-radius: 16px;
-  border: 1px solid #eee;
+  border: 1px solid var(--border);
 }
 
 .result-metrics {
@@ -206,7 +225,7 @@ section {
   padding: 6px 10px;
   border-radius: 6px;
   transition: 0.3s;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
 }
 
 .lang-switch a:hover {
