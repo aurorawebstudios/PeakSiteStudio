@@ -1,108 +1,67 @@
-/* =============================================
-   SERVICIOS.CSS - Peak Site Studio (Colores más claros + Cima)
-============================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
-
-/* HERO - Foto de cima moderna */
-.about-hero {
-  background: linear-gradient(rgba(10, 15, 40, 0.68), rgba(10, 15, 40, 0.78)), 
-              url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 185px 20px 145px;
-  position: relative;
-}
-
-.about-hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: linear-gradient(transparent, #0a0f2c);
-}
-
-.about-hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 4.15rem;
-  line-height: 1.05;
-  margin-bottom: 26px;
-  letter-spacing: -1px;
-}
-
-.about-hero p {
-  font-size: 1.4rem;
-  max-width: 760px;
-  margin: 0 auto 50px;
-  opacity: 0.94;
-}
-
-/* Tarjetas con colores más claros */
-.services-section {
-  padding: 130px 20px;
-  background: #0f162e;
-}
-
-.section-title {
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  font-size: 2.9rem;
-  margin-bottom: 80px;
-  color: white;
-}
-
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 45px;
-  max-width: 1300px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 40px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .service-card {
   background: rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(12px);
-  padding: 52px 40px;
+  padding: 50px 38px 45px;
   border-radius: 24px;
-  border: 1px solid rgba(255,255,255,0.15);
-  transition: all 0.5s ease;
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
 }
 
 .service-card:hover {
-  transform: translateY(-18px);
+  transform: translateY(-15px);
   border-color: #00d4ff;
-  background: rgba(255, 255, 255, 0.13);
 }
 
 .service-card.featured {
   border: 2px solid #00d4ff;
-  background: rgba(0, 212, 255, 0.12);
+  background: rgba(0, 212, 255, 0.08);
+  transform: scale(1.03);
+}
+
+.service-card.featured:hover {
+  transform: scale(1.05) translateY(-15px);
 }
 
 .service-icon {
-  font-size: 3.8rem;
-  margin-bottom: 28px;
+  font-size: 3.6rem;
+  margin-bottom: 24px;
 }
 
 .service-card h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.95rem;
+  margin-bottom: 16px;
 }
 
-.service-card p {
-  color: #d0d6e8;
-  line-height: 1.7;
-  margin-bottom: 32px;
+.service-desc {
+  color: #b8c4e0;
+  margin-bottom: 30px;
+  min-height: 80px;
+}
+
+.service-card ul {
+  text-align: left;
+  margin-bottom: 40px;
+  flex-grow: 1;
 }
 
 .service-card ul li {
-  padding: 10px 0;
+  padding: 9px 0;
   color: #e0e6f5;
-  padding-left: 32px;
   position: relative;
+  padding-left: 28px;
 }
 
 .service-card ul li::before {
@@ -113,47 +72,26 @@
 }
 
 .price {
-  font-size: 2.1rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: #00d4ff;
+  margin: 20px 0 25px;
 }
 
-/* Mantenimiento */
-.maintenance-section {
-  padding: 120px 20px;
-  background: #121a38;
-}
-
-.maintenance-card {
-  background: rgba(255,255,255,0.09);
-  backdrop-filter: blur(10px);
-  padding: 70px 60px;
-  border-radius: 28px;
-  border: 1px solid rgba(255,255,255,0.12);
-  text-align: center;
-}
-
-/* Botón */
-.btn-primary {
+/* Botón dentro de las tarjetas */
+.btn-card {
   background: linear-gradient(90deg, #00d4ff, #0099ff);
   color: #0a0f2c;
-  padding: 19px 52px;
-  border-radius: 60px;
-  font-size: 1.18rem;
+  padding: 14px 32px;
+  border-radius: 50px;
   font-weight: 600;
+  text-decoration: none;
+  margin-top: auto;
+  display: inline-block;
+  transition: all 0.3s;
 }
 
-.btn-primary:hover {
-  transform: translateY(-8px) scale(1.05);
-}
-
-/* CTA y Footer */
-.cta {
-  background: linear-gradient(135deg, #0f162e, #1a2645);
-  text-align: center;
-  padding: 130px 20px;
-}
-
-.footer-pro {
-  background: #0a0f24;
+.btn-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
 }
