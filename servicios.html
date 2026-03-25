@@ -1,168 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Diseño Web Profesional para Negocios | Peak Sites</title>
-<meta name="description" content="Diseño web profesional para empresas que quieren más clientes. Creamos páginas rápidas, optimizadas y enfocadas en resultados. Solicita tu auditoría gratis.">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Peak Sites Estudio",
-  "url": "https://peaksitestudio.com/",
-  "logo": "https://peaksitestudio.com/image.png"
-}
-</script>
-
-<meta property="og:title" content="Diseño Web Profesional | Peak Sites">
-<meta property="og:description" content="Creamos webs que convierten visitas en clientes.">
-<meta property="og:image" content="https://peaksitestudio.com/image.png">
-<meta property="og:url" content="https://peaksitestudio.com/">
-<meta property="og:type" content="website">
-
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
-
-<link rel="stylesheet" href="/styles.css">
-<link rel="stylesheet" href="/inicio.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="alternate" hreflang="es" href="https://peaksitestudio.com/">
-<link rel="alternate" hreflang="en" href="https://peaksitestudio.com/en/">
-<link rel="canonical" href="https://peaksitestudio.com/">
-
+  <meta charset="UTF-8">
+  <title>Nosotros | Peak Site Studio</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/nosotros.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
+<!-- NAV -->
 <header class="header">
-<div class="container nav">
-
-  <a href="/" class="brand">
-    <img src="logo11.png" class="logo" alt="Peak Sites">
-    <span class="brand-name">PeakSites</span>
-  </a>
-
+  <div class="container nav">
+    <a href="index.html">
+      <img src="image.png" class="logo" alt="Peak Site Studio">
+    </a>
     <nav>
-      <a href="/">Inicio</a>
-      <a href="/servicios.html">Servicios</a>
-      <a href="/portafolio.html">Portafolio</a>
-      <a href="/nosotros.html">Nosotros</a>
-      <a href="/contacto.html">Contacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="nosotros.html" class="active">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
 
-    <div class="lang-switch">
-      <div class="lang-current">
-        <img src="/banderas/es.png">
-        <span>ES</span>
-        <span class="arrow">▾</span>
+      <div class="lang-switch">
+        <div class="lang-current">
+          <img src="/banderas/es.png" alt="">
+          <span>ES</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="lang-menu">
+          <a href="/" class="lang-option">Español</a>
+          <a href="/en/" class="lang-option">English</a>
+        </div>
       </div>
       
-      <div class="lang-menu">
-        <a href="/" class="lang-option">
-          <img src="/banderas/es.png"> Español
-        </a>
-        <a href="/en/" class="lang-option">
-          <img src="/banderas/en.png"> English
-        </a>
-  </div>
-      
-</div>
-<button id="themeToggle" class="theme-toggle">🌙</button>
+      <button id="themeToggle" class="theme-toggle">🌙</button>
     </nav>
   </div>
 </header>
 
-<!-- HERO - Con foto de cima moderna -->
+<!-- HERO -->
 <section class="about-hero">
   <div class="container">
-    <h1>Elige el paquete que mejor se adapta a tu negocio</h1>
-    <p>Precios transparentes y paquetes diseñados para generar resultados reales.<br>
-       Desde una web profesional hasta una tienda online completa.</p>
-    <a href="#paquetes" class="btn-primary">Ver paquetes</a>
+    <h1>Llevamos tu negocio <span class="highlight">a la cima</span> del mundo digital</h1>
+    <p>En Peak Site Studio creamos páginas web que te ayudan a alcanzar tu pico más alto.</p>
+    <a href="contacto.html" class="btn-primary">Subir a la cima con nosotros</a>
   </div>
 </section>
-<!-- PAQUETES + MANTENIMIENTO -->
-<section class="services-section" id="paquetes">
-  <div class="container">
-    <h2 class="section-title">Elige tu paquete</h2>
+
+<!-- SECCIÓN HISTORIA + CARTOON -->
+<section class="about-story">
+  <div class="container story-grid">
     
-    <!-- 3 Paquetes principales en fila -->
-    <div class="services-grid">
+    <div class="story-text">
+      <h2>La cima no se alcanza por casualidad</h2>
       
-      <div class="service-card">
-        <div class="service-icon">🏔️</div>
-        <h3>Web Profesional</h3>
-        <p class="service-desc">Presencia online sólida y profesional para tu negocio.</p>
-        <ul>
-          <li>Diseño moderno y responsive</li>
-          <li>Optimización SEO básica</li>
-          <li>Formulario + WhatsApp</li>
-          <li>Velocidad y seguridad</li>
-        </ul>
-        <div class="price">699€</div>
-        <a href="contacto.html" class="btn-card">Seleccionar</a>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">⚡</div>
-        <h3>Optimización & Rediseño</h3>
-        <p class="service-desc">Mejoramos tu web actual para que convierta más y se vea moderna.</p>
-        <ul>
-          <li>Rediseño visual completo</li>
-          <li>Mejora de velocidad</li>
-          <li>Optimización UX/UI</li>
-          <li>Estrategia de conversión</li>
-        </ul>
-        <div class="price">449€</div>
-        <a href="contacto.html" class="btn-card">Seleccionar</a>
-      </div>
-
-      <div class="service-card featured">
-        <div class="service-icon">🛒</div>
-        <h3>Tienda Online</h3>
-        <p class="service-desc">Tienda completa lista para vender desde el primer día.</p>
-        <ul>
-          <li>Diseño enfocado en ventas</li>
-          <li>Pagos seguros integrados</li>
-          <li>Gestión de productos</li>
-          <li>SEO avanzado</li>
-        </ul>
-        <div class="price">1.099€</div>
-        <a href="contacto.html" class="btn-card">Seleccionar</a>
-      </div>
-
+      <p class="lead">
+        Peak Site Studio nació con una misión clara: ayudar a las empresas a dejar de estar perdidas en el valle digital 
+        y llegar a la cumbre de su industria.
+      </p>
+      
+      <p>
+        Combinamos diseño impactante, desarrollo ultrarrápido y estrategia de conversión para que tu web genere 
+        resultados reales: más clientes, más ventas y mayor autoridad.
+      </p>
+      
+      <p class="final">
+        Porque en la cima no hay espacio para webs mediocres.
+      </p>
     </div>
 
-    <!-- Mantenimiento Web Mensual - Separado y con tamaño similar -->
-    <div class="maintenance-section">
-      <div class="service-card maintenance-card">
-        <div class="service-icon">🔧</div>
-        <h3>Mantenimiento Web Mensual</h3>
-        <p class="service-desc">Nos encargamos de que tu web esté siempre rápida, segura y actualizada. Tú solo enfócate en tu negocio.</p>
-        <ul>
-          <li>Actualizaciones y parches de seguridad</li>
-          <li>Copias de seguridad automáticas</li>
-          <li>Soporte técnico prioritario</li>
-          <li>Pequeños cambios y ajustes incluidos</li>
-        </ul>
-        <div class="price">49€ <span class="price-month">/ mes</span></div>
-        <a href="contacto.html" class="btn-card">Contratar mantenimiento</a>
-      </div>
+    <!-- Imagen Cartoon -->
+    <div class="story-image-cartoon">
+      <img src="https://cdn-icons-png.flaticon.com/512/1015/1015769.png" 
+           alt="Hombre llegando a la cima - Peak Site Studio">
     </div>
 
   </div>
 </section>
+
+<!-- VALORES (esta parte que te gustaba) -->
+<section class="about-values">
+  <div class="container">
+    <h2 class="section-title">Lo que nos lleva a la cima</h2>
+    
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>🏔️ Excelencia en cada detalle</h3>
+        <p>No aceptamos lo bueno. Buscamos siempre la mejor versión posible de tu proyecto.</p>
+      </div>
+      <div class="value-card">
+        <h3>⚡ Velocidad y rendimiento</h3>
+        <p>Páginas ultrarrápidas, optimizadas y preparadas para posicionarse en los primeros lugares.</p>
+      </div>
+      <div class="value-card">
+        <h3>🎯 Diseñadas para convertir</h3>
+        <p>Cada elemento tiene un propósito: captar atención, generar confianza y cerrar ventas.</p>
+      </div>
+      <div class="value-card">
+        <h3>🤝 Acompañamiento hasta la cumbre</h3>
+        <p>Te acompañamos en todo el proceso, desde el primer boceto hasta mucho después del lanzamiento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta">
   <div class="container">
-    <h2>¿Listo para dar el siguiente paso?</h2>
-    <p>Cuéntanos sobre tu proyecto y te enviamos una propuesta personalizada.</p>
-    <a href="contacto.html" class="btn-primary">Solicitar presupuesto gratis</a>
+    <h2>¿Estás listo para llegar más alto?</h2>
+    <p>Deja que Peak Site Studio eleve tu negocio a su máximo potencial.</p>
+    <a href="contacto.html" class="btn-primary">Solicitar presupuesto sin compromiso</a>
   </div>
 </section>
 
@@ -171,22 +122,28 @@
   <div class="container footer-grid">
     <div>
       <h4>Soluciones</h4>
-      <a href="servicios.html">Web Profesional</a>
-      <a href="#">Tienda Online</a>
-      <a href="#">Optimización</a>
-      <a href="#">Mantenimiento</a>
+      <a href="#">Páginas Web Premium</a>
+      <a href="#">Tiendas Online</a>
+      <a href="#">SEO & Posicionamiento</a>
+      <a href="#">Mantenimiento Web</a>
+    </div>
+    <div>
+      <h4>Recursos</h4>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="#">Casos de éxito</a>
+      <a href="#">Blog</a>
     </div>
     <div>
       <h4>Empresa</h4>
+      <a href="servicios.html">Servicios</a>
       <a href="nosotros.html">Nosotros</a>
-      <a href="portafolio.html">Portafolio</a>
       <a href="contacto.html">Contacto</a>
     </div>
     <div>
       <h4>Legal</h4>
       <a href="#">Aviso legal</a>
-      <a href="#">Privacidad</a>
-      <a href="#">Cookies</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Política de cookies</a>
     </div>
     <div>
       <h4>Conectar</h4>
@@ -194,6 +151,7 @@
       <a href="mailto:info@peaksitestudio.com">info@peaksitestudio.com</a>
     </div>
   </div>
+  
   <div class="footer-bottom container">
     <p>© 2026 Peak Site Studio. Todos los derechos reservados.</p>
     <p>Hecho con pasión en la cima</p>
