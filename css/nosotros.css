@@ -1,5 +1,4 @@
 /* NOSOTROS.CSS - Peak Site Studio */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
 
 body {
@@ -15,7 +14,7 @@ h1, h2, h3, .section-title {
 
 /* HERO */
 .about-hero {
-  background: linear-gradient(rgba(10,15,44,0.8), rgba(10,15,44,0.85)), 
+  background: linear-gradient(rgba(10,15,44,0.8), rgba(10,15,44,0.85)),
               url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000') center/cover no-repeat;
   color: white;
   text-align: center;
@@ -203,24 +202,35 @@ h1, h2, h3, .section-title {
 
 /* RESPONSIVE */
 @media (max-width: 868px) {
-  .story-grid { grid-template-columns: 1fr; gap: 60px; }
-  .about-hero h1 { font-size: 3rem; }
-  .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+  .story-grid { 
+    grid-template-columns: 1fr; 
+    gap: 60px; 
+  }
+  .about-hero h1 { 
+    font-size: 3rem; 
+  }
+  .footer-bottom { 
+    flex-direction: column; 
+    gap: 15px; 
+    text-align: center; 
+  }
 }
+
+/* Brand y Logo */
 .brand {
   display: flex;
-  align-items: center; /* 🔥 centra verticalmente */
-  gap: 5px; /* espacio entre logo y texto */
+  align-items: center;
+  gap: 5px;
 }
 
 .logo {
-  height: 24px; /* 👈 tamaño ideal */
+  height: 24px;
   width: auto;
   display: block;
 }
 
 .brand-name {
-  font-size: 16px; /* 👈 tamaño equilibrado */
+  font-size: 16px;
   font-weight: 500;
-  line-height: 1; /* 🔥 evita que baje el texto */
+  line-height: 1;
 }
