@@ -208,3 +208,12 @@ body.light .maintenance-card .service-desc {
 body.light h2.section-title {
   color: #0f172a !important;
 }
+/* Texto del CTA */
+.cta p {
+  color: #cbd5e1; /* gris claro (modo oscuro) */
+}
+
+/* Modo claro */
+body.light .cta p {
+  color: #e2e8f0; /* más claro para que contraste */
+}
