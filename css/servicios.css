@@ -145,7 +145,7 @@ body.dark h4 {
 body.dark a {
   color: var(--text);
 }
-/* ===== LANG SWITCH - VERSIÓN FUERTE ===== */
+/* ===== LANG SWITCH - VERSIÓN CORREGIDA (solo lo necesario) ===== */
 .lang-switch {
   position: relative;
   display: inline-block;
@@ -186,12 +186,12 @@ body.dark a {
   margin-left: 2px;
 }
 
-/* Apertura del menú */
+/* === APERTURA DEL MENÚ (lo más importante) === */
 .lang-menu {
   position: absolute !important;
   top: 100% !important;
   right: 0 !important;
-  margin-top: 8px !important;
+  margin-top: 4px !important;   /* más pegado para evitar que se cierre */
   background: white !important;
   border: 1px solid #ddd !important;
   border-radius: 10px !important;
@@ -225,22 +225,21 @@ body.dark a {
   height: 16px !important;
   border-radius: 3px;
 }
-.lang-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 4px;        /* ← reducido para que esté más pegado */
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  display: none;
-  min-width: 180px;
-  padding: 8px 0;
-  z-index: 9999;
+
+/* Dark mode */
+body.dark .lang-current {
+  background: rgba(255,255,255,0.08) !important;
 }
 
-/* Esto es lo más importante para evitar que se cierre al mover el ratón */
-.lang-switch:hover .lang-menu {
-  display: block;
+body.dark .lang-current:hover {
+  background: rgba(255,255,255,0.20) !important;
+}
+
+body.dark .lang-menu {
+  background: #1f252f !important;
+  border-color: #444 !important;
+}
+
+body.dark .lang-option {
+  color: #eee !important;
 }
