@@ -137,7 +137,7 @@ body.light .service-card.featured .price {
   text-align: center;
   margin-bottom: 50px;
   font-size: 2.4rem;
-  color: #ffffff; /* blanco principal */
+  color: #1e2937; /* blanco principal */
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* sombra gris */
 }
 
