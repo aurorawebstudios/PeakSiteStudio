@@ -134,23 +134,33 @@ body.light .service-card.featured .price {
 
 /* ====================== TÍTULO "Elige tu paquete" ====================== */
 .section-title {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 2.2rem;
+  margin: 0 auto 60px;
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 2.4rem;
-  color: #1e2937; /* blanco principal */
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* sombra gris */
+}
+
+/* Contenedor centrado */
+.services-section .container {
+  text-align: center;
 }
 
 /* Modo oscuro */
 body:not(.light) .section-title {
-  color: #f8fafc; /* blanco suave, mejor que blanco puro */
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4); /* mejora legibilidad */
+  background: #1e2937; /* mismo azul oscuro de las cards */
+  color: #f8fafc;
+  border: 1px solid #334155;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 /* Modo claro */
 body.light .section-title {
-  color: #0f172a;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.15); /* leve contraste */
+  background: #1e2937; /* MISMO color que las cards (consistencia) */
+  color: #f8fafc;
+  border: 1px solid #475569;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 /* ====================== MANTENIMIENTO ====================== */
