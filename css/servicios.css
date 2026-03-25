@@ -203,7 +203,7 @@ body.dark .theme-toggle:hover {
     text-align: center;
   }
 }
-/* Dropdown */
+/* Dropdown - Esto es lo que hace que se abra al pasar el ratón */
 .lang-menu {
   position: absolute;
   top: 100%;
@@ -213,8 +213,13 @@ body.dark .theme-toggle:hover {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  display: none;
+  display: none;           /* ← Empieza oculto */
   min-width: 180px;
   padding: 8px 0;
   z-index: 9999;
+}
+
+/* Esto es lo que hace que se muestre cuando pasas el ratón */
+.lang-switch:hover .lang-menu {
+  display: block;          /* ← Aquí se abre el menú */
 }
