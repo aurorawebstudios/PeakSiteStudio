@@ -179,7 +179,7 @@ body.dark a {
   color: var(--text);
 }
 
-/* ====================== LANG SWITCH - BORDE AZUL SOLO EN HOVER (sin glow permanente) ====================== */
+/* ====================== LANG SWITCH - BORDE/GLOW AZUL SOLO EN HOVER (sin quedarse pegado) ====================== */
 .lang-switch {
   position: relative;
   display: inline-block;
@@ -187,7 +187,7 @@ body.dark a {
   z-index: 100;
 }
 
-/* Estado normal - SIN borde azul */
+/* Estado normal - COMPLETAMENTE SIN glow ni borde azul */
 .lang-current {
   display: flex;
   align-items: center;
@@ -202,18 +202,20 @@ body.dark a {
   white-space: nowrap;
   border: 2px solid transparent;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
+  outline: none;                    /* Evita outline de foco del navegador */
 }
 
-/* Borde + glow azul SOLO mientras el mouse está encima del selector */
+/* Glow + borde azul SOLO mientras el mouse está exactamente encima del .lang-current */
 .lang-current:hover {
   background: #1a2338;
   border: 2px solid #00d4ff;
-  box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.25), 
-              0 6px 16px rgba(0, 212, 255, 0.35);
+  box-shadow: 
+    0 0 0 4px rgba(0, 212, 255, 0.25),   /* glow exterior suave */
+    0 6px 20px rgba(0, 212, 255, 0.4);   /* glow más fuerte */
 }
 
-/* Cuando el mouse está sobre el contenedor completo (menú abierto), quitamos el glow azul */
+/* Cuando el mouse está sobre todo el .lang-switch (incluyendo el menú desplegado) → quitamos el glow */
 .lang-switch:hover .lang-current {
   border: 2px solid transparent;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -239,7 +241,7 @@ body.dark a {
   display: block;
 }
 
-/* Estilos de banderas y opciones */
+/* Estilos de banderas y opciones (sin cambios) */
 .flag-wrapper {
   display: inline-flex;
   padding: 2px;
@@ -275,7 +277,7 @@ body.dark a {
   background: #2a323f;
 }
 
-/* Modo oscuro */
+/* Modo oscuro (por si acaso) */
 body.dark .lang-menu {
   background: #1f252f;
   border-color: #444;
