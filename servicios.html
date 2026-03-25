@@ -5,12 +5,12 @@
   <title>Servicios | Peak Site Studio</title>
   <meta name="description" content="Elige el paquete de diseño web que mejor se adapta a tu presupuesto. Páginas profesionales, tiendas online y mantenimiento.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+  
   <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="css/servicios.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/nosotros.css">
- 
+  <link rel="stylesheet" href="css/servicios.css">
+  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,17 +18,29 @@
 <!-- NAV -->
 <header class="header">
   <div class="container nav">
-    <a href="/" class="brand">
-      <img src="logo11.png" class="logo" alt="Peak Sites">
-      <span class="brand-name">PeakSites</span>
+    <a href="index.html">
+      <img src="image.png" class="logo" alt="Peak Site Studio">
     </a>
-    
     <nav>
-      <a href="/">Inicio</a>
-      <a href="/servicios.html">Servicios</a>
-      <a href="/portafolio.html">Portafolio</a>
-      <a href="/nosotros.html">Nosotros</a>
-      <a href="/contacto.html">Contacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html" class="active">Servicios</a>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+
+      <div class="lang-switch">
+        <div class="lang-current">
+          <img src="/banderas/es.png" alt="">
+          <span>ES</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="lang-menu">
+          <a href="/" class="lang-option">Español</a>
+          <a href="/en/" class="lang-option">English</a>
+        </div>
+      </div>
+      
+      <button id="themeToggle" class="theme-toggle">🌙</button>
     </nav>
   </div>
 </header>
@@ -47,9 +59,10 @@
 <section class="services-section" id="paquetes">
   <div class="container">
     <h2 class="section-title">Elige tu paquete</h2>
-   
+    
     <!-- 3 Paquetes en fila -->
     <div class="services-grid">
+      
       <div class="service-card">
         <div class="service-icon">🏔️</div>
         <h3>Web Profesional</h3>
@@ -91,6 +104,7 @@
         <div class="price">1.099€</div>
         <a href="contacto.html" class="btn-card">Seleccionar</a>
       </div>
+
     </div>
 
     <!-- Mantenimiento Web Mensual -->
@@ -109,6 +123,7 @@
         <a href="contacto.html" class="btn-card">Contratar mantenimiento</a>
       </div>
     </div>
+
   </div>
 </section>
 
