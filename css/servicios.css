@@ -145,102 +145,106 @@ body.dark h4 {
 body.dark a {
   color: var(--text);
 }
-/* ===== LANG SWITCH - VERSIÓN CORREGIDA Y ESTABLE ===== */
+/* ===== LANG SWITCH - VERSIÓN CORREGIDA Y FUNCIONAL ===== */
 .lang-switch {
   position: relative;
   display: inline-block;
   margin-left: 12px;
-  z-index: 200;               /* más alto para evitar que quede debajo de otros elementos */
+  z-index: 100;
 }
 
 .lang-current {
-  display: flex !important;
+  display: flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 14px !important;   /* un poco más de padding para cerrar huecos */
-  border-radius: 8px !important;
-  background: rgba(255, 255, 255, 0.12) !important;
-  color: white !important;
-  font-weight: 600 !important;
-  font-size: 15px !important;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
   cursor: pointer;
   white-space: nowrap;
   transition: background 0.2s;
-  border: 1px solid rgba(255,255,255,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .lang-current:hover {
-  background: rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .lang-current img {
-  width: 24px !important;
-  height: 16px !important;
+  width: 24px;
+  height: 16px;
   border-radius: 3px;
   object-fit: cover;
 }
 
 .arrow {
-  font-size: 19px !important;
+  font-size: 19px;
   line-height: 1;
   margin-left: 2px;
 }
 
-/* Menú desplegable - más pegado y con "puente" para evitar que se cierre */
+/* Menú desplegable */
 .lang-menu {
-  position: absolute !important;
-  top: 100% !important;
-  right: 0 !important;
-  margin-top: 2px !important;     /* muy pegado */
-  background: white !important;
-  border: 1px solid #ddd !important;
-  border-radius: 10px !important;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
-  display: none !important;
-  min-width: 180px !important;
-  padding: 8px 0 !important;
-  z-index: 9999 !important;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: none;
+  min-width: 180px;
+  padding: 8px 0;
+  z-index: 9999;
 }
 
 .lang-switch:hover .lang-menu {
-  display: block !important;
+  display: block;
 }
 
-/* Opciones */
 .lang-option {
-  display: flex !important;
+  display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 18px !important;
-  color: #222 !important;
+  padding: 10px 18px;
+  color: #222;
   text-decoration: none;
   font-size: 15px;
 }
 
 .lang-option:hover {
-  background: #f1f3f5 !important;
+  background: #f1f3f5;
 }
 
 .lang-option img {
-  width: 24px !important;
-  height: 16px !important;
+  width: 24px;
+  height: 16px;
   border-radius: 3px;
 }
 
-/* Dark mode */
+/* Dark mode para el selector */
 body.dark .lang-current {
-  background: rgba(255,255,255,0.08) !important;
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.15);
 }
 
 body.dark .lang-current:hover {
-  background: rgba(255,255,255,0.20) !important;
+  background: rgba(255,255,255,0.20);
 }
 
 body.dark .lang-menu {
-  background: #1f252f !important;
-  border-color: #444 !important;
+  background: #1f252f;
+  border-color: #444;
 }
 
 body.dark .lang-option {
-  color: #eee !important;
+  color: #eee;
+}
+
+body.dark .lang-option:hover {
+  background: #2a323f;
 }
