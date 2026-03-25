@@ -179,7 +179,7 @@ body.dark a {
   color: var(--text);
 }
 
-/* ====================== LANG SWITCH - FONDO NEGRO/AZUL OSCURO EN MODO CLARO ====================== */
+/* ====================== LANG SWITCH - BORDE AZUL SOLO EN HOVER ====================== */
 .lang-switch {
   position: relative;
   display: inline-block;
@@ -191,27 +191,29 @@ body.dark a {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px !important;
-  border-radius: 10px !important;
-  background: #0f1629 !important;     /* Negro-azulado oscuro */
-  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: #0f1629;           /* Fondo oscuro siempre (modo claro y oscuro) */
+  color: #ffffff;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
   white-space: nowrap;
-  border: 2px solid #00d4ff !important;   /* Borde azul fuerte */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  border: 2px solid transparent;   /* Sin borde por defecto */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
 }
 
 .lang-current:hover {
-  background: #1a2338 !important;
-  border-color: #00ffcc !important;
+  background: #1a2338;
+  border: 2px solid #00d4ff;       /* ← Borde azul SOLO al pasar el mouse */
+  box-shadow: 0 6px 16px rgba(0, 212, 255, 0.25);
 }
 
 .flag-wrapper {
   display: inline-flex;
   padding: 2px;
-  background: transparent;       /* Sin fondo blanco dentro de la bandera */
+  background: transparent;
   border: none;
 }
 
@@ -229,7 +231,7 @@ body.dark a {
   color: #ffffff;
 }
 
-/* Menú desplegable (también oscuro) */
+/* Menú desplegable */
 .lang-menu {
   position: absolute;
   top: 100%;
