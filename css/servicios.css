@@ -109,3 +109,23 @@
     grid-template-columns: 1fr;              /* 1 columna en móviles */
   }
 }
+/* MANTENIMIENTO - mismo estilo que los paquetes */
+.maintenance-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.maintenance-wrapper .service-card {
+  max-width: 520px;
+  width: 100%;
+}
+
+.maintenance-wrapper .service-card h3 {
+  margin-bottom: 20px;
+}
+
+.maintenance-wrapper .service-desc {
+  min-height: auto;
+  margin-bottom: 30px;
+}
