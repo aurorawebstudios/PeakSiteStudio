@@ -203,4 +203,18 @@ body.dark .theme-toggle:hover {
     text-align: center;
   }
 }
-
+/* Dropdown */
+.lang-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: none;
+  min-width: 180px;
+  padding: 8px 0;
+  z-index: 9999;
+}
