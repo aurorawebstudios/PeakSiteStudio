@@ -2,39 +2,32 @@
   padding: 100px 20px 60px;
   text-align: center;
 }
-
 .portfolio-hero h1 {
   font-size: 48px;
 }
-
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
 }
-
 .project-card {
   border-radius: 20px;
   overflow: hidden;
   background: #fff;
   transition: 0.4s;
 }
-
 .project-image {
   height: 260px;
   overflow: hidden;
 }
-
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .project-content {
   padding: 20px;
 }
-
 .tag {
   background: linear-gradient(90deg, #6c63ff, #00c6ff);
   color: white;
@@ -42,27 +35,23 @@
   border-radius: 20px;
 }
 /* ===== FOOTER PREMIUM ===== */
-
 .footer-pro {
   background: #0b0d12;
   color: #aaa;
   padding: 80px 20px 40px;
   margin-top: 80px;
 }
-
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
   gap: 40px;
   margin-bottom: 50px;
 }
-
 .footer-pro h4 {
   color: white;
   margin-bottom: 15px;
   font-size: 14px;
 }
-
 .footer-pro a {
   display: block;
   text-decoration: none;
@@ -71,11 +60,9 @@
   margin-bottom: 10px;
   transition: 0.3s;
 }
-
 .footer-pro a:hover {
   color: white;
 }
-
 .footer-bottom {
   border-top: 1px solid #222;
   padding-top: 20px;
@@ -84,7 +71,6 @@
   align-items: center;
   font-size: 13px;
 }
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .footer-bottom {
@@ -103,116 +89,15 @@ nav {
   position: relative;
   z-index: 10;
 }
-
 .lang-menu {
   z-index: 999;
 }
-
 .header {
   overflow: visible;
 }
-/* ==================== LANGUAGE SWITCHER ==================== */
-.lang-switch {
-  position: relative;
-  margin-left: 12px;
-}
 
-.lang-current {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-weight: 500;
-  font-size: 15px;
-  cursor: pointer;
-  transition: all 0.2s;
-  white-space: nowrap;
-  user-select: none;
-}
-
-.lang-current:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.lang-current img {
-  width: 22px;
-  height: 16px;
-  border-radius: 3px;
-  object-fit: cover;
-}
-
-.arrow {
-  font-size: 18px;
-  line-height: 1;
-  margin-left: 3px;
-  transition: transform 0.2s;
-}
-
-/* Dropdown */
-.lang-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 8px;
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  display: none;
-  min-width: 170px;
-  overflow: hidden;
-  z-index: 1000;
-  padding: 6px 0;
-}
-
-.lang-switch:hover .lang-menu {
-  display: block;
-}
-
-.lang-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  color: #333;
-  text-decoration: none;
-  font-size: 15px;
-  transition: background 0.2s;
-  white-space: nowrap;
-}
-
-.lang-option:hover {
-  background: #f8f9fa;
-}
-
-.lang-option img {
-  width: 22px;
-  height: 16px;
-  border-radius: 3px;
-  object-fit: cover;
-}
-.brand {
-  display: flex;
-  align-items: center; /* 🔥 centra verticalmente */
-  gap: 5px; /* espacio entre logo y texto */
-}
-
-.logo {
-  height: 24px; /* 👈 tamaño ideal */
-  width: auto;
-  display: block;
-}
-
-.brand-name {
-  font-size: 16px; /* 👈 tamaño equilibrado */
-  font-weight: 500;
-  line-height: 1; /* 🔥 evita que baje el texto */
-}
 /* ============================================= */
-/*  LANGUAGE SWITCHER - FORZADO (igual que Inicio) */
+/*  LANGUAGE SWITCHER - VERSIÓN LIMPIA Y FUNCIONAL (solo lo necesario) */
 /* ============================================= */
 
 .lang-switch {
@@ -226,7 +111,7 @@ nav {
   display: flex !important;
   align-items: center;
   gap: 6px;
-  padding: 7px 12px !important;
+  padding: 6px 12px !important;
   border-radius: 8px !important;
   background: rgba(255, 255, 255, 0.12) !important;
   color: white !important;
@@ -235,7 +120,8 @@ nav {
   cursor: pointer;
   white-space: nowrap;
   transition: background 0.2s;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  user-select: none;
 }
 
 .lang-current:hover {
@@ -316,4 +202,21 @@ body.dark .lang-option {
 
 body.dark .lang-option:hover {
   background: #2a323f !important;
+}
+
+/* Reglas del brand/logo (las que ya tenías) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logo {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+.brand-name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
 }
