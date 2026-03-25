@@ -109,7 +109,15 @@
     grid-template-columns: 1fr;              /* 1 columna en móviles */
   }
 }
-/* MANTENIMIENTO - mismo estilo que los paquetes */
+/* Paquetes principales */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto 90px;        /* Más separación hacia abajo */
+}
+
 /* Mantenimiento - más separado y tamaño similar */
 .maintenance-section {
   display: flex;
