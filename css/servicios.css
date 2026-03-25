@@ -99,7 +99,7 @@ body:not(.light) .price-month {
   color: #94a3b8;
 }
 
-/* ====================== MODO CLARO (exacto como tu imagen) ====================== */
+/* ====================== MODO CLARO ====================== */
 body.light .service-card {
   background: #1e2937;
   border: 1px solid #475569;
@@ -132,16 +132,17 @@ body.light .service-card.featured .price {
   color: #0284c8;
 }
 
-/* ====================== TÍTULO "Elige tu paquete" - CORREGIDO ====================== */
+/* ====================== TÍTULO "Elige tu paquete" - CORREGIDO CON FUERZA ====================== */
 .section-title {
-  color: #fff;
+  color: #ffffff !important;
   text-align: center;
   margin-bottom: 50px;
   font-size: 2.4rem;
+  background: transparent;
 }
 
 body.light .section-title {
-  color: #0f172a;   /* Negro/azul oscuro para que se vea en fondo claro */
+  color: #0f172a !important;   /* Color oscuro fuerte para modo claro */
 }
 
 /* ====================== MANTENIMIENTO ====================== */
