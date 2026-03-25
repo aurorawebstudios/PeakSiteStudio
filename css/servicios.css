@@ -179,7 +179,7 @@ body.dark a {
   color: var(--text);
 }
 
-/* ====================== LANG SWITCH - ESTILO OSCURO SIEMPRE ====================== */
+/* ====================== LANG SWITCH - BORDE VISIBLE EN MODO CLARO ====================== */
 .lang-switch {
   position: relative;
   display: inline-block;
@@ -193,29 +193,27 @@ body.dark a {
   gap: 8px;
   padding: 8px 16px;
   border-radius: 10px;
-  background: #1f252f;           /* Fondo oscuro siempre */
-  color: #ffffff;                /* Texto blanco siempre */
+  background: rgba(255, 255, 255, 0.95);   /* Fondo casi blanco en claro */
+  color: #222;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
   white-space: nowrap;
-  border: 2px solid #00d4ff;     /* Borde azul que querías */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s ease;
+  border: 2px solid #222;                  /* ← Borde oscuro fuerte en modo claro */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  transition: all 0.2s;
 }
 
 .lang-current:hover {
-  background: #2a323f;
-  border-color: #00ffcc;
-  transform: translateY(-1px);
+  background: #ffffff;
+  border-color: #00d4ff;                   /* Borde azul al pasar el mouse */
 }
 
 .flag-wrapper {
   display: inline-flex;
   padding: 2px;
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  background: transparent;                 /* ← Fondo transparente en la bandera */
+  border: none;
   overflow: hidden;
 }
 
@@ -224,25 +222,42 @@ body.dark a {
   width: 26px;
   height: 17px;
   object-fit: cover;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .arrow {
   font-size: 19px;
   line-height: 1;
+  color: inherit;
+}
+
+/* ====================== MODO OSCURO ====================== */
+body.dark .lang-current {
+  background: rgba(30, 34, 44, 0.95);
+  color: #ffffff;
+  border: 2px solid #00d4ff;               /* Borde azul en oscuro */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+body.dark .lang-current:hover {
+  background: rgba(40, 45, 58, 0.95);
+  border-color: #00ffcc;
+}
+
+body.dark .arrow {
   color: #ffffff;
 }
 
-/* Menú desplegable también oscuro */
+/* Menú desplegable */
 .lang-menu {
   position: absolute;
   top: 100%;
   right: 0;
   margin-top: 8px;
-  background: #1f252f;
-  border: 1px solid #444;
+  background: #ffffff;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   display: none;
   min-width: 180px;
   padding: 8px 0;
@@ -258,13 +273,13 @@ body.dark a {
   align-items: center;
   gap: 10px;
   padding: 10px 18px;
-  color: #eee;
+  color: #222;
   text-decoration: none;
   font-size: 15px;
 }
 
 .lang-option:hover {
-  background: #2a323f;
+  background: #f1f3f5;
 }
 
 body.dark .lang-menu {
