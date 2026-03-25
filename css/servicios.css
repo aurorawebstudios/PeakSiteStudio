@@ -132,11 +132,7 @@ body.light .service-card.featured .price {
   color: #0284c8;
 }
 
-body.light .service-card.featured .service-icon {
-  filter: brightness(0.95);
-}
-
-/* Título "Elige tu paquete" */
+/* ====================== TÍTULO "Elige tu paquete" - CORREGIDO ====================== */
 .section-title {
   color: #fff;
   text-align: center;
@@ -145,7 +141,7 @@ body.light .service-card.featured .service-icon {
 }
 
 body.light .section-title {
-  color: #0f172a;
+  color: #0f172a;   /* Negro/azul oscuro para que se vea en fondo claro */
 }
 
 /* ====================== MANTENIMIENTO ====================== */
