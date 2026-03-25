@@ -1,22 +1,20 @@
 /* NOSOTROS.CSS - Peak Site Studio */
-/* Usando exactamente el mismo sistema de colores que servicios.css */
+/* Colores profesionales coherentes con index y servicios */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.7;
-  background: #0a0f2c;
 }
 
-/* ====================== FIX TEXTOS - IGUAL QUE EN SERVICIOS.CSS ====================== */
+/* ====================== FIX TEXTOS - PROFESIONAL Y COHERENTE ====================== */
 .about-hero h1,
 .about-hero p,
 .section-title,
 h2, h3, h4 {
   color: #fff !important;
 }
-
 body.dark .about-hero h1,
 body.dark .about-hero p,
 body.dark .section-title,
@@ -25,20 +23,17 @@ body.dark h3,
 body.dark h4 {
   color: var(--text) !important;
 }
-
 body.dark p,
 body.dark span,
 body.dark li {
   color: var(--text-soft);
 }
-
 body.dark h1,
 body.dark h2,
 body.dark h3,
 body.dark h4 {
   color: var(--text);
 }
-
 body.dark a {
   color: var(--text);
 }
@@ -50,13 +45,11 @@ body.dark a {
   text-align: center;
   padding: 160px 20px 120px;
 }
-
 .about-hero h1 {
   font-size: 4rem;
   line-height: 1.1;
   margin-bottom: 20px;
 }
-
 .about-hero p {
   font-size: 1.35rem;
   max-width: 720px;
@@ -76,7 +69,6 @@ body.dark a {
   padding: 120px 20px;
   background: #0a0f2c;
 }
-
 .story-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -85,29 +77,24 @@ body.dark a {
   max-width: 1280px;
   margin: 0 auto;
 }
-
 .story-text h2 {
   font-size: 2.8rem;
   margin-bottom: 30px;
 }
-
 .story-text .lead {
   font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 25px;
 }
-
 .story-text p {
   font-size: 1.15rem;
   margin-bottom: 22px;
 }
-
 .story-text .final {
   color: #00f5ff;
   font-weight: 600;
   font-size: 1.22rem;
 }
-
 .story-image-cartoon img {
   width: 100%;
   border-radius: 20px;
@@ -119,13 +106,11 @@ body.dark a {
   background: #0f1429;
   padding: 110px 20px;
 }
-
 .section-title {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 60px;
 }
-
 .values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -133,15 +118,13 @@ body.dark a {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .value-card {
-  background: rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.06);
   padding: 40px 30px;
   border-radius: 20px;
   border: 1px solid rgba(0,245,255,0.15);
   transition: all 0.4s ease;
 }
-
 .value-card:hover {
   transform: translateY(-12px);
   border-color: #00f5ff;
@@ -153,7 +136,6 @@ body.dark a {
   text-align: center;
   padding: 100px 20px;
 }
-
 .cta h2, .cta p {
   color: inherit;
 }
@@ -169,7 +151,6 @@ body.dark a {
   text-decoration: none;
   display: inline-block;
 }
-
 .btn-primary:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(0,245,255,0.4);
@@ -181,19 +162,15 @@ body.dark a {
   color: #aaa;
   padding: 100px 20px 50px;
 }
-
 .footer-pro h4 {
   color: white;
 }
-
 .footer-pro a {
   color: #888;
 }
-
 .footer-pro a:hover {
   color: #00f5ff;
 }
-
 .footer-bottom {
   border-top: 1px solid #1f2538;
   padding-top: 30px;
@@ -222,12 +199,10 @@ body.dark a {
   align-items: center;
   gap: 5px;
 }
-
 .logo {
   height: 24px;
   width: auto;
 }
-
 .brand-name {
   font-size: 16px;
   font-weight: 500;
