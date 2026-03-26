@@ -256,7 +256,7 @@ body.dark .mobile-menu-btn {
   background: rgba(0, 0, 0, 0.65); /* más oscuro */
   backdrop-filter: blur(4px); /* 🔥 opcional pero PRO */
 
-  z-index: 99999;
+  z-index: 9999999;
   display: none;
 }
 
