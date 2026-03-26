@@ -720,3 +720,17 @@ body.dark .mobile-menu-btn {
     padding: 60px 20px 40px !important;
   }
 }
+/* ===== FIX SOLO MÓVIL CONTACTO ===== */
+@media (max-width: 991px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+
+}
