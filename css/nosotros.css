@@ -297,3 +297,96 @@ body.dark .mobile-menu-btn {
     display: none !important;
   }
 }
+
+/* ============================================= */
+/* RESPONSIVE GENERAL PARA MÓVIL                 */
+/* (PC queda exactamente igual)                  */
+/* ============================================= */
+
+@media (max-width: 991px) {
+
+  .container {
+    width: 94%;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  section {
+    padding: 55px 0 !important;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 90px 20px 70px !important;
+  }
+
+  .hero h1 {
+    font-size: 2.35rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero p {
+    font-size: 1.08rem !important;
+  }
+
+  /* Split section */
+  .split {
+    grid-template-columns: 1fr !important;
+    gap: 35px !important;
+  }
+
+  /* Beneficios */
+  .benefits {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .card {
+    padding: 24px 18px !important;
+  }
+
+  /* Resultados */
+  .results-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .result-card {
+    padding: 28px 20px !important;
+  }
+
+  /* Botones */
+  .btn {
+    padding: 15px 30px !important;
+    font-size: 1.08rem !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 25px auto !important;
+    display: block !important;
+  }
+
+  /* Textos generales */
+  h2 {
+    font-size: 1.8rem !important;
+    line-height: 1.25 !important;
+  }
+
+  h3 {
+    font-size: 1.4rem !important;
+  }
+
+  p {
+    font-size: 1.06rem !important;
+    line-height: 1.78 !important;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 35px !important;
+  }
+
+  .footer-pro {
+    padding: 60px 20px 40px !important;
+  }
+}
