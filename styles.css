@@ -443,7 +443,7 @@ body.dark .mobile-menu-btn {
   top: 0 !important;
   right: 0 !important;
 
-  width: 80vw !important; /* puedes ajustar */
+  width: 100vw !important; /* puedes ajustar */
   max-width: 260px !important;
   height: 100vh !important;
 
