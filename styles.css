@@ -369,15 +369,15 @@ body.dark .theme-toggle {
     text-align: center;
   }
 }
-/* ==================== MENÚ MÓVIL FULL-SCREEN (SOLO MÓVIL) ==================== */
+/* ==================== MENÚ MÓVIL PARCIAL (como el vídeo) ==================== */
 .mobile-menu-btn {
   display: none;
   background: none;
   border: none;
-  font-size: 36px;
+  font-size: 32px;
   color: var(--primary);
   cursor: pointer;
-  padding: 5px 15px;
+  padding: 8px 12px;
 }
 
 body.dark .mobile-menu-btn {
@@ -386,61 +386,65 @@ body.dark .mobile-menu-btn {
 
 .mobile-menu {
   position: fixed;
-  inset: 0;                    /* cubre toda la pantalla */
-  background: #0a0f2c;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(10, 15, 44, 0.95);   /* fondo oscuro semi-transparente */
   z-index: 99999;
   display: none;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding-top: 100px;
-  overflow-y: auto;
+  justify-content: center;
 }
 
 .mobile-menu.active {
   display: flex;
 }
 
-.close-menu-btn {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  background: none;
-  border: none;
-  font-size: 48px;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px;
+.mobile-menu-content {
+  background: #0a0f2c;
+  width: 85%;
+  max-width: 320px;
+  border-radius: 16px;
+  padding: 40px 20px 30px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
-.mobile-menu-links {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 340px;
-  align-items: center;
+.close-menu-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .mobile-link {
-  color: #ffffff;
-  font-size: 1.9rem;
+  display: block;
+  color: #fff;
+  font-size: 1.55rem;
   font-weight: 500;
-  padding: 22px 0;
+  padding: 16px 0;
   text-decoration: none;
-  width: 100%;
   text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
 .mobile-link:last-child {
   border-bottom: none;
 }
 
+.mobile-link:hover,
 .mobile-link:active {
-  background-color: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 8px;
 }
 
-/* Visibilidad según dispositivo */
+/* Solo en móvil */
 @media (max-width: 991px) {
   .desktop-nav,
   .desktop-only {
