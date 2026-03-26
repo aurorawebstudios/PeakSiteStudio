@@ -369,15 +369,15 @@ body.dark .theme-toggle {
     text-align: center;
   }
 }
-/* ==================== MENÚ MÓVIL - CORREGIDO ==================== */
+/* ==================== MENÚ MÓVIL FULL-SCREEN (SOLO MÓVIL) ==================== */
 .mobile-menu-btn {
   display: none;
   background: none;
   border: none;
-  font-size: 34px;
-  padding: 8px 12px;
+  font-size: 36px;
   color: var(--primary);
   cursor: pointer;
+  padding: 5px 15px;
 }
 
 body.dark .mobile-menu-btn {
@@ -386,16 +386,15 @@ body.dark .mobile-menu-btn {
 
 .mobile-menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  inset: 0;                    /* cubre toda la pantalla */
   background: #0a0f2c;
   z-index: 99999;
   display: none;
   flex-direction: column;
   align-items: center;
-  padding-top: 90px;
+  justify-content: flex-start;
+  padding-top: 100px;
+  overflow-y: auto;
 }
 
 .mobile-menu.active {
@@ -405,32 +404,32 @@ body.dark .mobile-menu-btn {
 .close-menu-btn {
   position: absolute;
   top: 25px;
-  right: 25px;
+  right: 30px;
   background: none;
   border: none;
-  font-size: 42px;
+  font-size: 48px;
   color: #fff;
   cursor: pointer;
-  z-index: 100000;
+  padding: 10px;
 }
 
 .mobile-menu-links {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
+  align-items: center;
 }
 
 .mobile-link {
-  color: #fff;
-  font-size: 1.85rem;
+  color: #ffffff;
+  font-size: 1.9rem;
   font-weight: 500;
-  padding: 20px 0;
+  padding: 22px 0;
   text-decoration: none;
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 .mobile-link:last-child {
@@ -438,10 +437,10 @@ body.dark .mobile-menu-btn {
 }
 
 .mobile-link:active {
-  background: rgba(0, 212, 255, 0.15);
+  background-color: rgba(0, 212, 255, 0.2);
 }
 
-/* Reglas de visibilidad */
+/* Visibilidad según dispositivo */
 @media (max-width: 991px) {
   .desktop-nav,
   .desktop-only {
