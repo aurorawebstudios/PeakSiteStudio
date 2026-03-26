@@ -57,6 +57,9 @@
     ☰
   </button>
 
+  <!-- Botón Tema - visible en móvil al lado del ☰ -->
+  <button id="themeToggle" class="theme-toggle mobile-theme-btn">🌙</button>
+
   <!-- Menú móvil -->
   <div id="mobileMenu" class="mobile-menu">
     <button id="closeMenuBtn" class="close-menu-btn">✕</button>
@@ -66,32 +69,30 @@
       <a href="/portafolio.html" class="mobile-link">Portafolio</a>
       <a href="/nosotros.html" class="mobile-link">Nosotros</a>
       <a href="/contacto.html" class="mobile-link">Contacto</a>
-    </div>
-  </div>
 
-  <!-- Idioma + Tema - solo en PC -->
-  <div class="desktop-only nav-right">
-    <div class="lang-switch">
-      <!-- Aquí pega tu código completo del lang-switch -->
-      <div class="lang-current">
-        <span class="flag-wrapper">
-          <img src="/banderas/es.png" alt="Español">
-        </span>
-        <span>ES</span>
-        <span class="arrow">▾</span>
-      </div>
-      <div class="lang-menu">
-        <a href="/" class="lang-option">
-          <span class="flag-wrapper"><img src="/banderas/es.png" alt="Español"></span>
-          Español
-        </a>
-        <a href="/en/" class="lang-option">
-          <span class="flag-wrapper"><img src="/banderas/en.png" alt="English"></span>
-          English
-        </a>
+      <!-- Selector de idiomas DENTRO del menú móvil -->
+      <div class="mobile-lang-container">
+        <div class="lang-switch mobile-lang-switch">
+          <div class="lang-current">
+            <span class="flag-wrapper">
+              <img src="/banderas/es.png" alt="Español">
+            </span>
+            <span>ES</span>
+            <span class="arrow">▾</span>
+          </div>
+          <div class="lang-menu">
+            <a href="/" class="lang-option">
+              <span class="flag-wrapper"><img src="/banderas/es.png" alt="Español"></span>
+              Español
+            </a>
+            <a href="/en/" class="lang-option">
+              <span class="flag-wrapper"><img src="/banderas/en.png" alt="English"></span>
+              English
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </nav>
   </div>
