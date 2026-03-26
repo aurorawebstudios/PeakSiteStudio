@@ -35,6 +35,10 @@
   outline: none;
 }
 
+.input-group textarea {
+  resize: none;
+}
+
 .input-group label {
   position: absolute;
   top: 12px;
