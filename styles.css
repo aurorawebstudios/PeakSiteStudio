@@ -391,7 +391,7 @@ nav {
 .desktop-nav {
   flex: 1;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   justify-content: flex-end;
 }
 
