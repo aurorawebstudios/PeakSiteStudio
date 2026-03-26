@@ -217,3 +217,8 @@ body.light h2.section-title {
 body.light .cta {
   color: #ffffff;
 }
+
+body.light .cta h2,
+body.light .cta p {
+  color: #ffffff !important;
+}
