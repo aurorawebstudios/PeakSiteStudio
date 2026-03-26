@@ -251,12 +251,12 @@ body.dark .mobile-menu-btn {
 /* Menú móvil (mantengo la versión compacta que te gustó) */
 .mobile-menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.4);
-  z-index: 99999;
+  inset: 0; /* 🔥 reemplaza top/right/width/height */
+
+  background: rgba(0, 0, 0, 0.65); /* más oscuro */
+  backdrop-filter: blur(4px); /* 🔥 opcional pero PRO */
+
+  z-index: 999999;
   display: none;
 }
 
