@@ -597,3 +597,49 @@ body.dark .mobile-menu-btn {
     padding: 60px 20px 40px !important;
   }
 }
+/* ====================== FIX MENÚ MÓVIL - SOLO AFECTA MÓVIL ====================== */
+/* No toca nada en desktop gracias al media query */
+
+@media (max-width: 991px) {
+
+  /* Header como base baja */
+  .header {
+    position: relative;
+    z-index: 100;
+  }
+
+  /* Menú móvil más fuerte */
+  .mobile-menu {
+    z-index: 999999 !important;
+  }
+
+  .mobile-menu-links {
+    z-index: 1000000 !important;
+    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.5); /* opcional: da más profundidad */
+  }
+
+  .close-menu-btn {
+    z-index: 1000001 !important;
+  }
+
+  /* Forzar que TODO el contenido quede por debajo (solo en móvil) */
+  .hero,
+  .about-hero,
+  .services-section,
+  .cta,
+  .results-section,
+  .split,
+  .benefits,
+  .results-grid,
+  .footer-pro,
+  section,
+  .container {
+    position: relative;
+    z-index: 1 !important;
+  }
+
+  /* Bloquear scroll cuando menú abierto (evita que el usuario haga scroll debajo) */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
