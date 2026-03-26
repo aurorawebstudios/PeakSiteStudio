@@ -115,22 +115,6 @@ body.light .price {
   color: #38bdf8;
 }
 
-/* Tarjeta Tienda Online en modo claro */
-body.light .service-card.featured {
-  background: #bae6fd;
-  border: 2px solid #38bdf8;
-  color: #0f172a;
-}
-
-body.light .service-card.featured h3,
-body.light .service-card.featured .service-desc,
-body.light .service-card.featured ul li {
-  color: #0f172a;
-}
-
-body.light .service-card.featured .price {
-  color: #0284c8;
-}
 
 /* ====================== TÍTULO "Elige tu paquete" ====================== */
 .section-title {
