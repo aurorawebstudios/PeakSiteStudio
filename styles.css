@@ -391,30 +391,14 @@ body.dark .theme-toggle {
 /* ===== MOBILE/MOVIL ===== */
 @media (max-width: 768px) {
 
-  /* Mostrar hamburguesa */
-  .menu-toggle {
-    display: block;
-  }
-
-  /* Menú desplegable */
+  /* 🔴 FORZAR ocultar SIEMPRE */
   .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: white;
-    border-radius: 12px;
-    padding: 15px;
-    flex-direction: column;
-    gap: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    min-width: 180px;
-
-    display: none; /* 🔥 CLAVE */
+    display: none !important;
   }
 
-  /* Cuando se abre */
+  /* ✅ SOLO visible al abrir */
   .nav-links.active {
-    display: flex;
+    display: flex !important;
   }
 
 }
