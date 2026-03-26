@@ -369,28 +369,61 @@ body.dark .theme-toggle {
     text-align: center;
   }
 }
-/* ==================== MENÚ MÓVIL PARCIAL (como el vídeo) ==================== */
+/* ==================== HEADER FIX + MENÚ MÓVIL ==================== */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* Alineación correcta en PC */
+.desktop-nav {
+  flex: 1;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Botón hamburguesa */
 .mobile-menu-btn {
   display: none;
   background: none;
   border: none;
-  font-size: 32px;
+  font-size: 34px;
   color: var(--primary);
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 5px 10px;
 }
 
 body.dark .mobile-menu-btn {
   color: #fff;
 }
 
+/* Menú móvil (mantengo la versión compacta que te gustó) */
 .mobile-menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(10, 15, 44, 0.95);   /* fondo oscuro semi-transparente */
+  background: rgba(10, 15, 44, 0.97);
   z-index: 99999;
   display: none;
   align-items: center;
@@ -401,23 +434,22 @@ body.dark .mobile-menu-btn {
   display: flex;
 }
 
-.mobile-menu-content {
+.mobile-menu-links {
   background: #0a0f2c;
   width: 85%;
   max-width: 320px;
   border-radius: 16px;
-  padding: 40px 20px 30px;
+  padding: 50px 25px 35px;
   position: relative;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
 .close-menu-btn {
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 18px;
+  right: 25px;
   background: none;
   border: none;
-  font-size: 32px;
+  font-size: 36px;
   color: #fff;
   cursor: pointer;
 }
@@ -425,29 +457,26 @@ body.dark .mobile-menu-btn {
 .mobile-link {
   display: block;
   color: #fff;
-  font-size: 1.55rem;
-  font-weight: 500;
-  padding: 16px 0;
-  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 18px 0;
   text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 .mobile-link:last-child {
   border-bottom: none;
 }
 
-.mobile-link:hover,
 .mobile-link:active {
-  color: #00d4ff;
-  background: rgba(0, 212, 255, 0.1);
-  border-radius: 8px;
+  background: rgba(0, 212, 255, 0.12);
 }
 
-/* Solo en móvil */
+/* Visibilidad */
 @media (max-width: 991px) {
   .desktop-nav,
-  .desktop-only {
+  .nav-right,
+  .lang-switch {
     display: none !important;
   }
   .mobile-menu-btn {
