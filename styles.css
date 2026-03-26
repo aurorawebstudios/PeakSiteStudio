@@ -418,9 +418,20 @@ body.dark .mobile-menu-btn {
 
 /* Menú móvil (mantengo la versión compacta que te gustó) */
 .mobile-menu {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 999999999 !important;
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+
+  z-index: 9999999;
+
+  display: none;
+
+  justify-content: flex-end; /* 🔥 IMPORTANTE */
 }
 
 .mobile-menu.active {
