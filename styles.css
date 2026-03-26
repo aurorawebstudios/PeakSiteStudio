@@ -453,17 +453,20 @@ body.dark .mobile-menu-btn {
 }
 
 .close-menu-btn {
-  position: fixed; /* 🔥 clave */
-  top: 15px;
-  right: 15px;
+  position: fixed;
+  top: 18px;
+  right: 18px;
 
-  font-size: 30px;
+  font-size: 32px;
   color: #fff;
-  background: none;
+  background: rgba(0,0,0,0.4);
   border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+
   cursor: pointer;
 
-  z-index: 10000001; /* más alto que TODO */
+  z-index: 9999999999 !important; /* MÁS alto que todo */
 }
 .mobile-link {
   display: block;
