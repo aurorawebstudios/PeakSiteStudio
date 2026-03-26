@@ -268,7 +268,7 @@ body.dark .mobile-menu-btn {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 999999;
+  z-index: 10000000;
   overflow: hidden; /* evita que nada se salga */
 
   width: 25%;
@@ -295,7 +295,7 @@ body.dark .mobile-menu-btn {
   color: #fff;
   cursor: pointer;
 
-  z-index: 1000000;
+  z-index: 10000001;
 }
 
 .mobile-link {
