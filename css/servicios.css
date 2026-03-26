@@ -208,8 +208,14 @@ body.light section.cta {
 /* (PC queda exactamente igual)                  */
 /* ============================================= */
 
+@media (max-width: 991px) {
+
   section {
     padding: 55px 0 !important;
+  }
+
+  .hero {
+    padding: 90px 20px 70px !important;
   }
 
   /* Hero */
