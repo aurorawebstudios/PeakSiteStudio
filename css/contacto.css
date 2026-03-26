@@ -292,7 +292,7 @@ button.loading span {
 }
 
 .logo {
-  height: 24px; /* 👈 tamaño ideal */
+  height: 28px; /* 👈 tamaño ideal */
   width: auto;
   display: block;
 }
