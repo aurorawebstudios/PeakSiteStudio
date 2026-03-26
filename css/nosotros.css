@@ -279,6 +279,7 @@ body.dark .mobile-menu-btn {
   top: 0;
   right: 0;
   z-index: 99999;
+  overflow: hidden; /* evita que nada se salga */
 
   width: 25%;
   min-width: 200px;
