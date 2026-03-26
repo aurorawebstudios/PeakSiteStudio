@@ -442,11 +442,17 @@ body.dark .mobile-menu-btn {
 }
 
 .close-menu-btn {
-  position: absolute !important;
-  top: 15px !important;
-  right: 15px !important;
+  position: fixed; /* 🔥 clave */
+  top: 15px;
+  right: 15px;
 
-  z-index: 99999999999 !important;
+  font-size: 30px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  z-index: 10000001; /* más alto que TODO */
 }
 .mobile-link {
   display: block;
