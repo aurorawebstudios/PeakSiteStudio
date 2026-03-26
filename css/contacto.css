@@ -134,23 +134,6 @@ button.loading span {
   background: linear-gradient(135deg, #25D366, #1ebe5d);
 }
 
-/* EMAIL */
-.contact-email {
-  background: #f4f6fb;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 25px;
-}
-
-.contact-email span {
-  font-size: 12px;
-  color: #888;
-}
-
-.contact-email p {
-  font-weight: 600;
-}
-
 /* BENEFICIOS CONTACTO */
 .contact-benefits {
   display: flex;
@@ -720,17 +703,101 @@ body.dark .mobile-menu-btn {
     padding: 60px 20px 40px !important;
   }
 }
-/* ===== FIX SOLO MÓVIL CONTACTO ===== */
+/* ===================================== */
+/* 🚀 CONTACTO MOBILE PREMIUM (SOLO MÓVIL) */
+/* ===================================== */
 @media (max-width: 991px) {
 
+  /* GRID → vertical */
   .contact-grid {
     grid-template-columns: 1fr !important;
-    gap: 40px;
+    gap: 50px !important;
   }
 
-  .contact-form,
+  /* HERO más limpio */
+  .contact-hero {
+    padding: 80px 20px 60px !important;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.2;
+  }
+
+  .contact-hero p {
+    font-size: 1.05rem;
+    opacity: 0.85;
+  }
+
+  /* FORMULARIO estilo app */
+  .contact-form {
+    gap: 5px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 18px !important;
+    border-radius: 14px !important;
+    font-size: 16px;
+  }
+
+  #mensaje {
+    min-height: 160px;
+  }
+
+  /* BOTÓN principal */
+  .contact-form .btn {
+    margin-top: 20px;
+    padding: 16px;
+    font-size: 1.1rem;
+    border-radius: 40px;
+  }
+
+  /* BLOQUE DERECHA */
   .contact-info {
+    text-align: center;
+  }
+
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* BOTÓN WHATSAPP → protagonista */
+  .whatsapp-btn {
     width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    display: block;
+    padding: 16px;
+    font-size: 1.1rem;
+    border-radius: 40px;
+  }
+
+  /* EMAIL CARD más aire */
+  .contact-email-pro {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .email-box {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  /* BENEFICIOS tipo tarjetas */
+  .contact-benefits {
+    gap: 18px;
+    margin-top: 10px;
+  }
+
+  .benefit {
+    padding: 20px;
+    border-radius: 14px;
   }
 
 }
