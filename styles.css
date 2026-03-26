@@ -443,9 +443,10 @@ body.dark .mobile-menu-btn {
   top: 0 !important;
   right: 0 !important;
 
-  width: 100vw !important; /* puedes ajustar */
-  max-width: 260px !important;
+  width: 82vw !important; /* puedes ajustar */
+  max-width: 300px !important;
   height: 100vh !important;
+  padding: 80px 25px 40px 30px !important; /* más padding a la izquierda */
 
   background: #0a0f2c !important;
 
@@ -472,7 +473,7 @@ body.dark .mobile-menu-btn {
   display: block;
   color: #fff;
   font-size: 1.1rem;
-  padding: 12px 0;
+  padding: 16px 0;
   text-align: left;
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.15);
