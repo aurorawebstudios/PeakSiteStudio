@@ -42,39 +42,45 @@
     <img src="/logos2/favicon-96x96.png" class="logo" alt="Peak Site Studio">
     <span class="brand-name">PeakSites</span>
   </a>
-    <nav>
-      <div class="nav-links" id="navLinks">
-      <a href="/">Inicio</a>
-      <a href="/servicios.html">Servicios</a>
-      <a href="/portafolio.html">Portafolio</a>
-      <a href="/nosotros.html">Nosotros</a>
-      <a href="/contacto.html">Contacto</a>
-    </div>
-      <div class="lang-switch">
-        <div class="lang-current">
-          <span class="flag-wrapper">
-            <img src="/banderas/es.png" alt="Español">
-          </span>
-          <span>ES</span>
-          <span class="arrow">▾</span>
-        </div>
-        <div class="lang-menu">
-          <a href="/" class="lang-option">
-            <span class="flag-wrapper">
-              <img src="/banderas/es.png" alt="Español">
-            </span>
-            Español
-          </a>
-          <a href="/en/" class="lang-option">
-            <span class="flag-wrapper">
-              <img src="/banderas/en.png" alt="English">
-            </span>
-            English
-          </a>
-        </div>
+   <nav>
+  <!-- Menú desktop (se oculta en móvil) -->
+  <div class="nav-links" id="navLinks">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/portafolio.html">Portafolio</a>
+    <a href="/nosotros.html">Nosotros</a>
+    <a href="/contacto.html">Contacto</a>
+  </div>
+
+  <!-- Botón hamburguesa - SOLO móvil -->
+  <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Menú">
+    <span class="hamburger"></span>
+  </button>
+
+  <!-- Menú móvil full-screen -->
+  <div id="mobileMenu" class="mobile-menu">
+    <button id="closeMenuBtn" class="close-menu-btn" aria-label="Cerrar">✕</button>
+    
+    <div class="mobile-menu-content">
+      <a href="/" class="mobile-link">Inicio</a>
+      <a href="/servicios.html" class="mobile-link">Servicios</a>
+      <a href="/portafolio.html" class="mobile-link">Portafolio</a>
+      <a href="/nosotros.html" class="mobile-link">Nosotros</a>
+      <a href="/contacto.html" class="mobile-link">Contacto</a>
+      
+      <!-- Opcional: idioma y tema dentro del menú móvil -->
+      <div class="mobile-extra">
+        <div class="lang-switch-mobile">...</div> <!-- puedes copiar o simplificar -->
       </div>
-      <button id="themeToggle" class="theme-toggle">🌙</button>
-    </nav>
+    </div>
+  </div>
+
+  <!-- Elementos que ya tenías (idioma + tema) - se mantienen en desktop -->
+  <div class="desktop-only">
+    <div class="lang-switch">... (tu código actual) ...</div>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </div>
+</nav>
   </div>
 </header>
 
