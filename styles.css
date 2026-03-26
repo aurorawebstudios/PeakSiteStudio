@@ -395,15 +395,17 @@ body.dark .theme-toggle {
 
 /* ===== MOBILE/MOVIL ===== */
 @media (max-width: 768px) {
-
-  /* 🔴 FORZAR ocultar SIEMPRE */
   .nav-links {
     display: none !important;
   }
 
-  /* ✅ SOLO visible al abrir */
   .nav-links.active {
     display: flex !important;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
   }
-
 }
