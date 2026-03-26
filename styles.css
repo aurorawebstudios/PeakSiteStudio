@@ -645,36 +645,38 @@ body.dark .mobile-menu-btn {
   }
 }
 
-/* ====================== CAMBIOS SOLO PARA MÓVIL ====================== */
-/* El botón tema al lado del ☰ y el idioma dentro del menú */
+/* ====================== CONFIGURACIÓN MÓVIL - TEMA AL LADO + IDIOMA DENTRO MENÚ ====================== */
 
 @media (max-width: 991px) {
 
-  /* Mostrar botón tema al lado del hamburguesa en móvil */
+  /* Botón tema visible al lado del hamburguesa en móvil */
   .mobile-theme-btn {
     display: block !important;
     height: 38px;
     width: 38px;
     font-size: 1.2rem;
     margin-left: 8px;
+  }
+
+  /* Ocultar en móvil lo que no queremos ver */
+  .desktop-only.nav-right {
+    display: none !important;
+  }
+
+  /* Estilo del botón tema en móvil */
+  .theme-toggle.mobile-theme-btn {
     border: 1px solid rgba(255,255,255,0.3);
     background: rgba(255,255,255,0.1);
     color: #fff;
   }
 
-  body.light .mobile-theme-btn {
+  body.light .theme-toggle.mobile-theme-btn {
     border-color: var(--border-light);
     background: rgba(0,0,0,0.08);
     color: var(--primary);
   }
 
-  /* Ocultar la versión antigua de nav-right y lang-switch en móvil */
-  .desktop-only,
-  .nav-right {
-    display: none !important;
-  }
-
-  /* Selector de idiomas dentro del menú */
+  /* Selector de idioma dentro del menú móvil */
   .mobile-lang-container {
     margin-top: 35px;
     padding-top: 25px;
@@ -686,14 +688,9 @@ body.dark .mobile-menu-btn {
     background: rgba(255,255,255,0.12);
     border: 1px solid rgba(255,255,255,0.25);
   }
-
-  .mobile-lang-switch .lang-menu {
-    left: 0;
-    right: 0;
-  }
 }
 
-/* Asegurar que en PC todo siga igual */
+/* Asegurar que en PC todo siga normal */
 @media (min-width: 992px) {
   .mobile-theme-btn {
     display: none !important;
