@@ -214,6 +214,6 @@ body.light h2.section-title {
 }
 
 /* Modo claro */
-body.light .cta p {
-  color: #ffffff !important;
+body.light .cta {
+  color: #ffffff;
 }
