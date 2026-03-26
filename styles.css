@@ -379,7 +379,16 @@ body.dark .theme-toggle {
   cursor: pointer;
 }
 
-/* ===== MOBILE ===== */
+/* ===== HAMBURGUESA ===== */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== MOBILE/MOVIL ===== */
 @media (max-width: 768px) {
 
   /* Mostrar hamburguesa */
@@ -387,7 +396,7 @@ body.dark .theme-toggle {
     display: block;
   }
 
-  /* Ocultar menú normal */
+  /* Ocultar links normales */
   .nav-links {
     position: absolute;
     top: 70px;
@@ -397,18 +406,14 @@ body.dark .theme-toggle {
     padding: 15px;
     display: none;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    min-width: 180px;
   }
 
-  /* Mostrar cuando está activo */
+  /* Cuando se abre */
   .nav-links.active {
     display: flex;
-  }
-
-  /* Ocultar links inline */
-  nav > a {
-    display: none;
   }
 
 }
