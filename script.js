@@ -116,25 +116,26 @@ if (toggleBtn) {
   });
 }
 // MENÚ MÓVIL PARCIAL
-const mobileBtn = document.getElementById('mobileMenuBtn');
-const closeBtn = document.getElementById('closeMenuBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const closeMenuBtn = document.getElementById('closeMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
-if (mobileBtn && closeBtn && mobileMenu) {
-  mobileBtn.addEventListener('click', () => {
+if (mobileMenuBtn && closeMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('menu-open');   // ← clave para el fix
   });
 
-  closeBtn.addEventListener('click', () => {
+  closeMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
-    document.body.style.overflow = '';
+    document.body.classList.remove('menu-open');
   });
 
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
+  // Cerrar al tocar el fondo oscuro
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) {
       mobileMenu.classList.remove('active');
-      document.body.style.overflow = '';
-    });
+      document.body.classList.remove('menu-open');
+    }
   });
 }
