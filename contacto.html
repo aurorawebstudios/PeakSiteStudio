@@ -28,8 +28,8 @@
   <span class="brand-name">PeakSites</span>
 </div>
 
-   <nav>
-  <!-- Menú Desktop -->
+ <nav>
+  <!-- Menú Desktop (PC) -->
   <div class="nav-links desktop-nav" id="navLinks">
     <a href="/">Inicio</a>
     <a href="/servicios.html">Servicios</a>
@@ -38,14 +38,15 @@
     <a href="/contacto.html">Contacto</a>
   </div>
 
-  <!-- Botón hamburguesa -->
-  <button id="mobileMenuBtn" class="mobile-menu-btn">☰</button>
+  <!-- Botón hamburguesa - SOLO móvil -->
+  <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">
+    ☰
+  </button>
 
-  <!-- Menú móvil parcial (como en el vídeo) -->
+  <!-- Menú móvil -->
   <div id="mobileMenu" class="mobile-menu">
-    <div class="mobile-menu-content">
-      <button id="closeMenuBtn" class="close-menu-btn">✕</button>
-      
+    <button id="closeMenuBtn" class="close-menu-btn">✕</button>
+    <div class="mobile-menu-links">
       <a href="/" class="mobile-link">Inicio</a>
       <a href="/servicios.html" class="mobile-link">Servicios</a>
       <a href="/portafolio.html" class="mobile-link">Portafolio</a>
@@ -54,9 +55,28 @@
     </div>
   </div>
 
-  <!-- Idioma y Tema (solo desktop) -->
-  <div class="desktop-only">
-    <div class="lang-switch">... (tu código actual de lang-switch) ...</div>
+  <!-- Idioma + Tema - solo en PC -->
+  <div class="desktop-only nav-right">
+    <div class="lang-switch">
+      <!-- Aquí pega tu código completo del lang-switch -->
+      <div class="lang-current">
+        <span class="flag-wrapper">
+          <img src="/banderas/es.png" alt="Español">
+        </span>
+        <span>ES</span>
+        <span class="arrow">▾</span>
+      </div>
+      <div class="lang-menu">
+        <a href="/" class="lang-option">
+          <span class="flag-wrapper"><img src="/banderas/es.png" alt="Español"></span>
+          Español
+        </a>
+        <a href="/en/" class="lang-option">
+          <span class="flag-wrapper"><img src="/banderas/en.png" alt="English"></span>
+          English
+        </a>
+      </div>
+    </div>
     <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </nav>
