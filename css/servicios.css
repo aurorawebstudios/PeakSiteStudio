@@ -258,8 +258,6 @@ body.dark .mobile-menu-btn {
   background: rgba(10, 15, 44, 0.97);
   z-index: 99999;
   display: none;
-  align-items: center;
-  justify-content: center;
 }
 
 .mobile-menu.active {
