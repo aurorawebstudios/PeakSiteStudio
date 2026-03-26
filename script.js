@@ -119,6 +119,8 @@ if (toggleBtn) {
 const toggle = document.getElementById("menuToggle");
 const menu = document.getElementById("navLinks");
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
+if (toggle && menu) {
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+}
