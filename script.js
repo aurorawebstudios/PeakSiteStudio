@@ -116,13 +116,13 @@ if (toggleBtn) {
   });
 }
 // ======================
-// MENÚ MÓVIL (versión corregida)
+// MENÚ MÓVIL FULL-SCREEN
 // ======================
 const mobileBtn = document.getElementById('mobileMenuBtn');
 const closeBtn = document.getElementById('closeMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
-if (mobileBtn && mobileMenu && closeBtn) {
+if (mobileBtn && closeBtn && mobileMenu) {
   mobileBtn.addEventListener('click', () => {
     mobileMenu.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -133,7 +133,7 @@ if (mobileBtn && mobileMenu && closeBtn) {
     document.body.style.overflow = '';
   });
 
-  // Cerrar al tocar un enlace
+  // Cerrar al pulsar cualquier enlace
   document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
