@@ -115,9 +115,7 @@ if (toggleBtn) {
     toggleBtn.textContent = isDark ? "☀️" : "🌙";
   });
 }
-// ======================
-// MENÚ MÓVIL FULL-SCREEN
-// ======================
+// MENÚ MÓVIL PARCIAL
 const mobileBtn = document.getElementById('mobileMenuBtn');
 const closeBtn = document.getElementById('closeMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -133,7 +131,6 @@ if (mobileBtn && closeBtn && mobileMenu) {
     document.body.style.overflow = '';
   });
 
-  // Cerrar al pulsar cualquier enlace
   document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
