@@ -502,3 +502,7 @@ body.dark .benefit strong {
 body.dark .benefit p {
   color: var(--text-soft);
 }
+.contact-hero h1,
+.contact-hero p {
+  color: white !important;
+}
