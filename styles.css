@@ -396,7 +396,7 @@ body.dark .theme-toggle {
     display: block;
   }
 
-  /* Ocultar links normales */
+  /* Menú desplegable */
   .nav-links {
     position: absolute;
     top: 70px;
@@ -404,11 +404,12 @@ body.dark .theme-toggle {
     background: white;
     border-radius: 12px;
     padding: 15px;
-    display: none;
     flex-direction: column;
     gap: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     min-width: 180px;
+
+    display: none; /* 🔥 CLAVE */
   }
 
   /* Cuando se abre */
