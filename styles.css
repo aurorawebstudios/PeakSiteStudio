@@ -644,3 +644,68 @@ body.dark .mobile-menu-btn {
     overflow: hidden;
   }
 }
+
+/* ====================== BOTÓN TEMA EN MÓVIL + IDIOMA DENTRO MENÚ ====================== */
+
+@media (max-width: 991px) {
+
+  /* Mostrar botón tema al lado del hamburguesa */
+  .mobile-theme-btn {
+    display: block !important;
+    height: 38px;
+    width: 38px;
+    font-size: 1.15rem;
+    margin-left: 8px;
+  }
+
+  /* Ocultar nav-right antiguo en móvil */
+  .nav-right,
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* Ajustes del botón tema en móvil */
+  .theme-toggle.mobile-theme-btn {
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+
+  body.light .theme-toggle.mobile-theme-btn {
+    border-color: var(--border-light);
+    background: rgba(0,0,0,0.08);
+    color: var(--primary);
+  }
+
+  /* Selector de idioma dentro del menú móvil */
+  .mobile-lang-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .mobile-lang-switch {
+    width: 100%;
+  }
+
+  .mobile-lang-switch .lang-current {
+    justify-content: center;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .mobile-lang-switch .lang-menu {
+    right: 0;
+    left: 0;
+    margin-top: 8px;
+    background: #1a2338;
+  }
+}
+
+/* No afecta a PC */
+@media (min-width: 992px) {
+  .mobile-theme-btn {
+    display: none !important;
+  }
+}
