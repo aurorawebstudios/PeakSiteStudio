@@ -116,24 +116,24 @@ if (toggleBtn) {
   });
 }
 // ======================
-// MENÚ MÓVIL DESPLEGABLE
+// MENÚ MÓVIL (versión corregida)
 // ======================
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const closeMenuBtn = document.getElementById('closeMenuBtn');
+const mobileBtn = document.getElementById('mobileMenuBtn');
+const closeBtn = document.getElementById('closeMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
-if (mobileMenuBtn && mobileMenu) {
-  mobileMenuBtn.addEventListener('click', () => {
+if (mobileBtn && mobileMenu && closeBtn) {
+  mobileBtn.addEventListener('click', () => {
     mobileMenu.classList.add('active');
-    document.body.style.overflow = 'hidden';   // Bloquea scroll
+    document.body.style.overflow = 'hidden';
   });
 
-  closeMenuBtn.addEventListener('click', () => {
+  closeBtn.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
     document.body.style.overflow = '';
   });
 
-  // Cerrar al pulsar cualquier enlace
+  // Cerrar al tocar un enlace
   document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
