@@ -392,7 +392,7 @@ nav {
   flex: 1;
   display: flex;
   gap: 25px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .nav-right {
