@@ -387,6 +387,11 @@ body.dark .theme-toggle {
   border: none;
   cursor: pointer;
 }
+/* 💻 PC (estado normal) */
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
 
 /* ===== MOBILE/MOVIL ===== */
 @media (max-width: 768px) {
