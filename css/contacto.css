@@ -556,20 +556,20 @@ body.dark .mobile-menu-btn {
 
 .mobile-menu-links {
   background: #0a0f2c;
-  width: 85%;
-  max-width: 320px;
+  width: 70%;
+  max-width: 260px;
   border-radius: 16px;
-  padding: 50px 25px 35px;
+  padding: 35px 18px 25px;
   position: relative;
 }
 
 .close-menu-btn {
   position: absolute;
-  top: 18px;
-  right: 25px;
+  top: 12px;
+  right: 18px;
   background: none;
   border: none;
-  font-size: 36px;
+  font-size: 30px;
   color: #fff;
   cursor: pointer;
 }
@@ -577,8 +577,8 @@ body.dark .mobile-menu-btn {
 .mobile-link {
   display: block;
   color: #fff;
-  font-size: 1.6rem;
-  padding: 18px 0;
+  font-size: 1.25rem;
+  padding: 14px 0;
   text-align: center;
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.15);
