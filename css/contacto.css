@@ -33,6 +33,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   outline: none;
+  height: 140px;
 }
 
 .input-group textarea {
