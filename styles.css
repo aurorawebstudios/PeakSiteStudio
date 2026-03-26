@@ -370,27 +370,45 @@ body.dark .theme-toggle {
   }
 }
 
+/* BOTÓN HAMBURGUESA (oculto en PC) */
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
-  .nav {
+  /* Mostrar hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultar menú normal */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
     gap: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   }
 
-  nav {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  /* Mostrar cuando está activo */
+  .nav-links.active {
+    display: flex;
   }
 
-  nav a {
-    font-size: 14px;
-  }
-
-  .brand {
-    width: 100%;
-    justify-content: space-between;
+  /* Ocultar links inline */
+  nav > a {
+    display: none;
   }
 
 }
