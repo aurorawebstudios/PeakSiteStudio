@@ -25,11 +25,11 @@
 
 .service-card.featured {
   border: 2px solid #38bdf8;
-  transform: scale(1.04);
+  transform: scale(1);
 }
 
 .service-card.featured:hover {
-  transform: scale(1.06) translateY(-18px);
+  transform: translateY(-18px);
 }
 
 .service-icon {
