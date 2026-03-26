@@ -136,9 +136,6 @@ body.dark a {
   text-align: center;
   padding: 100px 20px;
 }
-.cta h2, .cta p {
-  color: inherit;
-}
 
 /* Botón principal */
 .btn-primary {
