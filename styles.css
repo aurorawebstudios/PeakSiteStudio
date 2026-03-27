@@ -696,3 +696,44 @@ body.dark .mobile-menu-btn {
     display: none !important;
   }
 }
+
+/* ====================== ANIMACIONES SCROLL REVEAL ====================== */
+
+/* Estado inicial de los elementos (ocultos) */
+.fade-up,
+.fade-left,
+.fade-right {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Cuando se activa la animación */
+.fade-up.visible,
+.fade-left.visible,
+.fade-right.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variaciones */
+.fade-left {
+  transform: translateX(-60px);
+}
+
+.fade-right {
+  transform: translateX(60px);
+}
+
+/* Delay para que no aparezcan todos a la vez */
+.fade-up.delay { transition-delay: 0.1s; }
+.fade-up.delay2 { transition-delay: 0.2s; }
+.fade-up.delay3 { transition-delay: 0.3s; }
+
+/* Hero ya tiene su propia animación, la respetamos */
+.hero-animate h1,
+.hero-animate p,
+.hero-animate .btn {
+  opacity: 1;
+  transform: none;
+}
