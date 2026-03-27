@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Nosotros | Peak Site Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-<link rel="icon" type="image/png" href="/logos2/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/logos2/favicon.svg" />
-<link rel="shortcut icon" href="/logos2/favicon-v2.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/logos2/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="MyWebSite" />
-<link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/logos2/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/logos2/favicon.svg" />
+  <link rel="shortcut icon" href="/logos2/favicon-v2.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/logos2/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="/site.webmanifest" />
   
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="css/nosotros.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body class="light">
-
 <!-- NAV -->
 <header class="header">
 <div class="container nav">
-
   <a href="/" class="brand">
     <img src="/logos2/favicon-96x96.png" class="logo" alt="Peak Sites">
     <span class="brand-name">PeakSites</span>
   </a>
-
 <nav>
   <!-- Menú Desktop (PC) -->
   <div class="nav-links desktop-nav" id="navLinks">
@@ -36,12 +33,10 @@
     <a href="/nosotros.html">Nosotros</a>
     <a href="/contacto.html">Contacto</a>
   </div>
-
   <!-- Botón hamburguesa - SOLO móvil -->
   <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">
     ☰
   </button>
-
   <!-- Menú móvil -->
   <div id="mobileMenu" class="mobile-menu">
     <button id="closeMenuBtn" class="close-menu-btn">✕</button>
@@ -53,11 +48,9 @@
       <a href="/contacto.html" class="mobile-link">Contacto</a>
     </div>
   </div>
-
   <!-- Idioma + Tema - solo en PC -->
   <div class="desktop-only nav-right">
     <div class="lang-switch">
-      <!-- Aquí pega tu código completo del lang-switch -->
       <div class="lang-current">
         <span class="flag-wrapper">
           <img src="/banderas/es.png" alt="Español">
@@ -91,31 +84,68 @@
   </div>
 </section>
 
-<!-- SECCIÓN HISTORIA + CARTOON -->
-<section class="about-story">
-  <div class="container story-grid">
-    <div class="story-text fade-up">
-      <h2>La cima no se alcanza por casualidad</h2>
-     
-      <p class="lead">
-        Peak Site Studio nació con una misión clara: ayudar a las empresas a dejar de estar perdidas en el valle digital
-        y llegar a la cumbre de su industria.
-      </p>
-     
-      <p>
-        Combinamos diseño impactante, desarrollo ultrarrápido y estrategia de conversión para que tu web genere
-        resultados reales: más clientes, más ventas y mayor autoridad.
-      </p>
-     
-      <p class="final">
-        Porque en la cima no hay espacio para webs mediocres.
-      </p>
+<!-- MENÚ DESPLEGABLE "NOSOTROS" - 3 APARTADOS -->
+<section class="solutions-menu">
+  <div class="container">
+    <div class="menu-header">
+      <h2 class="section-title">Explora quiénes somos</h2>
+      <p class="menu-subtitle">Haz clic en cada sección para descubrir más sobre Peak Site Studio</p>
     </div>
-    
-    <!-- Imagen Cartoon -->
-    <div class="story-image-cartoon fade-right">
-      <img src="https://cdn-icons-png.flaticon.com/512/1015/1015769.png"
-           alt="Hombre llegando a la cima - Peak Site Studio">
+
+    <div class="menu-grid">
+      
+      <!-- Apartado 1 -->
+      <div class="menu-card">
+        <div class="menu-card-header">
+          <span class="menu-icon">🏔️</span>
+          <h3>Quiénes Somos</h3>
+        </div>
+        <div class="menu-card-content">
+          <p>Peak Site Studio nació con una misión clara: ayudar a las empresas a dejar de estar perdidas en el valle digital y llegar a la cumbre de su industria.</p>
+          <p>Somos un equipo apasionado por el diseño estratégico, el desarrollo de alto rendimiento y las estrategias de conversión que realmente generan resultados.</p>
+          <p>Creemos que una página web no es solo una tarjeta de presentación: es tu mejor vendedor 24/7 y tu principal activo digital.</p>
+        </div>
+      </div>
+
+      <!-- Apartado 2 -->
+      <div class="menu-card">
+        <div class="menu-card-header">
+          <span class="menu-icon">⛰️</span>
+          <h3>Nuestra Cumbre</h3>
+        </div>
+        <div class="menu-card-content">
+          <p>Nos dedicamos a crear experiencias digitales premium que posicionan a las empresas en la cima de su sector.</p>
+          <ul>
+            <li>Diseño UI/UX moderno y conversor</li>
+            <li>Desarrollo web ultrarrápido y optimizado</li>
+            <li>Estrategias de marketing digital integradas</li>
+            <li>Tiendas online de alto rendimiento</li>
+            <li>Automatización y escalabilidad</li>
+          </ul>
+          <p>Combinamos creatividad con datos y tecnología para que tu web no solo se vea increíble, sino que genere clientes y ventas reales.</p>
+        </div>
+      </div>
+
+      <!-- Apartado 3 -->
+      <div class="menu-card">
+        <div class="menu-card-header">
+          <span class="menu-icon">🚀</span>
+          <h3>Cómo Te Llevamos a la Cima</h3>
+        </div>
+        <div class="menu-card-content">
+          <p>Transformamos páginas web mediocres en máquinas de captar clientes. Así lo hacemos:</p>
+          
+          <div class="benefit-list">
+            <div class="benefit-item">• <strong>Diseño que impacta</strong>: Interfaces modernas, rápidas y profesionales que generan confianza inmediata.</div>
+            <div class="benefit-item">• <strong>Velocidad extrema</strong>: Cargas en menos de 2 segundos y excelente puntuación en Core Web Vitals.</div>
+            <div class="benefit-item">• <strong>Optimización SEO</strong>: Estructura técnica perfecta para que Google te quiera desde el primer día.</div>
+            <div class="benefit-item">• <strong>Conversión máxima</strong>: Cada botón, texto y elemento está pensado para guiar al usuario hacia la acción deseada.</div>
+            <div class="benefit-item">• <strong>Estrategia a largo plazo</strong>: Te acompañamos después del lanzamiento con mantenimiento, mejoras y escalabilidad.</div>
+          </div>
+          
+          <p class="highlight-text">El resultado: más visibilidad, más autoridad y más clientes llegando a tu negocio a través de tu web.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
