@@ -139,19 +139,23 @@ if (mobileMenuBtn && closeMenuBtn && mobileMenu) {
     }
   });
 }
-// Animación Scroll Reveal
+// ANIMACIÓN SCROLL REVEAL - SOLO UNA VEZ (definitivo)
 document.addEventListener('DOMContentLoaded', () => {
+  
   const elements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
+        
+        // ← Esta línea es clave: una vez que aparece, ya no lo observamos más
+        observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.15,     // Se activa cuando el 15% del elemento es visible
-    rootMargin: "0px 0px -50px 0px"
+    threshold: 0.15,                    // Se activa cuando el 15% es visible
+    rootMargin: "0px 0px -60px 0px"
   });
 
   elements.forEach(el => observer.observe(el));
