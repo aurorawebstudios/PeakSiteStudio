@@ -236,7 +236,7 @@ body.light section.cta {
 .fade-left.visible,
 .fade-right.visible {
   opacity: 1;
-  transform: translate(0);
+  transform: translateY(0);
 }
 
 /* Pequeños delays para que no aparezcan todos a la vez */
