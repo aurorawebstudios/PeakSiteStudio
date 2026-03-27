@@ -52,65 +52,68 @@
       </div>
     </section>
     <section class="container contact-section">
-      <div class="contact-grid">
-        <form class="contact-form fade-left" id="contactForm">
-          <div class="input-group">
-            <input id="nombre" required="" type="text"/>
-            <label>Name</label>
-            <span class="error">Mandatory field</span>
+  <div class="contact-grid">
+    <!-- FORM -->
+    <form class="contact-form fade-left" id="contactForm">
+      <div class="input-group">
+        <input id="nombre" required="" type="text"/>
+        <label>Name</label>
+        <span class="error">Mandatory field</span>
+      </div>
+      <div class="input-group">
+        <input id="email" required="" type="email"/>
+        <label>Email</label>
+        <span class="error">Invalid email</span>
+      </div>
+      <div class="input-group">
+        <textarea id="mensaje" required=""></textarea>
+        <label>Tell us about your project</label>
+        <span class="error">Write your message</span>
+      </div>
+      <button class="btn" id="submitBtn" type="submit">
+        <span>Send message</span>
+        <div class="loader"></div>
+      </button>
+      <p class="success-msg">✔ Message sent successfully</p>
+    </form>
+
+    <!-- INFO -->
+    <div class="contact-info fade-right">
+      <h3 class="contact-title">Let's speak directly</h3>
+      <p class="contact-subtitle">We resolve doubts, analyze your website, and propose real improvements.</p>
+      <div class="contact-actions">
+        <a class="btn whatsapp-btn" href="https://wa.me/+34640814211">💬 Talk via WhatsApp</a>
+      </div>
+      <div class="contact-email-pro">
+        <div class="email-header">
+          <span class="email-label">Contact email</span>
+          <span class="email-status">Available</span>
+        </div>
+        <div class="email-box">
+          <span class="email-icon">📩</span>
+          <a class="email-link" href="mailto:info@peaksitestudio.com">info@peaksitestudio.com</a>
+        </div>
+        <p class="email-note">Write to us directly and we will respond with a clear proposal within 24 hours.</p>
+      </div>
+      <div class="contact-benefits">
+        <div class="benefit fade-up">
+          <div class="icon">⚡</div>
+          <div>
+            <strong>Quick answer</strong>
+            <p>Less than 24 hours</p>
           </div>
-          <div class="input-group">
-            <input id="email" required="" type="email"/>
-            <label>Email</label>
-            <span class="error">Invalid email</span>
-          </div>
-          <div class="input-group">
-            <textarea id="mensaje" required=""></textarea>
-            <label>Tell us about your project</label>
-            <span class="error">Write your message</span>
-          </div>
-          <button class="btn" id="submitBtn" type="submit">
-            <span>Send message</span>
-            <div class="loader"></div>
-          </button>
-          <p class="success-msg">✔ Message sent successfully</p>
-        </form>
-        <div class="contact-info fade-right">
-          <h3 class="contact-title">Let's speak directly</h3>
-          <p class="contact-subtitle">We resolve doubts, analyze your website, and propose real improvements. </p>
-          <div class="contact-actions">
-            <a class="btn whatsapp-btn" href="https://wa.me/+34640814211">💬 Talk via WhatsApp </a>
-          </div>
-          <div class="contact-email-pro">
-            <div class="email-header">
-              <span class="email-label">Contact email</span>
-              <span class="email-status">Available</span>
-            </div>
-            <div class="email-box">
-              <span class="email-icon">📩</span>
-              <a class="email-link" href="mailto:info@peaksitestudio.com">info@peaksitestudio.com </a>
-            </div>
-            <p class="email-note">Write to us directly and we will respond with a clear proposal within 24 hours. </p>
-          </div>
-          <div class="contact-benefits">
-            <div class="benefit">
-              <div class="icon">⚡</div>
-              <div>
-                <strong>Quick answer</strong>
-                <p>Less than 24 hours</p>
-              </div>
-            </div>
-            <div class="benefit">
-              <div class="icon">🎯</div>
-              <div>
-                <strong>Real advice</strong>
-                <p>No commitment</p>
-              </div>
-            </div>
+        </div>
+        <div class="benefit fade-up delay">
+          <div class="icon">🎯</div>
+          <div>
+            <strong>Real advice</strong>
+            <p>No commitment</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
     <script src="/script.js"></script>
     <footer class="footer-pro">
       <div class="container footer-grid">
