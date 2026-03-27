@@ -139,27 +139,20 @@ if (mobileMenuBtn && closeMenuBtn && mobileMenu) {
     }
   });
 }
-// ANIMACIÓN SCROLL REVEAL - Se activa cada vez que entra en pantalla
+// Animación Scroll Reveal
 document.addEventListener('DOMContentLoaded', () => {
-  
   const elements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Añade la clase visible para activar la animación
         entry.target.classList.add('visible');
-      } else {
-        // Opcional: Quita la clase cuando sale de la pantalla (para que se vuelva a animar al bajar otra vez)
-        entry.target.classList.remove('visible');
       }
     });
   }, {
-    threshold: 0.15,           // Se activa cuando el 15% del elemento es visible
-    rootMargin: "-50px 0px -80px 0px"
+    threshold: 0.15,     // Se activa cuando el 15% del elemento es visible
+    rootMargin: "0px 0px -50px 0px"
   });
 
-  elements.forEach(el => {
-    observer.observe(el);
-  });
+  elements.forEach(el => observer.observe(el));
 });
