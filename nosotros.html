@@ -30,14 +30,62 @@
     <a href="/">Inicio</a>
     <a href="/servicios.html">Servicios</a>
     <a href="/portafolio.html">Portafolio</a>
-    <a href="/nosotros.html">Nosotros</a>
+    
+    <!-- === NOSOTROS CON MENÚ DESPLEGABLE (exactamente como "Soluciones") === -->
+    <div class="nav-item has-dropdown">
+      <a href="/nosotros.html" class="nav-link">
+        Nosotros <span class="plus">+</span>
+      </a>
+      <!-- Mega-menú desplegable (aparece al pasar el ratón) -->
+      <div class="mega-dropdown">
+        <div class="mega-grid">
+          
+          <!-- Columna 1 -->
+          <div class="mega-column">
+            <h4>🏔️ Quiénes Somos</h4>
+            <p>Peak Site Studio nació para ayudar a las empresas a salir del valle digital y coronar la cima de su sector.</p>
+            <a href="/nosotros.html#quienes-somos" class="mega-link">Conocer nuestra historia →</a>
+          </div>
+          
+          <!-- Columna 2 -->
+          <div class="mega-column">
+            <h4>⛰️ Nuestra Cumbre</h4>
+            <p>Nos dedicamos a crear experiencias digitales premium que posicionan tu negocio en la cima.</p>
+            <ul>
+              <li>Diseño UI/UX conversor</li>
+              <li>Desarrollo ultrarrápido</li>
+              <li>Estrategias de marketing digital</li>
+              <li>Tiendas online de alto rendimiento</li>
+              <li>Automatización y escalabilidad</li>
+            </ul>
+            <a href="/nosotros.html#nuestra-cumbre" class="mega-link">Ver lo que hacemos →</a>
+          </div>
+          
+          <!-- Columna 3 -->
+          <div class="mega-column">
+            <h4>🚀 Cómo Te Llevamos a la Cima</h4>
+            <p>Transformamos webs normales en máquinas de captar clientes con resultados reales.</p>
+            <ul>
+              <li>Diseño que genera confianza</li>
+              <li>Velocidad extrema + SEO técnico</li>
+              <li>Optimización de conversión</li>
+              <li>Acompañamiento post-lanzamiento</li>
+            </ul>
+            <a href="/nosotros.html#como-te-llevamos" class="mega-link">Descubrir cómo lo hacemos →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <a href="/contacto.html">Contacto</a>
   </div>
+
   <!-- Botón hamburguesa - SOLO móvil -->
   <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">
     ☰
   </button>
-  <!-- Menú móvil -->
+  
+  <!-- Menú móvil (sin cambios, solo el enlace normal) -->
   <div id="mobileMenu" class="mobile-menu">
     <button id="closeMenuBtn" class="close-menu-btn">✕</button>
     <div class="mobile-menu-links">
@@ -48,6 +96,7 @@
       <a href="/contacto.html" class="mobile-link">Contacto</a>
     </div>
   </div>
+
   <!-- Idioma + Tema - solo en PC -->
   <div class="desktop-only nav-right">
     <div class="lang-switch">
@@ -84,7 +133,7 @@
   </div>
 </section>
 
-<!-- MENÚ DESPLEGABLE "NOSOTROS" - 3 APARTADOS -->
+<!-- MENÚ DESPLEGABLE "NOSOTROS" EN LA PÁGINA (las 3 secciones que pediste) -->
 <section class="solutions-menu">
   <div class="container">
     <div class="menu-header">
@@ -95,7 +144,7 @@
     <div class="menu-grid">
       
       <!-- Apartado 1 -->
-      <div class="menu-card">
+      <div class="menu-card" id="quienes-somos">
         <div class="menu-card-header">
           <span class="menu-icon">🏔️</span>
           <h3>Quiénes Somos</h3>
@@ -108,7 +157,7 @@
       </div>
 
       <!-- Apartado 2 -->
-      <div class="menu-card">
+      <div class="menu-card" id="nuestra-cumbre">
         <div class="menu-card-header">
           <span class="menu-icon">⛰️</span>
           <h3>Nuestra Cumbre</h3>
@@ -127,7 +176,7 @@
       </div>
 
       <!-- Apartado 3 -->
-      <div class="menu-card">
+      <div class="menu-card" id="como-te-llevamos">
         <div class="menu-card-header">
           <span class="menu-icon">🚀</span>
           <h3>Cómo Te Llevamos a la Cima</h3>
