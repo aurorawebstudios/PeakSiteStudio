@@ -771,23 +771,56 @@ body.dark .mobile-menu-btn {
   transform: rotate(180deg);
 }
 
-/* Mega Menu más ancho y extendido */
+/* ====================== MEGA MENU NOSOTROS - CORREGIDO ====================== */
+.nav-item {
+  position: relative;
+  display: inline-block;   /* Ayuda a la alineación */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 14px;      /* Más padding vertical para alinear mejor */
+  border-radius: 8px;
+  transition: background 0.25s ease;
+  height: 100%;            /* Ayuda a la alineación vertical */
+}
+
+.nav-link:hover {
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.chevron {
+  font-size: 0.78em;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.nav-item:hover .chevron {
+  transform: rotate(180deg);
+}
+
+/* Mega Menu extendido */
 .mega-menu {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(15px);
+  left: 0;
+  right: 0;
   opacity: 0;
   visibility: hidden;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 10000;
   pointer-events: none;
+  padding-top: 10px;       /* Espacio extra para mover el mouse */
 }
 
 .nav-item:hover .mega-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(8px);
   pointer-events: auto;
 }
 
@@ -796,8 +829,9 @@ body.dark .mobile-menu-btn {
   border-radius: 22px;
   box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.22);
   border: 1px solid #e2e8f0;
-  width: 920px;           /* ← Hazlo más ancho aquí (prueba 920px o 1000px) */
-  max-width: 95vw;        /* Evita que se salga de la pantalla en pantallas pequeñas */
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 95%;
   padding: 45px 40px;
   overflow: hidden;
 }
