@@ -12,22 +12,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <title>Servicios | Peak Site Studio</title>
   <meta name="description" content="Elige el paquete de diseño web que mejor se adapta a tu presupuesto. Páginas profesionales, tiendas online y mantenimiento.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="css/servicios.css">
   <link rel="stylesheet" href="css/nosotros.css">
-
   <link rel="icon" type="image/png" href="/logos2/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/logos2/favicon.svg" />
   <link rel="shortcut icon" href="/logos2/favicon-v2.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/logos2/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWebSite" />
   <link rel="manifest" href="/site.webmanifest" />
- 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body class="light">
-
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW3WHKC7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -36,61 +32,108 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAV -->
 <header class="header">
   <div class="container nav">
-    <a href="index.html">
+    <a href="/" class="brand">
       <img src="/logos2/favicon-96x96.png" class="logo" alt="Peak Site Studio">
+      <span class="brand-name">PeakSites</span>
     </a>
     <nav>
-  <!-- Menú Desktop (PC) -->
-  <div class="nav-links desktop-nav" id="navLinks">
-    <a href="/">Inicio</a>
-    <a href="/servicios.html">Servicios</a>
-    <a href="/portafolio.html">Portafolio</a>
-    <a href="/nosotros.html">Nosotros</a>
-    <a href="/contacto.html">Contacto</a>
-  </div>
-
-  <!-- Botón Desplegable - SOLO móvil -->
-  <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">
-    ☰
-  </button>
-
-  <!-- Menú móvil -->
-  <div id="mobileMenu" class="mobile-menu">
-    <button id="closeMenuBtn" class="close-menu-btn">✕</button>
-    <div class="mobile-menu-links">
-      <a href="/" class="mobile-link">Inicio</a>
-      <a href="/servicios.html" class="mobile-link">Servicios</a>
-      <a href="/portafolio.html" class="mobile-link">Portafolio</a>
-      <a href="/nosotros.html" class="mobile-link">Nosotros</a>
-      <a href="/contacto.html" class="mobile-link">Contacto</a>
-    </div>
-  </div>
-
-  <!-- Idioma + Tema - solo en PC -->
-  <div class="desktop-only nav-right">
-    <div class="lang-switch">
-      <!-- Aquí pega tu código completo del lang-switch -->
-      <div class="lang-current">
-        <span class="flag-wrapper">
-          <img src="/banderas/es.png" alt="Español">
-        </span>
-        <span>ES</span>
-        <span class="arrow">▾</span>
+      <!-- Menú Desktop (PC) -->
+      <div class="nav-links desktop-nav" id="navLinks">
+        <a href="/">Inicio</a>
+        
+        <!-- SERVICIOS CON MEGA MENÚ -->
+        <div class="nav-item">
+          <a href="/servicios.html" class="nav-link">
+            Servicios<span class="chevron"> ▼</span>
+          </a>
+          <div class="mega-menu">
+            <div class="mega-menu-content">
+              <div class="mega-grid">
+                <div class="mega-column">
+                  <h4>Estrategia, automatización e inteligencia digital</h4>
+                  <a href="/servicios.html">Gestión y optimización de CRM</a>
+                  <a href="#">Consultoría estratégica de negocio</a>
+                  <a href="#">Automatización de procesos empresariales</a>
+                  <a href="#">Análisis predictivo y modelado de datos</a>
+                  <a href="#">Soluciones de inteligencia artificial aplicada</a>
+                </div>
+                <div class="mega-column">
+                  <h4>Soluciones para tu negocio</h4>
+                  <a href="#">Desarrollo web a medida</a>
+                  <a href="#">Plataformas eCommerce/Tiendas Online</a>
+                  <a href="#">Sistemas de pago digital</a>
+                  <a href="#">Integraciones avanzadas y APIs</a>
+                  <a href="#">Aplicaciones web y móviles</a>
+                  <a href="#">Ciberseguridad y protección de datos</a>
+                  <a href="#">Mantenimiento y optimización</a>
+                  <a href="#">Consultoría Web</a>
+                </div>
+                <div class="mega-column">
+                  <h4>Estrategia y crecimiento digital</h4>
+                  <a href="/servicios.html">Posicionamiento orgánico (SEO)</a>
+                  <a href="#">Gestión de publicidad digital (SEM y Social Ads)</a>
+                  <a href="#">Analítica y medición de resultados</a>
+                  <a href="#">Consultoría estratégica digital</a>
+                  <a href="#">Optimización de conversión (CRO)</a>
+                </div>
+                <div class="mega-column">
+                  <h4>Diseño y UX</h4>
+                  <a href="#">Diseño de experiencia e interfaces digitales (UI/UX)</a>
+                  <a href="#">Arquitectura de interfaces y prototipado avanzado</a>
+                  <a href="#">Prototipado estratégico y validación de producto</a>
+                  <a href="#">Sistemas de diseño y escalabilidad visual</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <a href="/portafolio.html">Portafolio</a>
+        <a href="/nosotros.html">Nosotros</a>
+        <a href="/contacto.html">Contacto</a>
       </div>
-      <div class="lang-menu">
-        <a href="/" class="lang-option">
-          <span class="flag-wrapper"><img src="/banderas/es.png" alt="Español"></span>
-          Español
-        </a>
-        <a href="/en/" class="lang-option">
-          <span class="flag-wrapper"><img src="/banderas/en.png" alt="English"></span>
-          English
-        </a>
+
+      <!-- Botón Desplegable - SOLO móvil -->
+      <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <!-- Menú móvil -->
+      <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMenuBtn" class="close-menu-btn">✕</button>
+        <div class="mobile-menu-links">
+          <a href="/" class="mobile-link">Inicio</a>
+          <a href="/servicios.html" class="mobile-link">Servicios</a>
+          <a href="/portafolio.html" class="mobile-link">Portafolio</a>
+          <a href="/nosotros.html" class="mobile-link">Nosotros</a>
+          <a href="/contacto.html" class="mobile-link">Contacto</a>
+        </div>
       </div>
-    </div>
-    <button id="themeToggle" class="theme-toggle">🌙</button>
-  </div>
-</nav>
+
+      <!-- Idioma + Tema - solo en PC -->
+      <div class="desktop-only nav-right">
+        <div class="lang-switch">
+          <div class="lang-current">
+            <span class="flag-wrapper">
+              <img src="/banderas/es.png" alt="Español">
+            </span>
+            <span>ES</span>
+            <span class="arrow">▾</span>
+          </div>
+          <div class="lang-menu">
+            <a href="/" class="lang-option">
+              <span class="flag-wrapper"><img src="/banderas/es.png" alt="Español"></span>
+              Español
+            </a>
+            <a href="/en/" class="lang-option">
+              <span class="flag-wrapper"><img src="/banderas/en.png" alt="English"></span>
+              English
+            </a>
+          </div>
+        </div>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+      </div>
+    </nav>
   </div>
 </header>
 
@@ -108,54 +151,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="services-section" id="paquetes">
   <div class="container">
     <h2 class="section-title fade-up">Elige tu paquete</h2>
-  
+ 
     <div class="services-grid">
-  
-  <!-- 1. OPTIMIZACIÓN & REDISEÑO (449€) -->
-  <div class="service-card fade-up delay">
-    <div class="service-icon">⚡</div>
-    <h3>Rediseño & Optimización</h3>
-    <p class="service-desc">Mejoramos tu web actual para que convierta más y se vea moderna.</p>
-    <ul>
-      <li>Rediseño visual completo</li>
-      <li>Mejora de velocidad</li>
-      <li>Optimización UX/UI</li>
-      <li>Estrategia de conversión</li>
-    </ul>
-    <div class="price">500€</div>
-    <a href="contacto.html" class="btn-card">Seleccionar</a>
-  </div>
-
-  <!-- 2. WEB PROFESIONAL (699€) -->
-  <div class="service-card fade-up">
-    <div class="service-icon">🏔️</div>
-    <h3>Web Profesional</h3>
-    <p class="service-desc">Presencia online sólida y profesional para tu negocio.</p>
-    <ul>
-      <li>Diseño moderno y responsive</li>
-      <li>Optimización SEO básica</li>
-      <li>Formulario + WhatsApp</li>
-      <li>Velocidad y seguridad</li>
-    </ul>
-    <div class="price">800€</div>
-    <a href="contacto.html" class="btn-card">Seleccionar</a>
-  </div>
-
-  <!-- 3. TIENDA ONLINE (1099€) -->
-  <div class="service-card featured fade-up delay2">
-    <div class="service-icon">🛒</div>
-    <h3>Tienda Online</h3>
-    <p class="service-desc">Tienda completa lista para vender desde el primer día.</p>
-    <ul>
-      <li>Diseño enfocado en ventas</li>
-      <li>Pagos seguros integrados</li>
-      <li>Gestión de productos</li>
-      <li>SEO avanzado</li>
-    </ul>
-    <div class="price">1.099€</div>
-    <a href="contacto.html" class="btn-card">Seleccionar</a>
-  </div>
-</div>
+      <!-- 1. OPTIMIZACIÓN & REDISEÑO -->
+      <div class="service-card fade-up delay">
+        <div class="service-icon">⚡</div>
+        <h3>Rediseño & Optimización</h3>
+        <p class="service-desc">Mejoramos tu web actual para que convierta más y se vea moderna.</p>
+        <ul>
+          <li>Rediseño visual completo</li>
+          <li>Mejora de velocidad</li>
+          <li>Optimización UX/UI</li>
+          <li>Estrategia de conversión</li>
+        </ul>
+        <div class="price">500€</div>
+        <a href="contacto.html" class="btn-card">Seleccionar</a>
+      </div>
+      
+      <!-- 2. WEB PROFESIONAL -->
+      <div class="service-card fade-up">
+        <div class="service-icon">🏔️</div>
+        <h3>Web Profesional</h3>
+        <p class="service-desc">Presencia online sólida y profesional para tu negocio.</p>
+        <ul>
+          <li>Diseño moderno y responsive</li>
+          <li>Optimización SEO básica</li>
+          <li>Formulario + WhatsApp</li>
+          <li>Velocidad y seguridad</li>
+        </ul>
+        <div class="price">800€</div>
+        <a href="contacto.html" class="btn-card">Seleccionar</a>
+      </div>
+      
+      <!-- 3. TIENDA ONLINE -->
+      <div class="service-card featured fade-up delay2">
+        <div class="service-icon">🛒</div>
+        <h3>Tienda Online</h3>
+        <p class="service-desc">Tienda completa lista para vender desde el primer día.</p>
+        <ul>
+          <li>Diseño enfocado en ventas</li>
+          <li>Pagos seguros integrados</li>
+          <li>Gestión de productos</li>
+          <li>SEO avanzado</li>
+        </ul>
+        <div class="price">1.099€</div>
+        <a href="contacto.html" class="btn-card">Seleccionar</a>
+      </div>
+    </div>
 
     <!-- Mantenimiento -->
     <div class="maintenance-section">
