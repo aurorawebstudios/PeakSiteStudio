@@ -771,33 +771,38 @@ body.dark .mobile-menu-btn {
   transform: rotate(180deg);
 }
 
-/* ====================== MEGA MENU NOSOTROS - CORREGIDO ====================== */
+/* ====================== MEGA MENU NOSOTROS - ALINEACIÓN CORREGIDA ====================== */
 .nav-item {
   position: relative;
-  display: inline-block;   /* Ayuda a la alineación */
+  display: inline-block;
 }
 
 .nav-link {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 10px 14px;      /* Más padding vertical para alinear mejor */
+  padding: 12px 14px;           /* Padding uniforme */
   border-radius: 8px;
   transition: background 0.25s ease;
-  height: 100%;            /* Ayuda a la alineación vertical */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.4;
 }
 
 .nav-link:hover {
   background: rgba(0, 212, 255, 0.08);
 }
 
+/* Ajuste específico para "Nosotros" */
+.nosotros-link {
+  padding: 12px 14px;           /* Igual que los otros enlaces */
+}
+
 .chevron {
-  font-size: 0.78em;
+  font-size: 0.75em;
   transition: transform 0.3s ease;
-  display: inline-block;
+  margin-left: 2px;
 }
 
 .nav-item:hover .chevron {
@@ -810,12 +815,12 @@ body.dark .mobile-menu-btn {
   top: 100%;
   left: 0;
   right: 0;
+  padding-top: 12px;            /* Puente para que no desaparezca rápido */
   opacity: 0;
   visibility: hidden;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.25s ease, visibility 0.25s ease;
   z-index: 10000;
   pointer-events: none;
-  padding-top: 10px;       /* Espacio extra para mover el mouse */
 }
 
 .nav-item:hover .mega-menu {
@@ -833,7 +838,6 @@ body.dark .mobile-menu-btn {
   max-width: 1100px;
   width: 95%;
   padding: 45px 40px;
-  overflow: hidden;
 }
 
 body.dark .mega-menu-content {
@@ -859,7 +863,7 @@ body.dark .mega-menu-content {
 
 .mega-column a {
   display: block;
-  padding: 10px 0;
+  padding: 10px 4px;
   color: var(--text-light);
   text-decoration: none;
   font-size: 15.3px;
@@ -875,7 +879,7 @@ body.dark .mega-column a {
   padding-left: 8px;
 }
 
-/* Ocultar en móvil */
+/* En móvil se desactiva */
 @media (max-width: 991px) {
   .mega-menu {
     display: none !important;
