@@ -771,7 +771,7 @@ body.dark .mobile-menu-btn {
   transform: rotate(180deg);
 }
 
-/* ====================== MEGA MENU NOSOTROS - FINAL (EXTENDIDO + ALINEADO) ====================== */
+/* ====================== MEGA MENU NOSOTROS - CORREGIDO FINAL ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -793,9 +793,8 @@ body.dark .mobile-menu-btn {
   background: rgba(0, 212, 255, 0.08);
 }
 
-/* Alineación perfecta de "Nosotros" */
 .nosotros-link {
-  padding: 12px 14px;
+  padding: 12px 14px;   /* Igual que los otros enlaces */
 }
 
 .chevron {
@@ -807,18 +806,19 @@ body.dark .mobile-menu-btn {
   transform: rotate(180deg);
 }
 
-/* Panel extendido hacia los dos lados */
+/* Panel que se extiende hacia los dos lados */
 .mega-menu {
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
-  padding-top: 15px;           /* Puente para no perder el hover */
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 15px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 10000;
   pointer-events: none;
+  width: 100vw;                  /* Extiende a todo el ancho de la pantalla */
 }
 
 .nav-item:hover .mega-menu {
@@ -833,8 +833,8 @@ body.dark .mobile-menu-btn {
   box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.22);
   border: 1px solid #e2e8f0;
   margin: 0 auto;
+  max-width: 1150px;
   width: 95%;
-  max-width: 1150px;           /* Ancho amplio pero controlado */
   padding: 45px 40px;
 }
 
@@ -877,7 +877,7 @@ body.dark .mega-column a {
   padding-left: 8px;
 }
 
-/* Móvil */
+/* En móvil se desactiva */
 @media (max-width: 991px) {
   .mega-menu {
     display: none !important;
