@@ -633,7 +633,7 @@ body.dark .mobile-menu-btn {
   transform: none;
 }
 
-/* ====================== MEGA MENU NOSOTROS - ALINEADO + ESPACIO REDUCIDO ====================== */
+/* ====================== MEGA MENU NOSOTROS - ALINEACIÓN FORZADA ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -643,13 +643,13 @@ body.dark .mobile-menu-btn {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  padding: 12px 10px;           /* Reducido de 14px a 10px */
+  padding: 12px 14px !important;
   border-radius: 8px;
   transition: background 0.25s ease;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  height: 46px;
+  height: 46px;           /* Altura fija para forzar alineación */
   line-height: 1;
 }
 
@@ -658,27 +658,25 @@ body.dark .mobile-menu-btn {
 }
 
 .nosotros-link {
-  padding: 12px 10px;           /* Igual para "Nosotros" */
+  padding: 12px 14px !important;
 }
 
 .chevron {
   font-size: 0.68em;
   transition: transform 0.3s ease;
   position: relative;
-  top: -1px;
+  top: -1px;              /* Subimos la flecha */
 }
 
-.nav-item:hover .chevron {
-  transform: rotate(180deg);
+/* Forzar que todos los enlaces del menú tengan la misma altura y alineación */
+.desktop-nav a {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 46px !important;
+  padding: 12px 14px !important;
 }
 
-/* Reducir espacio entre todos los enlaces del menú */
-.desktop-nav a,
-.desktop-nav .nav-link {
-  margin: 0 4px;                /* Espacio reducido entre items */
-}
-
-/* Panel extendido (sin cambios importantes) */
+/* Panel extendido (sin cambios) */
 .mega-menu {
   position: absolute;
   top: 100%;
