@@ -771,7 +771,7 @@ body.dark .mobile-menu-btn {
   transform: rotate(180deg);
 }
 
-/* ====================== MEGA MENU NOSOTROS - ALINEACIÓN CORREGIDA ====================== */
+/* ====================== MEGA MENU NOSOTROS - FINAL (EXTENDIDO + ALINEADO) ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -781,44 +781,42 @@ body.dark .mobile-menu-btn {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  padding: 12px 14px;           /* Padding uniforme */
+  padding: 12px 14px;
   border-radius: 8px;
   transition: background 0.25s ease;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  line-height: 1.4;
+  gap: 5px;
 }
 
 .nav-link:hover {
   background: rgba(0, 212, 255, 0.08);
 }
 
-/* Ajuste específico para "Nosotros" */
+/* Alineación perfecta de "Nosotros" */
 .nosotros-link {
-  padding: 12px 14px;           /* Igual que los otros enlaces */
+  padding: 12px 14px;
 }
 
 .chevron {
   font-size: 0.75em;
   transition: transform 0.3s ease;
-  margin-left: 2px;
 }
 
 .nav-item:hover .chevron {
   transform: rotate(180deg);
 }
 
-/* Mega Menu extendido */
+/* Panel extendido hacia los dos lados */
 .mega-menu {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  padding-top: 12px;            /* Puente para que no desaparezca rápido */
+  padding-top: 15px;           /* Puente para no perder el hover */
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transition: all 0.3s ease;
   z-index: 10000;
   pointer-events: none;
 }
@@ -835,8 +833,8 @@ body.dark .mobile-menu-btn {
   box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.22);
   border: 1px solid #e2e8f0;
   margin: 0 auto;
-  max-width: 1100px;
   width: 95%;
+  max-width: 1150px;           /* Ancho amplio pero controlado */
   padding: 45px 40px;
 }
 
@@ -879,7 +877,7 @@ body.dark .mega-column a {
   padding-left: 8px;
 }
 
-/* En móvil se desactiva */
+/* Móvil */
 @media (max-width: 991px) {
   .mega-menu {
     display: none !important;
