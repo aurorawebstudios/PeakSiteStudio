@@ -6,7 +6,6 @@
   max-width: 1280px;
   margin: 0 auto 90px;
 }
-
 .service-card {
   padding: 48px 35px 40px;
   border-radius: 24px;
@@ -17,59 +16,48 @@
   height: 100%;
   border: 1px solid transparent;
 }
-
 .service-card {
   will-change: transform;
 }
-
 /* 🔥 FORZAR HOVER POR ENCIMA DEL SCROLL */
 .service-card:hover {
   transform: translateY(-18px) !important;
 }
-
 .service-card:hover {
   transform: translateY(-18px);
   box-shadow: 0 25px 50px rgba(0, 212, 255, 0.15);
 }
-
 .service-card.featured {
   border: 2px solid #38bdf8;
   transform: scale(1);
 }
-
 .service-card.featured:hover {
   transform: translateY(-18px);
 }
-
 .service-icon {
   font-size: 3.5rem;
   margin-bottom: 22px;
 }
-
 .service-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.92rem;
   margin-bottom: 18px;
   min-height: 58px;
 }
-
 .service-desc {
   margin-bottom: 28px;
   min-height: 85px;
 }
-
 .service-card ul {
   text-align: left;
   margin-bottom: 35px;
   flex-grow: 1;
 }
-
 .service-card ul li {
   padding: 8px 0;
   position: relative;
   padding-left: 28px;
 }
-
 .service-card ul li::before {
   content: "✓";
   color: #38bdf8;
@@ -77,54 +65,43 @@
   left: 0;
   font-weight: bold;
 }
-
 .price {
   font-size: 2.15rem;
   font-weight: 700;
   margin: 15px 0 25px;
 }
-
 .price-month {
   font-size: 1.1rem;
   font-weight: 400;
 }
-
 /* ====================== MODO OSCURO ====================== */
 body:not(.light) .service-card {
   background: #1e2937;
   border-color: #334155;
 }
-
 body:not(.light) .service-desc,
 body:not(.light) .service-card ul li {
   color: #cbd5e1;
 }
-
 body:not(.light) .price {
   color: #38bdf8;
 }
-
 body:not(.light) .price-month {
   color: #94a3b8;
 }
-
 /* ====================== MODO CLARO ====================== */
 body.light .service-card {
   background: #1e2937;
   border: 1px solid #475569;
   color: #f1f5f9;
 }
-
 body.light .service-desc,
 body.light .service-card ul li {
   color: #e2e8f0;
 }
-
 body.light .price {
   color: #38bdf8;
 }
-
-
 /* ====================== TÍTULO "Elige tu paquete" ====================== */
 .section-title {
   display: inline-block;
@@ -134,35 +111,30 @@ body.light .price {
   margin: 0 auto 60px;
   text-align: center;
 }
-
 /* Contenedor centrado */
 .services-section .container {
   text-align: center;
 }
-
 /* Modo oscuro */
 body:not(.light) .section-title {
-  background: #1e2937; /* mismo azul oscuro de las cards */
+  background: #1e2937;
   color: #f8fafc;
   border: 1px solid #334155;
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
-
 /* Modo claro */
 body.light .section-title {
-  background: #1e2937; /* MISMO color que las cards (consistencia) */
+  background: #1e2937;
   color: #f8fafc;
   border: 1px solid #475569;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
-
 /* ====================== MANTENIMIENTO ====================== */
 .maintenance-section {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
-
 .maintenance-card {
   max-width: 520px;
   width: 100%;
@@ -171,31 +143,26 @@ body.light .section-title {
   border-radius: 24px;
   border: 1px solid #334155;
 }
-
 body.light .maintenance-card {
   background: #1e2937;
   border-color: #475569;
 }
-
 .maintenance-card .service-desc {
   min-height: 90px;
   color: #cbd5e1;
 }
-
 body.light .maintenance-card .service-desc {
   color: #e2e8f0;
 }
-
 /* ====================== RESPONSIVE ====================== */
 @media (max-width: 992px) {
-  .services-grid { 
-    grid-template-columns: repeat(2, 1fr); 
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 640px) {
-  .services-grid { 
-    grid-template-columns: 1fr; 
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 }
 body.light h2.section-title {
@@ -203,53 +170,41 @@ body.light h2.section-title {
 }
 /* Texto del CTA */
 .cta p {
-  color: #cbd5e1; /* gris claro (modo oscuro) */
+  color: #cbd5e1;
 }
-
-/* Modo claro */
 body.light section.cta {
   color: #ffffff !important;
 }
-/* ====================== ANIMACIONES SCROLL REVEAL (solo una vez) ====================== */
-
+/* ====================== ANIMACIONES SCROLL REVEAL ====================== */
 .fade-up,
 .fade-left,
 .fade-right {
   opacity: 0;
   transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
 .fade-up {
   transform: translateY(50px);
 }
-
 .fade-left {
   transform: translateX(-60px);
 }
-
 .fade-right {
   transform: translateX(60px);
 }
-
-/* Estado visible - solo se activa una vez */
 .fade-up.visible,
 .fade-left.visible,
 .fade-right.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Pequeños delays para que no aparezcan todos a la vez */
-.fade-up.delay  { transition-delay: 0.1s; }
+.fade-up.delay { transition-delay: 0.1s; }
 .fade-up.delay2 { transition-delay: 0.25s; }
 .fade-up.delay3 { transition-delay: 0.4s; }
-
-/* El hero no necesita esta animación */
 .about-hero * {
   transition: none !important;
 }
 
-/* ====================== MEGA MENU SERVICIOS - ALINEACIÓN FORZADA ====================== */
+/* ====================== MEGA MENU - SOLO LO NECESARIO PARA QUE SE VEA IGUAL QUE EN INDEX.HTML ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -265,7 +220,7 @@ body.light section.cta {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  height: 46px;           /* Altura fija para forzar alineación */
+  height: 46px;
   line-height: 1;
 }
 
@@ -273,18 +228,14 @@ body.light section.cta {
   background: rgba(0, 212, 255, 0.08);
 }
 
-.nosotros-link {
-  padding: 12px 14px !important;
-}
-
 .chevron {
   font-size: 0.68em;
   transition: transform 0.3s ease;
   position: relative;
-  top: -1px;              /* Subimos la flecha */
+  top: -1px;
 }
 
-/* Forzar que todos los enlaces del menú tengan la misma altura y alineación */
+/* Forzar alineación de enlaces del menú */
 .desktop-nav a {
   display: inline-flex !important;
   align-items: center !important;
@@ -292,7 +243,7 @@ body.light section.cta {
   padding: 12px 14px !important;
 }
 
-/* Panel extendido (sin cambios) */
+/* Panel mega menú */
 .mega-menu {
   position: absolute;
   top: 100%;
@@ -324,7 +275,8 @@ body.light section.cta {
   padding: 45px 40px;
 }
 
-body.dark .mega-menu-content {
+body.dark .mega-menu-content,
+body:not(.light) .mega-menu-content {
   background: #0f1629;
   border-color: rgba(255,255,255,0.09);
 }
@@ -352,7 +304,8 @@ body.dark .mega-menu-content {
   font-size: 15.3px;
 }
 
-body.dark .mega-column a {
+body.dark .mega-column a,
+body:not(.light) .mega-column a {
   color: var(--text-dark);
 }
 
