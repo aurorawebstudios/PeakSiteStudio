@@ -204,7 +204,7 @@ body.light section.cta {
   transition: none !important;
 }
 
-/* ====================== MEGA MENU SERVICIOS - ALINEACIÓN FORZADA ====================== */
+/* ====================== MEGA MENU - CORREGIDO PARA MODO CLARO Y OSCURO ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -220,7 +220,7 @@ body.light section.cta {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  height: 46px;           /* Altura fija para forzar alineación */
+  height: 46px;
   line-height: 1;
 }
 
@@ -228,18 +228,13 @@ body.light section.cta {
   background: rgba(0, 212, 255, 0.08);
 }
 
-.nosotros-link {
-  padding: 12px 14px !important;
-}
-
 .chevron {
   font-size: 0.68em;
   transition: transform 0.3s ease;
   position: relative;
-  top: -1px;              /* Subimos la flecha */
+  top: -1px;
 }
 
-/* Forzar que todos los enlaces del menú tengan la misma altura y alineación */
 .desktop-nav a {
   display: inline-flex !important;
   align-items: center !important;
@@ -247,7 +242,7 @@ body.light section.cta {
   padding: 12px 14px !important;
 }
 
-/* Panel extendido (sin cambios) */
+/* Panel */
 .mega-menu {
   position: absolute;
   top: 100%;
@@ -279,36 +274,36 @@ body.light section.cta {
   padding: 45px 40px;
 }
 
-body.dark .mega-menu-content {
+/* Fondo en modo oscuro */
+body.dark .mega-menu-content,
+body:not(.light) .mega-menu-content {
   background: #0f1629;
   border-color: rgba(255,255,255,0.09);
 }
 
-.mega-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 48px;
-}
-
+/* TÍTULOS EN CYAN - FIJO PARA AMBOS MODOS */
 .mega-column h4 {
   font-size: 14.5px;
   font-weight: 700;
-  color: #00d4ff;
-  margin-bottom: 20px;
+  color: #00d4ff !important;           /* ← Esto es lo que querías */
+  margin-bottom: 22px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 
+/* Enlaces normales */
 .mega-column a {
   display: block;
   padding: 10px 4px;
-  color: var(--text-light);
+  color: #1e2937;                      /* Color oscuro en modo claro */
   text-decoration: none;
   font-size: 15.3px;
 }
 
-body.dark .mega-column a {
-  color: var(--text-dark);
+/* Enlaces en modo oscuro */
+body.dark .mega-column a,
+body:not(.light) .mega-column a {
+  color: #f1f5f9;                      /* Color claro en modo oscuro */
 }
 
 .mega-column a:hover {
@@ -320,5 +315,4 @@ body.dark .mega-column a {
   .mega-menu {
     display: none !important;
   }
-}
 }
