@@ -204,7 +204,7 @@ body.light section.cta {
   transition: none !important;
 }
 
-/* ====================== MEGA MENU - VERSIÓN AJUSTADA ====================== */
+/* ====================== MEGA MENU SERVICIOS - ALINEACIÓN FORZADA ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -220,7 +220,7 @@ body.light section.cta {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  height: 46px;
+  height: 46px;           /* Altura fija para forzar alineación */
   line-height: 1;
 }
 
@@ -228,14 +228,18 @@ body.light section.cta {
   background: rgba(0, 212, 255, 0.08);
 }
 
+.nosotros-link {
+  padding: 12px 14px !important;
+}
+
 .chevron {
   font-size: 0.68em;
   transition: transform 0.3s ease;
   position: relative;
-  top: -1px;
+  top: -1px;              /* Subimos la flecha */
 }
 
-/* Forzar alineación de todos los enlaces del menú */
+/* Forzar que todos los enlaces del menú tengan la misma altura y alineación */
 .desktop-nav a {
   display: inline-flex !important;
   align-items: center !important;
@@ -243,7 +247,7 @@ body.light section.cta {
   padding: 12px 14px !important;
 }
 
-/* Panel del mega menú */
+/* Panel extendido (sin cambios) */
 .mega-menu {
   position: absolute;
   top: 100%;
@@ -272,11 +276,10 @@ body.light section.cta {
   margin: 0 auto;
   max-width: 1150px;
   width: 95%;
-  padding: 50px 45px;   /* ← aumentado un poco */
+  padding: 45px 40px;
 }
 
-body.dark .mega-menu-content,
-body:not(.light) .mega-menu-content {
+body.dark .mega-menu-content {
   background: #0f1629;
   border-color: rgba(255,255,255,0.09);
 }
@@ -284,39 +287,38 @@ body:not(.light) .mega-menu-content {
 .mega-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 52px;   /* ← aumentado para más separación */
+  gap: 48px;
 }
 
 .mega-column h4 {
   font-size: 14.5px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 
 .mega-column a {
   display: block;
-  padding: 10px 6px;
+  padding: 10px 4px;
   color: var(--text-light);
   text-decoration: none;
   font-size: 15.3px;
-  line-height: 1.4;
 }
 
-body.dark .mega-column a,
-body:not(.light) .mega-column a {
+body.dark .mega-column a {
   color: var(--text-dark);
 }
 
 .mega-column a:hover {
   color: #00d4ff;
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 @media (max-width: 991px) {
   .mega-menu {
     display: none !important;
   }
+}
 }
