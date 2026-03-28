@@ -95,7 +95,7 @@ body.light .price {
   color: #38bdf8;
 }
 
-/* ====================== TÍTULO "Elige tu paquete" ====================== */
+/* ====================== TÍTULO Y SECCIONES ====================== */
 .section-title {
   display: inline-block;
   padding: 14px 28px;
@@ -117,7 +117,6 @@ body.light .section-title {
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* ====================== MANTENIMIENTO ====================== */
 .maintenance-section {
   display: flex;
   justify-content: center;
@@ -133,12 +132,7 @@ body.light .section-title {
   border: 1px solid #334155;
 }
 
-.maintenance-card .service-desc {
-  min-height: 90px;
-  color: #cbd5e1;
-}
-
-/* ====================== MEGA MENU - ESTILOS PARA SERVICIOS ====================== */
+/* ====================== MEGA MENU - VERSIÓN MEJORADA ====================== */
 
 .nav-item {
   position: relative;
@@ -149,37 +143,37 @@ body.light .section-title {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  padding: 12px 14px !important;
+  padding: 12px 16px !important;
   border-radius: 8px;
   transition: background 0.25s ease;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  height: 46px;
+  gap: 5px;
+  height: 48px;
   line-height: 1;
 }
 
 .nav-link:hover {
-  background: rgba(0, 212, 255, 0.08);
+  background: rgba(0, 212, 255, 0.1);
 }
 
 .chevron {
-  font-size: 0.68em;
+  font-size: 0.75em;
   transition: transform 0.3s ease;
   position: relative;
   top: -1px;
 }
 
-/* Panel mega menú */
+/* Panel principal */
 .mega-menu {
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  padding-top: 15px;
+  padding-top: 18px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
   z-index: 10000;
   pointer-events: none;
   width: 100vw;
@@ -192,43 +186,45 @@ body.light .section-title {
 }
 
 .mega-menu-content {
-  background: white;
-  border-radius: 22px;
-  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.22);
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 35px 90px -15px rgba(0, 0, 0, 0.25);
   border: 1px solid #e2e8f0;
   margin: 0 auto;
-  max-width: 1150px;
+  max-width: 1180px;
   width: 95%;
-  padding: 45px 40px;
+  padding: 50px 45px 40px;
 }
 
 body.dark .mega-menu-content,
 body:not(.light) .mega-menu-content {
   background: #0f1629;
-  border-color: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.08);
+  box-shadow: 0 35px 90px -15px rgba(0, 0, 0, 0.45);
 }
 
 .mega-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 48px;
+  gap: 55px;
 }
 
 .mega-column h4 {
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 20px;
-  letter-spacing: 0.6px;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
 .mega-column a {
   display: block;
-  padding: 10px 4px;
+  padding: 11px 6px;
   color: #1e2937;
   text-decoration: none;
-  font-size: 15.3px;
+  font-size: 15.5px;
+  line-height: 1.45;
   transition: all 0.2s ease;
 }
 
@@ -239,7 +235,7 @@ body:not(.light) .mega-column a {
 
 .mega-column a:hover {
   color: #00d4ff;
-  padding-left: 8px;
+  padding-left: 12px;
 }
 
 /* ====================== RESPONSIVE ====================== */
@@ -249,7 +245,7 @@ body:not(.light) .mega-column a {
   }
   
   .mega-menu {
-    display: none !important;
+    display: none !important;   /* Ocultamos en móvil */
   }
 }
 
@@ -267,17 +263,9 @@ body:not(.light) .mega-column a {
   transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.fade-up {
-  transform: translateY(50px);
-}
-
-.fade-left {
-  transform: translateX(-60px);
-}
-
-.fade-right {
-  transform: translateX(60px);
-}
+.fade-up { transform: translateY(50px); }
+.fade-left { transform: translateX(-60px); }
+.fade-right { transform: translateX(60px); }
 
 .fade-up.visible,
 .fade-left.visible,
@@ -290,20 +278,6 @@ body:not(.light) .mega-column a {
 .fade-up.delay2 { transition-delay: 0.25s; }
 .fade-up.delay3 { transition-delay: 0.4s; }
 
-/* Evitar animaciones en hero */
 .about-hero * {
   transition: none !important;
-}
-
-/* Ajustes para modo claro en textos generales */
-body.light h2.section-title {
-  color: #ffffff !important;
-}
-
-.cta p {
-  color: #cbd5e1;
-}
-
-body.light section.cta {
-  color: #ffffff !important;
 }
