@@ -633,7 +633,7 @@ body.dark .mobile-menu-btn {
   transform: none;
 }
 
-/* ====================== MEGA MENU - TÍTULOS CENTRADOS VERTICALMENTE ====================== */
+/* ====================== MEGA MENU - TÍTULOS ALINEADOS HORIZONTALMENTE Y CENTRADOS VERTICALMENTE ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -700,7 +700,7 @@ body.dark .mobile-menu-btn {
   margin: 0 auto;
   max-width: 1180px;
   width: 95%;
-  padding: 50px 45px;
+  padding: 52px 48px;
 }
 
 body.dark .mega-menu-content {
@@ -711,17 +711,16 @@ body.dark .mega-menu-content {
 .mega-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 50px;
+  gap: 48px;
 }
 
-/* === CLAVE: Centrado vertical del título === */
+/* === COLUMNA CON FLEX PARA CENTRADO VERTICAL === */
 .mega-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;     /* Esto centra verticalmente el contenido */
-  min-height: 380px;           /* Altura mínima para que el centrado funcione bien */
+  justify-content: center;        /* Centrado vertical */
+  min-height: 420px;              /* Altura mínima para buen centrado */
   align-items: flex-start;
-  gap: 8px;
 }
 
 .mega-column h4 {
@@ -731,13 +730,13 @@ body.dark .mega-menu-content {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   line-height: 1.25;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   flex-shrink: 0;
 }
 
 .mega-column a {
   display: block;
-  padding: 8px 6px;
+  padding: 9px 6px;
   color: var(--text-light);
   text-decoration: none;
   font-size: 15.4px;
