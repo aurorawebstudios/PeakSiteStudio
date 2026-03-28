@@ -26,7 +26,6 @@
 <link rel="alternate" hreflang="es" href="https://peaksitestudio.com/">
 <link rel="alternate" hreflang="en" href="https://peaksitestudio.com/en/">
 <link rel="canonical" href="https://peaksitestudio.com/">
-
 <link rel="icon" type="image/png" href="/logos2/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/logos2/favicon.svg" />
 <link rel="shortcut icon" href="/logos2/favicon-v2.ico" />
@@ -35,7 +34,6 @@
 <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body class="light">
-
 <header class="header">
 <div class="container nav">
   <a href="/" class="brand">
@@ -43,24 +41,68 @@
     <span class="brand-name">PeakSites</span>
   </a>
 <nav>
-  <!-- Menú el focking PC -->
+  <!-- Menú escritorio -->
   <div class="nav-links desktop-nav" id="navLinks">
     <a href="/">Inicio</a>
     <a href="/servicios.html">Servicios</a>
     <a href="/portafolio.html">Portafolio</a>
-    <a href="/nosotros.html">Nosotros</a>
+    
+    <!-- NOSOTROS CON MEGA MENU HOVER (efecto similar a Midrocket) -->
+    <div class="nav-item group">
+      <a href="/nosotros.html" class="nav-link flex items-center gap-1">
+        Nosotros
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
+
+      <!-- Mega Menu -->
+      <div class="mega-menu">
+        <div class="mega-menu-content">
+          <div class="mega-grid">
+            <div class="mega-column">
+              <h4>Sobre Nosotros</h4>
+              <a href="/nosotros.html">Quiénes somos</a>
+              <a href="#">Nuestra historia</a>
+              <a href="#">Nuestro equipo</a>
+            </div>
+            <div class="mega-column">
+              <h4>Qué Hacemos</h4>
+              <a href="#">Estrategia y consultoría</a>
+              <a href="#">Branding digital</a>
+              <a href="#">Posicionamiento de marca</a>
+            </div>
+            <div class="mega-column">
+              <h4>Desarrollo Web</h4>
+              <a href="/servicios.html">Páginas corporativas</a>
+              <a href="#">Landing pages de conversión</a>
+              <a href="#">Tiendas online</a>
+              <a href="#">Webs rápidas y optimizadas</a>
+            </div>
+            <div class="mega-column">
+              <h4>Interfaces y Prototipos</h4>
+              <a href="#">Diseño UI/UX</a>
+              <a href="#">Prototipos interactivos (Figma)</a>
+              <a href="#">Wireframes y pruebas de usuario</a>
+              <a href="#">Diseño de sistemas de diseño</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <a href="/contacto.html">Contacto</a>
   </div>
 
-  <!-- Botón Secciones - SOLO para el focking móvil -->
+  <!-- Botón Secciones - SOLO para móvil -->
   <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">
     ☰
   </button>
-
+  
   <!-- Botón de Modo Oscuro/claro SOLO para móvil -->
   <button id="mobileThemeToggle" class="theme-toggle mobile-theme-btn">🌙</button>
 
-  <!-- Menú del focking móvil -->
+  <!-- Menú móvil -->
   <div id="mobileMenu" class="mobile-menu">
     <button id="closeMenuBtn" class="close-menu-btn">✕</button>
     <div class="mobile-menu-links">
@@ -69,8 +111,8 @@
       <a href="/portafolio.html" class="mobile-link">Portafolio</a>
       <a href="/nosotros.html" class="mobile-link">Nosotros</a>
       <a href="/contacto.html" class="mobile-link">Contacto</a>
-
-      <!-- Selector de idiomas DENTRO del menú del focking móvil -->
+      
+      <!-- Selector de idiomas DENTRO del menú móvil -->
       <div class="mobile-lang-container">
         <div class="lang-switch mobile-lang-switch">
           <div class="lang-current">
@@ -95,7 +137,7 @@
     </div>
   </div>
 
-  <!-- Idioma + Tema - SOLO para el focking PC -->
+  <!-- Idioma + Tema - SOLO para PC -->
   <div class="desktop-only nav-right">
     <div class="lang-switch">
       <div class="lang-current">
@@ -145,9 +187,9 @@
     <p>Una página lenta, poco atractiva o sin estrategia hace que tus potenciales clientes se vayan a la competencia en segundos.</p>
     <p>Nosotros creamos webs modernas, optimizadas para SEO local y diseñadas para generar confianza y ventas</p>
   </div>
-  <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2070" 
-       class="image fade-right" 
-       alt="Diseño web profesional para empresas y locales" 
+  <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2070"
+       class="image fade-right"
+       alt="Diseño web profesional para empresas y locales"
        loading="lazy">
 </section>
 
@@ -179,7 +221,7 @@
       <p>No solo hacemos webs bonitas. Creamos herramientas que ayudan a crecer tu empresa.</p>
     </div>
   </div>
-  
+ 
   <div class="results-grid">
     <div class="result-card fade-up">
       <div class="result-content">
@@ -192,7 +234,6 @@
         <a href="/portafolio/proyecto-1.html" class="result-link">Ver caso completo →</a>
       </div>
     </div>
-
     <div class="result-card fade-up">
       <div class="result-content">
         <h3>Restaurante La Brasa</h3>
@@ -204,7 +245,6 @@
         <a href="/portafolio/proyecto-3.html" class="result-link">Ver caso completo →</a>
       </div>
     </div>
-
     <div class="result-card fade-up">
       <div class="result-content">
         <h3>Academia Nova</h3>
@@ -217,7 +257,6 @@
       </div>
     </div>
   </div>
-
   <div class="results-cta fade-up">
     <a href="/portafolio.html" class="btn">Ver todos nuestros proyectos</a>
   </div>
@@ -231,7 +270,6 @@
   </p>
   <a href="/contacto.html" class="btn">Solicitar presupuesto sin compromiso</a>
 </section>
-
 
 <!-- FOOTER -->
 <footer class="footer-pro">
@@ -272,6 +310,7 @@
     <p>Más que escalar. Nacidos para coronar.</p>
   </div>
 </footer>
+
 <script src="/script.js"></script>
 </body>
 </html>
