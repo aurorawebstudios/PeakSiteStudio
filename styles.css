@@ -633,7 +633,7 @@ body.dark .mobile-menu-btn {
   transform: none;
 }
 
-/* ====================== MEGA MENU - ALINEACIÓN FINAL ====================== */
+/* ====================== MEGA MENU NOSOTROS - ALINEACIÓN FORZADA ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -648,8 +648,8 @@ body.dark .mobile-menu-btn {
   transition: background 0.25s ease;
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  height: 48px;                    /* Altura fija para alinear todo */
+  gap: 4px;
+  height: 46px;           /* Altura fija para forzar alineación */
   line-height: 1;
 }
 
@@ -657,18 +657,26 @@ body.dark .mobile-menu-btn {
   background: rgba(0, 212, 255, 0.08);
 }
 
+.nosotros-link {
+  padding: 12px 14px !important;
+}
+
 .chevron {
-  font-size: 0.65em;
+  font-size: 0.68em;
   transition: transform 0.3s ease;
   position: relative;
-  top: -1px;
+  top: -1px;              /* Subimos la flecha */
 }
 
-.nav-item:hover .chevron {
-  transform: rotate(180deg);
+/* Forzar que todos los enlaces del menú tengan la misma altura y alineación */
+.desktop-nav a {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 46px !important;
+  padding: 12px 14px !important;
 }
 
-/* Panel extendido */
+/* Panel extendido (sin cambios) */
 .mega-menu {
   position: absolute;
   top: 100%;
