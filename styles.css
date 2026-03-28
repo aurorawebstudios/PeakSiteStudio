@@ -633,7 +633,7 @@ body.dark .mobile-menu-btn {
   transform: none;
 }
 
-/* ====================== MEGA MENU NOSOTROS - ALINEACIÓN FINAL ====================== */
+/* ====================== MEGA MENU - ALINEACIÓN FINAL ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -643,28 +643,25 @@ body.dark .mobile-menu-btn {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  padding: 12px 14px;
+  padding: 12px 14px !important;
   border-radius: 8px;
   transition: background 0.25s ease;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
+  height: 48px;                    /* Altura fija para alinear todo */
+  line-height: 1;
 }
 
 .nav-link:hover {
   background: rgba(0, 212, 255, 0.08);
 }
 
-.nosotros-link {
-  padding: 12px 14px;
-}
-
 .chevron {
-  font-size: 0.68em;           /* Tamaño más pequeño para que no empuje */
+  font-size: 0.65em;
   transition: transform 0.3s ease;
   position: relative;
-  top: 0.5px;                  /* Ajuste fino */
-  line-height: 1;
+  top: 1px;
 }
 
 .nav-item:hover .chevron {
