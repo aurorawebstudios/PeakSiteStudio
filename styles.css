@@ -633,7 +633,7 @@ body.dark .mobile-menu-btn {
   transform: none;
 }
 
-/* ====================== MEGA MENU - VERSIÓN PROFESIONAL Y ALINEADA ====================== */
+/* ====================== MEGA MENU - TÍTULOS CENTRADOS VERTICALMENTE ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -664,7 +664,6 @@ body.dark .mobile-menu-btn {
   top: -1px;
 }
 
-/* Alineación uniforme de todos los enlaces del menú */
 .desktop-nav a {
   display: inline-flex !important;
   align-items: center !important;
@@ -672,7 +671,7 @@ body.dark .mobile-menu-btn {
   padding: 12px 14px !important;
 }
 
-/* Panel del mega menú */
+/* Panel */
 .mega-menu {
   position: absolute;
   top: 100%;
@@ -715,25 +714,33 @@ body.dark .mega-menu-content {
   gap: 52px;
 }
 
-/* Títulos - Cyan consistente y bien alineados */
+/* Columna con flex para centrar verticalmente el título */
+.mega-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .mega-column h4 {
   font-size: 14.8px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   line-height: 1.25;
+  flex-shrink: 0;           /* Evita que se comprima */
 }
 
-/* Enlaces - Mejor espaciado y alineación */
+/* Enlaces con mejor espaciado */
 .mega-column a {
   display: block;
-  padding: 10px 6px;
+  padding: 9.5px 6px;
   color: var(--text-light);
   text-decoration: none;
   font-size: 15.4px;
   line-height: 1.48;
+  flex-shrink: 0;
 }
 
 body.dark .mega-column a {
