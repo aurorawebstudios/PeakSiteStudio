@@ -633,7 +633,7 @@ body.dark .mobile-menu-btn {
   transform: none;
 }
 
-/* ====================== MEGA MENU NOSOTROS - ALINEACIÓN PERFECTA ====================== */
+/* ====================== MEGA MENU NOSOTROS - ALINEACIÓN FINAL ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -648,8 +648,7 @@ body.dark .mobile-menu-btn {
   transition: background 0.25s ease;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  line-height: 1.4;
+  gap: 4px;
 }
 
 .nav-link:hover {
@@ -661,17 +660,18 @@ body.dark .mobile-menu-btn {
 }
 
 .chevron {
-  font-size: 0.72em;
+  font-size: 0.68em;           /* Tamaño más pequeño para que no empuje */
   transition: transform 0.3s ease;
   position: relative;
-  top: 1px;
+  top: 0.5px;                  /* Ajuste fino */
+  line-height: 1;
 }
 
 .nav-item:hover .chevron {
   transform: rotate(180deg);
 }
 
-/* Panel extendido hacia los dos lados */
+/* Panel extendido */
 .mega-menu {
   position: absolute;
   top: 100%;
@@ -706,7 +706,6 @@ body.dark .mobile-menu-btn {
 body.dark .mega-menu-content {
   background: #0f1629;
   border-color: rgba(255,255,255,0.09);
-  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.55);
 }
 
 .mega-grid {
@@ -730,7 +729,6 @@ body.dark .mega-menu-content {
   color: var(--text-light);
   text-decoration: none;
   font-size: 15.3px;
-  transition: all 0.25s ease;
 }
 
 body.dark .mega-column a {
@@ -742,7 +740,6 @@ body.dark .mega-column a {
   padding-left: 8px;
 }
 
-/* Ocultar en móvil */
 @media (max-width: 991px) {
   .mega-menu {
     display: none !important;
