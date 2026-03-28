@@ -741,3 +741,101 @@ body.dark .mobile-menu-btn {
   opacity: 1;
   transform: none;
 }
+/* ====================== MEGA MENU NOSOTROS (estilo similar a Midrocket) ====================== */
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.25s ease;
+}
+
+.nav-link:hover {
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
+  z-index: 10000;
+  pointer-events: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.group:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(8px);
+  pointer-events: auto;
+}
+
+.mega-menu-content {
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.22);
+  border: 1px solid #e2e8f0;
+  width: 860px;
+  padding: 45px 40px;
+  overflow: hidden;
+}
+
+body.dark .mega-menu-content {
+  background: #0f1629;
+  border-color: rgba(255,255,255,0.09);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.55);
+}
+
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+}
+
+.mega-column h4 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 20px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.mega-column a {
+  display: block;
+  padding: 10px 0;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 15.3px;
+  transition: all 0.25s ease;
+}
+
+body.dark .mega-column a {
+  color: var(--text-dark);
+}
+
+.mega-column a:hover {
+  color: #00d4ff;
+  padding-left: 8px;
+}
+
+/* Ocultar mega menu en móvil */
+@media (max-width: 991px) {
+  .mega-menu {
+    display: none !important;
+  }
+}
