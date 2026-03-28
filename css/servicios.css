@@ -18,6 +18,15 @@
   border: 1px solid transparent;
 }
 
+.service-card {
+  will-change: transform;
+}
+
+/* 🔥 FORZAR HOVER POR ENCIMA DEL SCROLL */
+.service-card:hover {
+  transform: translateY(-18px) !important;
+}
+
 .service-card:hover {
   transform: translateY(-18px);
   box-shadow: 0 25px 50px rgba(0, 212, 255, 0.15);
@@ -25,6 +34,11 @@
 
 .service-card.featured {
   border: 2px solid #38bdf8;
+  transform: scale(1);
+}
+
+.service-card.featured:hover {
+  transform: translateY(-18px);
 }
 
 .service-icon {
@@ -75,27 +89,43 @@
   font-weight: 400;
 }
 
-/* ====================== MODO OSCURO Y CLARO ====================== */
-body:not(.light) .service-card,
-body.light .service-card {
+/* ====================== MODO OSCURO ====================== */
+body:not(.light) .service-card {
   background: #1e2937;
   border-color: #334155;
-  color: #f1f5f9;
 }
 
 body:not(.light) .service-desc,
-body:not(.light) .service-card ul li,
-body.light .service-desc,
-body.light .service-card ul li {
+body:not(.light) .service-card ul li {
   color: #cbd5e1;
 }
 
-body:not(.light) .price,
+body:not(.light) .price {
+  color: #38bdf8;
+}
+
+body:not(.light) .price-month {
+  color: #94a3b8;
+}
+
+/* ====================== MODO CLARO ====================== */
+body.light .service-card {
+  background: #1e2937;
+  border: 1px solid #475569;
+  color: #f1f5f9;
+}
+
+body.light .service-desc,
+body.light .service-card ul li {
+  color: #e2e8f0;
+}
+
 body.light .price {
   color: #38bdf8;
 }
 
-/* ====================== TÍTULO Y SECCIONES ====================== */
+
+/* ====================== TÍTULO "Elige tu paquete" ====================== */
 .section-title {
   display: inline-block;
   padding: 14px 28px;
@@ -105,18 +135,28 @@ body.light .price {
   text-align: center;
 }
 
+/* Contenedor centrado */
 .services-section .container {
   text-align: center;
 }
 
-body:not(.light) .section-title,
-body.light .section-title {
-  background: #1e2937;
+/* Modo oscuro */
+body:not(.light) .section-title {
+  background: #1e2937; /* mismo azul oscuro de las cards */
   color: #f8fafc;
   border: 1px solid #334155;
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
+/* Modo claro */
+body.light .section-title {
+  background: #1e2937; /* MISMO color que las cards (consistencia) */
+  color: #f8fafc;
+  border: 1px solid #475569;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ====================== MANTENIMIENTO ====================== */
 .maintenance-section {
   display: flex;
   justify-content: center;
@@ -132,8 +172,84 @@ body.light .section-title {
   border: 1px solid #334155;
 }
 
-/* ====================== MEGA MENU - VERSIÓN MEJORADA ====================== */
+body.light .maintenance-card {
+  background: #1e2937;
+  border-color: #475569;
+}
 
+.maintenance-card .service-desc {
+  min-height: 90px;
+  color: #cbd5e1;
+}
+
+body.light .maintenance-card .service-desc {
+  color: #e2e8f0;
+}
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 992px) {
+  .services-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid { 
+    grid-template-columns: 1fr; 
+  }
+}
+body.light h2.section-title {
+  color: #ffffff !important;
+}
+/* Texto del CTA */
+.cta p {
+  color: #cbd5e1; /* gris claro (modo oscuro) */
+}
+
+/* Modo claro */
+body.light section.cta {
+  color: #ffffff !important;
+}
+/* ====================== ANIMACIONES SCROLL REVEAL (solo una vez) ====================== */
+
+.fade-up,
+.fade-left,
+.fade-right {
+  opacity: 0;
+  transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.fade-up {
+  transform: translateY(50px);
+}
+
+.fade-left {
+  transform: translateX(-60px);
+}
+
+.fade-right {
+  transform: translateX(60px);
+}
+
+/* Estado visible - solo se activa una vez */
+.fade-up.visible,
+.fade-left.visible,
+.fade-right.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pequeños delays para que no aparezcan todos a la vez */
+.fade-up.delay  { transition-delay: 0.1s; }
+.fade-up.delay2 { transition-delay: 0.25s; }
+.fade-up.delay3 { transition-delay: 0.4s; }
+
+/* El hero no necesita esta animación */
+.about-hero * {
+  transition: none !important;
+}
+
+/* ====================== MEGA MENU SERVICIOS - ALINEACIÓN FORZADA ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -143,37 +259,49 @@ body.light .section-title {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  padding: 12px 16px !important;
+  padding: 12px 14px !important;
   border-radius: 8px;
   transition: background 0.25s ease;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  height: 48px;
+  gap: 4px;
+  height: 46px;           /* Altura fija para forzar alineación */
   line-height: 1;
 }
 
 .nav-link:hover {
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.nosotros-link {
+  padding: 12px 14px !important;
 }
 
 .chevron {
-  font-size: 0.75em;
+  font-size: 0.68em;
   transition: transform 0.3s ease;
   position: relative;
-  top: -1px;
+  top: -1px;              /* Subimos la flecha */
 }
 
-/* Panel principal */
+/* Forzar que todos los enlaces del menú tengan la misma altura y alineación */
+.desktop-nav a {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 46px !important;
+  padding: 12px 14px !important;
+}
+
+/* Panel extendido (sin cambios) */
 .mega-menu {
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  padding-top: 18px;
+  padding-top: 15px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.35s ease;
+  transition: all 0.3s ease;
   z-index: 10000;
   pointer-events: none;
   width: 100vw;
@@ -186,98 +314,55 @@ body.light .section-title {
 }
 
 .mega-menu-content {
-  background: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0 35px 90px -15px rgba(0, 0, 0, 0.25);
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.22);
   border: 1px solid #e2e8f0;
   margin: 0 auto;
-  max-width: 1180px;
+  max-width: 1150px;
   width: 95%;
-  padding: 50px 45px 40px;
+  padding: 45px 40px;
 }
 
-body.dark .mega-menu-content,
-body:not(.light) .mega-menu-content {
+body.dark .mega-menu-content {
   background: #0f1629;
-  border-color: rgba(255,255,255,0.08);
-  box-shadow: 0 35px 90px -15px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255,255,255,0.09);
 }
 
 .mega-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 55px;
+  gap: 48px;
 }
 
 .mega-column h4 {
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 24px;
-  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 
 .mega-column a {
   display: block;
-  padding: 11px 6px;
-  color: #1e2937;
+  padding: 10px 4px;
+  color: var(--text-light);
   text-decoration: none;
-  font-size: 15.5px;
-  line-height: 1.45;
-  transition: all 0.2s ease;
+  font-size: 15.3px;
 }
 
-body.dark .mega-column a,
-body:not(.light) .mega-column a {
-  color: #f1f5f9;
+body.dark .mega-column a {
+  color: var(--text-dark);
 }
 
 .mega-column a:hover {
   color: #00d4ff;
-  padding-left: 12px;
+  padding-left: 8px;
 }
 
-/* ====================== RESPONSIVE ====================== */
-@media (max-width: 992px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
+@media (max-width: 991px) {
   .mega-menu {
-    display: none !important;   /* Ocultamos en móvil */
+    display: none !important;
   }
-}
-
-@media (max-width: 640px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ====================== ANIMACIONES ====================== */
-.fade-up,
-.fade-left,
-.fade-right {
-  opacity: 0;
-  transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.fade-up { transform: translateY(50px); }
-.fade-left { transform: translateX(-60px); }
-.fade-right { transform: translateX(60px); }
-
-.fade-up.visible,
-.fade-left.visible,
-.fade-right.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fade-up.delay { transition-delay: 0.1s; }
-.fade-up.delay2 { transition-delay: 0.25s; }
-.fade-up.delay3 { transition-delay: 0.4s; }
-
-.about-hero * {
-  transition: none !important;
 }
