@@ -1,20 +1,19 @@
 /* ===== VARIABLES - Colores profesionales y coherentes ===== */
 :root {
-  --primary: #0a0f2c;           /* Azul oscuro profundo */
-  --accent: #00d4ff;            /* Cian brillante (mismo que servicios) */
-  --accent2: #0099ff;           /* Azul secundario */
-  --bg-light: #f8fafd;          /* Fondo claro suave y moderno */
-  --bg-dark: #0a0f2c;           /* Fondo oscuro premium */
-  --text-light: #1e2937;        /* Texto oscuro en modo claro */
-  --text-dark: #f1f5f9;         /* Texto claro en modo oscuro */
-  --text-soft-light: #64748b;   /* Texto secundario claro */
-  --text-soft-dark: #94a3b8;    /* Texto secundario oscuro */
+  --primary: #0a0f2c; /* Azul oscuro profundo */
+  --accent: #00d4ff; /* Cian brillante (mismo que servicios) */
+  --accent2: #0099ff; /* Azul secundario */
+  --bg-light: #f8fafd; /* Fondo claro suave y moderno */
+  --bg-dark: #0a0f2c; /* Fondo oscuro premium */
+  --text-light: #1e2937; /* Texto oscuro en modo claro */
+  --text-dark: #f1f5f9; /* Texto claro en modo oscuro */
+  --text-soft-light: #64748b; /* Texto secundario claro */
+  --text-soft-dark: #94a3b8; /* Texto secundario oscuro */
   --card-bg-light: #ffffff;
   --card-bg-dark: rgba(255,255,255,0.06);
   --border-light: #e2e8f0;
   --border-dark: rgba(255,255,255,0.12);
 }
-
 /* ===== MODO CLARO (por defecto) ===== */
 body {
   font-family: 'Inter', sans-serif;
@@ -22,13 +21,11 @@ body {
   color: var(--text-light);
   line-height: 1.7;
 }
-
 /* ===== MODO OSCURO ===== */
 body.dark {
   background: var(--bg-dark);
   color: var(--text-dark);
 }
-
 /* ===== LAYOUT ===== */
 .container {
   width: 90%;
@@ -38,13 +35,11 @@ body.dark {
 section {
   padding: 80px 0;
 }
-
 /* ===== HEADER / NAV ===== */
 .header {
   position: sticky;
   top: 0;
   z-index: 9999;
-
   background: rgba(255,255,255,0.95);
   padding: 15px 0;
   backdrop-filter: blur(10px);
@@ -73,7 +68,6 @@ nav a {
 body.dark nav a {
   color: #fff;
 }
-
 /* LOGO + BRAND */
 .logo {
   height: 28px;
@@ -103,7 +97,6 @@ body.dark .brand-name {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-block;
@@ -120,7 +113,6 @@ body.dark .brand-name {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 212, 255, 0.35);
 }
-
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(135deg, #0a0f2c, #1a2540);
@@ -132,7 +124,6 @@ body.dark .brand-name {
   font-size: 3.2rem;
   line-height: 1.1;
 }
-
 /* ===== SPLIT ===== */
 .split {
   display: grid;
@@ -148,7 +139,6 @@ body.dark .brand-name {
 body.dark .image {
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
-
 /* ===== TEXT ===== */
 p {
   color: var(--text-soft-light);
@@ -168,7 +158,6 @@ body.dark section:not(.hero) h3,
 body.dark section:not(.hero) h4 {
   color: var(--text-dark);
 }
-
 /* ===== BENEFICIOS ===== */
 .benefits {
   display: grid;
@@ -186,7 +175,6 @@ body.dark .card {
   background: var(--card-bg-dark);
   border: 1px solid var(--border-dark);
 }
-
 /* ===== RESULTS ===== */
 .results-section {
   background: var(--bg-light);
@@ -228,7 +216,6 @@ body.dark .result-metrics span {
   gap: 25px;
   margin: 20px 0;
 }
-
 /* ===== THEME BUTTON ===== */
 .theme-toggle {
   height: 32px;
@@ -247,7 +234,6 @@ body.dark .theme-toggle {
 .theme-toggle:hover {
   background: rgba(0,212,255,0.08);
 }
-
 /* ===== LANG SWITCH (mantengo tu versión actualizada) ===== */
 .lang-switch {
   position: relative;
@@ -328,7 +314,6 @@ body.dark .theme-toggle {
 .lang-option:hover {
   background: #2a323f;
 }
-
 /* ===== FOOTER ===== */
 .footer-pro {
   background: #080b14;
@@ -373,8 +358,8 @@ body.dark .theme-toggle {
     text-align: center;
   }
 }
-/* ==================== HEADER FIX + MENÚ MÓVIL ==================== */
 
+/* ==================== HEADER FIX + MENÚ MÓVIL ==================== */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -382,7 +367,6 @@ body.dark .theme-toggle {
   width: 100%;
   gap: 15px;
 }
-
 nav {
   display: flex;
   align-items: center;
@@ -390,7 +374,6 @@ nav {
   flex: 1;
   justify-content: flex-end;
 }
-
 /* Alineación correcta en PC */
 .desktop-nav {
   flex: 1;
@@ -398,13 +381,11 @@ nav {
   gap: 10px;
   justify-content: flex-end;
 }
-
 .nav-right {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
 /* Botón hamburguesa */
 .mobile-menu-btn {
   display: none;
@@ -415,63 +396,47 @@ nav {
   cursor: pointer;
   padding: 5px 10px;
 }
-
 body.dark .mobile-menu-btn {
   color: #fff;
 }
-
-/* Menú móvil (mantengo la versión compacta que te gustó) */
+/* Menú móvil */
 .mobile-menu {
   position: fixed;
   inset: 0;
-
   width: 100vw;
   height: 100vh;
-
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(4px);
-
   z-index: 9999999;
-
   display: none;
-
-  justify-content: flex-end; /* 🔥 IMPORTANTE */
+  justify-content: flex-end;
 }
-
 .mobile-menu.active {
   display: flex;
 }
-
 .mobile-menu-links {
   position: fixed !important;
   top: 0 !important;
   right: 0 !important;
-
-  width: 82vw !important; /* puedes ajustar */
+  width: 82vw !important;
   max-width: 300px !important;
   height: 100vh !important;
-  padding: 80px 25px 40px 30px !important; /* más padding a la izquierda */
-
+  padding: 80px 25px 40px 30px !important;
   background: #0a0f2c !important;
-
   z-index: 9999999999 !important;
 }
-
 .close-menu-btn {
   position: fixed;
   top: 18px;
   right: 18px;
-
   font-size: 32px;
   color: #fff;
   background: rgba(0,0,0,0.4);
   border: none;
   border-radius: 8px;
   padding: 6px 10px;
-
   cursor: pointer;
-
-  z-index: 9999999999 !important; /* MÁS alto que todo */
+  z-index: 9999999999 !important;
 }
 .mobile-link {
   display: block;
@@ -482,16 +447,14 @@ body.dark .mobile-menu-btn {
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
-
 .mobile-link:last-child {
   border-bottom: none;
 }
-
 .mobile-link:active {
   background: rgba(0, 212, 255, 0.12);
 }
 
-/* Visibilidad */
+/* Visibilidad móvil */
 @media (max-width: 991px) {
   .desktop-nav,
   .nav-right,
@@ -502,7 +465,6 @@ body.dark .mobile-menu-btn {
     display: block;
   }
 }
-
 @media (min-width: 992px) {
   .mobile-menu,
   .mobile-menu-btn {
@@ -511,63 +473,44 @@ body.dark .mobile-menu-btn {
 }
 
 /* ============================================= */
-/* RESPONSIVE GENERAL PARA MÓVIL                 */
-/* (PC queda exactamente igual)                  */
-/* ============================================= */
-
+/* RESPONSIVE GENERAL PARA MÓVIL */
 @media (max-width: 991px) {
-
   .container {
     width: 94%;
     max-width: 100%;
     padding: 0 15px;
   }
-
   section {
     padding: 55px 0 !important;
   }
-
-  /* Hero */
   .hero {
     padding: 90px 20px 70px !important;
   }
-
   .hero h1 {
     font-size: 2.35rem !important;
     line-height: 1.2 !important;
   }
-
   .hero p {
     font-size: 1.08rem !important;
   }
-
-  /* Split section */
   .split {
     grid-template-columns: 1fr !important;
     gap: 35px !important;
   }
-
-  /* Beneficios */
   .benefits {
     grid-template-columns: 1fr !important;
     gap: 18px !important;
   }
-
   .card {
     padding: 24px 18px !important;
   }
-
-  /* Resultados */
   .results-grid {
     grid-template-columns: 1fr !important;
     gap: 22px !important;
   }
-
   .result-card {
     padding: 28px 20px !important;
   }
-
-  /* Botones */
   .btn {
     padding: 15px 30px !important;
     font-size: 1.08rem !important;
@@ -576,84 +519,52 @@ body.dark .mobile-menu-btn {
     margin: 25px auto !important;
     display: block !important;
   }
-
-  /* Textos generales */
   h2 {
     font-size: 1.8rem !important;
     line-height: 1.25 !important;
   }
-
   h3 {
     font-size: 1.4rem !important;
   }
-
   p {
     font-size: 1.06rem !important;
     line-height: 1.78 !important;
   }
-
-  /* Footer */
   .footer-grid {
     grid-template-columns: 1fr 1fr !important;
     gap: 35px !important;
   }
-
   .footer-pro {
     padding: 60px 20px 40px !important;
   }
 }
-/* ====================== FIX MENÚ MÓVIL - SOLO AFECTA MÓVIL ====================== */
-/* No toca nada en desktop gracias al media query */
 
+/* ====================== FIX MENÚ MÓVIL ====================== */
 @media (max-width: 991px) {
-
-  /* Header como base baja */
   .header {
     position: relative;
     z-index: 100;
   }
-
-  /* Menú móvil más fuerte */
   .mobile-menu {
     z-index: 999999 !important;
   }
-
   .mobile-menu-links {
     z-index: 1000000 !important;
-    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.5); /* opcional: da más profundidad */
+    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.5);
   }
-
   .close-menu-btn {
     z-index: 1000001 !important;
   }
-
-  /* Forzar que TODO el contenido quede por debajo (solo en móvil) */
-  .hero,
-  .about-hero,
-  .services-section,
-  .cta,
-  .results-section,
-  .split,
-  .benefits,
-  .results-grid,
-  .footer-pro,
-  section,
-  .container {
+  .hero, .about-hero, .services-section, .cta, .results-section, .split, .benefits, .results-grid, .footer-pro, section, .container {
     position: relative;
     z-index: 1 !important;
   }
-
-  /* Bloquear scroll cuando menú abierto (evita que el usuario haga scroll debajo) */
   body.menu-open {
     overflow: hidden;
   }
 }
 
-/* ====================== CONFIGURACIÓN MÓVIL - TEMA AL LADO + IDIOMA DENTRO MENÚ ====================== */
-
 @media (max-width: 991px) {
-
-  /* Botón tema visible al lado del hamburguesa en móvil */
   .mobile-theme-btn {
     display: block !important;
     height: 38px;
@@ -661,32 +572,24 @@ body.dark .mobile-menu-btn {
     font-size: 1.2rem;
     margin-left: 8px;
   }
-
-  /* Ocultar en móvil lo que no queremos ver */
   .desktop-only.nav-right {
     display: none !important;
   }
-
-  /* Estilo del botón tema en móvil */
   .theme-toggle.mobile-theme-btn {
     border: 1px solid rgba(255,255,255,0.3);
     background: rgba(255,255,255,0.1);
     color: #fff;
   }
-
   body.light .theme-toggle.mobile-theme-btn {
     border-color: var(--border-light);
     background: rgba(0,0,0,0.08);
     color: var(--primary);
   }
-
-  /* Selector de idioma dentro del menú móvil */
   .mobile-lang-container {
     margin-top: 35px;
     padding-top: 25px;
     border-top: 1px solid rgba(255,255,255,0.18);
   }
-
   .mobile-lang-switch .lang-current {
     justify-content: center;
     background: rgba(255,255,255,0.12);
@@ -694,7 +597,6 @@ body.dark .mobile-menu-btn {
   }
 }
 
-/* Asegurar que en PC todo siga normal */
 @media (min-width: 992px) {
   .mobile-theme-btn {
     display: none !important;
@@ -702,8 +604,6 @@ body.dark .mobile-menu-btn {
 }
 
 /* ====================== ANIMACIONES SCROLL REVEAL ====================== */
-
-/* Estado inicial de los elementos (ocultos) */
 .fade-up,
 .fade-left,
 .fade-right {
@@ -711,67 +611,29 @@ body.dark .mobile-menu-btn {
   transform: translateY(40px);
   transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
-/* Cuando se activa la animación */
 .fade-up.visible,
 .fade-left.visible,
 .fade-right.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Variaciones */
 .fade-left {
   transform: translateX(-60px);
 }
-
 .fade-right {
   transform: translateX(60px);
 }
-
-/* Delay para que no aparezcan todos a la vez */
 .fade-up.delay { transition-delay: 0.1s; }
 .fade-up.delay2 { transition-delay: 0.2s; }
 .fade-up.delay3 { transition-delay: 0.3s; }
-
-/* Hero ya tiene su propia animación, la respetamos */
 .hero-animate h1,
 .hero-animate p,
 .hero-animate .btn {
   opacity: 1;
   transform: none;
 }
-/* ====================== MEGA MENU NOSOTROS (versión más ancha y extendida) ====================== */
-.nav-item {
-  position: relative;
-}
 
-.nav-link {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: background 0.25s ease;
-}
-
-.nav-link:hover {
-  background: rgba(0, 212, 255, 0.08);
-}
-
-.chevron {
-  font-size: 0.75em;
-  transition: transform 0.3s ease;
-}
-
-.nav-item:hover .chevron {
-  transform: rotate(180deg);
-}
-
-/* ====================== MEGA MENU NOSOTROS - CORREGIDO FINAL ====================== */
+/* ====================== MEGA MENU NOSOTROS - ALINEACIÓN PERFECTA ====================== */
 .nav-item {
   position: relative;
   display: inline-block;
@@ -787,6 +649,7 @@ body.dark .mobile-menu-btn {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  line-height: 1.4;
 }
 
 .nav-link:hover {
@@ -794,19 +657,21 @@ body.dark .mobile-menu-btn {
 }
 
 .nosotros-link {
-  padding: 12px 14px;   /* Igual que los otros enlaces */
+  padding: 12px 14px;
 }
 
 .chevron {
-  font-size: 0.75em;
+  font-size: 0.72em;
   transition: transform 0.3s ease;
+  position: relative;
+  top: 1px;
 }
 
 .nav-item:hover .chevron {
   transform: rotate(180deg);
 }
 
-/* Panel que se extiende hacia los dos lados */
+/* Panel extendido hacia los dos lados */
 .mega-menu {
   position: absolute;
   top: 100%;
@@ -818,7 +683,7 @@ body.dark .mobile-menu-btn {
   transition: all 0.3s ease;
   z-index: 10000;
   pointer-events: none;
-  width: 100vw;                  /* Extiende a todo el ancho de la pantalla */
+  width: 100vw;
 }
 
 .nav-item:hover .mega-menu {
@@ -877,7 +742,7 @@ body.dark .mega-column a {
   padding-left: 8px;
 }
 
-/* En móvil se desactiva */
+/* Ocultar en móvil */
 @media (max-width: 991px) {
   .mega-menu {
     display: none !important;
