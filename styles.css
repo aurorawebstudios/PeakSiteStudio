@@ -700,7 +700,7 @@ body.dark .mobile-menu-btn {
   margin: 0 auto;
   max-width: 1180px;
   width: 95%;
-  padding: 50px 48px;
+  padding: 50px 45px;
 }
 
 body.dark .mega-menu-content {
@@ -711,35 +711,37 @@ body.dark .mega-menu-content {
 .mega-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 52px;
+  gap: 50px;
 }
 
-/* Columna con flex para centrar verticalmente el título */
+/* === CLAVE: Centrado vertical del título === */
 .mega-column {
   display: flex;
   flex-direction: column;
+  justify-content: center;     /* Esto centra verticalmente el contenido */
+  min-height: 380px;           /* Altura mínima para que el centrado funcione bien */
   align-items: flex-start;
+  gap: 8px;
 }
 
 .mega-column h4 {
   font-size: 14.8px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 28px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   line-height: 1.25;
-  flex-shrink: 0;           /* Evita que se comprima */
+  margin-bottom: 20px;
+  flex-shrink: 0;
 }
 
-/* Enlaces con mejor espaciado */
 .mega-column a {
   display: block;
-  padding: 9.5px 6px;
+  padding: 8px 6px;
   color: var(--text-light);
   text-decoration: none;
   font-size: 15.4px;
-  line-height: 1.48;
+  line-height: 1.5;
   flex-shrink: 0;
 }
 
