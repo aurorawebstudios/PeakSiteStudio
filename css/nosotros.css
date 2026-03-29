@@ -65,6 +65,11 @@ body.dark a {
   opacity: 0.95;
 }
 
+.page-nosotros .about-hero h1,
+.page-nosotros .about-hero p {
+  color: #ffffff;
+}
+
 /* Highlight */
 .highlight {
   background: linear-gradient(90deg, #00f5ff, #00aaff);
