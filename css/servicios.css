@@ -210,33 +210,26 @@ body.light section.cta {
   transition: none !important;
 }
 
-/* ================= FIX COLORES SERVICIOS (COMO ANTES) ================= */
+/* ================= FIX MODO CLARO SERVICIOS ================= */
 
-/* Hero */
-.about-hero h1,
-.about-hero p {
+body.light .service-card {
+  color: #f1f5f9;
+}
+
+body.light .service-card h3 {
   color: #ffffff;
 }
 
-/* Títulos */
-.section-title,
-.service-card h3 {
-  color: #ffffff;
+body.light .service-desc {
+  color: #e2e8f0;
 }
 
-/* Textos */
-.service-desc,
-.service-card ul li {
-  color: #cbd5e1;
+body.light .service-card ul li {
+  color: #e2e8f0;
 }
 
-/* CTA */
-.cta h2 {
-  color: #ffffff;
-}
-
-.cta p {
-  color: #cbd5e1;
+body.light .price {
+  color: #38bdf8;
 }
 
 /* ====================== MEGA MENU - CORREGIDO PARA MODO CLARO Y OSCURO ====================== */
