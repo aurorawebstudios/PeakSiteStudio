@@ -1,2 +1,2 @@
-# aurora-web-estudio
+# Peak-Site-Studio
 Mi página web estática
