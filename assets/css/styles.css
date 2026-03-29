@@ -94,6 +94,7 @@ body.dark nav a {
 }
 body.dark .brand-name {
   background: linear-gradient(90deg, #ffffff, #a0b8ff);
+  background-clip: text; /* Versión estándar */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
