@@ -6,60 +6,15 @@
 body {
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.7;
+  /* Cambio 1: El body hereda el color de fondo y texto del modo claro/oscuro del index */
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ====================== SOLUCIÓN DEFINITIVA ADAPTATIVA ====================== */
-
-/* 1. SECCIONES: Forzamos el fondo según el modo */
-body.light .about-story, 
-body.light .about-values, 
-body.light .cta {
-  background-color: var(--bg-light) !important;
-}
-
-/* 2. TÍTULOS (H2, H3): Forzamos color para que no herede el del styles.css */
-body.light .about-story h2,
-body.light .about-values h2,
-body.light .about-values h3,
-body.light .section-title {
-  color: var(--text-light) !important;
-}
-
-body.dark .about-story h2,
-body.dark .about-values h2,
-body.dark .about-values h3,
-body.dark .section-title {
-  color: var(--text-dark) !important;
-}
-
-/* 3. PÁRRAFOS: Corregimos la visibilidad */
-body.light .about-story p,
-body.light .about-values p {
-  color: var(--text-light) !important;
-  opacity: 0.9;
-}
-
-body.dark .about-story p,
-body.dark .about-values p {
-  color: var(--text-soft-dark) !important;
-}
-
-/* 4. TARJETAS DE VALORES: Ajuste de contraste */
-body.light .value-card {
-  background: var(--card-bg-light) !important;
-  border: 1px solid var(--border-light) !important;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-body.dark .value-card {
-  background: var(--card-bg-dark) !important;
-  border: 1px solid var(--border-dark) !important;
-}
-
-/* 5. HERO: Se mantiene blanco siempre por la imagen de fondo */
-.about-hero h1, 
-.about-hero p {
-  color: #ffffff !important;
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
 
 /* ====================== HERO ====================== */
@@ -73,12 +28,14 @@ body.dark .value-card {
   font-size: 4rem;
   line-height: 1.1;
   margin-bottom: 20px;
+  color: #ffffff; /* El hero siempre es blanco por el fondo oscuro de la imagen */
 }
 .about-hero p {
   font-size: 1.35rem;
   max-width: 720px;
   margin: 0 auto 40px;
   opacity: 0.95;
+  color: #ffffff;
 }
 
 /* Highlight */
@@ -91,13 +48,15 @@ body.dark .value-card {
 /* ====================== RESTO DE SECCIONES ====================== */
 .about-story {
   padding: 120px 20px;
-  background: var(--bg-light); /* Usa la variable de styles.css */
+  /* Cambio 2: Usamos variable para que cambie a blanco en modo claro */
+  background: var(--bg-light); 
   transition: background 0.3s ease;
 }
 
 body.dark .about-story {
-  background: var(--bg-dark); /* Fondo oscuro solo en modo dark */
+  background: var(--bg-dark);
 }
+
 .story-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -106,19 +65,36 @@ body.dark .about-story {
   max-width: 1280px;
   margin: 0 auto;
 }
+
 .story-text h2 {
   font-size: 2.8rem;
   margin-bottom: 30px;
+  /* Cambio 3: El texto h2 se adapta al modo claro/oscuro */
+  color: var(--text-light);
 }
+body.dark .story-text h2 {
+  color: var(--text-dark);
+}
+
 .story-text .lead {
   font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 25px;
+  color: var(--text-soft-light);
 }
+body.dark .story-text .lead {
+  color: var(--text-soft-dark);
+}
+
 .story-text p {
   font-size: 1.15rem;
   margin-bottom: 22px;
+  color: var(--text-soft-light);
 }
+body.dark .story-text p {
+  color: var(--text-soft-dark);
+}
+
 .story-text .final {
   color: #00f5ff;
   font-weight: 600;
@@ -132,18 +108,25 @@ body.dark .about-story {
 
 /* Valores */
 .about-values {
-  background: var(--bg-light); /* Usa la variable de styles.css */
+  /* Cambio 4: Fondo adaptativo */
+  background: var(--bg-light);
   padding: 110px 20px;
   transition: background 0.3s ease;
 }
 body.dark .about-values {
   background: var(--bg-dark);
 }
+
 .section-title {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 60px;
+  color: var(--text-light);
 }
+body.dark .section-title {
+  color: var(--text-dark);
+}
+
 .values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -151,13 +134,34 @@ body.dark .about-values {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .value-card {
-  background: rgba(255,255,255,0.06);
+  /* Cambio 5: La tarjeta usa el color de fondo del modo claro del index */
+  background: var(--card-bg-light);
   padding: 40px 30px;
   border-radius: 20px;
-  border: 1px solid rgba(0,245,255,0.15);
+  border: 1px solid var(--border-light);
   transition: all 0.4s ease;
 }
+body.dark .value-card {
+  background: var(--card-bg-dark);
+  border: 1px solid var(--border-dark);
+}
+
+.value-card h3 {
+  color: var(--text-light);
+}
+body.dark .value-card h3 {
+  color: var(--text-dark);
+}
+
+.value-card p {
+  color: var(--text-soft-light);
+}
+body.dark .value-card p {
+  color: var(--text-soft-dark);
+}
+
 .value-card:hover {
   transform: translateY(-12px);
   border-color: #00f5ff;
@@ -238,7 +242,8 @@ body.dark .about-values {
   font-weight: 500;
   line-height: 1;
 }
-/* ====================== ANIMACIONES SCROLL REVEAL (solo una vez) ====================== */
+
+/* ====================== ANIMACIONES SCROLL REVEAL ====================== */
 
 .fade-up,
 .fade-left,
@@ -259,7 +264,6 @@ body.dark .about-values {
   transform: translateX(60px);
 }
 
-/* Estado visible - solo se activa una vez */
 .fade-up.visible,
 .fade-left.visible,
 .fade-right.visible {
@@ -267,56 +271,10 @@ body.dark .about-values {
   transform: translate(0);
 }
 
-/* Delays suaves */
 .fade-up.delay  { transition-delay: 0.1s; }
 .fade-up.delay2 { transition-delay: 0.25s; }
 .fade-up.delay3 { transition-delay: 0.4s; }
 
-/* El hero no necesita esta animación de scroll */
 .about-hero * {
   transition: none !important;
-}
-/* ====================== RESET DE COLORES PRIORITARIO ====================== */
-
-/* Forzar fondos claros */
-body.light .about-story, 
-body.light .about-values, 
-body.light .cta,
-body.light section:not(.about-hero) {
-  background-color: #ffffff !important;
-  background-image: none !important;
-}
-
-/* Forzar textos oscuros en modo claro */
-body.light h1:not(.about-hero h1), 
-body.light h2, 
-body.light h3, 
-body.light h4,
-body.light .section-title,
-body.light .story-text h2 {
-  color: #0a0f2c !important; /* Tu color --primary */
-}
-
-/* Forzar párrafos y textos pequeños */
-body.light p, 
-body.light span:not(.highlight), 
-body.light li,
-body.light .story-text p {
-  color: #444444 !important; /* Gris oscuro legible */
-}
-
-/* Tarjetas de valores en modo claro */
-body.light .value-card {
-  background: #f9f9f9 !important;
-  border: 1px solid #e2e8f0 !important;
-}
-
-body.light .value-card h3 {
-  color: #0a0f2c !important;
-}
-
-/* El Hero se queda blanco (está sobre imagen oscura) */
-.about-hero h1, 
-.about-hero p {
-  color: #ffffff !important;
 }
