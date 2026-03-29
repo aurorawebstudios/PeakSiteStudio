@@ -232,6 +232,25 @@ body.light .price {
   color: #38bdf8;
 }
 
+/* ================= FIX HERO Y CTA MODO CLARO ================= */
+
+body.light .about-hero h1 {
+  color: #ffffff;
+}
+
+body.light .about-hero p {
+  color: #e2e8f0;
+}
+
+/* CTA */
+body.light .cta h2 {
+  color: #ffffff;
+}
+
+body.light .cta p {
+  color: #cbd5e1;
+}
+
 /* ====================== MEGA MENU - CORREGIDO PARA MODO CLARO Y OSCURO ====================== */
 .nav-item {
   position: relative;
