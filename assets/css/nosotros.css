@@ -8,49 +8,61 @@ body {
   line-height: 1.7;
 }
 
-/* ====================== FIX TEXTOS - PROFESIONAL Y COHERENTE ====================== */
+/* ====================== SOLUCIÓN DEFINITIVA ADAPTATIVA ====================== */
 
-/* 1. Colores para el Hero (Siempre blanco porque la imagen de fondo es oscura) */
-.about-hero h1, 
-.about-hero p {
-  color: #ffffff;
-}
-
-/* 2. Configuración para MODO CLARO (body.light) */
+/* 1. SECCIONES: Forzamos el fondo según el modo */
 body.light .about-story, 
-body.light .about-values {
-  background-color: #ffffff; /* Fondo blanco */
+body.light .about-values, 
+body.light .cta {
+  background-color: var(--bg-light) !important;
 }
 
-body.light h2, 
-body.light h3, 
+body.dark .about-story { background-color: var(--bg-dark) !important; }
+body.dark .about-values { background-color: #0f1429 !important; }
+
+/* 2. TÍTULOS (H2, H3): Forzamos color para que no herede el del styles.css */
+body.light .about-story h2,
+body.light .about-values h2,
+body.light .about-values h3,
 body.light .section-title {
-  color: #0a0f2c; /* Azul muy oscuro para títulos */
+  color: var(--text-light) !important;
 }
 
-body.light p {
-  color: #444444; /* Gris oscuro para párrafos */
+body.dark .about-story h2,
+body.dark .about-values h2,
+body.dark .about-values h3,
+body.dark .section-title {
+  color: var(--text-dark) !important;
 }
 
+/* 3. PÁRRAFOS: Corregimos la visibilidad */
+body.light .about-story p,
+body.light .about-values p {
+  color: var(--text-light) !important;
+  opacity: 0.9;
+}
+
+body.dark .about-story p,
+body.dark .about-values p {
+  color: var(--text-soft-dark) !important;
+}
+
+/* 4. TARJETAS DE VALORES: Ajuste de contraste */
 body.light .value-card {
-  background: #f8f9fa; /* Fondo gris muy sutil para las tarjetas */
-  border: 1px solid #e0e0e0;
-}
-
-/* 3. Configuración para MODO OSCURO (body.dark) */
-body.dark .about-story { background-color: #0a0f2c; }
-body.dark .about-values { background-color: #0f1429; }
-
-body.dark h2, 
-body.dark h3, 
-body.dark .section-title,
-body.dark p {
-  color: #ffffff; /* Todo blanco en modo oscuro */
+  background: var(--card-bg-light) !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 body.dark .value-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(0,245,255,0.15);
+  background: var(--card-bg-dark) !important;
+  border: 1px solid var(--border-dark) !important;
+}
+
+/* 5. HERO: Se mantiene blanco siempre por la imagen de fondo */
+.about-hero h1, 
+.about-hero p {
+  color: #ffffff !important;
 }
 
 /* ====================== HERO ====================== */
