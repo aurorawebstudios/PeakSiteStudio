@@ -6,36 +6,15 @@
 body {
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.7;
+  /* Cambio 1: El body hereda el color de fondo y texto del modo claro/oscuro del index */
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ====================== FIX TEXTOS - PROFESIONAL Y COHERENTE ====================== */
-.about-hero h1,
-.about-hero p,
-.section-title,
-h2, h3, h4 {
-  color: #fff !important;
-}
-body.dark .about-hero h1,
-body.dark .about-hero p,
-body.dark .section-title,
-body.dark h2,
-body.dark h3,
-body.dark h4 {
-  color: var(--text) !important;
-}
-body.dark p,
-body.dark span,
-body.dark li {
-  color: var(--text-soft);
-}
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark h4 {
-  color: var(--text);
-}
-body.dark a {
-  color: var(--text);
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
 
 /* ====================== HERO ====================== */
@@ -49,12 +28,14 @@ body.dark a {
   font-size: 4rem;
   line-height: 1.1;
   margin-bottom: 20px;
+  color: #ffffff; /* El hero siempre es blanco por el fondo oscuro de la imagen */
 }
 .about-hero p {
   font-size: 1.35rem;
   max-width: 720px;
   margin: 0 auto 40px;
   opacity: 0.95;
+  color: #ffffff;
 }
 
 /* Highlight */
@@ -67,8 +48,15 @@ body.dark a {
 /* ====================== RESTO DE SECCIONES ====================== */
 .about-story {
   padding: 120px 20px;
-  background: #0a0f2c;
+  /* Cambio 2: Usamos variable para que cambie a blanco en modo claro */
+  background: var(--bg-light); 
+  transition: background 0.3s ease;
 }
+
+body.dark .about-story {
+  background: var(--bg-dark);
+}
+
 .story-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,19 +65,36 @@ body.dark a {
   max-width: 1280px;
   margin: 0 auto;
 }
+
 .story-text h2 {
   font-size: 2.8rem;
   margin-bottom: 30px;
+  /* Cambio 3: El texto h2 se adapta al modo claro/oscuro */
+  color: var(--text-light);
 }
+body.dark .story-text h2 {
+  color: var(--text-dark);
+}
+
 .story-text .lead {
   font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 25px;
+  color: var(--text-soft-light);
 }
+body.dark .story-text .lead {
+  color: var(--text-soft-dark);
+}
+
 .story-text p {
   font-size: 1.15rem;
   margin-bottom: 22px;
+  color: var(--text-soft-light);
 }
+body.dark .story-text p {
+  color: var(--text-soft-dark);
+}
+
 .story-text .final {
   color: #00f5ff;
   font-weight: 600;
@@ -103,14 +108,25 @@ body.dark a {
 
 /* Valores */
 .about-values {
-  background: #0f1429;
+  /* Cambio 4: Fondo adaptativo */
+  background: var(--bg-light);
   padding: 110px 20px;
+  transition: background 0.3s ease;
 }
+body.dark .about-values {
+  background: var(--bg-dark);
+}
+
 .section-title {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 60px;
+  color: var(--text-light);
 }
+body.dark .section-title {
+  color: var(--text-dark);
+}
+
 .values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -118,13 +134,34 @@ body.dark a {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .value-card {
-  background: rgba(255,255,255,0.06);
+  /* Cambio 5: La tarjeta usa el color de fondo del modo claro del index */
+  background: var(--card-bg-light);
   padding: 40px 30px;
   border-radius: 20px;
-  border: 1px solid rgba(0,245,255,0.15);
+  border: 1px solid var(--border-light);
   transition: all 0.4s ease;
 }
+body.dark .value-card {
+  background: var(--card-bg-dark);
+  border: 1px solid var(--border-dark);
+}
+
+.value-card h3 {
+  color: var(--text-light);
+}
+body.dark .value-card h3 {
+  color: var(--text-dark);
+}
+
+.value-card p {
+  color: var(--text-soft-light);
+}
+body.dark .value-card p {
+  color: var(--text-soft-dark);
+}
+
 .value-card:hover {
   transform: translateY(-12px);
   border-color: #00f5ff;
@@ -205,7 +242,8 @@ body.dark a {
   font-weight: 500;
   line-height: 1;
 }
-/* ====================== ANIMACIONES SCROLL REVEAL (solo una vez) ====================== */
+
+/* ====================== ANIMACIONES SCROLL REVEAL ====================== */
 
 .fade-up,
 .fade-left,
@@ -226,7 +264,6 @@ body.dark a {
   transform: translateX(60px);
 }
 
-/* Estado visible - solo se activa una vez */
 .fade-up.visible,
 .fade-left.visible,
 .fade-right.visible {
@@ -234,12 +271,10 @@ body.dark a {
   transform: translate(0);
 }
 
-/* Delays suaves */
 .fade-up.delay  { transition-delay: 0.1s; }
 .fade-up.delay2 { transition-delay: 0.25s; }
 .fade-up.delay3 { transition-delay: 0.4s; }
 
-/* El hero no necesita esta animación de scroll */
 .about-hero * {
   transition: none !important;
 }
