@@ -17,9 +17,6 @@ body.light .cta {
   background-color: var(--bg-light) !important;
 }
 
-body.dark .about-story { background-color: var(--bg-dark) !important; }
-body.dark .about-values { background-color: #0f1429 !important; }
-
 /* 2. TÍTULOS (H2, H3): Forzamos color para que no herede el del styles.css */
 body.light .about-story h2,
 body.light .about-values h2,
@@ -94,7 +91,12 @@ body.dark .value-card {
 /* ====================== RESTO DE SECCIONES ====================== */
 .about-story {
   padding: 120px 20px;
-  background: #0a0f2c;
+  background: var(--bg-light); /* Usa la variable de styles.css */
+  transition: background 0.3s ease;
+}
+
+body.dark .about-story {
+  background: var(--bg-dark); /* Fondo oscuro solo en modo dark */
 }
 .story-grid {
   display: grid;
@@ -130,8 +132,12 @@ body.dark .value-card {
 
 /* Valores */
 .about-values {
-  background: #0f1429;
+  background: var(--bg-light); /* Usa la variable de styles.css */
   padding: 110px 20px;
+  transition: background 0.3s ease;
+}
+body.dark .about-values {
+  background: var(--bg-dark);
 }
 .section-title {
   text-align: center;
