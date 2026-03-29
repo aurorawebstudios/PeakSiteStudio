@@ -9,33 +9,48 @@ body {
 }
 
 /* ====================== FIX TEXTOS - PROFESIONAL Y COHERENTE ====================== */
-.about-hero h1,
-.about-hero p,
-.section-title,
-h2, h3, h4 {
-  color: #fff !important;
+
+/* 1. Colores para el Hero (Siempre blanco porque la imagen de fondo es oscura) */
+.about-hero h1, 
+.about-hero p {
+  color: #ffffff;
 }
-body.dark .about-hero h1,
-body.dark .about-hero p,
+
+/* 2. Configuración para MODO CLARO (body.light) */
+body.light .about-story, 
+body.light .about-values {
+  background-color: #ffffff; /* Fondo blanco */
+}
+
+body.light h2, 
+body.light h3, 
+body.light .section-title {
+  color: #0a0f2c; /* Azul muy oscuro para títulos */
+}
+
+body.light p {
+  color: #444444; /* Gris oscuro para párrafos */
+}
+
+body.light .value-card {
+  background: #f8f9fa; /* Fondo gris muy sutil para las tarjetas */
+  border: 1px solid #e0e0e0;
+}
+
+/* 3. Configuración para MODO OSCURO (body.dark) */
+body.dark .about-story { background-color: #0a0f2c; }
+body.dark .about-values { background-color: #0f1429; }
+
+body.dark h2, 
+body.dark h3, 
 body.dark .section-title,
-body.dark h2,
-body.dark h3,
-body.dark h4 {
-  color: var(--text) !important;
+body.dark p {
+  color: #ffffff; /* Todo blanco en modo oscuro */
 }
-body.dark p,
-body.dark span,
-body.dark li {
-  color: var(--text-soft);
-}
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark h4 {
-  color: var(--text);
-}
-body.dark a {
-  color: var(--text);
+
+body.dark .value-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,245,255,0.15);
 }
 
 /* ====================== HERO ====================== */
