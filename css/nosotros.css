@@ -245,3 +245,10 @@ body.dark a {
 .about-hero * {
   transition: none !important;
 }
+.page-nosotros .about-hero h1 {
+  color: #ffffff;
+}
+
+.page-nosotros .about-hero p {
+  color: #e2e8f0;
+}
