@@ -1,3 +1,9 @@
+/* TAMAÑO DE LETRAS */
+.about-hero h1 {
+  font-size: 3rem;
+}
+
+
 /* ====================== PAQUETES EN FILA ====================== */
 .services-grid {
   display: grid;
