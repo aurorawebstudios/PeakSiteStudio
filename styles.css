@@ -651,28 +651,26 @@ body.dark .mobile-menu-btn {
   transform: none;
 }
 
-/* ====================== HERO GLOBAL ====================== */
+/* ================= HERO (IGUAL QUE ANTES) ================= */
 .about-hero {
   background: linear-gradient(rgba(10,15,44,0.85), rgba(10,15,44,0.9)),
               url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000') center/cover no-repeat;
   text-align: center;
   padding: 160px 20px 120px;
+  color: #ffffff; /* 🔥 ESTO ES CLAVE */
 }
 
 .about-hero h1 {
   font-size: 3.5rem;
-  line-height: 1.1;
-  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .about-hero p {
   font-size: 1.25rem;
-  max-width: 720px;
-  margin: 0 auto 40px;
-  opacity: 0.95;
+  color: #cbd5e1; /* gris claro como antes */
 }
 
-/* ====================== BOTÓN GLOBAL ====================== */
+/* ================= BOTÓN (IGUAL QUE ANTES) ================= */
 .btn-primary {
   background: linear-gradient(90deg, #00f5ff, #0099ff);
   color: #0a0f2c;
@@ -690,11 +688,16 @@ body.dark .mobile-menu-btn {
   box-shadow: 0 15px 35px rgba(0,245,255,0.4);
 }
 
-/* ====================== CTA GLOBAL ====================== */
+/* ================= CTA (IGUAL QUE ANTES) ================= */
 .cta {
   background: linear-gradient(135deg, #0a0f2c, #1a2540);
+  color: #ffffff;
   text-align: center;
   padding: 100px 20px;
+}
+
+.cta p {
+  color: #cbd5e1;
 }
 
 /* ====================== MEGA MENU - TÍTULOS CENTRADOS VERTICALMENTE ====================== */
