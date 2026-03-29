@@ -9,14 +9,20 @@ body {
 }
 
 /* ====================== FIX TEXTOS - PROFESIONAL Y COHERENTE ====================== */
-.page-nosotros .about-hero h1,
-.page-nosotros .about-hero p,
-.page-nosotros .section-title,
-.page-nosotros h2,
-.page-nosotros h3,
-.page-nosotros h4 {
-  color: #fff;
+/* MODO CLARO */
+body:not(.dark) .page-nosotros h1,
+body:not(.dark) .page-nosotros h2,
+body:not(.dark) .page-nosotros h3,
+body:not(.dark) .page-nosotros h4 {
+  color: #0f172a;
 }
+
+body:not(.dark) .page-nosotros p,
+body:not(.dark) .page-nosotros li,
+body:not(.dark) .page-nosotros span {
+  color: #475569;
+}
+
 body.dark .about-hero h1,
 body.dark .about-hero p,
 body.dark .section-title,
