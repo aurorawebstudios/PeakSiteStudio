@@ -6,7 +6,6 @@
   max-width: 1280px;
   margin: 0 auto 90px;
 }
-
 .service-card {
   padding: 48px 35px 40px;
   border-radius: 24px;
@@ -17,59 +16,48 @@
   height: 100%;
   border: 1px solid transparent;
 }
-
 .service-card {
   will-change: transform;
 }
-
 /* 🔥 FORZAR HOVER POR ENCIMA DEL SCROLL */
 .service-card:hover {
   transform: translateY(-18px) !important;
 }
-
 .service-card:hover {
   transform: translateY(-18px);
   box-shadow: 0 25px 50px rgba(0, 212, 255, 0.15);
 }
-
 .service-card.featured {
   border: 2px solid #38bdf8;
   transform: scale(1);
 }
-
 .service-card.featured:hover {
   transform: translateY(-18px);
 }
-
 .service-icon {
   font-size: 3.5rem;
   margin-bottom: 22px;
 }
-
 .service-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.92rem;
   margin-bottom: 18px;
   min-height: 58px;
 }
-
 .service-desc {
   margin-bottom: 28px;
   min-height: 85px;
 }
-
 .service-card ul {
   text-align: left;
   margin-bottom: 35px;
   flex-grow: 1;
 }
-
 .service-card ul li {
   padding: 8px 0;
   position: relative;
   padding-left: 28px;
 }
-
 .service-card ul li::before {
   content: "✓";
   color: #38bdf8;
@@ -77,54 +65,43 @@
   left: 0;
   font-weight: bold;
 }
-
 .price {
   font-size: 2.15rem;
   font-weight: 700;
   margin: 15px 0 25px;
 }
-
 .price-month {
   font-size: 1.1rem;
   font-weight: 400;
 }
-
 /* ====================== MODO OSCURO ====================== */
 body:not(.light) .service-card {
   background: #1e2937;
   border-color: #334155;
 }
-
 body:not(.light) .service-desc,
 body:not(.light) .service-card ul li {
   color: #cbd5e1;
 }
-
 body:not(.light) .price {
   color: #38bdf8;
 }
-
 body:not(.light) .price-month {
   color: #94a3b8;
 }
-
 /* ====================== MODO CLARO ====================== */
 body.light .service-card {
   background: #1e2937;
   border: 1px solid #475569;
   color: #f1f5f9;
 }
-
 body.light .service-desc,
 body.light .service-card ul li {
   color: #e2e8f0;
 }
-
 body.light .price {
   color: #38bdf8;
 }
-
-
 /* ====================== TÍTULO "Elige tu paquete" ====================== */
 .section-title {
   display: inline-block;
@@ -134,35 +111,30 @@ body.light .price {
   margin: 0 auto 60px;
   text-align: center;
 }
-
 /* Contenedor centrado */
 .services-section .container {
   text-align: center;
 }
-
 /* Modo oscuro */
 body:not(.light) .section-title {
-  background: #1e2937; /* mismo azul oscuro de las cards */
+  background: #1e2937;
   color: #f8fafc;
   border: 1px solid #334155;
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
-
 /* Modo claro */
 body.light .section-title {
-  background: #1e2937; /* MISMO color que las cards (consistencia) */
+  background: #1e2937;
   color: #f8fafc;
   border: 1px solid #475569;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
-
 /* ====================== MANTENIMIENTO ====================== */
 .maintenance-section {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
-
 .maintenance-card {
   max-width: 520px;
   width: 100%;
@@ -171,31 +143,26 @@ body.light .section-title {
   border-radius: 24px;
   border: 1px solid #334155;
 }
-
 body.light .maintenance-card {
   background: #1e2937;
   border-color: #475569;
 }
-
 .maintenance-card .service-desc {
   min-height: 90px;
   color: #cbd5e1;
 }
-
 body.light .maintenance-card .service-desc {
   color: #e2e8f0;
 }
-
 /* ====================== RESPONSIVE ====================== */
 @media (max-width: 992px) {
-  .services-grid { 
-    grid-template-columns: repeat(2, 1fr); 
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 640px) {
-  .services-grid { 
-    grid-template-columns: 1fr; 
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 }
 body.light h2.section-title {
@@ -203,48 +170,150 @@ body.light h2.section-title {
 }
 /* Texto del CTA */
 .cta p {
-  color: #cbd5e1; /* gris claro (modo oscuro) */
+  color: #cbd5e1;
 }
-
-/* Modo claro */
 body.light section.cta {
   color: #ffffff !important;
 }
-/* ====================== ANIMACIONES SCROLL REVEAL (solo una vez) ====================== */
-
+/* ====================== ANIMACIONES SCROLL REVEAL ====================== */
 .fade-up,
 .fade-left,
 .fade-right {
   opacity: 0;
   transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
 .fade-up {
   transform: translateY(50px);
 }
-
 .fade-left {
   transform: translateX(-60px);
 }
-
 .fade-right {
   transform: translateX(60px);
 }
-
-/* Estado visible - solo se activa una vez */
 .fade-up.visible,
 .fade-left.visible,
 .fade-right.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Pequeños delays para que no aparezcan todos a la vez */
-.fade-up.delay  { transition-delay: 0.1s; }
+.fade-up.delay { transition-delay: 0.1s; }
 .fade-up.delay2 { transition-delay: 0.25s; }
 .fade-up.delay3 { transition-delay: 0.4s; }
-
-/* El hero no necesita esta animación */
 .about-hero * {
   transition: none !important;
+}
+
+/* ====================== MEGA MENU - CORREGIDO PARA MODO CLARO Y OSCURO ====================== */
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  padding: 12px 14px !important;
+  border-radius: 8px;
+  transition: background 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 46px;
+  line-height: 1;
+}
+
+.nav-link:hover {
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.chevron {
+  font-size: 0.68em;
+  transition: transform 0.3s ease;
+  position: relative;
+  top: -1px;
+}
+
+.desktop-nav a {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 46px !important;
+  padding: 12px 14px !important;
+}
+
+/* Panel */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10000;
+  pointer-events: none;
+  width: 100vw;
+}
+
+.nav-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mega-menu-content {
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.22);
+  border: 1px solid #e2e8f0;
+  margin: 0 auto;
+  max-width: 1150px;
+  width: 95%;
+  padding: 45px 40px;
+}
+
+/* Fondo en modo oscuro */
+body.dark .mega-menu-content,
+body:not(.light) .mega-menu-content {
+  background: #0f1629;
+  border-color: rgba(255,255,255,0.09);
+}
+
+/* TÍTULOS EN CYAN - FIJO PARA AMBOS MODOS */
+.mega-column h4 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #00d4ff !important;           /* ← Esto es lo que querías */
+  margin-bottom: 22px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+   margin-left: 50px;
+}
+
+/* Enlaces normales */
+.mega-column a {
+  display: block;
+  padding: 10px 4px;
+  color: #1e2937;                      /* Color oscuro en modo claro */
+  text-decoration: none;
+  font-size: 15.3px;
+}
+
+/* Enlaces en modo oscuro */
+body.dark .mega-column a,
+body:not(.light) .mega-column a {
+  color: #f1f5f9;                      /* Color claro en modo oscuro */
+}
+
+.mega-column a:hover {
+  color: #00d4ff;
+  padding-left: 8px;
+}
+
+@media (max-width: 991px) {
+  .mega-menu {
+    display: none !important;
+  }
 }
