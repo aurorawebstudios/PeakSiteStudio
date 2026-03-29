@@ -263,3 +263,12 @@ body.dark a {
 .page-nosotros .about-hero p {
   color: #e2e8f0;
 }
+
+/* ===== FIX DEFINITIVO HERO ===== */
+.page-nosotros .about-hero h1 {
+  color: #ffffff !important;
+}
+
+.page-nosotros .about-hero p {
+  color: #e2e8f0 !important;
+}
