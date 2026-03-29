@@ -9,11 +9,13 @@ body {
 }
 
 /* ====================== FIX TEXTOS - PROFESIONAL Y COHERENTE ====================== */
-.about-hero h1,
-.about-hero p,
-.section-title,
-h2, h3, h4 {
-  color: #fff !important;
+.page-nosotros .about-hero h1,
+.page-nosotros .about-hero p,
+.page-nosotros .section-title,
+.page-nosotros h2,
+.page-nosotros h3,
+.page-nosotros h4 {
+  color: #fff;
 }
 body.dark .about-hero h1,
 body.dark .about-hero p,
