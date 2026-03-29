@@ -270,3 +270,47 @@ body.dark .value-card {
 .about-hero * {
   transition: none !important;
 }
+/* ====================== RESET DE COLORES PRIORITARIO ====================== */
+
+/* Forzar fondos claros */
+body.light .about-story, 
+body.light .about-values, 
+body.light .cta,
+body.light section:not(.about-hero) {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Forzar textos oscuros en modo claro */
+body.light h1:not(.about-hero h1), 
+body.light h2, 
+body.light h3, 
+body.light h4,
+body.light .section-title,
+body.light .story-text h2 {
+  color: #0a0f2c !important; /* Tu color --primary */
+}
+
+/* Forzar párrafos y textos pequeños */
+body.light p, 
+body.light span:not(.highlight), 
+body.light li,
+body.light .story-text p {
+  color: #444444 !important; /* Gris oscuro legible */
+}
+
+/* Tarjetas de valores en modo claro */
+body.light .value-card {
+  background: #f9f9f9 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+body.light .value-card h3 {
+  color: #0a0f2c !important;
+}
+
+/* El Hero se queda blanco (está sobre imagen oscura) */
+.about-hero h1, 
+.about-hero p {
+  color: #ffffff !important;
+}
