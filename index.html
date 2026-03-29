@@ -1,298 +1,418 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diseño Web Profesional para Empresas y Locales | Peak Site Studio</title>
-<meta name="description" content="Agencia de diseño web profesional especializada en crear páginas web modernas, rápidas y optimizadas para empresas y negocios locales. Aumenta tus clientes con una web que realmente vende.">
-<meta name="keywords" content="diseño web profesional, página web para empresas, web para locales, agencia diseño web, tienda online, SEO local, página web rápida">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Peak Site Studio",
-  "url": "https://peaksitestudio.com/",
-  "logo": "https://peaksitestudio.com/logos2/favicon-96x96.png"
-}
-</script>
-<meta property="og:title" content="Diseño Web Profesional para Empresas y Locales | Peak Site Studio">
-<meta property="og:description" content="Páginas web modernas y efectivas que convierten visitantes en clientes.">
-<meta property="og:image" content="https://peaksitestudio.com/logos2/favicon-96x96.png">
-<meta property="og:url" content="https://peaksitestudio.com/">
-<meta property="og:type" content="website">
-<link rel="stylesheet" href="/styles.css">
-<link rel="stylesheet" href="/inicio.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="alternate" hreflang="es" href="https://peaksitestudio.com/">
-<link rel="alternate" hreflang="en" href="https://peaksitestudio.com/en/">
-<link rel="canonical" href="https://peaksitestudio.com/">
-<link rel="icon" type="image/png" href="/logos2/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/logos2/favicon.svg" />
-<link rel="shortcut icon" href="/logos2/favicon-v2.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/logos2/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="MyWebSite" />
-<link rel="manifest" href="/site.webmanifest" />
-</head>
-<body class="light">
-<header class="header">
-<div class="container nav">
-  <a href="/" class="brand">
-    <img src="/logos2/favicon-96x96.png" class="logo" alt="Peak Site Studio">
-    <span class="brand-name">PeakSites</span>
-  </a>
-<nav>
-            <!-- Menú escritorio -->
-  <div class="nav-links desktop-nav" id="navLinks">
-    <a href="/">Inicio</a>
-    
-    <!-- SERVICIOS CON MEGA MENÚ -->
-    <div class="nav-item">
-      <a href="/servicios.html" class="nav-link">
-        Servicios<span class="chevron"> ▼</span>
-      </a>
-      <div class="mega-menu">
-        <div class="mega-menu-content">
-          <div class="mega-grid">
-            <div class="mega-column">
-              <h4>Estrategia, automatización e inteligencia digital</h4>
-              <a href="/servicios.html">Gestión y optimización de CRM</a>
-              <a href="#">Consultoría estratégica de negocio</a>
-              <a href="#">Automatización de procesos empresariales</a>
-              <a href="#">Análisis predictivo y modelado de datos</a>
-              <a href="#">Soluciones de inteligencia artificial aplicada</a>
-            </div>
-            <div class="mega-column">
-              <h4>Soluciones para tu negocio</h4>
-              <a href="#">Desarrollo web a medida</a>
-              <a href="#">Plataformas eCommerce/Tiendas Online</a>
-              <a href="#">Sistemas de pago digital</a>
-              <a href="#">Integraciones avanzadas y APIs</a>
-              <a href="#">Aplicaciones web y móviles</a>
-              <a href="#">Ciberseguridad y protección de datos</a>
-              <a href="#">Mantenimiento y optimización</a>
-              <a href="#">Consultoría Web</a>
-            </div>
-            <div class="mega-column">
-              <h4>Estrategia y crecimiento digital</h4>
-              <a href="/servicios.html">Posicionamiento orgánico (SEO)</a>
-              <a href="#">Gestión de publicidad digital (SEM y Social Ads)</a>
-              <a href="#">Analítica y medición de resultados</a>
-              <a href="#">Consultoría estratégica digital</a>
-              <a href="#">Optimización de conversión (CRO)</a>
-            </div>
-            <div class="mega-column">
-              <h4>Diseño y UX</h4>
-              <a href="#">Diseño de experiencia e interfaces digitales (UI/UX)</a>
-              <a href="#">Arquitectura de interfaces y prototipado avanzado</a>
-              <a href="#">Prototipado estratégico y validación de producto</a>
-              <a href="#">Sistemas de diseño y escalabilidad visual</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-   
-    <a href="/portafolio.html">Portafolio</a>
-    <a href="/nosotros.html">Nosotros</a>
-    <a href="/contacto.html">Contacto</a>
-  </div>
-
-  <!-- Botón móvil -->
-  <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">☰</button>
-  <button id="mobileThemeToggle" class="theme-toggle mobile-theme-btn">🌙</button>
-
-  <!-- Menú móvil -->
-  <div id="mobileMenu" class="mobile-menu">
-    <button id="closeMenuBtn" class="close-menu-btn">✕</button>
-    <div class="mobile-menu-links">
-      <a href="/" class="mobile-link">Inicio</a>
-      <a href="/servicios.html" class="mobile-link">Servicios</a>
-      <a href="/portafolio.html" class="mobile-link">Portafolio</a>
-      <a href="/nosotros.html" class="mobile-link">Nosotros</a>
-      <a href="/contacto.html" class="mobile-link">Contacto</a>
-     
-      <div class="mobile-lang-container">
-        <div class="lang-switch mobile-lang-switch">
-          <div class="lang-current">
-            <span class="flag-wrapper">
-              <img src="/banderas/es.png" alt="Español">
-            </span>
-            <span>ES</span>
-            <span class="arrow">▾</span>
-          </div>
-          <div class="lang-menu">
-            <a href="/" class="lang-option">
-              <span class="flag-wrapper"><img src="/banderas/es.png" alt="Español"></span>
-              Español
-            </a>
-            <a href="/en/" class="lang-option">
-              <span class="flag-wrapper"><img src="/banderas/en.png" alt="English"></span>
-              English
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Idioma + Tema PC -->
-  <div class="desktop-only nav-right">
-    <div class="lang-switch">
-      <div class="lang-current">
-        <span class="flag-wrapper">
-          <img src="/banderas/es.png" alt="Español">
-        </span>
-        <span>ES</span>
-        <span class="arrow">▾</span>
-      </div>
-      <div class="lang-menu">
-        <a href="/" class="lang-option">
-          <span class="flag-wrapper"><img src="/banderas/es.png" alt="Español"></span>
-          Español
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Diseño Web Profesional para Empresas y Locales | Peak Site Studio
+    </title>
+    <meta
+      name="description"
+      content="Agencia de diseño web profesional especializada en crear páginas web modernas, rápidas y optimizadas para empresas y negocios locales. Aumenta tus clientes con una web que realmente vende."
+    />
+    <meta
+      name="keywords"
+      content="diseño web profesional, página web para empresas, web para locales, agencia diseño web, tienda online, SEO local, página web rápida"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Peak Site Studio",
+        "url": "https://peaksitestudio.com/",
+        "logo": "https://peaksitestudio.com/logos2/favicon-96x96.png"
+      }
+    </script>
+    <meta
+      property="og:title"
+      content="Diseño Web Profesional para Empresas y Locales | Peak Site Studio"
+    />
+    <meta
+      property="og:description"
+      content="Páginas web modernas y efectivas que convierten visitantes en clientes."
+    />
+    <meta
+      property="og:image"
+      content="https://peaksitestudio.com/logos2/favicon-96x96.png"
+    />
+    <meta property="og:url" content="https://peaksitestudio.com/" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/inicio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="alternate" hreflang="es" href="https://peaksitestudio.com/" />
+    <link rel="alternate" hreflang="en" href="https://peaksitestudio.com/en/" />
+    <link rel="canonical" href="https://peaksitestudio.com/" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/logos2/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/logos2/favicon.svg" />
+    <link rel="shortcut icon" href="/logos2/favicon-v2.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/logos2/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body class="light">
+    <header class="header">
+      <div class="container nav">
+        <a href="/" class="brand">
+          <img
+            src="/logos2/favicon-96x96.png"
+            class="logo"
+            alt="Peak Site Studio"
+          />
+          <span class="brand-name">PeakSites</span>
         </a>
-        <a href="/en/" class="lang-option">
-          <span class="flag-wrapper"><img src="/banderas/en.png" alt="English"></span>
-          English
-        </a>
+        <nav>
+          <!-- Menú escritorio -->
+          <div class="nav-links desktop-nav" id="navLinks">
+            <a href="/">Inicio</a>
+
+            <!-- SERVICIOS CON MEGA MENÚ -->
+            <div class="nav-item">
+              <a href="/servicios.html" class="nav-link">
+                Servicios<span class="chevron"> ▼</span>
+              </a>
+              <div class="mega-menu">
+                <div class="mega-menu-content">
+                  <div class="mega-grid">
+                    <div class="mega-column">
+                      <h4>Estrategia, automatización e inteligencia digital</h4>
+                      <a href="/servicios.html"
+                        >Gestión y optimización de CRM</a
+                      >
+                      <a href="#">Consultoría estratégica de negocio</a>
+                      <a href="#">Automatización de procesos empresariales</a>
+                      <a href="#">Análisis predictivo y modelado de datos</a>
+                      <a href="#"
+                        >Soluciones de inteligencia artificial aplicada</a
+                      >
+                    </div>
+                    <div class="mega-column">
+                      <h4>Soluciones para tu negocio</h4>
+                      <a href="#">Desarrollo web a medida</a>
+                      <a href="#">Plataformas eCommerce/Tiendas Online</a>
+                      <a href="#">Sistemas de pago digital</a>
+                      <a href="#">Integraciones avanzadas y APIs</a>
+                      <a href="#">Aplicaciones web y móviles</a>
+                      <a href="#">Ciberseguridad y protección de datos</a>
+                      <a href="#">Mantenimiento y optimización</a>
+                      <a href="#">Consultoría Web</a>
+                    </div>
+                    <div class="mega-column">
+                      <h4>Estrategia y crecimiento digital</h4>
+                      <a href="/servicios.html"
+                        >Posicionamiento orgánico (SEO)</a
+                      >
+                      <a href="#"
+                        >Gestión de publicidad digital (SEM y Social Ads)</a
+                      >
+                      <a href="#">Analítica y medición de resultados</a>
+                      <a href="#">Consultoría estratégica digital</a>
+                      <a href="#">Optimización de conversión (CRO)</a>
+                    </div>
+                    <div class="mega-column">
+                      <h4>Diseño y UX</h4>
+                      <a href="#"
+                        >Diseño de experiencia e interfaces digitales (UI/UX)</a
+                      >
+                      <a href="#"
+                        >Arquitectura de interfaces y prototipado avanzado</a
+                      >
+                      <a href="#"
+                        >Prototipado estratégico y validación de producto</a
+                      >
+                      <a href="#">Sistemas de diseño y escalabilidad visual</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="/portafolio.html">Portafolio</a>
+            <a href="/nosotros.html">Nosotros</a>
+            <a href="/contacto.html">Contacto</a>
+          </div>
+
+          <!-- Botón móvil -->
+          <button
+            id="mobileMenuBtn"
+            class="mobile-menu-btn"
+            aria-label="Abrir menú"
+          >
+            ☰
+          </button>
+          <button id="mobileThemeToggle" class="theme-toggle mobile-theme-btn">
+            🌙
+          </button>
+
+          <!-- Menú móvil -->
+          <div id="mobileMenu" class="mobile-menu">
+            <button id="closeMenuBtn" class="close-menu-btn">✕</button>
+            <div class="mobile-menu-links">
+              <a href="/" class="mobile-link">Inicio</a>
+              <a href="/servicios.html" class="mobile-link">Servicios</a>
+              <a href="/portafolio.html" class="mobile-link">Portafolio</a>
+              <a href="/nosotros.html" class="mobile-link">Nosotros</a>
+              <a href="/contacto.html" class="mobile-link">Contacto</a>
+
+              <div class="mobile-lang-container">
+                <div class="lang-switch mobile-lang-switch">
+                  <div class="lang-current">
+                    <span class="flag-wrapper">
+                      <img src="/banderas/es.png" alt="Español" />
+                    </span>
+                    <span>ES</span>
+                    <span class="arrow">▾</span>
+                  </div>
+                  <div class="lang-menu">
+                    <a href="/" class="lang-option">
+                      <span class="flag-wrapper"
+                        ><img src="/banderas/es.png" alt="Español"
+                      /></span>
+                      Español
+                    </a>
+                    <a href="/en/" class="lang-option">
+                      <span class="flag-wrapper"
+                        ><img src="/banderas/en.png" alt="English"
+                      /></span>
+                      English
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Idioma + Tema PC -->
+          <div class="desktop-only nav-right">
+            <div class="lang-switch">
+              <div class="lang-current">
+                <span class="flag-wrapper">
+                  <img src="/banderas/es.png" alt="Español" />
+                </span>
+                <span>ES</span>
+                <span class="arrow">▾</span>
+              </div>
+              <div class="lang-menu">
+                <a href="/" class="lang-option">
+                  <span class="flag-wrapper"
+                    ><img src="/banderas/es.png" alt="Español"
+                  /></span>
+                  Español
+                </a>
+                <a href="/en/" class="lang-option">
+                  <span class="flag-wrapper"
+                    ><img src="/banderas/en.png" alt="English"
+                  /></span>
+                  English
+                </a>
+              </div>
+            </div>
+            <button id="themeToggle" class="theme-toggle">🌙</button>
+          </div>
+        </nav>
       </div>
-    </div>
-    <button id="themeToggle" class="theme-toggle">🌙</button>
-  </div>
-</nav>
-  </div>
-</header>
+    </header>
 
-<!-- HERO -->
-<section class="hero hero-animate">
-  <div class="container">
-    <h1 class="fade-up">Diseño web profesional que <span class="highlight">atrae más clientes</span></h1>
-    <p class="fade-up delay">Creamos páginas web modernas, rápidas y optimizadas para empresas y negocios locales que quieren destacar en internet y aumentar sus ventas.</p>
-    <a href="/contacto.html" class="btn fade-up delay2">Solicitar auditoría gratuita</a>
-  </div>
-</section>
+    <!-- HERO -->
+    <section class="hero hero-animate">
+      <div class="container">
+        <h1 class="fade-up">
+          Diseño web profesional que
+          <span class="highlight">atrae más clientes</span>
+        </h1>
+        <p class="fade-up delay">
+          Creamos páginas web modernas, rápidas y optimizadas para empresas y
+          negocios locales que quieren destacar en internet y aumentar sus
+          ventas.
+        </p>
+        <a href="/contacto.html" class="btn fade-up delay2"
+          >Solicitar auditoría gratuita</a
+        >
+      </div>
+    </section>
 
-<!-- INTRO -->
-<section class="container">
-  <h2 class="fade-up">Tu negocio merece una web que realmente funcione</h2>
-  <p class="fade-up delay">En Peak Site Studio ayudamos a empresas y locales a tener una presencia online profesional. Diseñamos webs atractivas, rápidas y pensadas para convertir visitantes en clientes reales.</p>
-  <p class="fade-up delay2">Ya seas restaurante, clínica, tienda, taller, despacho profesional o cualquier negocio local, tu web es tu mejor vendedor las 24 horas.</p>
-</section>
+    <!-- INTRO -->
+    <section class="container">
+      <h2 class="fade-up">Tu negocio merece una web que realmente funcione</h2>
+      <p class="fade-up delay">
+        En Peak Site Studio ayudamos a empresas y locales a tener una presencia
+        online profesional. Diseñamos webs atractivas, rápidas y pensadas para
+        convertir visitantes en clientes reales.
+      </p>
+      <p class="fade-up delay2">
+        Ya seas restaurante, clínica, tienda, taller, despacho profesional o
+        cualquier negocio local, tu web es tu mejor vendedor las 24 horas.
+      </p>
+    </section>
 
-<!-- BLOQUE VISUAL -->
-<section class="split container">
-  <div class="text fade-left">
-    <h2>Deja de perder clientes por tener una web anticuada</h2>
-    <p>Una página lenta, poco atractiva o sin estrategia hace que tus potenciales clientes se vayan a la competencia en segundos.</p>
-    <p>Nosotros creamos webs modernas, optimizadas para SEO local y diseñadas para generar confianza y ventas</p>
-  </div>
-  <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2070" class="image fade-right" alt="Diseño web profesional para empresas y locales" loading="lazy">
-</section>
+    <!-- BLOQUE VISUAL -->
+    <section class="split container">
+      <div class="text fade-left">
+        <h2>Deja de perder clientes por tener una web anticuada</h2>
+        <p>
+          Una página lenta, poco atractiva o sin estrategia hace que tus
+          potenciales clientes se vayan a la competencia en segundos.
+        </p>
+        <p>
+          Nosotros creamos webs modernas, optimizadas para SEO local y diseñadas
+          para generar confianza y ventas
+        </p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2070"
+        class="image fade-right"
+        alt="Diseño web profesional para empresas y locales"
+        loading="lazy"
+      />
+    </section>
 
-<!-- BENEFICIOS -->
-<section class="benefits container">
-  <div class="card fade-up"><strong>🚀 Más clientes locales</strong><br>Optimización SEO local para aparecer en Google</div>
-  <div class="card fade-up delay"><strong>⚡ Velocidad profesional</strong><br>Páginas que cargan en menos de 2 segundos</div>
-  <div class="card fade-up delay2"><strong>💰 Diseñada para vender</strong><br>Enfoque en conversión y llamadas a acción</div>
-  <div class="card fade-up delay3"><strong>📱 100% Responsive</strong><br>Perfecta en móviles y todos los dispositivos</div>
-</section>
+    <!-- BENEFICIOS -->
+    <section class="benefits container">
+      <div class="card fade-up">
+        <strong>🚀 Más clientes locales</strong><br />Optimización SEO local
+        para aparecer en Google
+      </div>
+      <div class="card fade-up delay">
+        <strong>⚡ Velocidad profesional</strong><br />Páginas que cargan en
+        menos de 2 segundos
+      </div>
+      <div class="card fade-up delay2">
+        <strong>💰 Diseñada para vender</strong><br />Enfoque en conversión y
+        llamadas a acción
+      </div>
+      <div class="card fade-up delay3">
+        <strong>📱 100% Responsive</strong><br />Perfecta en móviles y todos los
+        dispositivos
+      </div>
+    </section>
 
-<!-- RESULTADOS -->
-<section class="results-section">
-  <div class="container">
-    <div class="results-header fade-up">
-      <h2>Resultados reales para negocios como el tuyo</h2>
-      <p>No solo hacemos webs bonitas. Creamos herramientas que ayudan a crecer tu empresa.</p>
-    </div>
-  </div>
-  <div class="results-grid">
-    <div class="result-card fade-up">
-      <div class="result-content">
-        <h3>Clínica Dental Sonríe</h3>
-        <p class="result-desc">Rediseño completo con sistema de citas online.</p>
-        <div class="result-metrics">
-          <div><strong>+92%</strong><span>Reservas</span></div>
-          <div><strong>+67%</strong><span>Tráfico orgánico</span></div>
+    <!-- RESULTADOS -->
+    <section class="results-section">
+      <div class="container">
+        <div class="results-header fade-up">
+          <h2>Resultados reales para negocios como el tuyo</h2>
+          <p>
+            No solo hacemos webs bonitas. Creamos herramientas que ayudan a
+            crecer tu empresa.
+          </p>
         </div>
-        <a href="/portafolio/proyecto-1.html" class="result-link">Ver caso completo →</a>
       </div>
-    </div>
-    <div class="result-card fade-up">
-      <div class="result-content">
-        <h3>Restaurante La Brasa</h3>
-        <p class="result-desc">Web con menú digital, reservas y pedidos online.</p>
-        <div class="result-metrics">
-          <div><strong>+180%</strong><span>Reservas</span></div>
-          <div><strong>+124%</strong><span>Pedidos online</span></div>
+      <div class="results-grid">
+        <div class="result-card fade-up">
+          <div class="result-content">
+            <h3>Clínica Dental Sonríe</h3>
+            <p class="result-desc">
+              Rediseño completo con sistema de citas online.
+            </p>
+            <div class="result-metrics">
+              <div><strong>+92%</strong><span>Reservas</span></div>
+              <div><strong>+67%</strong><span>Tráfico orgánico</span></div>
+            </div>
+            <a href="/portafolio/proyecto-1.html" class="result-link"
+              >Ver caso completo →</a
+            >
+          </div>
         </div>
-        <a href="/portafolio/proyecto-3.html" class="result-link">Ver caso completo →</a>
-      </div>
-    </div>
-    <div class="result-card fade-up">
-      <div class="result-content">
-        <h3>Academia Nova</h3>
-        <p class="result-desc">Plataforma de captación e inscripciones online.</p>
-        <div class="result-metrics">
-          <div><strong>+137%</strong><span>Nuevos alumnos</span></div>
-          <div><strong>+95%</strong><span>Conversiones</span></div>
+        <div class="result-card fade-up">
+          <div class="result-content">
+            <h3>Restaurante La Brasa</h3>
+            <p class="result-desc">
+              Web con menú digital, reservas y pedidos online.
+            </p>
+            <div class="result-metrics">
+              <div><strong>+180%</strong><span>Reservas</span></div>
+              <div><strong>+124%</strong><span>Pedidos online</span></div>
+            </div>
+            <a href="/portafolio/proyecto-3.html" class="result-link"
+              >Ver caso completo →</a
+            >
+          </div>
         </div>
-        <a href="/portafolio/proyecto-2.html" class="result-link">Ver caso completo →</a>
+        <div class="result-card fade-up">
+          <div class="result-content">
+            <h3>Academia Nova</h3>
+            <p class="result-desc">
+              Plataforma de captación e inscripciones online.
+            </p>
+            <div class="result-metrics">
+              <div><strong>+137%</strong><span>Nuevos alumnos</span></div>
+              <div><strong>+95%</strong><span>Conversiones</span></div>
+            </div>
+            <a href="/portafolio/proyecto-2.html" class="result-link"
+              >Ver caso completo →</a
+            >
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="results-cta fade-up">
-    <a href="/portafolio.html" class="btn">Ver todos nuestros proyectos</a>
-  </div>
-</section>
+      <div class="results-cta fade-up">
+        <a href="/portafolio.html" class="btn">Ver todos nuestros proyectos</a>
+      </div>
+    </section>
 
-<!-- CTA FINAL -->
-<section class="container" style="text-align:center; margin: 100px 0 80px;">
-  <h2>¿Listo para tener la web que tu negocio merece?</h2>
-  <p style="font-size: 1.25rem; max-width: 720px; margin: 25px auto;">
-    Te ayudamos a crear una página web profesional, moderna y efectiva que atraiga más clientes a tu empresa o local.
-  </p>
-  <a href="/contacto.html" class="btn">Solicitar presupuesto sin compromiso</a>
-</section>
+    <!-- CTA FINAL -->
+    <section class="container" style="text-align: center; margin: 100px 0 80px">
+      <h2>¿Listo para tener la web que tu negocio merece?</h2>
+      <p style="font-size: 1.25rem; max-width: 720px; margin: 25px auto">
+        Te ayudamos a crear una página web profesional, moderna y efectiva que
+        atraiga más clientes a tu empresa o local.
+      </p>
+      <a href="/contacto.html" class="btn"
+        >Solicitar presupuesto sin compromiso</a
+      >
+    </section>
 
-<!-- FOOTER -->
-<footer class="footer-pro">
-  <div class="container footer-grid">
-    <div>
-      <h4>Soluciones</h4>
-      <a href="/servicios.html">Páginas Web Profesionales</a>
-      <a href="#">Tiendas Online</a>
-      <a href="#">SEO Local</a>
-      <a href="#">Rediseño Web</a>
-    </div>
-    <div>
-      <h4>Recursos</h4>
-      <a href="/portafolio.html">Portafolio</a>
-      <a href="#">Casos de éxito</a>
-      <a href="#">Blog</a>
-    </div>
-    <div>
-      <h4>Empresa</h4>
-      <a href="/servicios.html">Servicios</a>
-      <a href="/nosotros.html">Nosotros</a>
-      <a href="/contacto.html">Contacto</a>
-    </div>
-    <div>
-      <h4>Legal</h4>
-      <a href="/legal.html">Aviso legal</a>
-      <a href="/privacidad.html">Política de privacidad</a>
-      <a href="#">Política de cookies</a>
-    </div>
-    <div>
-      <h4>Conectar</h4>
-      <a href="#">Instagram ↗</a>
-      <a href="mailto:info@peaksitestudio.com">info@peaksitestudio.com</a>
-    </div>
-  </div>
-  <div class="footer-bottom container">
-    <p>© 2026 Peak Site Studio. Todos los derechos reservados.</p>
-    <p>Más que escalar. Nacidos para coronar.</p>
-  </div>
-</footer>
+    <!-- FOOTER -->
+    <footer class="footer-pro">
+      <div class="container footer-grid">
+        <div>
+          <h4>Soluciones</h4>
+          <a href="/servicios.html">Páginas Web Profesionales</a>
+          <a href="#">Tiendas Online</a>
+          <a href="#">SEO Local</a>
+          <a href="#">Rediseño Web</a>
+        </div>
+        <div>
+          <h4>Recursos</h4>
+          <a href="/portafolio.html">Portafolio</a>
+          <a href="#">Casos de éxito</a>
+          <a href="#">Blog</a>
+        </div>
+        <div>
+          <h4>Empresa</h4>
+          <a href="/servicios.html">Servicios</a>
+          <a href="/nosotros.html">Nosotros</a>
+          <a href="/contacto.html">Contacto</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="/legal.html">Aviso legal</a>
+          <a href="/privacidad.html">Política de privacidad</a>
+          <a href="#">Política de cookies</a>
+        </div>
+        <div>
+          <h4>Conectar</h4>
+          <a href="#">Instagram ↗</a>
+          <a href="mailto:info@peaksitestudio.com">info@peaksitestudio.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>© 2026 Peak Site Studio. Todos los derechos reservados.</p>
+        <p>Más que escalar. Nacidos para coronar.</p>
+      </div>
+    </footer>
 
-<script src="/script.js"></script>
-</body>
+    <script src="/script.js"></script>
+  </body>
 </html>

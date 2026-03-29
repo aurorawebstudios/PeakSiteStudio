@@ -1,18 +1,17 @@
 // ==========================
 // ANIMACIONES SCROLL
 // ==========================
-const elements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+const elements = document.querySelectorAll(".fade-up, .fade-left, .fade-right");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      entry.target.classList.add("visible");
     }
   });
 });
 
-elements.forEach(el => observer.observe(el));
-
+elements.forEach((el) => observer.observe(el));
 
 // ==========================
 // FORMULARIO (solo si existe)
@@ -22,7 +21,7 @@ const form = document.getElementById("contactForm");
 if (form) {
   const btn = document.getElementById("submitBtn");
 
-  form.addEventListener("submit", function(e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     let valid = true;
@@ -31,7 +30,9 @@ if (form) {
     const email = document.getElementById("email");
     const mensaje = document.getElementById("mensaje");
 
-    document.querySelectorAll(".input-group").forEach(g => g.classList.remove("input-error"));
+    document
+      .querySelectorAll(".input-group")
+      .forEach((g) => g.classList.remove("input-error"));
 
     if (!nombre.value) {
       nombre.parentElement.classList.add("input-error");
@@ -60,26 +61,25 @@ if (form) {
   });
 }
 
-
 // ==========================
 // IDIOMA
 // ==========================
-document.querySelectorAll('.lang-option').forEach(link => {
-  link.addEventListener('click', function () {
-    const lang = this.getAttribute('href').includes('/en') ? 'en' : 'es';
-    localStorage.setItem('lang', lang);
+document.querySelectorAll(".lang-option").forEach((link) => {
+  link.addEventListener("click", function () {
+    const lang = this.getAttribute("href").includes("/en") ? "en" : "es";
+    localStorage.setItem("lang", lang);
   });
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  const lang = localStorage.getItem('lang');
+window.addEventListener("DOMContentLoaded", () => {
+  const lang = localStorage.getItem("lang");
 
-  if (lang === 'en' && !window.location.pathname.startsWith('/en')) {
-    window.location.href = '/en/';
+  if (lang === "en" && !window.location.pathname.startsWith("/en")) {
+    window.location.href = "/en/";
   }
 
-  if (lang === 'es' && window.location.pathname.startsWith('/en')) {
-    window.location.href = '/';
+  if (lang === "es" && window.location.pathname.startsWith("/en")) {
+    window.location.href = "/";
   }
 });
 // ==========================
@@ -92,7 +92,10 @@ const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme === "dark") {
   document.body.classList.add("dark");
-} else if (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+} else if (
+  !savedTheme &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
   document.body.classList.add("dark");
 }
 
@@ -116,47 +119,51 @@ if (toggleBtn) {
   });
 }
 // MENÚ MÓVIL PARCIAL
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const closeMenuBtn = document.getElementById('closeMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const closeMenuBtn = document.getElementById("closeMenuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
 if (mobileMenuBtn && closeMenuBtn && mobileMenu) {
-  mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
-    document.body.classList.add('menu-open');   // ← clave para el fix
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+    document.body.classList.add("menu-open"); // ← clave para el fix
   });
 
-  closeMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    document.body.classList.remove('menu-open');
+  closeMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    document.body.classList.remove("menu-open");
   });
 
   // Cerrar al tocar el fondo oscuro
-  mobileMenu.addEventListener('click', (e) => {
+  mobileMenu.addEventListener("click", (e) => {
     if (e.target === mobileMenu) {
-      mobileMenu.classList.remove('active');
-      document.body.classList.remove('menu-open');
+      mobileMenu.classList.remove("active");
+      document.body.classList.remove("menu-open");
     }
   });
 }
 // ANIMACIÓN SCROLL REVEAL - SOLO UNA VEZ (definitivo)
-document.addEventListener('DOMContentLoaded', () => {
-  
-  const elements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(
+    ".fade-up, .fade-left, .fade-right",
+  );
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        
-        // ← Esta línea es clave: una vez que aparece, ya no lo observamos más
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.15,                    // Se activa cuando el 15% es visible
-    rootMargin: "0px 0px -60px 0px"
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
 
-  elements.forEach(el => observer.observe(el));
+          // ← Esta línea es clave: una vez que aparece, ya no lo observamos más
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15, // Se activa cuando el 15% es visible
+      rootMargin: "0px 0px -60px 0px",
+    },
+  );
+
+  elements.forEach((el) => observer.observe(el));
 });
