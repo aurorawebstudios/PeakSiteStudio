@@ -6,13 +6,9 @@
 }
 
 :root {
-  --bg: #0b1124;
-  --fg: #e2e8f5;
-  --card: #131b35;
-  --primary: #00d4ff;
-  --muted: #a3b4d1;
-  --border: #1e2a47;
-  --radius: 0.75rem;
+  --crm-bg: #0b1124;
+  --crm-fg: #e2e8f5;
+  --crm-card: #131b35;
 }
 
 .crm-page {
