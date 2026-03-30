@@ -443,33 +443,127 @@ img { max-width: 100%; display: block; }
     text-align: center;
   }
 }
-/* ===== HEADER FIX ===== */
+/* ===== HEADER / NAV (copiado de styles.css) ===== */
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  background: hsla(216, 28%, 7%, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  z-index: 9999;
+  background: rgba(10, 15, 44, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 4rem;
+  align-items: center;
+}
+
+.logo {
+  height: 28px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
+  gap: 5px;
 }
 
 .brand-name {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.2rem;
+  font-size: 16px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+}
+
+/* ===== MEGA MENU ===== */
+.nav-item {
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.nav-item:hover .mega-menu {
+  display: block;
+}
+
+.mega-menu-content {
+  background: #0f1629;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.mega-column h4 {
+  color: #00d4ff;
+  margin-bottom: 15px;
+}
+
+.mega-column a {
+  display: block;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+/* ===== MOBILE ===== */
+.mobile-menu-btn {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+@media (max-width:768px){
+  .nav-links { display:none; }
+  .mobile-menu-btn { display:block; }
+}
+
+/* ===== FOOTER ===== */
+.footer-pro {
+  background: #080b14;
+  color: #aaa;
+  padding: 60px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+  gap: 30px;
+}
+
+.footer-pro h4 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-pro a {
+  display: block;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #222;
+  padding-top: 20px;
 }
