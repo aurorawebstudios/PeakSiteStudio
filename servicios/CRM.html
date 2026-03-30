@@ -324,19 +324,6 @@
       <p>Más que escalar. Nacidos para coronar.</p>
     </div>
   </footer>
-
-  <script>
-    lucide.createIcons();
-    // Simple scroll animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
     </main>
   <script src="/assets/js/script.js"></script>
 </body>
