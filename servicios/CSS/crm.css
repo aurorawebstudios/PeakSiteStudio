@@ -363,3 +363,9 @@ body {
 .cta-section p {
   color: #ffffff;
 }
+
+/* Arreglar overlay oscuro del CTA */
+.cta-glow {
+  opacity: 0.3; /* antes seguramente está muy alto */
+  background: radial-gradient(circle, rgba(0, 180, 255, 0.25), transparent 70%);
+}
