@@ -402,3 +402,27 @@ body.light .hero-badge {
   align-items: center;
   text-align: center;
 }
+
+/* ===== ARREGLO COLUMNAS SERVICIOS (CRM) ===== */
+
+/* Contenedor de columnas */
+.mega-grid {
+  align-items: flex-start; /* evita que se estiren */
+}
+
+/* Columnas */
+.mega-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Títulos */
+.mega-column h4 {
+  margin-bottom: 16px;
+}
+
+/* Links / textos */
+.mega-column a {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
