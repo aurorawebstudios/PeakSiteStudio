@@ -167,3 +167,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach((el) => observer.observe(el));
 });
+
+// ==========================
+// HEADER SCROLL EFFECT (DEL OTRO SCRIPT)
+// ==========================
+const header = document.getElementById("header");
+
+if (header) {
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 10);
+  });
+}
