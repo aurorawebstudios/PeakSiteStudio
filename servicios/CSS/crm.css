@@ -18,7 +18,7 @@
   --radius: 0.75rem;
 }
 
-/* Variables del header (coherencia con styles.css) */
+/* Variables del header (NO TOCAR - para mantenerlo idéntico al index.html) */
 :root {
   --primary: #0a0f2c; 
   --accent: #00d4ff; 
@@ -107,7 +107,7 @@ img { max-width: 100%; display: block; }
 .w-full { width: 100%; }
 .icon-sm { width: 16px; height: 16px; }
 
-/* ===== GRADIENTS ===== */
+/* ===== GRADIENTS Y SECTIONS (colores del antiguo crm.css) ===== */
 .hero-gradient {
   background: linear-gradient(135deg, var(--bg) 0%, hsl(217, 35%, 14%) 50%, var(--bg) 100%);
 }
@@ -115,7 +115,7 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
 }
 
-/* ===== HERO, SECTIONS, FEATURES, STATS, PROCESS, CTA (colores originales CRM) ===== */
+/* ===== HERO ===== */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -125,7 +125,8 @@ img { max-width: 100%; display: block; }
 }
 .hero-glow {
   position: absolute;
-  top: 25%; left: 50%;
+  top: 25%;
+  left: 50%;
   transform: translateX(-50%);
   width: 600px; height: 600px;
   border-radius: 50%;
@@ -150,7 +151,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-content > p {
   font-size: 1.125rem;
-  color: var(--muted);
+  color: var(--muted);   /* ← Texto secundario como en el antiguo */
   max-width: 32rem;
   line-height: 1.7;
 }
@@ -187,6 +188,7 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(to top, hsla(216, 28%, 7%, 0.6), transparent);
 }
 
+/* ===== SECTIONS, FEATURES, STATS, PROCESS, CTA ===== */
 .section {
   padding: 6rem 0;
   position: relative;
@@ -260,7 +262,10 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
-.stat-item p { color: var(--muted); font-size: 0.9375rem; }
+.stat-item p { 
+  color: var(--muted); 
+  font-size: 0.9375rem; 
+}
 
 .process-glow {
   position: absolute;
@@ -289,14 +294,6 @@ img { max-width: 100%; display: block; }
   margin: 0.5rem 0 0.75rem;
 }
 .process-step p { color: var(--muted); line-height: 1.7; }
-.step-connector {
-  display: none;
-  position: absolute;
-  top: 2rem; right: 0;
-  transform: translateX(50%);
-  width: 3rem; height: 1px;
-  background: var(--border);
-}
 
 .cta-section { position: relative; }
 .cta-glow {
@@ -331,7 +328,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================= */
-/* ===== HEADER, NAV, MEGA MENU, MOBILE MENU Y LANG SWITCH (IGUAL QUE EN index.html) ===== */
+/* ===== HEADER + LANG SWITCH (exacto como en index.html) ===== */
 /* ============================================= */
 
 .header {
@@ -414,7 +411,6 @@ body.dark .brand-name {
 }
 body.dark nav a { color: #fff; }
 
-/* Botón hamburguesa */
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -426,7 +422,6 @@ body.dark nav a { color: #fff; }
 }
 body.dark .mobile-menu-btn { color: #fff; }
 
-/* Menú móvil */
 .mobile-menu {
   position: fixed;
   inset: 0;
@@ -599,7 +594,6 @@ body.dark .mega-column a {
   }
 }
 
-/* Fix z-index móvil */
 @media (max-width: 991px) {
   .header { position: relative; z-index: 100; }
   .mobile-menu { z-index: 999999 !important; }
@@ -607,10 +601,7 @@ body.dark .mega-column a {
   .close-menu-btn { z-index: 1000001 !important; }
 }
 
-/* ============================================= */
-/* ===== LANG SWITCH FIX (para que se vea perfecto en CRM) ===== */
-/* ============================================= */
-
+/* LANG SWITCH (mantenido para que se vea bien en fondo oscuro) */
 .lang-current {
   display: flex !important;
   align-items: center;
@@ -624,68 +615,22 @@ body.dark .mega-column a {
   cursor: pointer;
   white-space: nowrap;
   border: 2px solid transparent !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-  transition: all 0.2s ease !important;
 }
 
 .lang-current:hover {
   background: #1a2338 !important;
   border: 2px solid #00d4ff !important;
-  box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.25), 0 6px 20px rgba(0, 212, 255, 0.45) !important;
 }
 
 .lang-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 4px;
   background: #1f252f !important;
   border: 1px solid #444 !important;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  display: none;
-  min-width: 180px;
-  padding: 8px 0;
-  z-index: 9999;
-}
-
-.lang-switch:hover .lang-menu {
-  display: block;
-}
-
-.lang-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 18px;
-  color: #eee;
-  text-decoration: none;
-  font-size: 15px;
 }
 .lang-option:hover {
   background: #2a323f !important;
 }
 
-.flag-wrapper {
-  display: inline-flex;
-  padding: 2px;
-  background: transparent;
-  border: none;
-}
-.lang-current img,
-.lang-option img {
-  width: 26px;
-  height: 17px;
-  object-fit: cover;
-  border-radius: 3px;
-}
-.arrow {
-  font-size: 19px;
-  line-height: 1;
-  color: #ffffff;
-}
-
-/* ===== FOOTER (sin cambios) ===== */
+/* ===== FOOTER (NO TOCADO) ===== */
 .footer-pro {
   background: #080b14;
   color: #aaa;
