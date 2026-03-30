@@ -363,3 +363,19 @@ body {
 .cta-section p {
   color: #ffffff;
 }
+
+/* CTA - modo claro arreglado */
+body.light .cta-section h2 {
+  color: #ffffff;
+}
+
+body.light .cta-section p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Botón como en la segunda imagen */
+body.light .cta-section .btn-primary {
+  background: linear-gradient(135deg, #22d3ee, #06b6d4);
+  color: #0b1324;
+  border: none;
+}
