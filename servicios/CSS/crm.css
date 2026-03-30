@@ -18,6 +18,14 @@
   --border: #1e2a47;
 }
 
+.hero-gradient {
+  background: linear-gradient(135deg, #ffffff, #eeeeee);
+}
+
+.dark .hero-gradient {
+  background: linear-gradient(135deg, #0b1124, #131b35);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Space Grotesk', sans-serif;
 }
