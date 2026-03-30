@@ -338,6 +338,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 }
-body {
-  background: linear-gradient(135deg, #0b1124 0%, #131b35 50%, #0b1124 100%) !important;
+.crm-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0b1124 0%, #131b35 50%, #0b1124 100%);
 }
