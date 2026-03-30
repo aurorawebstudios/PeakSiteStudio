@@ -508,9 +508,9 @@ img { max-width: 100%; display: block; }
   display: none;
 }
 
-/* SOLO en móvil */
-@media (max-width: 768px) {
-  .mobile-menu.open {
-    display: block;
+/* 🔒 OCULTAR menú móvil en desktop SIEMPRE */
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
   }
 }
