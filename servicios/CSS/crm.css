@@ -6,12 +6,7 @@
 }
 
 :root {
-  --bg: #ffffff;
-  --fg: #0b1124;
-  --card: #f1f5f9;
-  --primary: #00d4ff;
-  --muted: #64748b;
-  --border: #e2e8f0;
+  /* vacío o solo cosas neutras si quieres */
 }
 
 .dark {
