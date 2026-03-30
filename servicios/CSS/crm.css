@@ -379,3 +379,14 @@ body.light .cta-section .btn-primary {
   color: #0b1324;
   border: none;
 }
+
+/* HERO BADGE - modo claro */
+body.light .hero-badge span {
+  color: #22d3ee; /* azul brillante como en la segunda imagen */
+}
+
+/* opcional: fondo del badge */
+body.light .hero-badge {
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+}
