@@ -18,7 +18,7 @@
   --radius: 0.75rem;
 }
 
-/* Variables del header (coherencia con styles.css) */
+/* Variables del header (NO TOCAR - coherencia con styles.css) */
 :root {
   --primary: #0a0f2c; 
   --accent: #00d4ff; 
@@ -69,6 +69,7 @@ img {
   background: linear-gradient(135deg, var(--primary), hsl(187, 80%, 70%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ===== ANIMATIONS ===== */
@@ -113,7 +114,7 @@ img {
 .w-full { width: 100%; }
 .icon-sm { width: 16px; height: 16px; }
 
-/* ===== GRADIENTS ===== */
+/* ===== GRADIENTS (colores originales CRM) ===== */
 .hero-gradient {
   background: linear-gradient(135deg, var(--bg) 0%, hsl(217, 35%, 14%) 50%, var(--bg) 100%);
 }
@@ -233,6 +234,7 @@ img {
   padding: 2rem;
   box-shadow: 0 0 40px hsla(187, 100%, 50%, 0.05);
   transition: box-shadow 0.3s, border-color 0.3s;
+  cursor: default;
 }
 .glow-card:hover {
   box-shadow: 0 0 60px hsla(187, 100%, 50%, 0.12);
@@ -246,6 +248,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
+  transition: background 0.2s;
   color: var(--primary);
 }
 .glow-card:hover .feature-icon {
@@ -353,7 +356,7 @@ img {
 }
 
 /* ============================================= */
-/* ===== HEADER - NAV - MEGA MENU - MOBILE (EXACTO IGUAL A styles.css) ===== */
+/* ===== HEADER, NAV, MEGA MENU Y MOBILE MENU (NO TOCADO - IGUAL QUE styles.css) ===== */
 /* ============================================= */
 
 .header {
@@ -632,7 +635,7 @@ body.dark .mega-column a {
   .close-menu-btn { z-index: 1000001 !important; }
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (NO TOCADO) ===== */
 .footer-pro {
   background: #080b14;
   color: #aaa;
