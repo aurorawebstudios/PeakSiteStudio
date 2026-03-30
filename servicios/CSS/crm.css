@@ -390,17 +390,3 @@ body.light .hero-badge {
   background: rgba(34, 211, 238, 0.1);
   border: 1px solid rgba(34, 211, 238, 0.3);
 }
-
-/*------------------------------------*/
-
-
-.hero {
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.hero .container {
-  max-width: 1200px; /* controla el contenido */
-  margin: 0 auto;
-}
