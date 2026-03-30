@@ -6,14 +6,11 @@
 }
 
 :root {
-  --bg: #0b1124;           /* Fondo principal azul oscuro elegante */
-  --fg: #e2e8f5;           /* Texto principal claro */
-  --card: #131b35;         /* Fondo de cards */
-  --card-fg: #e2e8f5;
-  --primary: #00d4ff;      /* Cian brillante */
-  --primary-fg: #0a0f2c;
-  --secondary: #1e2a47;
-  --muted: #a3b4d1;        /* Gris suave para textos secundarios */
+  --bg: #0b1124;
+  --fg: #e2e8f5;
+  --card: #131b35;
+  --primary: #00d4ff;
+  --muted: #a3b4d1;
   --border: #1e2a47;
   --radius: 0.75rem;
 }
@@ -22,16 +19,12 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg);
   color: var(--fg);
-  -webkit-font-smoothing: antialiased;
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Space Grotesk', sans-serif;
 }
-
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
 
 .container {
   max-width: 1200px;
