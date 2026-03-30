@@ -418,11 +418,12 @@ body.light .hero-badge {
 
 /* Títulos */
 .mega-column h4 {
-  margin-bottom: 16px;
+  margin-bottom: 22px; /* 🔥 separación título */
 }
 
 /* Links / textos */
 .mega-column a {
-  margin-bottom: 10px;
-  line-height: 1.4;
+  display: block;
+  margin-bottom: 18px; /* 🔥 MÁS espacio entre opciones */
+  line-height: 1.6;
 }
