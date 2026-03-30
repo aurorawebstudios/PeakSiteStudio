@@ -6,9 +6,12 @@
 }
 
 :root {
-  --crm-bg: #0b1124;
-  --crm-fg: #e2e8f5;
-  --crm-card: #131b35;
+  --bg: #ffffff;
+  --fg: #0b1124;
+  --card: #f1f5f9;
+  --primary: #00d4ff;
+  --muted: #64748b;
+  --border: #e2e8f0;
 }
 
 h1, h2, h3, h4, h5, h6 {
