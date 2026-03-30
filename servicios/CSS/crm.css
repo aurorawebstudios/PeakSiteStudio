@@ -353,3 +353,13 @@ body {
   color: var(--fg);
   line-height: 1.6;
 }
+/* CTA FINAL - forzar mismo fondo en ambos modos */
+.cta-section {
+  background: linear-gradient(135deg, #0f172a, #0b1f3a, #0a2540) !important;
+}
+
+/* opcional: asegurar texto blanco */
+.cta-section h2,
+.cta-section p {
+  color: #ffffff;
+}
