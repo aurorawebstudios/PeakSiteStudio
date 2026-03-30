@@ -424,6 +424,6 @@ body.light .hero-badge {
 /* Links / textos */
 .mega-column a {
   display: block;
-  margin-bottom: 24px; /* 🔥 MÁS espacio entre opciones */
+  margin-bottom: 30px; /* 🔥 MÁS espacio entre opciones */
   line-height: 1.6;
 }
