@@ -147,10 +147,10 @@ p {
 body.dark p {
   color: var(--text-soft-dark);
 }
-section:not(.hero) h1,
-section:not(.hero) h2,
-section:not(.hero) h3,
-section:not(.hero) h4 {
+section:not(.hero):not(.about-hero) h1,
+section:not(.hero):not(.about-hero) h2,
+section:not(.hero):not(.about-hero) h3,
+section:not(.hero):not(.about-hero) h4 {
   color: var(--text-light);
 }
 body.dark section:not(.hero) h1,
@@ -668,7 +668,7 @@ body.dark .mobile-menu-btn {
 
 .about-hero p {
   font-size: 1.25rem;
-  color: #cbd5e1; /* gris claro como antes */
+  color: #cbd5e1;
 }
 
 /* ================= BOTÓN (IGUAL QUE ANTES) ================= */
