@@ -5,18 +5,32 @@
   box-sizing: border-box;
 }
 
+/* ====================== VARIABLES - MODO CLARO ====================== */
 :root {
+  --bg: #f8fafc;
+  --fg: #0f172a;
+  --card: #ffffff;
+  --primary: #00d4ff;
+  --primary-fg: #0b1324;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --secondary: #f1f5f9;
+  --radius: 0.75rem;
+}
+
+/* ====================== VARIABLES - MODO OSCURO ====================== */
+.dark {
   --bg: #0b1124;
   --fg: #e2e8f5;
   --card: #131b35;
   --primary: #00d4ff;
-  --primary-fg: #0b1124;
+  --primary-fg: #0b1324;
   --muted: #a3b4d1;
   --border: #1e2a47;
   --secondary: #1a2340;
-  --radius: 0.75rem;
 }
 
+/* ===== BASE GENERAL ===== */
 html {
   scroll-behavior: smooth;
 }
@@ -257,9 +271,18 @@ img {
   overflow: hidden;
   padding: 5rem 0 4rem;
 }
-.hero-gradient {
+
+/* Modo Claro - Hero */
+:root .hero-gradient,
+body.light .hero-gradient {
+  background: linear-gradient(135deg, #ffffff, #eeeeee);
+}
+
+/* Modo Oscuro - Hero */
+.dark .hero-gradient {
   background: linear-gradient(135deg, #0b1124 0%, #131b35 50%, #0b1124 100%);
 }
+
 .hero-glow {
   position: absolute;
   top: 25%;
@@ -273,6 +296,7 @@ img {
   pointer-events: none;
   animation: glow-pulse 4s ease-in-out infinite;
 }
+
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -282,6 +306,7 @@ img {
   text-align: center;
   gap: 2rem;
 }
+
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -289,6 +314,7 @@ img {
   gap: 2rem;
   max-width: 800px;
 }
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -301,6 +327,19 @@ img {
   color: var(--primary);
   font-weight: 500;
 }
+
+/* Corrección de visibilidad del texto principal del Hero */
+.hero-content h1,
+.hero-content > p {
+  color: var(--fg);
+}
+
+/* Forzar texto oscuro en modo claro (importante) */
+body.light .hero-content h1,
+body.light .hero-content > p {
+  color: #0f172a;
+}
+
 .pulse-dot {
   width: 8px;
   height: 8px;
@@ -308,24 +347,28 @@ img {
   background: var(--primary);
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
 .hero-content h1 {
   font-size: clamp(2.25rem, 5vw, 3.75rem);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.02em;
 }
+
 .hero-content > p {
   font-size: 1.125rem;
   color: var(--muted);
   max-width: 640px;
   line-height: 1.7;
 }
+
 .hero-buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .hero-image-wrapper {
   position: relative;
   border-radius: 0.75rem;
@@ -335,11 +378,13 @@ img {
   margin-top: 1rem;
   width: 100%;
 }
+
 .hero-image {
   width: 100%;
   height: 400px;
   object-fit: cover;
 }
+
 .hero-image-overlay {
   position: absolute;
   inset: 0;
@@ -391,7 +436,16 @@ img {
   filter: brightness(1.1);
 }
 
-/* ===== SECTIONS ===== */
+/* CTA Section - Modo Claro y Oscuro */
+.cta-section {
+  background: linear-gradient(135deg, #0a1f3f, #0f3b6d, #0a2540) !important;
+}
+.cta-content h2,
+.cta-content > p {
+  color: #ffffff;
+}
+
+/* ===== SECTIONS, FEATURES, STATS, etc. (sin cambios de tema) ===== */
 .section {
   padding: 5rem 0;
   position: relative;
@@ -427,14 +481,12 @@ img {
   line-height: 1.7;
 }
 
-/* ===== FEATURES GRID ===== */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
-/* ===== GLOW CARD ===== */
 .glow-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -476,7 +528,6 @@ img {
   line-height: 1.7;
 }
 
-/* ===== STATS ===== */
 .stats-section {
   position: relative;
 }
@@ -512,7 +563,6 @@ img {
   font-size: 0.9375rem;
 }
 
-/* ===== CAPABILITIES ===== */
 .capabilities-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -541,10 +591,6 @@ img {
   color: var(--muted);
 }
 
-/* ===== CTA ===== */
-.cta-section {
-  background: linear-gradient(135deg, #0a1f3f, #0f3b6d, #0a2540) !important;
-}
 .cta-glow {
   position: absolute;
   top: 50%;
@@ -571,15 +617,13 @@ img {
   font-weight: 700;
   max-width: 48rem;
   line-height: 1.2;
-  color: #fff;
 }
 .cta-content > p {
   font-size: 1.125rem;
   max-width: 36rem;
-  color: rgba(255, 255, 255, 0.8);
 }
 
-/* ===== CONTACT ===== */
+/* ===== CONTACT & FOOTER ===== */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -609,7 +653,6 @@ img {
   margin-top: 0.75rem;
 }
 
-/* ===== FOOTER ===== */
 .footer-pro {
   background: #080b14;
   color: #aaa;
