@@ -275,11 +275,6 @@ img {
   color: var(--fg);
 }
 
-/* Forzar texto oscuro en modo claro */
-body.light 
-body.light .hero-content > p {
-  color: #0f172a;
-}
 
 .pulse-dot {
   width: 8px;
