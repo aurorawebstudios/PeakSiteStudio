@@ -85,33 +85,24 @@ window.addEventListener("DOMContentLoaded", () => {
 // ==========================
 // DARK MODE
 // ==========================
-// ==========================
-// DARK MODE - SIEMPRE EMPIEZA EN LIGHT
-// ==========================
-
 const toggleBtn = document.getElementById("themeToggle");
 
-// FORZAR MODO LIGHT al cargar (incluso en incógnito)
-document.body.classList.remove("dark");
-document.body.classList.add("light");
-localStorage.setItem("theme", "light");
+// Detectar preferencia guardada o del sistema
+const savedTheme = localStorage.getItem("theme");
 
-// Ajustar icono inicial (Luna = modo claro)
-if (toggleBtn) {
-  toggleBtn.textContent = "🌙";
+if (savedTheme === "dark") {
+  document.body.classList.add("dark");
+} else if (
+  !savedTheme &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+  document.body.classList.add("dark");
 }
 
-// Toggle manual (el usuario sí puede cambiar a dark si quiere)
+/* Ajustar icono al cargar */
+const isDarkInit = document.body.classList.contains("dark");
 if (toggleBtn) {
-  toggleBtn.addEventListener("click", () => {
-    const isDark = document.body.classList.toggle("dark");
-    document.body.classList.toggle("light", !isDark);
-
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-
-    // Cambiar icono
-    toggleBtn.textContent = isDark ? "☀️" : "🌙";
-  });
+  toggleBtn.textContent = isDarkInit ? "☀️" : "🌙";
 }
 
 // Toggle manual
