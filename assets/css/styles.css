@@ -837,3 +837,118 @@ body.dark .mega-column a {
     display: none !important;
   }
 }
+
+/* ====================== CTA FINAL CENTRADO (como en la imagen) ====================== */
+.final-cta {
+  background: #ffffff;
+  padding: 120px 20px;
+  text-align: center;
+  margin: 80px 0;
+}
+
+body.dark .final-cta {
+  background: #0a0f2c;
+}
+
+.final-cta-content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.final-cta h2 {
+  font-size: 2.35rem;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #0a0f2c;
+}
+
+body.dark .final-cta h2 {
+  color: #ffffff;
+}
+
+.final-cta p {
+  font-size: 1.28rem;
+  line-height: 1.55;
+  color: #475569;
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+body.dark .final-cta p {
+  color: #94a3b8;
+}
+
+/* Botón más grande y bonito como en la imagen */
+.btn-big {
+  display: inline-block;
+  padding: 18px 42px !important;
+  font-size: 1.15rem !important;
+  font-weight: 600;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  color: #0a0f2c;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+}
+
+.btn-big:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.45);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .final-cta {
+    padding: 90px 20px;
+  }
+  
+  .final-cta h2 {
+    font-size: 2rem;
+  }
+  
+  .final-cta p {
+    font-size: 1.15rem;
+  }
+}
+
+/* ====================== BOTÓN "VER TODOS NUESTROS PROYECTOS" - CENTRADO ====================== */
+.projects-cta {
+  text-align: center;
+  margin: 60px 0 20px;
+  padding: 20px 0;
+}
+
+.btn-projects {
+  display: inline-block;
+  padding: 16px 40px !important;
+  font-size: 1.08rem !important;
+  font-weight: 600;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  color: #0a0f2c;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.35);
+  min-width: 280px;           /* Para que no se haga muy estrecho */
+}
+
+.btn-projects:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 212, 255, 0.45);
+}
+
+/* Aseguramos que quede bien centrado en móviles también */
+@media (max-width: 768px) {
+  .projects-cta {
+    margin: 50px 0 30px;
+  }
+  
+  .btn-projects {
+    padding: 15px 36px !important;
+    font-size: 1.05rem !important;
+    min-width: 260px;
+    width: 100%;
+    max-width: 320px;
+  }
+}
