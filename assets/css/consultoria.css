@@ -158,10 +158,53 @@ img {
 
 .mega-menu-content {
   background: var(--card);
-  border-radius: 1.25rem;
-  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.5);
+  border-radius: 1.5rem; /* Bordes un poco más redondeados */
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.3);
   border: 1px solid var(--border);
-  padding: 2rem;
+  padding: 3.5rem 3rem; /* Aumentamos el aire interno (arriba/abajo y lados) */
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 95vw;
+}
+
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Crea las 4 columnas de la imagen */
+  gap: 52px;
+}
+
+.mega-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Títulos de las categorías (Estrategia, Diseño, etc.) */
+.mega-column h4 {
+  font-size: 14.8px;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.25;
+  flex-shrink: 0;           /* Evita que se comprima */
+}
+
+/* Las opciones individuales */
+.mega-column a {
+  display: block;
+  padding: 9.5px 6px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 15.4px;
+  line-height: 1.48;
+  flex-shrink: 0;
+}
+
+.mega-column a:hover {
+  color: var(--primary);
+  transform: translateX(5px); /* Efecto sutil al pasar el ratón */
 }
 
 /* ===== HERO ===== */
