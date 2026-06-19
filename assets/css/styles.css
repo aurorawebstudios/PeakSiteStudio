@@ -671,6 +671,30 @@ body.dark .mobile-menu-btn {
   color: #cbd5e1;
 }
 
+/* ===== FIX HERO SOLO MODO CLARO ===== */
+body:not(.dark) .about-hero {
+  background: linear-gradient(
+                rgba(255,255,255,0.75),
+                rgba(255,255,255,0.85)
+              ),
+              url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000') center/cover no-repeat;
+
+  color: #0f172a;
+}
+
+body:not(.dark) .about-hero p {
+  color: #475569;
+}
+
+/* ===== TEXTO HERO EN MODO CLARO ===== */
+body:not(.dark) .about-hero h1 {
+  color: #0f172a;
+}
+
+body:not(.dark) .about-hero p {
+  color: #475569;
+}
+
 /* ================= BOTÓN (IGUAL QUE ANTES) ================= */
 .btn-primary {
   background: linear-gradient(90deg, #00f5ff, #0099ff);
