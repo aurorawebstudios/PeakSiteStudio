@@ -1,2 +1,2 @@
 # Peak-Site-Studio
-Mi página web estática
+Mi página web 
