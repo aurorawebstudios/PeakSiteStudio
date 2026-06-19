@@ -3,7 +3,6 @@
   font-size: 3rem;
 }
 
-
 /* ====================== PAQUETES EN FILA ====================== */
 .services-grid {
   display: grid;
@@ -12,6 +11,7 @@
   max-width: 1280px;
   margin: 0 auto 90px;
 }
+
 .service-card {
   padding: 48px 35px 40px;
   border-radius: 24px;
@@ -21,18 +21,15 @@
   text-align: center;
   height: 100%;
   border: 1px solid transparent;
-}
-.service-card {
   will-change: transform;
 }
-/* 🔥 FORZAR HOVER POR ENCIMA DEL SCROLL */
+
+/* Hover base */
 .service-card:hover {
   transform: translateY(-18px) !important;
-}
-.service-card:hover {
-  transform: translateY(-18px);
   box-shadow: 0 25px 50px rgba(0, 212, 255, 0.15);
 }
+
 .service-card.featured {
   border: 2px solid #38bdf8;
   transform: scale(1);
@@ -40,6 +37,7 @@
 .service-card.featured:hover {
   transform: translateY(-18px);
 }
+
 .service-icon {
   font-size: 3.5rem;
   margin-bottom: 22px;
@@ -80,34 +78,60 @@
   font-size: 1.1rem;
   font-weight: 400;
 }
+
 /* ====================== MODO OSCURO ====================== */
+body.dark .service-card,
 body:not(.light) .service-card {
   background: #1e2937;
   border-color: #334155;
-}
-body:not(.light) .service-desc,
-body:not(.light) .service-card ul li {
-  color: #cbd5e1;
-}
-body:not(.light) .price {
-  color: #38bdf8;
-}
-body:not(.light) .price-month {
-  color: #94a3b8;
-}
-/* ====================== MODO CLARO ====================== */
-body.light .service-card {
-  background: #1e2937;
-  border: 1px solid #475569;
-  color: #f1f5f9;
-}
-body.light .service-desc,
-body.light .service-card ul li {
   color: #e2e8f0;
 }
-body.light .price {
+body:not(.light) .service-desc,
+body:not(.light) .service-card ul li,
+body.dark .service-desc,
+body.dark .service-card ul li {
+  color: #cbd5e1;
+}
+body:not(.light) .price,
+body.dark .price {
   color: #38bdf8;
 }
+body:not(.light) .price-month,
+body.dark .price-month {
+  color: #94a3b8;
+}
+
+/* ====================== MODO CLARO (Compatible con tu sistema) ====================== */
+body:not(.dark) .service-card,
+body:not(.dark) .maintenance-card {
+  background: #ffffff !important;
+  border: 2px solid #e2e8f0 !important;
+  color: #1e2937 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+body:not(.dark) .service-card:hover,
+body:not(.dark) .maintenance-card:hover {
+  border-color: #00d4ff !important;
+  box-shadow: 0 20px 45px rgba(0, 212, 255, 0.15) !important;
+}
+
+body:not(.dark) .service-card h3,
+body:not(.dark) .maintenance-card h3 {
+  color: #0f172a !important;
+}
+
+body:not(.dark) .service-desc,
+body:not(.dark) .service-card ul li,
+body:not(.dark) .maintenance-card .service-desc,
+body:not(.dark) .maintenance-card ul li {
+  color: #475569 !important;
+}
+
+body:not(.dark) .price {
+  color: #0f172a !important;
+}
+
 /* ====================== TÍTULO "Elige tu paquete" ====================== */
 .section-title {
   display: inline-block;
@@ -117,24 +141,31 @@ body.light .price {
   margin: 0 auto 60px;
   text-align: center;
 }
+
 /* Contenedor centrado */
 .services-section .container {
   text-align: center;
 }
+
 /* Modo oscuro */
+body.dark .section-title,
 body:not(.light) .section-title {
   background: #1e2937;
   color: #f8fafc;
   border: 1px solid #334155;
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
-/* Modo claro */
-body.light .section-title {
-  background: #1e2937;
-  color: #f8fafc;
-  border: 1px solid #475569;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+
+/* Modo claro - Texto oscuro (más específico para que no lo pise el CTA) */
+body:not(.dark) .section-title,
+body:not(.dark) .services-section .section-title,
+body:not(.dark) h2.section-title {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
+
 /* ====================== MANTENIMIENTO ====================== */
 .maintenance-section {
   display: flex;
@@ -145,117 +176,44 @@ body.light .section-title {
   max-width: 520px;
   width: 100%;
   padding: 48px 40px;
-  background: #1e2937;
   border-radius: 24px;
   border: 1px solid #334155;
 }
-body.light .maintenance-card {
-  background: #1e2937;
-  border-color: #475569;
-}
-.maintenance-card .service-desc {
-  min-height: 90px;
-  color: #cbd5e1;
-}
-body.light .maintenance-card .service-desc {
-  color: #e2e8f0;
-}
-/* ====================== RESPONSIVE ====================== */
+
+/* ====================== RESPONSIVE + RESTO ====================== */
 @media (max-width: 992px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
+  .services-grid { grid-template-columns: 1fr; }
 }
-body.light h2.section-title {
+
+/* ====================== CTA FINAL - CORRECCIÓN MODO CLARO ====================== */
+.cta {
+  background: linear-gradient(135deg, #0a0f2c, #1a2540) !important;
+}
+
+/* Texto en modo claro (sobre fondo oscuro) */
+body:not(.dark) .cta h2,
+body:not(.dark) .cta .fade-up h2,
+body:not(.dark) h2.fade-up {
   color: #ffffff !important;
 }
-/* Texto del CTA */
-.cta p {
-  color: #cbd5e1;
-}
-body.light section.cta {
-  color: #ffffff !important;
-}
-/* ====================== ANIMACIONES SCROLL REVEAL ====================== */
-.fade-up,
-.fade-left,
-.fade-right {
-  opacity: 0;
-  transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-.fade-up {
-  transform: translateY(50px);
-}
-.fade-left {
-  transform: translateX(-60px);
-}
-.fade-right {
-  transform: translateX(60px);
-}
-.fade-up.visible,
-.fade-left.visible,
-.fade-right.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.fade-up.delay { transition-delay: 0.1s; }
-.fade-up.delay2 { transition-delay: 0.25s; }
-.fade-up.delay3 { transition-delay: 0.4s; }
-.about-hero * {
-  transition: none !important;
+
+/* Párrafo del CTA */
+body:not(.dark) .cta p {
+  color: #e2e8f0 !important;
 }
 
-/* ================= FIX MODO CLARO SERVICIOS ================= */
-
-body.light .service-card {
-  color: #f1f5f9;
+/* Botón en modo claro */
+body:not(.dark) .cta .btn,
+body:not(.dark) .cta .btn-primary {
+  color: #0a0f2c !important;
+  background: linear-gradient(135deg, #00d4ff, #0099ff) !important;
 }
 
-body.light .service-card h3 {
-  color: #ffffff;
-}
-
-body.light .service-desc {
-  color: #e2e8f0;
-}
-
-body.light .service-card ul li {
-  color: #e2e8f0;
-}
-
-body.light .price {
-  color: #38bdf8;
-}
-
-/* ================= FIX HERO Y CTA MODO CLARO ================= */
-
-body.light .about-hero h1 {
-  color: #ffffff;
-}
-
-body.light .about-hero p {
-  color: #e2e8f0;
-}
-
-/* CTA */
-body.light .cta h2 {
-  color: #ffffff;
-}
-
-body.light .cta p {
-  color: #cbd5e1;
-}
-
-/* ====================== MEGA MENU - CORREGIDO PARA MODO CLARO Y OSCURO ====================== */
-.nav-item {
-  position: relative;
-  display: inline-block;
-}
+/* MEGA MENU (sin cambios) */
+.nav-item { position: relative; display: inline-block; }
 
 .nav-link {
   text-decoration: none;
