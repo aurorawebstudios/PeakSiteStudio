@@ -127,75 +127,159 @@
 </link></meta></link></link></link></link></head>
 <body class="light">
 <header class="header">
-<div class="container nav">
-<a class="brand" href="/">
-<img alt="Peak Site Studio" class="logo" src="/assets/img/logos2/favicon-96x96.png"/>
-<span class="brand-name">PeakSites</span>
-</a>
-<nav>
- Desktop Menu (PC) 
-<div class="nav-links desktop-nav" id="navLinks">
-<a href="/">Home</a>
-<a href="/servicios.html">Services</a>
-<a href="/portafolio.html">Portfolio</a>
-<a href="/nosotros.html">We</a>
-<a href="/contacto.html">Contact</a>
-</div>
- Hamburger button - MOBILE only 
-<button aria-label="Abrir menú" class="mobile-menu-btn" id="mobileMenuBtn">☰ </button>
- Theme Button MOBILE ONLY (next to the ☰) 
-<button class="theme-toggle mobile-theme-btn" id="mobileThemeToggle">🌙</button>
- Mobile menu 
-<div class="mobile-menu" id="mobileMenu">
-<button class="close-menu-btn" id="closeMenuBtn">✕</button>
-<div class="mobile-menu-links">
-<a class="mobile-link" href="/">Start</a>
-<a class="mobile-link" href="/servicios.html">Services</a>
-<a class="mobile-link" href="/portafolio.html">Portfolio</a>
-<a class="mobile-link" href="/nosotros.html">We</a>
-<a class="mobile-link" href="/contacto.html">Contact</a>
- Language selector INSIDE the mobile menu 
-<div class="mobile-lang-container">
-<div class="lang-switch mobile-lang-switch">
-<div class="lang-current">
-<span class="flag-wrapper">
-<img alt="Español" src="/assets/img/banderas/es.png"/>
-</span>
-<span>ES</span>
-<span class="arrow">▾</span>
-</div>
-<div class="lang-menu">
-<a class="lang-option" href="/">
-<span class="flag-wrapper"><img alt="Español" src="/assets/img/banderas/es.png"/></span>Spanish </a>
-<a class="lang-option" href="/en/">
-<span class="flag-wrapper"><img alt="English" src="/assets/img/banderas/en.png"/></span>English </a>
-</div>
-</div>
-</div>
-</div>
-</div>
- Language + Theme - PC only 
-<div class="desktop-only nav-right">
-<div class="lang-switch">
-<div class="lang-current">
-<span class="flag-wrapper">
-<img alt="Español" src="/assets/img/banderas/es.png"/>
-</span>
-<span>ES</span>
-<span class="arrow">▾</span>
-</div>
-<div class="lang-menu">
-<a class="lang-option" href="/">
-<span class="flag-wrapper"><img alt="Español" src="/assets/img/banderas/es.png"/></span>Spanish </a>
-<a class="lang-option" href="/en/">
-<span class="flag-wrapper"><img alt="English" src="/assets/img/banderas/en.png"/></span>English </a>
-</div>
-</div>
-<button class="theme-toggle" id="themeToggle">🌙</button>
-</div>
-</nav>
-</div>
-</header>
+      <div class="container nav">
+        <a href="/" class="brand">
+          <img
+            src="/assets/img/logos2/favicon-96x96.png"
+            class="logo"
+            alt="Peak Site Studio"
+          />
+          <span class="brand-name">PeakSites</span>
+        </a>
+        <nav>
+          <!-- Menú escritorio -->
+          <div class="nav-links desktop-nav" id="navLinks">
+            <a href="/">Home</a>
+
+            <!-- SERVICIOS CON MEGA MENÚ -->
+            <div class="nav-item">
+              <a href="/en/servicios.html" class="nav-link">
+                Services<span class="chevron"> ▼</span>
+              </a>
+              <div class="mega-menu">
+                <div class="mega-menu-content">
+                  <div class="mega-grid">
+                    <div class="mega-column">
+                      <h4>Strategy, Automation, and Digital Intelligence</h4>
+                      <a href="/servicios/CRM.html"
+                        >CRM Management and Optimization</a
+                      >
+                      <a href="/servicios/consultoria.html">Strategic Business Consulting</a>
+                      <a href="#">Business Process Automation</a>
+                      <a href="#">Predictive Analytics and Data Modeling</a>
+                    </div>
+                    <div class="mega-column">
+                      <h4>Solutions for Your Business</h4>
+                      <a href="#">Custom Web Development</a>
+                      <a href="#">E-commerce Platforms/Online Stores</a>
+                      <a href="#">Digital Payment Systems</a>
+                      <a href="#">Advanced Integrations and APIs</a>
+                      <a href="#">Cybersecurity and Data Protection</a>
+                      <a href="#">Maintenance and Optimization</a>
+                    </div>
+                    <div class="mega-column">
+                      <h4>Strategy and Digital Growth</h4>
+                      <a href="/servicios.html"
+                        >Organic Search Engine Optimization (SEO)</a
+                      >
+                      <a href="#"
+                        >Digital Advertising Management (SEM and Social Ads)</a
+                      >
+                      <a href="#">Analytics and Performance Measurement</a>
+                      <a href="#">Digital Strategy Consulting</a>
+                    </div>
+                    <div class="mega-column">
+                      <h4>Design and UX</h4>
+                      <a href="#"
+                        >Digital Experience and Interface Design (UI/UX)</a
+                      >
+                      <a href="#"
+                        >Interface Architecture and Advanced Prototyping</a
+                      >
+                      <a href="#"
+                        >Strategic Prototyping and Product Validation</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="/en/portafolio.html">Portfolio</a>
+            <a href="/en/nosotros.html">About Us</a>
+            <a href="/en/contacto.html">Contact</a>
+          </div>
+
+          <!-- Botón móvil -->
+          <button
+            id="mobileMenuBtn"
+            class="mobile-menu-btn"
+            aria-label="Abrir menú"
+          >
+            ☰
+          </button>
+          <button id="mobileThemeToggle" class="theme-toggle mobile-theme-btn">
+            🌙
+          </button>
+
+          <!-- Menú móvil -->
+          <div id="mobileMenu" class="mobile-menu">
+            <button id="closeMenuBtn" class="close-menu-btn">✕</button>
+            <div class="mobile-menu-links">
+              <a href="/" class="mobile-link">Inicio</a>
+              <a href="/servicios.html" class="mobile-link">Servicios</a>
+              <a href="/portafolio.html" class="mobile-link">Portafolio</a>
+              <a href="/nosotros.html" class="mobile-link">Nosotros</a>
+              <a href="/contacto.html" class="mobile-link">Contacto</a>
+
+              <div class="mobile-lang-container">
+                <div class="lang-switch mobile-lang-switch">
+                  <div class="lang-current">
+                    <span class="flag-wrapper">
+                      <img src="/assets/img/banderas/es.png" alt="Español" />
+                    </span>
+                    <span>ES</span>
+                    <span class="arrow">▾</span>
+                  </div>
+                  <div class="lang-menu">
+                    <a href="/" class="lang-option">
+                      <span class="flag-wrapper"
+                        ><img src="/assets/img/banderas/es.png" alt="Español"
+                      /></span>
+                      Español
+                    </a>
+                    <a href="/en/" class="lang-option">
+                      <span class="flag-wrapper"
+                        ><img src="/assets/img/banderas/en.png" alt="English"
+                      /></span>
+                      English
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Idioma + Tema PC -->
+          <div class="desktop-only nav-right">
+            <div class="lang-switch">
+              <div class="lang-current">
+                <span class="flag-wrapper">
+                  <img src="/assets/img/banderas/en.png" alt="English" />
+                </span>
+                <span>EN</span>
+                <span class="arrow">▾</span>
+              </div>
+              <div class="lang-menu">
+                <a href="/" class="lang-option">
+                  <span class="flag-wrapper"
+                    ><img src="/assets/img/banderas/es.png" alt="Español"
+                  /></span>
+                  Español
+                </a>
+                <a href="/en/" class="lang-option">
+                  <span class="flag-wrapper"
+                    ><img src="/assets/img/banderas/en.png" alt="English"
+                  /></span>
+                  English
+                </a>
+              </div>
+            </div>
+            <button id="themeToggle" class="theme-toggle">🌙</button>
+          </div>
+        </nav>
+      </div>
+    </header>
 <main>
 <div class="privacy-container">
 <div class="privacy-header">
