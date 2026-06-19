@@ -1,3 +1,5 @@
+/* CRM.CSS - Peak Site Studio */
+
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
   margin: 0;
@@ -103,7 +105,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 9999;
-  background: rgba(11, 17, 36, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);

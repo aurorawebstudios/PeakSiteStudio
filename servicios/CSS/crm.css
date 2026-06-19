@@ -5,10 +5,6 @@
   box-sizing: border-box; 
 }
 
-:root {
-  /* vacío o solo cosas neutras si quieres */
-}
-
 .dark {
   --bg: #0b1124;
   --fg: #e2e8f5;

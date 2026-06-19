@@ -1,12 +1,10 @@
+/* CRM.CSS - Peak Site Studio */
+
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { 
   margin: 0; 
   padding: 0; 
   box-sizing: border-box; 
-}
-
-:root {
-  /* vacío o solo cosas neutras si quieres */
 }
 
 .dark {
@@ -44,7 +42,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .gradient-text {
   background: linear-gradient(135deg, #00d4ff, #00b8ff);
+  background-clip: text;              /* 👈 AÑADIR */
   -webkit-background-clip: text;
+  color: transparent;                 /* 👈 AÑADIR */
   -webkit-text-fill-color: transparent;
 }
 

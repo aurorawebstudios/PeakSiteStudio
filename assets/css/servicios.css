@@ -1,3 +1,5 @@
+/* SERVICIOS.CSS - Peak Site Studio */
+
 /* TAMAÑO DE LETRAS */
 .about-hero h1 {
   font-size: 3rem;
@@ -212,8 +214,11 @@ body:not(.dark) .cta .btn-primary {
   background: linear-gradient(135deg, #00d4ff, #0099ff) !important;
 }
 
-/* MEGA MENU (sin cambios) */
-.nav-item { position: relative; display: inline-block; }
+/* ====================== MEGA MENU - VERSIÓN DEFINITIVA ====================== */
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
 
 .nav-link {
   text-decoration: none;
@@ -240,14 +245,6 @@ body:not(.dark) .cta .btn-primary {
   top: -1px;
 }
 
-.desktop-nav a {
-  display: inline-flex !important;
-  align-items: center !important;
-  height: 46px !important;
-  padding: 12px 14px !important;
-}
-
-/* Panel */
 .mega-menu {
   position: absolute;
   top: 100%;
@@ -274,47 +271,54 @@ body:not(.dark) .cta .btn-primary {
   box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.22);
   border: 1px solid #e2e8f0;
   margin: 0 auto;
-  max-width: 1150px;
+  max-width: 1180px;
   width: 95%;
-  padding: 45px 40px;
+  padding: 50px 48px;
 }
 
-/* Fondo en modo oscuro */
-body.dark .mega-menu-content,
-body:not(.light) .mega-menu-content {
+body.dark .mega-menu-content {
   background: #0f1629;
   border-color: rgba(255,255,255,0.09);
 }
 
-/* TÍTULOS EN CYAN - FIJO PARA AMBOS MODOS */
-.mega-column h4 {
-  font-size: 14.5px;
-  font-weight: 700;
-  color: #00d4ff !important;           /* ← Esto es lo que querías */
-  margin-bottom: 22px;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-   margin-left: 50px;
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 52px;
 }
 
-/* Enlaces normales */
+.mega-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mega-column h4 {
+  font-size: 14.8px;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
 .mega-column a {
   display: block;
-  padding: 10px 4px;
-  color: #1e2937;                      /* Color oscuro en modo claro */
+  padding: 9.5px 6px;
+  color: var(--text-light);
   text-decoration: none;
-  font-size: 15.3px;
+  font-size: 15.4px;
+  line-height: 1.48;
 }
 
-/* Enlaces en modo oscuro */
-body.dark .mega-column a,
-body:not(.light) .mega-column a {
-  color: #f1f5f9;                      /* Color claro en modo oscuro */
+body.dark .mega-column a {
+  color: var(--text-dark);
 }
 
 .mega-column a:hover {
   color: #00d4ff;
-  padding-left: 8px;
+  padding-left: 12px;
 }
 
 @media (max-width: 991px) {
