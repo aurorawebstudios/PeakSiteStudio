@@ -321,8 +321,17 @@ body.dark .theme-toggle {
 .footer-pro {
   background: #080b14;
   color: #aaa;
-  padding: 80px 20px 40px;
-  margin-top: 80px;
+  padding: 80px 0px 40px;
+}
+
+.footer-pro {
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: -8px;
+}
+
+body {
+  margin: 8px;
 }
 .footer-grid {
   display: grid;
