@@ -338,15 +338,52 @@ img {
 .btn-cta { background: linear-gradient(135deg, #22d3ee, #06b6d4); color: #0b1324; font-weight: 600; }
 .btn-cta:hover { filter: brightness(1.1); }
 
-/* CTA Section */
+/* ===== CTA SECTION - ADAPTATIVO LIGHT / DARK ===== */
 .cta-section {
-  background: linear-gradient(135deg, #0a1f3f, #0f3b6d, #0a2540) !important;
-}
-.cta-content h2,
-.cta-content > p {
-  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
 }
 
+/* === MODO CLARO === */
+body:not(.dark) .cta-section {
+  background: #ffffff !important;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+body:not(.dark) .cta-content h2,
+body:not(.dark) .cta-content p {
+  color: #0f172a !important;
+}
+
+/* === MODO OSCURO === */
+.dark .cta-section {
+  background: linear-gradient(135deg, #0a1f3f, #0f3b6d, #0a2540) !important;
+}
+
+.dark .cta-content h2,
+.dark .cta-content p {
+  color: #ffffff !important;
+}
+
+/* Glow solo visible en modo oscuro */
+.cta-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: hsla(187, 100%, 50%, 0.07);
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+body:not(.dark) .cta-glow {
+  display: none;
+}
 /* ===== SECTIONS, FEATURES, STATS, etc. ===== */
 .section {
   padding: 5rem 0;
