@@ -1,9 +1,51 @@
-/* HERO CONTACTO */
+
+/* ================= HERO CONTACTO ================= */
+
 .contact-hero {
-  background: linear-gradient(135deg, #0a0f2c, #1a1f4b);
-  color: white;
+  position: relative;
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px 110px;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.82),
+      rgba(255,255,255,0.88)
+    ),
+    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000')
+    center/cover no-repeat;
+
+  border-bottom: 1px solid rgba(15,23,42,.08);
+}
+
+.contact-hero h1 {
+  color: #0f172a;
+  font-size: 3rem;
+}
+
+.contact-hero p {
+  color: #475569;
+}
+
+/* DARK MODE */
+body.dark .contact-hero {
+  background: linear-gradient(135deg, #0a0f2c, #1a1f4b);
+  border-bottom: none;
+}
+
+body.dark .contact-hero h1,
+body.dark .contact-hero p {
+  color: #fff;
+}
+
+/* ===== HERO CONTACTO DARK MODE ===== */
+
+body.dark .contact-hero {
+  background:
+    linear-gradient(rgba(10,15,44,0.85), rgba(10,15,44,0.90)),
+    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000')
+    center/cover no-repeat;
+
+  border-bottom: none;
 }
 
 /* GRID CONTACTO */
@@ -484,10 +526,6 @@ body.dark .benefit strong {
 
 body.dark .benefit p {
   color: var(--text-soft);
-}
-.contact-hero h1,
-.contact-hero p {
-  color: white !important;
 }
 /* ==================== HEADER FIX + MENÚ MÓVIL ==================== */
 
