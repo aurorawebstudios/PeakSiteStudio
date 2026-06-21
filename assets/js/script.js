@@ -178,3 +178,128 @@ if (header) {
     header.classList.toggle("scrolled", window.scrollY > 10);
   });
 }
+
+// ====================================
+// TODO ESTO ES DE PORTFOLIO.HTML Y CSS
+// ====================================
+
+(() => {
+  /* =============== REVEAL ON SCROLL =============== */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+  /* =============== STATS COUNTER =============== */
+  const counters = document.querySelectorAll(".pf-num");
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = +el.dataset.count;
+      const duration = 1600;
+      const start = performance.now();
+      const step = (now) => {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.floor(eased * target).toLocaleString();
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+      countObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach((c) => countObs.observe(c));
+
+  /* =============== FILTROS =============== */
+  const chips = document.querySelectorAll(".pf-chip");
+  const cards = document.querySelectorAll(".pf-card");
+  const empty = document.getElementById("pfEmpty");
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      chips.forEach((c) => c.classList.remove("active"));
+      chip.classList.add("active");
+      const filter = chip.dataset.filter;
+      let visible = 0;
+      cards.forEach((card) => {
+        const match = filter === "all" || card.dataset.cat === filter;
+        card.classList.toggle("hide", !match);
+        if (match) visible++;
+      });
+      empty.hidden = visible !== 0;
+    });
+  });
+
+  /* =============== HOVER 3D TILT =============== */
+  cards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `translateY(-10px) rotateX(${-y * 6}deg) rotateY(${x * 8}deg)`;
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+  });
+
+/* =============== MODAL =============== */
+const modal = document.getElementById("pfModal");
+const mCover = document.getElementById("pfModalCover");
+const mTitle = document.getElementById("pfModalTitle");
+const mDesc = document.getElementById("pfModalDesc");
+const mSector = document.getElementById("pfModalSector");
+const mClient = document.getElementById("pfModalClient");
+const mYear = document.getElementById("pfModalYear");
+const mServices = document.getElementById("pfModalServices");
+const mResult = document.getElementById("pfModalResult");
+
+const openModal = (card) => {
+  const media = card.querySelector(".pf-card-media");
+  
+  if (media) {
+    mCover.style.backgroundImage = media.style.backgroundImage || "linear-gradient(135deg,#0ea5e9,#1e3a8a)";
+    mCover.style.backgroundColor = media.style.backgroundColor || "";
+  }
+
+  mTitle.textContent = card.dataset.title || "Proyecto";
+  mDesc.textContent = card.dataset.desc || "";
+  mSector.textContent = card.dataset.sector || "";
+  mClient.textContent = card.dataset.client || "";
+  mYear.textContent = card.dataset.year || "";
+  mServices.textContent = card.dataset.services || "";
+  mResult.textContent = card.dataset.result || "";
+
+  modal.classList.add("show");
+  document.body.style.overflow = "hidden";
+};
+
+const closeModal = () => {
+  modal.classList.remove("show");
+  document.body.style.overflow = "";
+};
+
+// Abrir
+document.querySelectorAll(".pf-card").forEach(card => {
+  card.addEventListener("click", () => openModal(card));
+});
+
+// Cerrar
+modal.addEventListener("click", (e) => {
+  if (e.target.classList.contains("pf-modal-close") || 
+      e.target.classList.contains("pf-modal-backdrop") || 
+      e.target === modal) {
+    closeModal();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
+});
+})();

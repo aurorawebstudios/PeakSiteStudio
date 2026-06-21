@@ -1,47 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio | Peak Site Studio — Casos de éxito</title>
+  <meta name="description" content="Descubre los casos de éxito de Peak Site Studio: páginas web profesionales para empresas y negocios locales que han transformado su presencia digital." />
+  <link rel="icon" href="/assets/img/logos2/favicon-96x96.png" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/portfolio.css" />
 
-<title>Diseño Web Profesional para Negocios | Peak Sites</title>
-<meta name="description" content="Diseño web profesional para empresas que quieren más clientes. Creamos páginas rápidas, optimizadas y enfocadas en resultados. Solicita tu auditoría gratis.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Peak Sites Estudio",
-  "url": "https://peaksitestudio.com/",
-  "logo": "https://peaksitestudio.com/image.png"
-}
-</script>
-
-<meta property="og:title" content="Diseño Web Profesional | Peak Sites">
-<meta property="og:description" content="Creamos webs que convierten visitas en clientes.">
-<meta property="og:image" content="https://peaksitestudio.com/image.png">
-<meta property="og:url" content="https://peaksitestudio.com/">
-<meta property="og:type" content="website">
-
-<link rel="icon" type="image/png" href="/assets/img/logos2/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/assets/img/logos2/favicon.svg" />
-<link rel="shortcut icon" href="/assets/img/logos2/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/logos2/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="MyWebSite" />
-<link rel="manifest" href="/site.webmanifest" />
-
-<link rel="stylesheet" href="/assets/css/styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="alternate" hreflang="es" href="https://peaksitestudio.com/">
-<link rel="alternate" hreflang="en" href="https://peaksitestudio.com/en/">
-<link rel="canonical" href="https://peaksitestudio.com/">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body class="light">
-
-
-<header class="header">
+  <!-- ================= HEADER ================= -->
+  <header class="header">
       <div class="container nav">
         <a href="/" class="brand">
           <img
@@ -196,46 +171,305 @@
       </div>
     </header>
 
-  <!-- FOOTER -->
-<footer class="footer-pro">
-  <div class="container footer-grid">
-    <div>
-      <h4>Servicios</h4>
+  <!-- ================= HERO ================= -->
+  <section class="pf-hero">
+    <div class="pf-hero-bg"></div>
+    <div class="container pf-hero-inner">
+      <span class="pf-eyebrow reveal">Casos de éxito</span>
+      <h1 class="pf-title reveal">
+        Webs que <span class="pf-grad">coronan</span> a sus marcas
+      </h1>
+      <p class="pf-sub reveal">
+        Una selección de proyectos reales de empresas y negocios locales que confiaron en
+        Peak Site Studio para escalar su presencia digital.
+      </p>
+      <div class="pf-stats reveal">
+        <div class="pf-stat"><span class="pf-num" data-count="48">0</span><small>Proyectos entregados</small></div>
+        <div class="pf-stat"><span class="pf-num" data-count="32">0</span><small>Clientes activos</small></div>
+        <div class="pf-stat"><span class="pf-num" data-count="98">0</span><small>% satisfacción</small></div>
+        <div class="pf-stat"><span class="pf-num" data-count="12">0</span><small>Sectores cubiertos</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FILTROS ================= -->
+  <section class="pf-filter-section">
+    <div class="container">
+      <div class="pf-filters reveal" id="pfFilters">
+        <button class="pf-chip active" data-filter="all">Todos</button>
+        <button class="pf-chip" data-filter="restaurante">Restaurantes</button>
+        <button class="pf-chip" data-filter="ecommerce">eCommerce</button>
+        <button class="pf-chip" data-filter="corporativo">Corporativo</button>
+        <button class="pf-chip" data-filter="salud">Salud & Bienestar</button>
+        <button class="pf-chip" data-filter="inmobiliaria">Inmobiliaria</button>
+        <button class="pf-chip" data-filter="local">Negocios locales</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GRID PROYECTOS ================= -->
+  <section class="pf-grid-section">
+    <div class="container">
+      <div class="pf-grid" id="pfGrid">
+
+        <!-- 1. La Cumbre Bistró -->
+        <a href="/portafolio/la-cumbre-bistro.html" class="pf-card reveal" data-cat="restaurante"
+          data-title="La Cumbre Bistró"
+          data-client="Restaurante La Cumbre"
+          data-sector="Gastronomía"
+          data-year="2025"
+          data-services="Diseño web · Reservas online · SEO local"
+          data-result="+180% reservas online en 3 meses"
+          data-desc="Rediseño completo con sistema de reservas integrado, menú dinámico y optimización SEO local para Madrid.">
+          <div class="pf-card-media" style="background:linear-gradient(135deg,#ff7a59,#ffb347);">
+            <span class="pf-badge">Restaurante</span>
+            <div class="pf-card-hover"><span>Ver caso →</span></div>
+          </div>
+          <div class="pf-card-body">
+            <h3>La Cumbre Bistró</h3>
+            <p>Reservas online + SEO local</p>
+            <span class="pf-metric">+180% reservas</span>
+          </div>
+        </a>
+
+        <!-- 2. NordicWear Store -->
+        <a href="/portafolio/nordicwear-store.html" class="pf-card reveal" data-cat="ecommerce"
+          data-title="NordicWear Store"
+          data-client="NordicWear"
+          data-sector="Moda · eCommerce"
+          data-year="2025"
+          data-services="Tienda online · Pasarela de pago · Integraciones"
+          data-result="+240% conversión en checkout"
+          data-desc="Plataforma eCommerce con pasarela de pago, gestión de stock y experiencia de compra optimizada.">
+          <div class="pf-card-media" style="background:linear-gradient(135deg,#0ea5e9,#1e3a8a);">
+            <span class="pf-badge">eCommerce</span>
+            <div class="pf-card-hover"><span>Ver caso →</span></div>
+          </div>
+          <div class="pf-card-body">
+            <h3>NordicWear Store</h3>
+            <p>Tienda online escalable</p>
+            <span class="pf-metric">+240% conversión</span>
+          </div>
+        </a>
+
+        <!-- 3. Vértice Consulting -->
+        <a href="/portafolio/vertice-consulting.html" class="pf-card reveal" data-cat="corporativo"
+          data-title="Vértice Consulting"
+          data-client="Vértice Consulting Group"
+          data-sector="Consultoría B2B"
+          data-year="2024"
+          data-services="Web corporativa · CRM · Automatizaciones"
+          data-result="+65% leads cualificados / mes"
+          data-desc="Web corporativa con integración a HubSpot, formularios inteligentes y panel de métricas.">
+          <div class="pf-card-media" style="background:linear-gradient(135deg,#0f172a,#334155);">
+            <span class="pf-badge">Corporativo</span>
+            <div class="pf-card-hover"><span>Ver caso →</span></div>
+          </div>
+          <div class="pf-card-body">
+            <h3>Vértice Consulting</h3>
+            <p>Web corporativa + CRM</p>
+            <span class="pf-metric">+65% leads</span>
+          </div>
+        </a>
+
+        <!-- 4. Clínica Aurora -->
+        <a href="/portafolio/clinica-aurora.html" class="pf-card reveal" data-cat="salud"
+          data-title="Clínica Aurora"
+          data-client="Clínica Dental Aurora"
+          data-sector="Salud · Odontología"
+          data-year="2025"
+          data-services="Web médica · Citas online · SEO local"
+          data-result="+320% citas online / mes"
+          data-desc="Sistema de reservas, blog médico y posicionamiento local en Barcelona.">
+          <div class="pf-card-media" style="background:linear-gradient(135deg,#10b981,#06b6d4);">
+            <span class="pf-badge">Salud</span>
+            <div class="pf-card-hover"><span>Ver caso →</span></div>
+          </div>
+          <div class="pf-card-body">
+            <h3>Clínica Aurora</h3>
+            <p>Citas online + SEO médico</p>
+            <span class="pf-metric">+320% citas</span>
+          </div>
+        </a>
+
+        <!-- 5. Cumbre Inmobiliaria -->
+        <a href="/portafolio/cumbre-inmobiliaria.html" class="pf-card reveal" data-cat="inmobiliaria"
+          data-title="Cumbre Inmobiliaria"
+          data-client="Cumbre Real Estate"
+          data-sector="Inmobiliaria"
+          data-year="2024"
+          data-services="Portal inmobiliario · IDX · CRM"
+          data-result="+150% solicitudes de visita"
+          data-desc="Portal con buscador avanzado, fichas dinámicas y conexión con CRM inmobiliario.">
+          <div class="pf-card-media" style="background:linear-gradient(135deg,#7c3aed,#ec4899);">
+            <span class="pf-badge">Inmobiliaria</span>
+            <div class="pf-card-hover"><span>Ver caso →</span></div>
+          </div>
+          <div class="pf-card-body">
+            <h3>Cumbre Inmobiliaria</h3>
+            <p>Portal con buscador avanzado</p>
+            <span class="pf-metric">+150% visitas</span>
+          </div>
+        </a>
+
+        <!-- 6. Panadería Aurora -->
+        <a href="/portafolio/panaderia-aurora.html" class="pf-card reveal" data-cat="local"
+          data-title="Panadería Aurora"
+          data-client="Panadería Aurora"
+          data-sector="Negocio local"
+          data-year="2025"
+          data-services="Web local · Google Business · Pedidos WhatsApp"
+          data-result="+90% pedidos por WhatsApp"
+          data-desc="Presencia digital para panadería de barrio: web, ficha de Google y pedidos directos.">
+          <div class="pf-card-media" style="background:linear-gradient(135deg,#f59e0b,#ef4444);">
+            <span class="pf-badge">Local</span>
+            <div class="pf-card-hover"><span>Ver caso →</span></div>
+          </div>
+          <div class="pf-card-body">
+            <h3>Panadería Aurora</h3>
+            <p>Web + Google + WhatsApp</p>
+            <span class="pf-metric">+90% pedidos</span>
+          </div>
+        </a>
+
+        <!-- 7. EcoBotánica -->
+        <a href="/portafolio/ecobotanica.html" class="pf-card reveal" data-cat="ecommerce"
+          data-title="EcoBotánica"
+          data-client="EcoBotánica Shop"
+          data-sector="eCommerce sostenible"
+          data-year="2025"
+          data-services="Tienda online · Suscripciones · Email marketing"
+          data-result="+210% ticket medio"
+          data-desc="Tienda online de cosmética natural con sistema de suscripciones recurrentes.">
+          <div class="pf-card-media" style="background:linear-gradient(135deg,#16a34a,#84cc16);">
+            <span class="pf-badge">eCommerce</span>
+            <div class="pf-card-hover"><span>Ver caso →</span></div>
+          </div>
+          <div class="pf-card-body">
+            <h3>EcoBotánica</h3>
+            <p>Suscripciones recurrentes</p>
+            <span class="pf-metric">+210% ticket</span>
+          </div>
+        </a>
+
+        <!-- 8. Norte Legal -->
+        <a href="/portafolio/norte-legal.html" class="pf-card reveal" data-cat="corporativo"
+          data-title="Norte Legal"
+          data-client="Norte Legal Abogados"
+          data-sector="Despacho jurídico"
+          data-year="2024"
+          data-services="Web institucional · Blog jurídico · SEO"
+          data-result="Top 3 Google en 6 meses"
+          data-desc="Web institucional con blog jurídico optimizado y estrategia SEO de alto valor.">
+          <div class="pf-card-media" style="background:linear-gradient(135deg,#1e293b,#475569);">
+            <span class="pf-badge">Legal</span>
+            <div class="pf-card-hover"><span>Ver caso →</span></div>
+          </div>
+          <div class="pf-card-body">
+            <h3>Norte Legal</h3>
+            <p>SEO jurídico avanzado</p>
+            <span class="pf-metric">Top 3 Google</span>
+          </div>
+        </a>
+
+        <!-- 9. Brasa & Roca -->
+        <a href="/portafolio/brasa-y-roca.html" class="pf-card reveal" data-cat="restaurante"
+          data-title="Brasa & Roca"
+          data-client="Brasa & Roca Asador"
+          data-sector="Restauración premium"
+          data-year="2025"
+          data-services="Branding digital · Web · Reservas"
+          data-result="100% mesas reservadas fin de semana"
+          data-desc="Branding digital y web premium para asador de alta gama con sistema de reservas.">
+          <div class="pf-card-media" style="background:linear-gradient(135deg,#991b1b,#78350f);">
+            <span class="pf-badge">Restaurante</span>
+            <div class="pf-card-hover"><span>Ver caso →</span></div>
+          </div>
+          <div class="pf-card-body">
+            <h3>Brasa & Roca</h3>
+            <p>Web premium + reservas</p>
+            <span class="pf-metric">100% ocupación</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="pf-empty" id="pfEmpty" hidden>
+        <p>No hay proyectos en esta categoría todavía. ¡El tuyo puede ser el próximo!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="pf-cta">
+    <div class="container pf-cta-inner reveal">
+      <h2>¿Quieres que tu marca sea el próximo caso de éxito?</h2>
+      <p>Solicita una auditoría gratuita y descubre cómo podemos llevar tu negocio a la cima.</p>
+      <a href="/contacto.html" class="pf-cta-btn">Solicitar auditoría gratuita →</a>
+    </div>
+  </section>
+
+  <!-- ================= MODAL ================= -->
+  <div class="pf-modal" id="pfModal" hidden>
+    <div class="pf-modal-backdrop" data-close></div>
+    <div class="pf-modal-card" role="dialog" aria-modal="true">
+      <button class="pf-modal-close" data-close aria-label="Cerrar">✕</button>
+      <div class="pf-modal-cover" id="pfModalCover"></div>
+      <div class="pf-modal-body">
+        <span class="pf-modal-sector" id="pfModalSector"></span>
+        <h3 id="pfModalTitle"></h3>
+        <p id="pfModalDesc"></p>
+        <ul class="pf-modal-meta">
+          <li><strong>Cliente:</strong> <span id="pfModalClient"></span></li>
+          <li><strong>Año:</strong> <span id="pfModalYear"></span></li>
+          <li><strong>Servicios:</strong> <span id="pfModalServices"></span></li>
+          <li><strong>Resultado:</strong> <span id="pfModalResult" class="pf-modal-result"></span></li>
+        </ul>
+        <a href="/contacto.html" class="pf-cta-btn small">Quiero algo así →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-pro">
+      <div class="container footer-grid">
+        <div>
+          <h4>Servicios</h4>
           <a href="/servicios.html">Estrategia, automatización e inteligencia digital</a>
           <a href="#">Soluciones para tu negocio</a>
           <a href="#">Estrategia y crecimiento digital</a>
           <a href="#">Diseño y UX</a>
-    </div>
-    <div>
-      <h4>Recursos</h4>
-      <a href="/portafolio.html">Portafolio</a>
-      <a href="#">Casos de éxito</a>
-      <a href="#">Blog</a>
-    </div>
-    <div>
-      <h4>Empresa</h4>
-      <a href="/servicios.html">Servicios</a>
-      <a href="/nosotros.html">Nosotros</a>
-      <a href="/contacto.html">Contacto</a>
-    </div>
-    <div>
-      <h4>Legal</h4>
-      <a href="/legal.html">Aviso legal</a>
-      <a href="/privacidad.html">Política de privacidad</a>
-      <a href="#">Política de cookies</a>
-    </div>
-    <div>
-      <h4>Conectar</h4>
-      <a href="#">Instagram ↗</a>
-      <a href="mailto:info@peaksitestudio.com">info@peaksitestudio.com</a>
-    </div>
-  </div>
-  <div class="footer-bottom container">
-    <p>© 2026 Peak Site Studio. Todos los derechos reservados.</p>
-    <p>Más que escalar. Nacidos para coronar.</p>
-  </div>
-</footer>
+        </div>
+        <div>
+          <h4>Recursos</h4>
+          <a href="/portafolio.html">Portafolio</a>
+          <a href="#">Casos de éxito</a>
+          <a href="#">Blog</a>
+        </div>
+        <div>
+          <h4>Empresa</h4>
+          <a href="/servicios.html">Servicios</a>
+          <a href="/nosotros.html">Nosotros</a>
+          <a href="/contacto.html">Contacto</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="/legal.html">Aviso legal</a>
+          <a href="/privacidad.html">Política de privacidad</a>
+          <a href="#">Política de cookies</a>
+        </div>
+        <div>
+          <h4>Conectar</h4>
+          <a href="#">Instagram ↗</a>
+          <a href="mailto:info@peaksitestudio.com">info@peaksitestudio.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>© 2026 Peak Site Studio. Todos los derechos reservados.</p>
+        <p>Más que escalar. Nacidos para coronar.</p>
+      </div>
+    </footer>
 
-<script src="/assets/js/script.js"></script>
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>
