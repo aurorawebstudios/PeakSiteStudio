@@ -304,11 +304,25 @@ body.dark .value-card p {
   border-color: #00f5ff;
 }
 
-/* CTA */
-.cta {
-  background: linear-gradient(135deg, #0a0f2c, #1a2540);
-  text-align: center;
-  padding: 100px 20px;
+/* =======================================
+   CTA EN MODO CLARO (CONTRASTE PERFECTO)
+   =======================================
+
+/* Se ejecuta únicamente cuando el body NO tiene la clase .dark */
+body:not(.dark) .cta {
+  background: #ffffff !important; /* Fondo blanco puro */
+  border-top: 1px solid var(--border-light, #e2e8f0);
+  border-bottom: 1px solid var(--border-light, #e2e8f0);
+}
+
+
+body:not(.dark) .cta h2 {
+  color: #0f172a !important; 
+}
+
+
+body:not(.dark) .cta p {
+  color: #475569 !important; 
 }
 
 /* Botón principal */
