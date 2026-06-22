@@ -915,3 +915,15 @@ body.dark .final-cta p {
     text-align: center;
   }
 }
+
+/* ==========================================================================
+   ARREGLO EXCLUSIVO ANTI-DESBORDAMIENTO (SOLO PARA /en/index.html)
+   ========================================================================== */
+.en-index-body {
+  overflow-x: hidden; /* Corta cualquier desbordamiento lateral en toda la página */
+}
+
+.en-index-body .mega-menu {
+  max-width: 100vw; /* Asegura que el mega menú nunca mida más que la pantalla */
+  box-sizing: border-box;
+}
