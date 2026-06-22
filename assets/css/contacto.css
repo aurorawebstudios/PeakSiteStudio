@@ -1,11 +1,8 @@
-
 /* ================= HERO CONTACTO ================= */
-
 .contact-hero {
   position: relative;
   text-align: center;
   padding: 120px 20px 110px;
-
   background:
     linear-gradient(
       rgba(255,255,255,0.82),
@@ -13,7 +10,6 @@
     ),
     url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000')
     center/cover no-repeat;
-
   border-bottom: 1px solid rgba(15,23,42,.08);
 }
 
@@ -26,26 +22,18 @@
   color: #475569;
 }
 
-/* DARK MODE */
+/* ===== HERO CONTACTO DARK MODE ===== */
 body.dark .contact-hero {
-  background: linear-gradient(135deg, #0a0f2c, #1a1f4b);
+  background:
+    linear-gradient(rgba(10,15,44,0.85), rgba(10,15,44,0.90)),
+    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000')
+    center/cover no-repeat;
   border-bottom: none;
 }
 
 body.dark .contact-hero h1,
 body.dark .contact-hero p {
   color: #fff;
-}
-
-/* ===== HERO CONTACTO DARK MODE ===== */
-
-body.dark .contact-hero {
-  background:
-    linear-gradient(rgba(10,15,44,0.85), rgba(10,15,44,0.90)),
-    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000')
-    center/cover no-repeat;
-
-  border-bottom: none;
 }
 
 /* GRID CONTACTO */
@@ -122,7 +110,7 @@ body.dark .contact-hero {
   display: block;
 }
 
-/* BOTÓN LOADING */
+/* BOTÓN LOADING ENVIAR */
 .loader {
   width: 18px;
   height: 18px;
@@ -133,19 +121,23 @@ body.dark .contact-hero {
   margin-left: 10px;
 }
 
-button.loading .loader {
+#submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#submitBtn.loading .loader {
   display: inline-block;
   animation: spin 1s linear infinite;
 }
 
-button.loading span {
+#submitBtn.loading span {
   display: none;
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 /* MENSAJE SUCCESS */
@@ -155,7 +147,7 @@ button.loading span {
   margin-top: 15px;
 }
 
-/* BLOQUE DERECHA (INFO) */
+/* BLOQUE INFO DERECHA */
 .contact-title {
   font-size: 1.8rem;
   margin-bottom: 10px;
@@ -198,11 +190,19 @@ button.loading span {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+.benefit strong {
+  color: #111;
+}
+
+.benefit p {
+  color: #666;
+}
+
 .icon {
   font-size: 20px;
 }
 
-/* EMAIL PRO (extra visual) */
+/* EMAIL CARD */
 .contact-email-pro {
   background: linear-gradient(135deg, #ffffff, #f7f9fc);
   padding: 20px;
@@ -266,8 +266,8 @@ button.loading span {
   font-size: 0.9rem;
   color: #666;
 }
-/* ===== FOOTER PREMIUM ===== */
 
+/* ===== FOOTER PREMIUM ===== */
 .footer-pro {
   background: #0b0d12;
   color: #aaa;
@@ -310,32 +310,25 @@ button.loading span {
   font-size: 13px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-}
 .brand {
   display: flex;
-  align-items: center; /* 🔥 centra verticalmente */
-  gap: 5px; /* espacio entre logo y texto */
+  align-items: center;
+  gap: 5px;
 }
 
 .logo {
-  height: 28px; /* 👈 tamaño ideal */
+  height: 28px;
   width: auto;
   display: block;
 }
 
 .brand-name {
-  font-size: 16px; /* 👈 tamaño equilibrado */
+  font-size: 16px;
   font-weight: 500;
-  line-height: 1; /* 🔥 evita que baje el texto */
+  line-height: 1;
 }
-/* ====================== LANG SWITCH - GLOW AZUL SOLO EN HOVER (versión forzada para Chrome) ====================== */
+
+/* ==================== LANG SWITCH (SELECTOR IDIOMAS) ==================== */
 .lang-switch {
   position: relative;
   display: inline-block;
@@ -343,7 +336,6 @@ button.loading span {
   z-index: 100;
 }
 
-/* Estado normal - SIN glow */
 .lang-current {
   display: flex !important;
   align-items: center;
@@ -362,7 +354,6 @@ button.loading span {
   outline: none !important;
 }
 
-/* GLOW AZUL SOLO cuando el mouse está DIRECTAMENTE sobre .lang-current */
 .lang-current:hover {
   background: #1a2338 !important;
   border: 2px solid #00d4ff !important;
@@ -371,13 +362,11 @@ button.loading span {
     0 6px 20px rgba(0, 212, 255, 0.45) !important;
 }
 
-/* Cuando el mouse toca CUALQUIER parte del .lang-switch (incluido menú), FORZAMOS quitar el glow */
 .lang-switch:hover .lang-current {
   border: 2px solid transparent !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Menú desplegable */
 .lang-menu {
   position: absolute;
   top: 100%;
@@ -397,7 +386,6 @@ button.loading span {
   display: block;
 }
 
-/* Resto sin cambios */
 .flag-wrapper {
   display: inline-flex;
   padding: 2px;
@@ -433,22 +421,11 @@ button.loading span {
   background: #2a323f;
 }
 
-body.dark .lang-menu {
-  background: #1f252f;
-  border-color: #444;
-}
-body.dark .lang-option {
-  color: #eee;
-}
-body.dark .lang-option:hover {
-  background: #2a323f;
-}
-/* ===== FIX DARK MODE CONTACTO ===== */
+/* ===== FIX DARK MODE GENERAL ===== */
 body.dark .contact-subtitle {
   color: var(--text-soft);
 }
 
-/* INPUTS */
 body.dark .input-group input,
 body.dark .input-group textarea {
   background: #161a22;
@@ -460,7 +437,6 @@ body.dark .input-group label {
   color: #aaa;
 }
 
-/* LABEL flotante */
 body.dark .input-group input:focus + label,
 body.dark .input-group textarea:focus + label,
 body.dark .input-group input:valid + label,
@@ -469,12 +445,10 @@ body.dark .input-group textarea:valid + label {
   color: var(--accent);
 }
 
-/* BOTÓN ENVIAR */
 body.dark .contact-form .btn {
   color: white;
 }
 
-/* EMAIL BOX */
 body.dark .contact-email-pro {
   background: #161a22;
   border: 1px solid #222;
@@ -497,29 +471,10 @@ body.dark .email-note {
   color: var(--text-soft);
 }
 
-/* BENEFICIOS */
 body.dark .benefit {
   background: #161a22;
 }
 
-body.dark .benefit p {
-  color: var(--text-soft);
-}
-
-/* SUCCESS */
-body.dark .success-msg {
-  color: #22c55e;
-}
-/* ===== BENEFICIOS - LIGHT MODE ===== */
-.benefit strong {
-  color: #111;
-}
-
-.benefit p {
-  color: #666;
-}
-
-/* ===== BENEFICIOS - DARK MODE ===== */
 body.dark .benefit strong {
   color: #f1f1f1;
 }
@@ -527,8 +482,25 @@ body.dark .benefit strong {
 body.dark .benefit p {
   color: var(--text-soft);
 }
-/* ==================== HEADER FIX + MENÚ MÓVIL ==================== */
 
+body.dark .success-msg {
+  color: #22c55e;
+}
+
+body.dark .lang-menu {
+  background: #1f252f;
+  border-color: #444;
+}
+
+body.dark .lang-option {
+  color: #eee;
+}
+
+body.dark .lang-option:hover {
+  background: #2a323f;
+}
+
+/* ==================== NAVBAR FIX + MENÚ MÓVIL ==================== */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -545,7 +517,6 @@ nav {
   justify-content: flex-end;
 }
 
-/* Alineación correcta en PC */
 .desktop-nav {
   flex: 1;
   display: flex;
@@ -559,7 +530,6 @@ nav {
   gap: 15px;
 }
 
-/* Botón hamburguesa */
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -574,7 +544,6 @@ body.dark .mobile-menu-btn {
   color: #fff;
 }
 
-/* Menú móvil (mantengo la versión compacta que te gustó) */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -597,32 +566,26 @@ body.dark .mobile-menu-btn {
   top: 0;
   right: 0;
   z-index: 99999;
-  overflow: hidden; /* evita que nada se salga */
-
+  overflow: hidden;
   width: 25%;
   min-width: 200px;
   max-width: 260px;
-
   height: 100%;
-
   background: #0a0f2c;
   padding: 30px 15px;
-
-  border-radius: 0; /* 👈 importante */
+  border-radius: 0;
   box-shadow: -10px 0 30px rgba(0,0,0,0.5);
 }
 
 .close-menu-btn {
   position: absolute;
   top: 15px;
-  right: 15px; /* 🔥 pegada al borde del sidebar */
-
+  right: 15px;
   background: none;
   border: none;
   font-size: 28px;
   color: #fff;
   cursor: pointer;
-
   z-index: 1000000;
 }
 
@@ -644,7 +607,9 @@ body.dark .mobile-menu-btn {
   background: rgba(0, 212, 255, 0.12);
 }
 
-/* Visibilidad */
+/* ============================================= */
+/* RESPONSIVE GENERAL PARA MÓVIL Y TABLET        */
+/* ============================================= */
 @media (max-width: 991px) {
   .desktop-nav,
   .nav-right,
@@ -654,21 +619,6 @@ body.dark .mobile-menu-btn {
   .mobile-menu-btn {
     display: block;
   }
-}
-
-@media (min-width: 992px) {
-  .mobile-menu,
-  .mobile-menu-btn {
-    display: none !important;
-  }
-}
-
-/* ============================================= */
-/* RESPONSIVE GENERAL PARA MÓVIL                 */
-/* (PC queda exactamente igual)                  */
-/* ============================================= */
-
-@media (max-width: 991px) {
 
   .container {
     width: 94%;
@@ -680,7 +630,6 @@ body.dark .mobile-menu-btn {
     padding: 55px 0 !important;
   }
 
-  /* Hero */
   .hero {
     padding: 90px 20px 70px !important;
   }
@@ -694,13 +643,11 @@ body.dark .mobile-menu-btn {
     font-size: 1.08rem !important;
   }
 
-  /* Split section */
   .split {
     grid-template-columns: 1fr !important;
     gap: 35px !important;
   }
 
-  /* Beneficios */
   .benefits {
     grid-template-columns: 1fr !important;
     gap: 18px !important;
@@ -710,7 +657,6 @@ body.dark .mobile-menu-btn {
     padding: 24px 18px !important;
   }
 
-  /* Resultados */
   .results-grid {
     grid-template-columns: 1fr !important;
     gap: 22px !important;
@@ -720,7 +666,6 @@ body.dark .mobile-menu-btn {
     padding: 28px 20px !important;
   }
 
-  /* Botones */
   .btn {
     padding: 15px 30px !important;
     font-size: 1.08rem !important;
@@ -730,7 +675,6 @@ body.dark .mobile-menu-btn {
     display: block !important;
   }
 
-  /* Textos generales */
   h2 {
     font-size: 1.8rem !important;
     line-height: 1.25 !important;
@@ -745,7 +689,6 @@ body.dark .mobile-menu-btn {
     line-height: 1.78 !important;
   }
 
-  /* Footer */
   .footer-grid {
     grid-template-columns: 1fr 1fr !important;
     gap: 35px !important;
@@ -754,19 +697,13 @@ body.dark .mobile-menu-btn {
   .footer-pro {
     padding: 60px 20px 40px !important;
   }
-}
-/* ===================================== */
-/* 🚀 CONTACTO MOBILE PREMIUM (SOLO MÓVIL) */
-/* ===================================== */
-@media (max-width: 991px) {
 
-  /* GRID → vertical */
+  /* CONTACTO MOBILE EXCLUSIVO */
   .contact-grid {
     grid-template-columns: 1fr !important;
     gap: 50px !important;
   }
 
-  /* HERO más limpio */
   .contact-hero {
     padding: 80px 20px 60px !important;
   }
@@ -781,7 +718,6 @@ body.dark .mobile-menu-btn {
     opacity: 0.85;
   }
 
-  /* FORMULARIO estilo app */
   .contact-form {
     gap: 5px;
   }
@@ -797,7 +733,6 @@ body.dark .mobile-menu-btn {
     min-height: 160px;
   }
 
-  /* BOTÓN principal */
   .contact-form .btn {
     margin-top: 20px;
     padding: 16px;
@@ -805,7 +740,6 @@ body.dark .mobile-menu-btn {
     border-radius: 40px;
   }
 
-  /* BLOQUE DERECHA */
   .contact-info {
     text-align: center;
   }
@@ -819,7 +753,6 @@ body.dark .mobile-menu-btn {
     line-height: 1.6;
   }
 
-  /* BOTÓN WHATSAPP → protagonista */
   .whatsapp-btn {
     width: 100%;
     max-width: 340px;
@@ -830,7 +763,6 @@ body.dark .mobile-menu-btn {
     border-radius: 40px;
   }
 
-  /* EMAIL CARD más aire */
   .contact-email-pro {
     padding: 22px;
     border-radius: 16px;
@@ -841,7 +773,6 @@ body.dark .mobile-menu-btn {
     border-radius: 12px;
   }
 
-  /* BENEFICIOS tipo tarjetas */
   .contact-benefits {
     gap: 18px;
     margin-top: 10px;
@@ -851,10 +782,24 @@ body.dark .mobile-menu-btn {
     padding: 20px;
     border-radius: 14px;
   }
-
 }
-/* ====================== ANIMACIONES SCROLL REVEAL (solo una vez) ====================== */
 
+@media (min-width: 992px) {
+  .mobile-menu,
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* ====================== ANIMACIONES SCROLL REVEAL ====================== */
 .fade-up,
 .fade-left,
 .fade-right {
@@ -862,19 +807,10 @@ body.dark .mobile-menu-btn {
   transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.fade-up {
-  transform: translateY(50px);
-}
+.fade-up { transform: translateY(50px); }
+.fade-left { transform: translateX(-60px); }
+.fade-right { transform: translateX(60px); }
 
-.fade-left {
-  transform: translateX(-60px);
-}
-
-.fade-right {
-  transform: translateX(60px);
-}
-
-/* Estado visible - solo se activa una vez */
 .fade-up.visible,
 .fade-left.visible,
 .fade-right.visible {
@@ -882,12 +818,10 @@ body.dark .mobile-menu-btn {
   transform: translate(0);
 }
 
-/* Delays suaves */
 .fade-up.delay  { transition-delay: 0.1s; }
 .fade-up.delay2 { transition-delay: 0.25s; }
 .fade-up.delay3 { transition-delay: 0.4s; }
 
-/* El hero no necesita esta animación de scroll */
 .contact-hero * {
   transition: none !important;
 }

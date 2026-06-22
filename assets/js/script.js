@@ -1,40 +1,52 @@
-// ==========================
-// ANIMACIONES SCROLL
-// ==========================
-const elements = document.querySelectorAll(".fade-up, .fade-left, .fade-right");
+// =================================================================
+// 🚀 ANIMACIÓN SCROLL REVEAL - SOLO UNA VEZ (Definitivo y Optimizado)
+// =================================================================
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade-up, .fade-left, .fade-right");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          // Deja de observar el elemento una vez que ya es visible
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15, // Se activa cuando el 15% es visible
+      rootMargin: "0px 0px -60px 0px",
     }
-  });
+  );
+
+  elements.forEach((el) => observer.observe(el));
 });
 
-elements.forEach((el) => observer.observe(el));
-
-// ==========================
-// FORMULARIO (solo si existe)
-// ==========================
+// =================================================================
+// 📩 FORMULARIO DE CONTACTO (Conexión asíncrona / Cloudflare / Formspree)
+// =================================================================
 const form = document.getElementById("contactForm");
 
 if (form) {
   const btn = document.getElementById("submitBtn");
+  const successMsg = document.querySelector(".success-msg");
 
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     let valid = true;
-
     const nombre = document.getElementById("nombre");
     const email = document.getElementById("email");
     const mensaje = document.getElementById("mensaje");
 
+    // Limpiar errores previos
     document
       .querySelectorAll(".input-group")
       .forEach((g) => g.classList.remove("input-error"));
 
-    if (!nombre.value) {
+    // Validaciones de campos
+    if (!nombre.value.trim()) {
       nombre.parentElement.classList.add("input-error");
       valid = false;
     }
@@ -44,26 +56,47 @@ if (form) {
       valid = false;
     }
 
-    if (!mensaje.value) {
+    if (!mensaje.value.trim()) {
       mensaje.parentElement.classList.add("input-error");
       valid = false;
     }
 
     if (!valid) return;
 
+    // Activar estado visual de carga
     btn.classList.add("loading");
+    btn.disabled = true;
 
-    setTimeout(() => {
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        if (successMsg) successMsg.style.display = "block";
+        form.reset();
+      } else {
+        alert("Hubo un problema al procesar el envío. Por favor, inténtalo de nuevo.");
+      }
+    } catch (error) {
+      alert("Error de red. Comprueba tu conexión de internet.");
+    } finally {
+      // Restaurar el botón pase lo que pase
       btn.classList.remove("loading");
-      form.reset();
-      document.querySelector(".success-msg").style.display = "block";
-    }, 1500);
+      btn.disabled = false;
+    }
   });
 }
 
-// ==========================
-// IDIOMA
-// ==========================
+// =================================================================
+// 🌐 SISTEMA DE IDIOMAS (Localstorage)
+// =================================================================
 document.querySelectorAll(".lang-option").forEach((link) => {
   link.addEventListener("click", function () {
     const lang = this.getAttribute("href").includes("/en") ? "en" : "es";
@@ -82,43 +115,33 @@ window.addEventListener("DOMContentLoaded", () => {
     window.location.href = "/";
   }
 });
-// ==========================
-// DARK MODE
-// ==========================
-const toggleBtn = document.getElementById("themeToggle");
 
-// Detectar preferencia guardada o del sistema
+// =================================================================
+// 🌗 CONFIGURACIÓN DARK MODE
+// =================================================================
+const toggleBtn = document.getElementById("themeToggle");
 const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme === "dark") {
-  document.body.classList.add("dark");
-} else if (
-  !savedTheme &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches
-) {
+if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
   document.body.classList.add("dark");
 }
 
 /* Ajustar icono al cargar */
-const isDarkInit = document.body.classList.contains("dark");
 if (toggleBtn) {
-  toggleBtn.textContent = isDarkInit ? "☀️" : "🌙";
-}
-
-// Toggle manual
-if (toggleBtn) {
+  toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+  
+  // Evento click manual
   toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
-
     const isDark = document.body.classList.contains("dark");
-
     localStorage.setItem("theme", isDark ? "dark" : "light");
-
-    // Cambiar icono
     toggleBtn.textContent = isDark ? "☀️" : "🌙";
   });
 }
-// MENÚ MÓVIL PARCIAL
+
+// =================================================================
+// 📱 MENÚ MÓVIL (Sidebar)
+// =================================================================
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const closeMenuBtn = document.getElementById("closeMenuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -126,51 +149,25 @@ const mobileMenu = document.getElementById("mobileMenu");
 if (mobileMenuBtn && closeMenuBtn && mobileMenu) {
   mobileMenuBtn.addEventListener("click", () => {
     mobileMenu.classList.add("active");
-    document.body.classList.add("menu-open"); // ← clave para el fix
+    document.body.classList.add("menu-open");
   });
 
-  closeMenuBtn.addEventListener("click", () => {
+  const hideMenu = () => {
     mobileMenu.classList.remove("active");
     document.body.classList.remove("menu-open");
-  });
+  };
 
-  // Cerrar al tocar el fondo oscuro
+  closeMenuBtn.addEventListener("click", hideMenu);
+
+  // Cerrar al tocar el fondo oscuro exterior
   mobileMenu.addEventListener("click", (e) => {
-    if (e.target === mobileMenu) {
-      mobileMenu.classList.remove("active");
-      document.body.classList.remove("menu-open");
-    }
+    if (e.target === mobileMenu) hideMenu();
   });
 }
-// ANIMACIÓN SCROLL REVEAL - SOLO UNA VEZ (definitivo)
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(
-    ".fade-up, .fade-left, .fade-right",
-  );
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-
-          // ← Esta línea es clave: una vez que aparece, ya no lo observamos más
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.15, // Se activa cuando el 15% es visible
-      rootMargin: "0px 0px -60px 0px",
-    },
-  );
-
-  elements.forEach((el) => observer.observe(el));
-});
-
-// ==========================
-// HEADER SCROLL EFFECT (DEL OTRO SCRIPT)
-// ==========================
+// =================================================================
+// 🌊 HEADER SCROLL EFFECT
+// =================================================================
 const header = document.getElementById("header");
 
 if (header) {
@@ -179,10 +176,9 @@ if (header) {
   });
 }
 
-// ====================================
-// TODO ESTO ES DE PORTFOLIO.HTML Y CSS
-// ====================================
-
+// =================================================================
+// 📁 COMPONENTES EXCLUSIVOS DE PORTFOLIO.HTML
+// =================================================================
 (() => {
   /* =============== REVEAL ON SCROLL =============== */
   const io = new IntersectionObserver((entries) => {
@@ -232,7 +228,7 @@ if (header) {
         card.classList.toggle("hide", !match);
         if (match) visible++;
       });
-      empty.hidden = visible !== 0;
+      if (empty) empty.hidden = visible !== 0;
     });
   });
 
@@ -249,57 +245,59 @@ if (header) {
     });
   });
 
-/* =============== MODAL =============== */
-const modal = document.getElementById("pfModal");
-const mCover = document.getElementById("pfModalCover");
-const mTitle = document.getElementById("pfModalTitle");
-const mDesc = document.getElementById("pfModalDesc");
-const mSector = document.getElementById("pfModalSector");
-const mClient = document.getElementById("pfModalClient");
-const mYear = document.getElementById("pfModalYear");
-const mServices = document.getElementById("pfModalServices");
-const mResult = document.getElementById("pfModalResult");
+  /* =============== MODAL DETALLES =============== */
+  const modal = document.getElementById("pfModal");
+  if (!modal) return; // Salvaguarda si no estamos en la página del portafolio
 
-const openModal = (card) => {
-  const media = card.querySelector(".pf-card-media");
-  
-  if (media) {
-    mCover.style.backgroundImage = media.style.backgroundImage || "linear-gradient(135deg,#0ea5e9,#1e3a8a)";
-    mCover.style.backgroundColor = media.style.backgroundColor || "";
-  }
+  const mCover = document.getElementById("pfModalCover");
+  const mTitle = document.getElementById("pfModalTitle");
+  const mDesc = document.getElementById("pfModalDesc");
+  const mSector = document.getElementById("pfModalSector");
+  const mClient = document.getElementById("pfModalClient");
+  const mYear = document.getElementById("pfModalYear");
+  const mServices = document.getElementById("pfModalServices");
+  const mResult = document.getElementById("pfModalResult");
 
-  mTitle.textContent = card.dataset.title || "Proyecto";
-  mDesc.textContent = card.dataset.desc || "";
-  mSector.textContent = card.dataset.sector || "";
-  mClient.textContent = card.dataset.client || "";
-  mYear.textContent = card.dataset.year || "";
-  mServices.textContent = card.dataset.services || "";
-  mResult.textContent = card.dataset.result || "";
+  const openModal = (card) => {
+    const media = card.querySelector(".pf-card-media");
+    
+    if (media && mCover) {
+      mCover.style.backgroundImage = media.style.backgroundImage || "linear-gradient(135deg,#0ea5e9,#1e3a8a)";
+      mCover.style.backgroundColor = media.style.backgroundColor || "";
+    }
 
-  modal.classList.add("show");
-  document.body.style.overflow = "hidden";
-};
+    if (mTitle) mTitle.textContent = card.dataset.title || "Proyecto";
+    if (mDesc) mDesc.textContent = card.dataset.desc || "";
+    if (mSector) mSector.textContent = card.dataset.sector || "";
+    if (mClient) mClient.textContent = card.dataset.client || "";
+    if (mYear) mYear.textContent = card.dataset.year || "";
+    if (mServices) mServices.textContent = card.dataset.services || "";
+    if (mResult) mResult.textContent = card.dataset.result || "";
 
-const closeModal = () => {
-  modal.classList.remove("show");
-  document.body.style.overflow = "";
-};
+    modal.classList.add("show");
+    document.body.style.overflow = "hidden";
+  };
 
-// Abrir
-document.querySelectorAll(".pf-card").forEach(card => {
-  card.addEventListener("click", () => openModal(card));
-});
+  const closeModal = () => {
+    modal.classList.remove("show");
+    document.body.style.overflow = "";
+  };
 
-// Cerrar
-modal.addEventListener("click", (e) => {
-  if (e.target.classList.contains("pf-modal-close") || 
-      e.target.classList.contains("pf-modal-backdrop") || 
-      e.target === modal) {
-    closeModal();
-  }
-});
+  // Asignar clics de apertura
+  document.querySelectorAll(".pf-card").forEach(card => {
+    card.addEventListener("click", () => openModal(card));
+  });
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeModal();
-});
+  // Cerrar desde backdrop/clics internos
+  modal.addEventListener("click", (e) => {
+    if (e.target.classList.contains("pf-modal-close") || 
+        e.target.classList.contains("pf-modal-backdrop") || 
+        e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
 })();
