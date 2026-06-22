@@ -196,19 +196,19 @@
     <!-- CONTACT -->
 <section class="container contact-section">
   <div class="contact-grid">
-    <form id="contactForm" class="contact-form fade-left">
+    <form id="contactForm" class="contact-form fade-left" novalidate>
       <div class="input-group">
-        <input type="text" id="nombre" name="nombre" required />
+        <input type="text" id="nombre" name="nombre" />
         <label>Nombre</label>
         <span class="error">Campo obligatorio</span>
       </div>
       <div class="input-group">
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" />
         <label>Email</label>
         <span class="error">Email no válido</span>
       </div>
       <div class="input-group">
-        <textarea id="mensaje" name="mensaje" required></textarea>
+        <textarea id="mensaje" name="mensaje"></textarea>
         <label>Cuéntanos tu proyecto</label>
         <span class="error">Escribe tu mensaje</span>
       </div>
@@ -321,14 +321,14 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   
-  <script type="text/javascript">
-     (function(){
-        // REEMPLAZA ESTE TEXTO por la Public Key que te da EmailJS en tu cuenta (pestaña Account / API Keys)
-        emailjs.init("C5tta5Z9efSseWM0D");
-     })();
-  </script>
-
-  <script src="script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init({
+          publicKey: "C5tta5Z9efSseWM0D",
+        });
+      })();
+    </script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
