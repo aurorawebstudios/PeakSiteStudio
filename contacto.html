@@ -196,33 +196,30 @@
     <!-- CONTACT -->
 <section class="container contact-section">
   <div class="contact-grid">
-    <!-- FORM (Limpio y preparado para controlar desde JS) -->
     <form id="contactForm" class="contact-form fade-left">
       <div class="input-group">
         <input type="text" id="nombre" name="nombre" required />
         <label>Nombre</label>
         <span class="error">Campo obligatorio</span>
       </div>
-      
       <div class="input-group">
         <input type="email" id="email" name="email" required />
         <label>Email</label>
         <span class="error">Email no válido</span>
       </div>
-      
       <div class="input-group">
         <textarea id="mensaje" name="mensaje" required></textarea>
         <label>Cuéntanos tu proyecto</label>
         <span class="error">Escribe tu mensaje</span>
       </div>
-      
       <button type="submit" class="btn" id="submitBtn">
         <span>Enviar mensaje</span>
         <div class="loader"></div>
       </button>
       
-      <!-- Oculto por defecto, tu script.js lo mostrará al enviar con éxito -->
-      <p class="success-msg" style="display: none;">✔ Mensaje enviado correctamente</p>
+      <p class="success-msg" style="display: none; color: #10b981; margin-top: 15px; font-weight: 500;">
+        ✔ Mensaje enviado correctamente
+      </p>
     </form>
 
         <!-- INFO -->

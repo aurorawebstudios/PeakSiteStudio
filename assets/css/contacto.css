@@ -46,6 +46,7 @@ body.dark .contact-hero p {
 
 /* FORMULARIO */
 .contact-form {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -94,50 +95,60 @@ body.dark .contact-hero p {
   padding: 0 5px;
 }
 
-/* ERRORES */
+/* ERRORES Y VALIDACIONES */
 .error {
-  color: red;
+  color: #ef4444;
   font-size: 12px;
   display: none;
+  margin-top: 5px;
 }
 
+.input-group.input-error input,
+.input-group.input-error textarea,
 .input-error input,
 .input-error textarea {
-  border-color: red;
+  border-color: #ef4444 !important;
 }
 
+.input-group.input-error .error,
 .input-error .error {
   display: block;
 }
 
-/* BOTÓN LOADING ENVIAR */
-.loader {
-  width: 18px;
-  height: 18px;
-  border: 2px solid white;
-  border-top: 2px solid transparent;
-  border-radius: 50%;
-  display: none;
-  margin-left: 10px;
-}
-
+/* BOTÓN ENVIAR Y ESTADO LOADING */
 #submitBtn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-#submitBtn.loading .loader {
-  display: inline-block;
-  animation: spin 1s linear infinite;
+.loader {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
 }
 
 #submitBtn.loading span {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#submitBtn.loading .loader {
+  display: block;
+  animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 /* MENSAJE SUCCESS */
