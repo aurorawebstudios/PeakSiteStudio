@@ -35,16 +35,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero .container {
-  max-width: 1400px; /* o 1440px */
+  max-width: 1400px;
 }
 
 .text-primary { color: var(--primary); }
 
 .gradient-text {
   background: linear-gradient(135deg, #00d4ff, #00b8ff);
-  background-clip: text;              /* 👈 AÑADIR */
+  background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;                 /* 👈 AÑADIR */
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 6rem 0 4rem; /* ajusta altura visual */
+  padding: 6rem 0 4rem;
 }
 .hero-glow {
   position: absolute;
@@ -316,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #080b14;
   color: #aaa;
   padding: 80px 20px 40px;
-  margin-top: 80px;
+  margin-top: 80px; /* Margen por defecto del Modo Oscuro */
 }
 .footer-grid {
   display: grid;
@@ -358,42 +358,88 @@ body {
   color: var(--fg);
   line-height: 1.6;
 }
-/* CTA FINAL - forzar mismo fondo en ambos modos */
-.cta-section {
-  background: linear-gradient(135deg, #0a1f3f, #0f3b6d, #0a2540) !important;
+
+/* ==========================================================================
+   AISLAMIENTO DE MODOS: MODO OSCURO INTACTO Y CLARO REESTRUCTURADO 
+   ========================================================================== */
+
+/* --- CONFIGURACIÓN MODO CLARO (body.light) --- */
+
+/* Fondos Blancos Totales Solicitados (Solo si NO está activo el modo dark) */
+body.light:not(.dark) .hero.hero-gradient {
+  background: #ffffff !important;
+}
+body.light:not(.dark) .cta-section.hero-gradient {
+  background: #ffffff !important;
 }
 
-/* opcional: asegurar texto blanco */
-.cta-section h2,
-.cta-section p {
-  color: #ffffff;
+/* Textos adaptados para visibilidad sobre el fondo blanco (Solo si NO está activo el modo dark) */
+body.light:not(.dark) .hero-content h1,
+body.light:not(.dark) .cta-content h2 {
+  color: #0b1124 !important;
+}
+body.light:not(.dark) .hero-content > p,
+body.light:not(.dark) .cta-content > p {
+  color: #475569 !important;
 }
 
-/* CTA - modo claro arreglado */
-body.light .cta-section h2 {
-  color: #ffffff;
+
+/* --- GARANTÍA DE VISIBILIDAD MODO OSCURO (body.dark) --- */
+
+/* Forzar colores claros legibles para el CTA y Hero cuando el modo oscuro esté activo */
+body.dark .hero-content h1,
+body.dark .cta-content h2 {
+  color: #ffffff !important;
+}
+body.dark .hero-content > p,
+body.dark .cta-content > p {
+  color: #a3b4d1 !important; /* Color var(--muted) original de tu paleta oscura */
 }
 
-body.light .cta-section p {
-  color: rgba(255, 255, 255, 0.8);
+/* Textos adaptados para visibilidad sobre el fondo blanco */
+body.light .hero-content h1 {
+  color: #0b1124 !important;
+}
+body.light .hero-content > p {
+  color: #475569 !important;
+}
+body.light .cta-content h2 {
+  color: #0b1124 !important;
+}
+body.light .cta-content > p {
+  color: #475569 !important;
 }
 
-/* Botón como en la segunda imagen */
-body.light .cta-section .btn-primary {
-  background: linear-gradient(135deg, #22d3ee, #06b6d4);
-  color: #0b1324;
-  border: none;
-}
-
-/* HERO BADGE - modo claro */
-body.light .hero-badge span {
-  color: #22d3ee; /* azul brillante como en la segunda imagen */
-}
-
-/* opcional: fondo del badge */
+/* Ajustes Visuales de Elementos del Modo Claro */
 body.light .hero-badge {
-  background: rgba(34, 211, 238, 0.1);
-  border: 1px solid rgba(34, 211, 238, 0.3);
+  background: rgba(34, 211, 238, 0.1) !important;
+  border: 1px solid rgba(34, 211, 238, 0.3) !important;
+}
+body.light .hero-badge span {
+  color: #00b8ff !important;
+}
+body.light .cta-section .btn-primary {
+  background: linear-gradient(135deg, #22d3ee, #06b6d4) !important;
+  color: #0b1324 !important;
+  border: none !important;
+}
+body.light .btn-outline {
+  border-color: #cbd5e1 !important;
+  color: #0b1124 !important;
+}
+
+/* ACOPLE ABSOLUTO DEL FOOTER SÓLO EN MODO CLARO */
+body.light .crm-page, 
+body.light main {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+body.light .cta-section {
+  margin-bottom: 0 !important;
+  padding-bottom: 6rem !important;
+}
+body.light .footer-pro {
+  margin-top: 0 !important;
 }
 
 /*--------------------------------------------------*/
@@ -404,26 +450,64 @@ body.light .hero-badge {
 }
 
 /* ===== ARREGLO COLUMNAS SERVICIOS (CRM) ===== */
-
-/* Contenedor de columnas */
 .mega-grid {
-  align-items: flex-start; /* evita que se estiren */
+  align-items: flex-start;
 }
-
-/* Columnas */
 .mega-column {
   display: flex;
   flex-direction: column;
 }
-
-/* Títulos */
 .mega-column h4 {
-  margin-bottom: 22px; /* 🔥 separación título */
+  margin-bottom: 22px; 
 }
-
-/* Links / textos */
 .mega-column a {
   display: block;
-  margin-bottom: 30px; /* 🔥 MÁS espacio entre opciones */
+  margin-bottom: 30px; 
   line-height: 1.6;
+}
+
+/* --- CORRECCIÓN DE CONTRASTE EN TEXTOS (OVERRIDE MODO OSCURO) --- */
+
+/* Cuando el body tenga la clase dark, ignoramos por completo el color del modo claro */
+body.dark .cta-section .cta-content h2,
+body.dark .cta-content h2,
+body.dark h2 {
+  color: #ffffff !important;
+}
+
+body.dark .cta-section .cta-content p,
+body.dark .cta-content p,
+body.dark .cta-content > p {
+  color: #a3b4d1 !important; /* El color gris claro/azulado de tu paleta oscura */
+}
+
+/* --- CORRECCIÓN HERO EN MODO OSCURO --- */
+
+/* 1. Forzar el título principal (<h1>) a blanco */
+body.dark .hero.hero-gradient h1,
+body.dark .hero-content h1,
+body.dark .hero h1 {
+  color: #ffffff !important;
+}
+
+/* 2. Forzar el párrafo del hero a su tono gris azulado claro */
+body.dark .hero.hero-gradient .hero-content p,
+body.dark .hero-content > p {
+  color: #a3b4d1 !important;
+}
+
+/* 3. Arreglar el botón "Ver casos de éxito" (Botón Secundario/Outline) */
+body.dark .hero .btn-outline,
+body.dark .hero a[href*="casos"],
+body.dark a.btn-outline {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background: transparent !important;
+}
+
+/* Efecto hover sutil para el botón en modo oscuro */
+body.dark .hero .btn-outline:hover,
+body.dark a.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
 }
