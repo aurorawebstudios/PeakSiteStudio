@@ -71,15 +71,18 @@ if (form) {
     btn.classList.add("loading");
     btn.disabled = true;
 
+    // Mapeamos los datos unificados para tu plantilla (Atendiendo a image_8d2c24.png)
     const templateParams = {
-      nombre: nombre.value,
-      email: email.value,
-      mensaje: mensaje.value,
+      nombre: nombre.value,   // Para tu diseño en español
+      email: email.value,    // Para el cuerpo y el Reply To
+      mensaje: mensaje.value,  // Para los detalles del proyecto
+      name: nombre.value,     // Por si acaso para el From Name
+      title: "Formulario de Contacto" // Para evitar que el Subject {{title}} llegue vacío
     };
 
     console.log("Llamando a EmailJS con los parámetros:", templateParams);
 
-    // Cambia "service_xxxxxxx" por tu ID de servicio de EmailJS (mira la pestaña Email Services)
+    // Envío del formulario
     emailjs.send("service_rg18143", "template_phy0b3d", templateParams)
       .then((response) => {
         console.log("¡ÉXITO de EmailJS!", response.status, response.text);
