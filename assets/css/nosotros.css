@@ -123,7 +123,7 @@ body:not(.dark) .story-image-cartoon img {
   box-shadow: 0 25px 55px rgba(0, 212, 255, 0.2);
 }
 
-/* Composicion visual abstracta para representacion de marca */
+/* Brand-art-container */
 .brand-art-container {
   position: relative;
   width: 100%;
@@ -138,14 +138,12 @@ body:not(.dark) .story-image-cartoon img {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Adaptacion del contenedor de arte para entorno con modo claro */
 body:not(.dark) .brand-art-container {
   background: linear-gradient(135deg, #f8fafc, #e2e8f0);
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
-/* Efecto de resplandor ambiental de fondo */
 .art-glow-radial {
   position: absolute;
   width: 250px;
@@ -156,7 +154,6 @@ body:not(.dark) .brand-art-container {
   z-index: 1;
 }
 
-/* Elemento geometrico que simula el pico o cumbre corporativa */
 .art-mountain-peak {
   position: absolute;
   bottom: 0;
@@ -167,7 +164,6 @@ body:not(.dark) .brand-art-container {
   z-index: 2;
 }
 
-/* Capa de cuadricula tecnica que evoca el desarrollo y diseño web */
 .art-grid-overlay {
   position: absolute;
   inset: 0;
@@ -177,13 +173,11 @@ body:not(.dark) .brand-art-container {
   z-index: 3;
 }
 
-/* Ajuste de opacidad de la cuadricula para modo claro */
 body:not(.dark) .art-grid-overlay {
   background-image: linear-gradient(rgba(0, 153, 255, 0.04) 1px, transparent 1px),
                     linear-gradient(90deg, rgba(0, 153, 255, 0.04) 1px, transparent 1px);
 }
 
-/* Componente flotante que representa la interfaz de usuario */
 .art-floating-card {
   position: relative;
   z-index: 4;
@@ -198,14 +192,12 @@ body:not(.dark) .art-grid-overlay {
   animation: floatingArtifact 4s ease-in-out infinite;
 }
 
-/* Variacion estetica de la tarjeta flotante en modo claro */
 body:not(.dark) .art-floating-card {
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(0, 153, 255, 0.15);
   box-shadow: 0 15px 35px rgba(0, 153, 255, 0.08);
 }
 
-/* Elementos estructurales simulados dentro de la tarjeta flotante */
 .art-card-icon {
   font-size: 1.8rem;
   display: block;
@@ -233,7 +225,6 @@ body:not(.dark) .art-card-line {
   margin-bottom: 0;
 }
 
-/* Animacion de balanceo para simular dinamismo y tecnologia */
 @keyframes floatingArtifact {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
@@ -269,7 +260,6 @@ body:not(.dark) .art-card-line {
   color: var(--text-soft-light, #475569);
 }
 
-/* Ajuste del color del párrafo para el Modo Oscuro */
 body.dark .story-seo-text p {
   color: var(--text-soft-dark, #94a3b8);
 }
@@ -285,7 +275,6 @@ body.dark .story-seo-text strong {
 
 /* Valores */
 .about-values {
-  /* Cambio 4: Fondo adaptativo */
   background: var(--bg-light);
   padding: 110px 20px;
   transition: background 0.3s ease;
@@ -313,7 +302,6 @@ body.dark .section-title {
 }
 
 .value-card {
-  /* Cambio 5: La tarjeta usa el color de fondo del modo claro del index */
   background: var(--card-bg-light);
   padding: 40px 30px;
   border-radius: 20px;
@@ -346,20 +334,16 @@ body.dark .value-card p {
 
 /* =======================================
    CTA EN MODO CLARO (CONTRASTE PERFECTO)
-   =======================================
-
-/* Se ejecuta únicamente cuando el body NO tiene la clase .dark */
+   ======================================= */
 body:not(.dark) .cta {
   background: #ffffff !important; /* Fondo blanco puro */
   border-top: 1px solid var(--border-light, #e2e8f0);
   border-bottom: 1px solid var(--border-light, #e2e8f0);
 }
 
-
 body:not(.dark) .cta h2 {
   color: #0f172a !important; 
 }
-
 
 body:not(.dark) .cta p {
   color: #475569 !important; 
@@ -434,26 +418,16 @@ body:not(.dark) .cta p {
   line-height: 1;
 }
 
-/* ====================== ANIMACIONES SCROLL REVEAL ====================== */
-
+/* Animations Scroll Reveal */
 .fade-up,
 .fade-left,
 .fade-right {
   opacity: 0;
   transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
-.fade-up {
-  transform: translateY(50px);
-}
-
-.fade-left {
-  transform: translateX(-60px);
-}
-
-.fade-right {
-  transform: translateX(60px);
-}
+.fade-up { transform: translateY(50px); }
+.fade-left { transform: translateX(-60px); }
+.fade-right { transform: translateX(60px); }
 
 .fade-up.visible,
 .fade-left.visible,
@@ -468,4 +442,18 @@ body:not(.dark) .cta p {
 
 .about-hero * {
   transition: none !important;
+}
+
+/* ==========================================================================
+   BLINDAJE DE ACOPLE DE FOOTER (EVITA FILTRACIONES DEL MARGIN GENERAL)
+   ========================================================================== */
+.about-page {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.cta {
+  margin-bottom: 0 !important;
+}
+.footer-pro {
+  margin-top: 0 !important;
 }
