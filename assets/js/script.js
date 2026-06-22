@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =================================================================
-// 📩 FORMULARIO DE CONTACTO (Conexión asíncrona / Cloudflare / Formspree)
+// 📩 FORMULARIO DE CONTACTO (Conexión directa con EmailJS)
 // =================================================================
 const form = document.getElementById("contactForm");
 
@@ -32,8 +32,9 @@ if (form) {
   const btn = document.getElementById("submitBtn");
   const successMsg = document.querySelector(".success-msg");
 
-  form.addEventListener("submit", async function (e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
+    console.log("Formulario enviado, iniciando validación...");
 
     let valid = true;
     const nombre = document.getElementById("nombre");
@@ -46,51 +47,53 @@ if (form) {
       .forEach((g) => g.classList.remove("input-error"));
 
     // Validaciones de campos
-    if (!nombre.value.trim()) {
-      nombre.parentElement.classList.add("input-error");
+    if (!nombre || !nombre.value.trim()) {
+      if(nombre) nombre.parentElement.classList.add("input-error");
       valid = false;
     }
 
-    if (!email.value.includes("@")) {
-      email.parentElement.classList.add("input-error");
+    if (!email || !email.value.includes("@")) {
+      if(email) email.parentElement.classList.add("input-error");
       valid = false;
     }
 
-    if (!mensaje.value.trim()) {
-      mensaje.parentElement.classList.add("input-error");
+    if (!mensaje || !mensaje.value.trim()) {
+      if(mensaje) mensaje.parentElement.classList.add("input-error");
       valid = false;
     }
 
-    if (!valid) return;
+    if (!valid) {
+      console.log("Fallo en las validaciones de los campos.");
+      return;
+    }
 
     // Activar estado visual de carga
     btn.classList.add("loading");
     btn.disabled = true;
 
-    const formData = new FormData(form);
+    const templateParams = {
+      nombre: nombre.value,
+      email: email.value,
+      mensaje: mensaje.value,
+    };
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
+    console.log("Llamando a EmailJS con los parámetros:", templateParams);
 
-      if (response.ok) {
+    // Cambia "service_xxxxxxx" por tu ID de servicio de EmailJS (mira la pestaña Email Services)
+    emailjs.send("service_rg18143", "template_phy0b3d", templateParams)
+      .then((response) => {
+        console.log("¡ÉXITO de EmailJS!", response.status, response.text);
         if (successMsg) successMsg.style.display = "block";
         form.reset();
-      } else {
+      })
+      .catch((error) => {
+        console.error("ERROR CRÍTICO de EmailJS:", error);
         alert("Hubo un problema al procesar el envío. Por favor, inténtalo de nuevo.");
-      }
-    } catch (error) {
-      alert("Error de red. Comprueba tu conexión de internet.");
-    } finally {
-      // Restaurar el botón pase lo que pase
-      btn.classList.remove("loading");
-      btn.disabled = false;
-    }
+      })
+      .finally(() => {
+        btn.classList.remove("loading");
+        btn.disabled = false;
+      });
   });
 }
 
