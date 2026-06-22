@@ -40,8 +40,7 @@
       content="https://peaksitestudio.com/aviso-legal.html"
     />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/inicio.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -167,22 +166,77 @@
       <div class="container nav">
         <a href="/" class="brand">
           <img
-            src="/logos2/favicon-96x96.png"
+            src="/assets/img/logos2/favicon-96x96.png"
             class="logo"
             alt="Peak Site Studio"
           />
           <span class="brand-name">PeakSites</span>
         </a>
         <nav>
-          <!-- Menú Desktop (PC) -->
+          <!-- Menú escritorio -->
           <div class="nav-links desktop-nav" id="navLinks">
             <a href="/">Inicio</a>
-            <a href="/servicios.html">Servicios</a>
+
+            <!-- SERVICIOS CON MEGA MENÚ -->
+            <div class="nav-item">
+              <a href="/servicios.html" class="nav-link">
+                Servicios<span class="chevron"> ▼</span>
+              </a>
+              <div class="mega-menu">
+                <div class="mega-menu-content">
+                  <div class="mega-grid">
+                    <div class="mega-column">
+                      <h4>Estrategia, automatización e inteligencia digital</h4>
+                      <a href="/servicios/CRM.html"
+                        >Gestión y optimización de CRM</a
+                      >
+                      <a href="/servicios/consultoria.html">Consultoría estratégica de negocio</a>
+                      <a href="#">Automatización de procesos empresariales</a>
+                      <a href="#">Análisis predictivo y modelado de datos</a>
+                    </div>
+                    <div class="mega-column">
+                      <h4>Soluciones para tu negocio</h4>
+                      <a href="#">Desarrollo web a medida</a>
+                      <a href="#">Plataformas eCommerce/Tiendas Online</a>
+                      <a href="#">Sistemas de pago digital</a>
+                      <a href="#">Integraciones avanzadas y APIs</a>
+                      <a href="#">Ciberseguridad y protección de datos</a>
+                      <a href="#">Mantenimiento y optimización</a>
+                    </div>
+                    <div class="mega-column">
+                      <h4>Estrategia y crecimiento digital</h4>
+                      <a href="/servicios.html"
+                        >Posicionamiento orgánico (SEO)</a
+                      >
+                      <a href="#"
+                        >Gestión de publicidad digital (SEM y Social Ads)</a
+                      >
+                      <a href="#">Analítica y medición de resultados</a>
+                      <a href="#">Consultoría estratégica digital</a>
+                    </div>
+                    <div class="mega-column">
+                      <h4>Diseño y UX</h4>
+                      <a href="#"
+                        >Diseño de experiencia e interfaces digitales (UI/UX)</a
+                      >
+                      <a href="#"
+                        >Arquitectura de interfaces y prototipado avanzado</a
+                      >
+                      <a href="#"
+                        >Prototipado estratégico y validación de producto</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <a href="/portafolio.html">Portafolio</a>
             <a href="/nosotros.html">Nosotros</a>
             <a href="/contacto.html">Contacto</a>
           </div>
-          <!-- Botón hamburguesa - SOLO móvil -->
+
+          <!-- Botón móvil -->
           <button
             id="mobileMenuBtn"
             class="mobile-menu-btn"
@@ -190,7 +244,6 @@
           >
             ☰
           </button>
-          <!-- Botón Tema SOLO para móvil -->
           <button id="mobileThemeToggle" class="theme-toggle mobile-theme-btn">
             🌙
           </button>
@@ -204,54 +257,58 @@
               <a href="/portafolio.html" class="mobile-link">Portafolio</a>
               <a href="/nosotros.html" class="mobile-link">Nosotros</a>
               <a href="/contacto.html" class="mobile-link">Contacto</a>
-              <!-- Selector de idiomas -->
+
               <div class="mobile-lang-container">
                 <div class="lang-switch mobile-lang-switch">
                   <div class="lang-current">
-                    <span class="flag-wrapper"
-                      ><img src="/banderas/es.png" alt="Español"
-                    /></span>
+                    <span class="flag-wrapper">
+                      <img src="/assets/img/banderas/es.png" alt="Español" />
+                    </span>
                     <span>ES</span>
                     <span class="arrow">▾</span>
                   </div>
                   <div class="lang-menu">
-                    <a href="/legal.html" class="lang-option"
-                      ><span class="flag-wrapper"
-                        ><img src="/banderas/es.png" alt="Español" /></span
-                      >Español</a
-                    >
-                    <a href="/en/legal.html" class="lang-option"
-                      ><span class="flag-wrapper"
-                        ><img src="/banderas/en.png" alt="English" /></span
-                      >English</a
-                    >
+                    <a href="/" class="lang-option">
+                      <span class="flag-wrapper"
+                        ><img src="/assets/img/banderas/es.png" alt="Español"
+                      /></span>
+                      Español
+                    </a>
+                    <a href="/en/" class="lang-option">
+                      <span class="flag-wrapper"
+                        ><img src="/assets/img/banderas/en.png" alt="English"
+                      /></span>
+                      English
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Idioma + Tema - SOLO para PC -->
+          <!-- Idioma + Tema PC -->
           <div class="desktop-only nav-right">
             <div class="lang-switch">
               <div class="lang-current">
-                <span class="flag-wrapper"
-                  ><img src="/banderas/es.png" alt="Español"
-                /></span>
+                <span class="flag-wrapper">
+                  <img src="/assets/img/banderas/es.png" alt="Español" />
+                </span>
                 <span>ES</span>
                 <span class="arrow">▾</span>
               </div>
               <div class="lang-menu">
-                <a href="/" class="lang-option"
-                  ><span class="flag-wrapper"
-                    ><img src="/banderas/es.png" alt="Español" /></span
-                  >Español</a
-                >
-                <a href="/en/" class="lang-option"
-                  ><span class="flag-wrapper"
-                    ><img src="/banderas/en.png" alt="English" /></span
-                  >English</a
-                >
+                <a href="/legal.html" class="lang-option">
+                  <span class="flag-wrapper"
+                    ><img src="/assets/img/banderas/es.png" alt="Español"
+                  /></span>
+                  Español
+                </a>
+                <a href="/en/legal.html" class="lang-option">
+                  <span class="flag-wrapper"
+                    ><img src="/assets/img/banderas/en.png" alt="English"
+                  /></span>
+                  English
+                </a>
               </div>
             </div>
             <button id="themeToggle" class="theme-toggle">🌙</button>
@@ -548,7 +605,7 @@
         </div>
         <div>
           <h4>Legal</h4>
-          <a href="#">Aviso legal</a>
+          <a href="/legal.html">Aviso legal</a>
           <a href="/privacidad.html">Política de privacidad</a>
           <a href="#">Política de cookies</a>
         </div>
@@ -563,6 +620,6 @@
         <p>Más que escalar. Nacidos para coronar.</p>
       </div>
     </footer>
-    <script src="/script.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
