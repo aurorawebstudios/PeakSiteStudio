@@ -194,31 +194,36 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="container contact-section">
-      <div class="contact-grid">
-        <!-- FORM -->
-        <form id="contactForm" action="https://formbold.com/s/3AYYl" method="POST" class="contact-form fade-left">
-  <div class="input-group">
-    <input type="text" id="nombre" name="nombre" required />
-    <label>Nombre</label>
-    <span class="error">Campo obligatorio</span>
-  </div>
-  <div class="input-group">
-    <input type="email" id="email" name="email" required />
-    <label>Email</label>
-    <span class="error">Email no válido</span>
-  </div>
-  <div class="input-group">
-    <textarea id="mensaje" name="mensaje" required></textarea>
-    <label>Cuéntanos tu proyecto</label>
-    <span class="error">Escribe tu mensaje</span>
-  </div>
-  <button type="submit" class="btn" id="submitBtn">
-    <span>Enviar mensaje</span>
-    <div class="loader"></div>
-  </button>
-  <p class="success-msg">✔ Mensaje enviado correctamente</p>
-</form>
+<section class="container contact-section">
+  <div class="contact-grid">
+    <!-- FORM (Limpio y preparado para controlar desde JS) -->
+    <form id="contactForm" class="contact-form fade-left">
+      <div class="input-group">
+        <input type="text" id="nombre" name="nombre" required />
+        <label>Nombre</label>
+        <span class="error">Campo obligatorio</span>
+      </div>
+      
+      <div class="input-group">
+        <input type="email" id="email" name="email" required />
+        <label>Email</label>
+        <span class="error">Email no válido</span>
+      </div>
+      
+      <div class="input-group">
+        <textarea id="mensaje" name="mensaje" required></textarea>
+        <label>Cuéntanos tu proyecto</label>
+        <span class="error">Escribe tu mensaje</span>
+      </div>
+      
+      <button type="submit" class="btn" id="submitBtn">
+        <span>Enviar mensaje</span>
+        <div class="loader"></div>
+      </button>
+      
+      <!-- Oculto por defecto, tu script.js lo mostrará al enviar con éxito -->
+      <p class="success-msg" style="display: none;">✔ Mensaje enviado correctamente</p>
+    </form>
 
         <!-- INFO -->
         <div class="contact-info fade-right">
@@ -316,5 +321,17 @@
         <p>Más que escalar. Nacidos para coronar.</p>
       </div>
     </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+     (function(){
+        // REEMPLAZA ESTE TEXTO por la Public Key que te da EmailJS en tu cuenta (pestaña Account / API Keys)
+        emailjs.init("C5tta5Z9efSseWM0D");
+     })();
+  </script>
+
+  <script src="script.js"></script>
+
   </body>
 </html>
