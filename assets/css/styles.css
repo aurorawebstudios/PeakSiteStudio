@@ -1,3 +1,15 @@
+/* ==========================================================================
+   RESET UNIVERSAL RESPONSIVO (Protección Anti-Desbordamiento Segura)
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box; /* Evita que los paddings estiren las cajas hacia los lados */
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: clip; /* Bloquea el scroll horizontal de las animaciones sin romper el menú sticky */
+}
+
 /* ===== VARIABLES - Colores profesionales y coherentes ===== */
 :root {
   --primary: #0a0f2c; /* Azul oscuro profundo */
@@ -14,18 +26,23 @@
   --border-light: #e2e8f0;
   --border-dark: rgba(255, 255, 255, 0.12);
 }
+
 /* ===== MODO CLARO (por defecto) ===== */
 body {
   font-family: "Inter", sans-serif;
   background: var(--bg-light);
   color: var(--text-light);
   line-height: 1.7;
+  margin: 0; /* Ajustado a 0 para evitar que el navegador empuje la web en móviles */
+  padding: 0;
 }
+
 /* ===== MODO OSCURO ===== */
 body.dark {
   background: var(--bg-dark);
   color: var(--text-dark);
 }
+
 /* ===== LAYOUT ===== */
 .container {
   width: 90%;
@@ -35,6 +52,7 @@ body.dark {
 section {
   padding: 80px 0;
 }
+
 /* ===== HEADER / NAV ===== */
 .header {
   position: sticky;
@@ -68,6 +86,7 @@ nav a {
 body.dark nav a {
   color: #fff;
 }
+
 /* LOGO + BRAND */
 .logo {
   height: 28px;
@@ -94,10 +113,11 @@ body.dark nav a {
 }
 body.dark .brand-name {
   background: linear-gradient(90deg, #ffffff, #a0b8ff);
-  background-clip: text; /* Versión estándar */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-block;
@@ -114,6 +134,7 @@ body.dark .brand-name {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 212, 255, 0.35);
 }
+
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(135deg, #0a0f2c, #1a2540);
@@ -125,6 +146,7 @@ body.dark .brand-name {
   font-size: 3.2rem;
   line-height: 1.1;
 }
+
 /* ===== SPLIT ===== */
 .split {
   display: grid;
@@ -140,6 +162,7 @@ body.dark .brand-name {
 body.dark .image {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
+
 /* ===== TEXT ===== */
 p {
   color: var(--text-soft-light);
@@ -159,6 +182,7 @@ body.dark section:not(.hero) h3,
 body.dark section:not(.hero) h4 {
   color: var(--text-dark);
 }
+
 /* ===== BENEFICIOS ===== */
 .benefits {
   display: grid;
@@ -176,6 +200,7 @@ body.dark .card {
   background: var(--card-bg-dark);
   border: 1px solid var(--border-dark);
 }
+
 /* ===== RESULTS ===== */
 .results-section {
   background: var(--bg-light);
@@ -217,6 +242,7 @@ body.dark .result-metrics span {
   gap: 25px;
   margin: 20px 0;
 }
+
 /* ===== THEME BUTTON ===== */
 .theme-toggle {
   height: 32px;
@@ -235,6 +261,7 @@ body.dark .theme-toggle {
 .theme-toggle:hover {
   background: rgba(0, 212, 255, 0.08);
 }
+
 /* ===== LANG SWITCH ===== */
 .lang-switch {
   position: relative;
@@ -317,19 +344,15 @@ body.dark .theme-toggle {
 .lang-option:hover {
   background: #2a323f;
 }
+
 /* ===== FOOTER ===== */
 .footer-pro {
   background: #080b14;
   color: #aaa;
   padding: 80px 0px 40px;
-}
-.footer-pro {
-  margin-left: -8px;
-  margin-right: -8px;
-  margin-bottom: -8px;
-}
-body {
-  margin: 8px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0; /* Limpiados los márgenes negativos antiguos que causaban desborde lateral */
 }
 .footer-grid {
   display: grid;
@@ -665,7 +688,7 @@ body.dark .mega-column a {
   margin: 80px 0;
 }
 body.dark .final-cta {
-  background: #0d153a; /* CORRECCIÓN: Tono sutilmente más claro que var(--bg-dark) para contrastar en modo oscuro */
+  background: #0d153a;
   border-top: 1px solid var(--border-dark);
   border-bottom: 1px solid var(--border-dark);
 }
@@ -732,7 +755,6 @@ body.dark .final-cta p {
   transform: translateY(-4px);
   box-shadow: 0 12px 35px rgba(0, 212, 255, 0.45);
 }
-
 
 /* ==========================================================================
    ===== ZONA EXCLUSIVA RESPONSIVE: SOLO COMPORTAMIENTO MÓVIL Y TABLET =====
@@ -920,10 +942,10 @@ body.dark .final-cta p {
    ARREGLO EXCLUSIVO ANTI-DESBORDAMIENTO (SOLO PARA /en/index.html)
    ========================================================================== */
 .en-index-body {
-  overflow-x: hidden; /* Corta cualquier desbordamiento lateral en toda la página */
+  overflow-x: hidden;
 }
 
 .en-index-body .mega-menu {
-  max-width: 100vw; /* Asegura que el mega menú nunca mida más que la pantalla */
+  max-width: 100vw;
   box-sizing: border-box;
 }
