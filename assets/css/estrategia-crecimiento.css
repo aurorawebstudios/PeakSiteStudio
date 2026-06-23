@@ -1,0 +1,335 @@
+/* ============================================================
+   ESTRATEGIA Y CRECIMIENTO DIGITAL
+   Hereda variables globales de styles.css:
+   --primary, --accent, --accent2, --bg-light, --bg-dark,
+   --text-light, --text-dark, --text-soft-light, --text-soft-dark,
+   --card-bg-light, --card-bg-dark, --border-light, --border-dark
+   ============================================================ */
+
+/* ====== HERO ====== */
+.ec-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 90px;
+  background: linear-gradient(135deg, #06091f 0%, #0a0f2c 55%, #0d1b3d 100%);
+  color: #fff;
+  isolation: isolate;
+}
+.ec-hero-bg { position: absolute; inset: 0; z-index: -1; }
+.ec-hero-bg .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: .55;
+  animation: floatOrb 14s ease-in-out infinite;
+}
+.orb-1 { width: 420px; height: 420px; background: var(--accent); top: -120px; left: -120px; }
+.orb-2 { width: 360px; height: 360px; background: var(--accent2); bottom: -140px; right: -100px; animation-delay: -6s; }
+.grid-overlay {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
+}
+@keyframes floatOrb {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(40px,-30px) scale(1.08); }
+}
+
+.ec-hero-inner { max-width: 900px; text-align: center; }
+.ec-eyebrow {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid rgba(0,212,255,.4);
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(0,212,255,.08);
+  margin-bottom: 24px;
+}
+.ec-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 22px;
+  letter-spacing: -1px;
+}
+.ec-title .grad {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.ec-lead {
+  font-size: 1.15rem;
+  color: #c8d2e6;
+  max-width: 720px;
+  margin: 0 auto 36px;
+}
+.ec-cta-row {
+  display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: wrap;
+}
+.ec-link {
+  color: #fff; text-decoration: none; font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  padding-bottom: 2px; transition: .3s;
+}
+.ec-link:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ====== INTRO ====== */
+.ec-intro { padding: 100px 0; }
+.ec-intro-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.ec-h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -.5px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+body.dark .ec-h2 { color: #fff; }
+.ec-p {
+  font-size: 1.05rem;
+  color: var(--text-soft-light);
+  margin-bottom: 16px;
+}
+body.dark .ec-p { color: var(--text-soft-dark); }
+
+.ec-bullets {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: 18px;
+}
+.ec-bullets li {
+  padding: 24px 26px;
+  border-radius: 18px;
+  background: var(--card-bg-light);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 30px rgba(10,15,44,.06);
+  transition: .35s;
+}
+body.dark .ec-bullets li {
+  background: var(--card-bg-dark);
+  border-color: var(--border-dark);
+  box-shadow: none;
+}
+.ec-bullets li:hover { transform: translateY(-4px); border-color: var(--accent); }
+.ec-bullets span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.ec-bullets p { margin: 4px 0 0; color: var(--text-soft-light); }
+body.dark .ec-bullets p { color: var(--text-soft-dark); }
+
+/* ====== SECTION HEAD ====== */
+.ec-section-head { text-align: center; margin-bottom: 60px; }
+.ec-sub {
+  color: var(--text-soft-light);
+  max-width: 600px; margin: 0 auto;
+  font-size: 1.05rem;
+}
+body.dark .ec-sub { color: var(--text-soft-dark); }
+
+/* ====== SERVICIOS - CARDS ====== */
+.ec-services {
+  padding: 100px 0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(0,212,255,.06), transparent 60%),
+    radial-gradient(circle at 80% 90%, rgba(0,153,255,.06), transparent 60%),
+    var(--bg-light);
+}
+body.dark .ec-services {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(0,212,255,.08), transparent 60%),
+    radial-gradient(circle at 80% 90%, rgba(0,153,255,.08), transparent 60%),
+    var(--bg-dark);
+}
+
+.ec-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.ec-card {
+  position: relative;
+  display: block;
+  padding: 38px 32px;
+  border-radius: 22px;
+  background: var(--card-bg-light);
+  border: 1px solid var(--border-light);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s, border-color .4s;
+  box-shadow: 0 10px 30px rgba(10,15,44,.05);
+}
+body.dark .ec-card {
+  background: var(--card-bg-dark);
+  border-color: var(--border-dark);
+  box-shadow: none;
+}
+.ec-card::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0,212,255,.10), rgba(0,153,255,.04));
+  opacity: 0; transition: opacity .4s;
+}
+.ec-card::after {
+  content: "";
+  position: absolute; top: 0; left: 0; height: 3px; width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transition: width .5s ease;
+}
+.ec-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 24px 50px rgba(0,212,255,.18); }
+.ec-card:hover::before { opacity: 1; }
+.ec-card:hover::after  { width: 100%; }
+
+.ec-card-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #0a0f2c;
+  margin-bottom: 22px;
+  transition: transform .4s;
+}
+.ec-card-icon svg { width: 28px; height: 28px; }
+.ec-card:hover .ec-card-icon { transform: rotate(-6deg) scale(1.08); }
+
+.ec-card h3 {
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+  font-weight: 700;
+  color: var(--primary);
+}
+body.dark .ec-card h3 { color: #fff; }
+.ec-card p {
+  color: var(--text-soft-light);
+  font-size: .98rem;
+  margin: 0 0 22px;
+}
+body.dark .ec-card p { color: var(--text-soft-dark); }
+.ec-card-link {
+  font-weight: 600;
+  color: var(--accent);
+  position: relative;
+  transition: letter-spacing .3s;
+}
+.ec-card:hover .ec-card-link { letter-spacing: .5px; }
+
+/* ====== CTA FINAL ====== */
+.ec-final {
+  padding: 100px 0;
+  text-align: center;
+}
+.ec-final-inner {
+  padding: 70px 40px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #0a0f2c, #1a2540);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.ec-final-inner::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(0,212,255,.25), transparent 60%);
+}
+.ec-final-inner > * { position: relative; z-index: 1; }
+.ec-final h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; }
+.ec-final p  { color: #c8d2e6; max-width: 560px; margin: 0 auto 28px; }
+
+/* ====== ANIMACIÓN REVEAL ====== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  .ec-intro-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ec-cards { grid-template-columns: 1fr; }
+  .ec-hero { padding: 90px 0 70px; }
+  .ec-final-inner { padding: 50px 24px; }
+}
+
+/* =========================================
+   Corrección HERO: Blanco solo en modo claro
+   ========================================= */
+/* 1. Fondo del Hero blanco y color de texto base oscuro */
+body:not(.dark) .ec-hero {
+  background: #ffffff;
+  color: var(--text-light);
+}
+
+/* 2. Forzamos el color del título a oscuro (las palabras en gradiente no se verán afectadas) */
+body:not(.dark) .ec-title {
+  color: var(--text-light);
+}
+
+/* 3. Subtítulo a gris oscuro para una lectura cómoda */
+body:not(.dark) .ec-lead {
+  color: var(--text-soft-light);
+}
+
+/* 4. Etiqueta superior (eyebrow): Usamos el azul secundario (--accent2) para mejor contraste sobre blanco */
+body:not(.dark) .ec-eyebrow {
+  color: var(--accent2);
+  border-color: rgba(0, 153, 255, 0.4);
+  background: rgba(0, 153, 255, 0.08);
+}
+
+/* 5. Enlace secundario ("Ver servicios"): Texto oscuro y línea sutil */
+body:not(.dark) .ec-link {
+  color: var(--text-light);
+  border-bottom-color: rgba(10, 15, 44, 0.2);
+}
+body:not(.dark) .ec-link:hover {
+  color: var(--accent2);
+  border-bottom-color: var(--accent2);
+}
+
+/* 6. Adaptamos la cuadrícula de fondo: cambiamos las líneas blancas por oscuras muy suaves */
+body:not(.dark) .grid-overlay {
+  background-image:
+    linear-gradient(rgba(10, 15, 44, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 15, 44, 0.05) 1px, transparent 1px);
+}
+
+/* =========================================
+   Corrección CTA FINAL: Blanco solo en modo claro
+   ========================================= */
+/* 1. Fondo blanco, texto oscuro, borde y sombra sutil para enmarcar la caja */
+body:not(.dark) .ec-final-inner {
+  background: #ffffff;
+  color: var(--text-light);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 40px rgba(10, 15, 44, 0.06);
+}
+
+/* 2. Título principal a color primario (oscuro) */
+body:not(.dark) .ec-final h2 {
+  color: var(--primary);
+}
+
+/* 3. Párrafo a gris oscuro para lectura fluida */
+body:not(.dark) .ec-final p {
+  color: var(--text-soft-light);
+}
+
+/* 4. Suavizamos el destello azul de fondo para que no ensucie el blanco */
+body:not(.dark) .ec-final-inner::before {
+  background: radial-gradient(circle at 30% 30%, rgba(0, 212, 255, 0.05), transparent 60%);
+}
