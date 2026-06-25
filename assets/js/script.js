@@ -123,27 +123,38 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // =================================================================
-// 🌗 CONFIGURACIÓN DARK MODE
+// 🌗 CONFIGURACIÓN DARK MODE (Corregido para Escritorio y Móvil)
 // =================================================================
 const toggleBtn = document.getElementById("themeToggle");
+const mobileToggleBtn = document.getElementById("mobileThemeToggle"); // <-- Detecta el botón móvil
 const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
   document.body.classList.add("dark");
 }
 
-/* Ajustar icono al cargar */
-if (toggleBtn) {
-  toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-  
-  // Evento click manual
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    const isDark = document.body.classList.contains("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    toggleBtn.textContent = isDark ? "☀️" : "🌙";
-  });
-}
+/* Función unificada para ajustar iconos */
+const updateThemeIcons = () => {
+  const isDark = document.body.classList.contains("dark");
+  const icon = isDark ? "☀️" : "🌙";
+  if (toggleBtn) toggleBtn.textContent = icon;
+  if (mobileToggleBtn) mobileToggleBtn.textContent = icon;
+};
+
+// Ejecutar al cargar la página
+updateThemeIcons();
+
+/* Asignar evento click a ambos botones de forma segura */
+[toggleBtn, mobileToggleBtn].forEach((btn) => {
+  if (btn) {
+    btn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      const isDark = document.body.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      updateThemeIcons(); // Actualiza ambos botones a la vez
+    });
+  }
+});
 
 // =================================================================
 // 📱 MENÚ MÓVIL (Sidebar)
