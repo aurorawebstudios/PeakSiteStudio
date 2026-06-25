@@ -798,6 +798,9 @@ body.dark .final-cta p {
     width: 38px;
     font-size: 1.2rem;
     margin-left: 8px;
+    position: relative !important;  
+    z-index: 999999 !important;     
+    pointer-events: auto !important; 
   }
   .desktop-only.nav-right {
     display: none !important;
