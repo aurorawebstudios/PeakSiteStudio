@@ -123,38 +123,51 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // =================================================================
-// 🌗 CONFIGURACIÓN DARK MODE (Corregido para Escritorio y Móvil)
+// 🌗 CONFIGURACIÓN DARK MODE (Versión Ultra-Compatible y Blindada)
 // =================================================================
-const toggleBtn = document.getElementById("themeToggle");
-const mobileToggleBtn = document.getElementById("mobileThemeToggle"); // <-- Detecta el botón móvil
 const savedTheme = localStorage.getItem("theme");
 
+// 1. Aplicar el tema en el body de inmediato (Evita el parpadeo blanco)
 if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
   document.body.classList.add("dark");
 }
 
-/* Función unificada para ajustar iconos */
+// 2. Función para actualizar los iconos de TODOS los botones que existan en la página
 const updateThemeIcons = () => {
   const isDark = document.body.classList.contains("dark");
   const icon = isDark ? "☀️" : "🌙";
-  if (toggleBtn) toggleBtn.textContent = icon;
-  if (mobileToggleBtn) mobileToggleBtn.textContent = icon;
+  
+  // Selecciona por ID de PC, ID de móvil o por la clase CSS general del botón móvil
+  const allButtons = document.querySelectorAll("#themeToggle, #mobileThemeToggle, .mobile-theme-btn");
+  allButtons.forEach(btn => {
+    btn.textContent = icon;
+  });
 };
 
-// Ejecutar al cargar la página
-updateThemeIcons();
+// 3. Función para activar los clics de forma segura sin duplicar eventos
+const initThemeButtons = () => {
+  const allButtons = document.querySelectorAll("#themeToggle, #mobileThemeToggle, .mobile-theme-btn");
+  
+  allButtons.forEach((btn) => {
+    if (!btn.dataset.themeInitialized) {
+      btn.dataset.themeInitialized = "true"; // Marca el botón para no duplicar el evento
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.body.classList.toggle("dark");
+        const isDark = document.body.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        updateThemeIcons(); // Sincroniza todos los botones a la vez
+      });
+    }
+  });
+  updateThemeIcons();
+};
 
-/* Asignar evento click a ambos botones de forma segura */
-[toggleBtn, mobileToggleBtn].forEach((btn) => {
-  if (btn) {
-    btn.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      const isDark = document.body.classList.contains("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-      updateThemeIcons(); // Actualiza ambos botones a la vez
-    });
-  }
-});
+// Ejecutar inmediatamente por si el script está abajo en el HTML
+initThemeButtons();
+
+// Ejecutar al cargar el DOM por si el script está en el <head>
+document.addEventListener("DOMContentLoaded", initThemeButtons);
 
 // =================================================================
 // 📱 MENÚ MÓVIL (Sidebar)
