@@ -765,7 +765,7 @@ body.dark .final-cta p {
 @media (max-width: 991px) {
   .desktop-nav,
   .nav-right,
-  .lang-switch {
+  .header .lang-switch { /* <--- CAMBIO ACÁ: Ahora SOLO oculta el de la cabecera del PC */
     display: none !important;
   }
   .mobile-menu-btn {
@@ -814,16 +814,6 @@ body.dark .final-cta p {
     border-color: var(--border-light);
     background: rgba(0, 0, 0, 0.08);
     color: var(--primary);
-  }
-  .mobile-lang-container {
-    margin-top: 35px;
-    padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-  }
-  .mobile-lang-switch .lang-current {
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.25);
   }
 }
 
