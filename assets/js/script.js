@@ -101,15 +101,35 @@ if (form) {
 }
 
 // =================================================================
-// 🌐 SISTEMA DE IDIOMAS (Localstorage)
+// 🌐 SISTEMA DE IDIOMAS (Localstorage y Desplegable Táctil Móvil)
 // =================================================================
-document.querySelectorAll(".lang-option").forEach((link) => {
-  link.addEventListener("click", function () {
-    const lang = this.getAttribute("href").includes("/en") ? "en" : "es";
-    localStorage.setItem("lang", lang);
-  });
+
+// 1. Control de apertura/cierre del desplegable exclusivo de móvil
+document.addEventListener("click", (e) => {
+  const currentLangBtn = e.target.closest(".mobile-lang-switch .lang-current");
+  const allMobileSwitches = document.querySelectorAll(".mobile-lang-switch");
+
+  if (currentLangBtn) {
+    e.preventDefault();
+    e.stopPropagation();
+    const parentSwitch = currentLangBtn.closest(".mobile-lang-switch");
+    parentSwitch.classList.toggle("active");
+  } else {
+    // Si pulsa fuera del botón, el desplegable se cierra automáticamente
+    allMobileSwitches.forEach(el => el.classList.remove("active"));
+  }
 });
 
+// 2. Captura de clics en las opciones de idioma (PC y Móvil)
+document.addEventListener("click", (e) => {
+  const langLink = e.target.closest(".lang-option");
+  if (langLink) {
+    const lang = langLink.getAttribute("href").includes("/en") ? "en" : "es";
+    localStorage.setItem("lang", lang);
+  }
+});
+
+// 3. Redirección automática según preferencia guardada
 window.addEventListener("DOMContentLoaded", () => {
   const lang = localStorage.getItem("lang");
 
