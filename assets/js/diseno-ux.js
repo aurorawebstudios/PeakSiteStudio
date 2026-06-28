@@ -125,3 +125,20 @@
     });
   });
 })();
+
+  // ---------------------------------------------------------
+  // 7) ESTO ES DE # DISCIPLINAS
+  // ---------------------------------------------------------
+
+  document.querySelectorAll('.scroll-link').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const id = link.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Limpia el hash de la URL sin recargar ni saltar
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  });
+});

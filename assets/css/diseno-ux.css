@@ -217,24 +217,107 @@ body.dark {
 .dux-steps li p { margin: 0; color: var(--dux-ink-soft); line-height: 1.55; font-size: .92rem; }
 
 /* =========================================================
-   CTA
+   CTA (Adaptativo Modo Claro / Oscuro)
    ========================================================= */
-.dux-cta { padding: 110px 0; background: var(--dux-bg); color: var(--dux-ink); font-family: var(--dux-font-body); }
-.dux-cta-inner {
-  text-align: center; padding: 70px 40px;
-  border-radius: 28px; background: var(--dux-gradient); color: #fff;
-  box-shadow: var(--dux-shadow-glow); position: relative; overflow: hidden;
+.dux-cta { 
+  padding: 110px 0; 
+  background: var(--dux-bg); 
+  color: var(--dux-ink); 
+  font-family: var(--dux-font-body); 
 }
+
+/* --- CONFIGURACIÓN POR DEFECTO (MODO CLARO) --- */
+.dux-cta-inner {
+  text-align: center; 
+  padding: 70px 40px;
+  border-radius: 28px; 
+  background: #ffffff;             /* Fondo blanco puro solicitado */
+  color: var(--dux-ink);           /* Texto oscuro de alta legibilidad */
+  border: 1px solid var(--dux-border);
+  box-shadow: var(--dux-shadow-md); /* Sombra suave para darle volumen sobre el fondo */
+  position: relative; 
+  overflow: hidden;
+}
+
+/* Sutil destello de marca en la esquina para que no sea un bloque plano */
 .dux-cta-inner::after {
-  content: ""; position: absolute; inset: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(255,255,255,.25), transparent 50%);
+  content: ""; 
+  position: absolute; 
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(0, 214, 255, 0.08), transparent 60%);
   pointer-events: none;
 }
-.dux-cta-inner h2 { font-family: var(--dux-font-display); font-size: clamp(1.8rem, 3.2vw, 2.6rem); margin: 0 0 14px; }
-.dux-cta-inner h2 em { font-style: italic; }
-.dux-cta-inner p { margin: 0 0 28px; opacity: .9; font-size: 1.05rem; }
-.dux-cta-inner .dux-btn-primary { background: #0b1220; color: #fff; box-shadow: 0 18px 40px -10px rgba(0,0,0,.45); }
-.dux-cta-inner .dux-btn-primary:hover { background: #000; }
+
+.dux-cta-inner h2 { 
+  font-family: var(--dux-font-display); 
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem); 
+  margin: 0 0 14px; 
+  color: var(--dux-ink);           /* Título oscuro */
+}
+
+.dux-cta-inner h2 em { 
+  font-style: italic; 
+  background: var(--dux-gradient); /* Resalte en gradiente sobre el fondo blanco */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dux-cta-inner p { 
+  margin: 0 0 28px; 
+  color: var(--dux-ink-soft);      /* Subtítulo gris suave legible */
+  font-size: 1.05rem; 
+  opacity: 1;
+}
+
+/* El botón en el modo claro pasa a llevar el gradiente de la marca para destacar */
+.dux-cta-inner .dux-btn-primary { 
+  background: var(--dux-gradient); 
+  color: #fff; 
+  box-shadow: var(--dux-shadow-glow); 
+}
+
+.dux-cta-inner .dux-btn-primary:hover { 
+  transform: translateY(-2px);
+  box-shadow: 0 26px 70px -18px rgba(0, 212, 255, 0.6); 
+}
+
+
+/* --- ADAPTACIÓN AUTOMÁTICA (MODO OSCURO) --- */
+body.dark .dux-cta-inner {
+  background: var(--dux-gradient); /* Recupera el gradiente corporativo impactante */
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: var(--dux-shadow-glow);
+}
+
+body.dark .dux-cta-inner::after {
+  background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.25), transparent 50%);
+}
+
+body.dark .dux-cta-inner h2 {
+  color: #ffffff;
+}
+
+body.dark .dux-cta-inner h2 em {
+  -webkit-text-fill-color: #ffffff; /* Evita que el gradiente se pise consigo mismo */
+  background: none;
+}
+
+body.dark .dux-cta-inner p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* El botón en modo oscuro cambia a fondo oscuro para contrastar con la tarjeta */
+body.dark .dux-cta-inner .dux-btn-primary { 
+  background: #0b1220; 
+  color: #fff; 
+  box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.45); 
+}
+
+body.dark .dux-cta-inner .dux-btn-primary:hover { 
+  background: #000; 
+}
 
 /* =========================================================
    REVEAL ANIMATIONS
@@ -255,4 +338,28 @@ body.dark {
   .dux-hero { padding: 110px 0 70px; }
   .dux-steps { grid-template-columns: 1fr; }
   .dux-cta-inner { padding: 50px 24px; }
+}
+
+/* =========================================================
+   Arreglo de DISCIPLINA
+   ========================================================= */
+
+   .nav-link-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid var(--border, #d4d4d8);
+  border-radius: 999px;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  background: transparent;
+  transition: all .25s ease;
+}
+
+.nav-link-pill:hover {
+  background: var(--foreground, #111);
+  color: var(--background, #fff);
+  border-color: var(--foreground, #111);
+  transform: translateY(-1px);
 }

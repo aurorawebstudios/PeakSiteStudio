@@ -344,33 +344,49 @@ body.dark .ea-card-link { color: #00d4ff; }
   gap: 10px;
 }
 
-/* ========== REVEAL ANIMATIONS ========== */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(.2,.8,.2,1);
-}
-.reveal.in-view { opacity: 1; transform: translateY(0); }
-.ea-card.reveal { transition-delay: calc(var(--i, 0) * 90ms); }
+/* =========================================================
+   CORRECCIÓN ESTRICTA Y ADAPTATIVA PARA EL CTA
+   ========================================================= */
 
-/* Corrección estricta para fondo blanco solo en modo claro */
+/* --- CONFIGURACIÓN MODO CLARO (Fondo blanco, texto oscuro) --- */
 body:not(.dark) .ea-cta-box {
   background: #ffffff;
   border: 1px solid var(--border-light);
   box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
-  /* Sobreescribimos el color blanco general de la caja */
   color: var(--text); 
 }
 
 body:not(.dark) .ea-cta-box h2 {
-  color: var(--text); /* Usa tu azul marino/negro (#0f172a) */
+  color: var(--text); 
 }
 
 body:not(.dark) .ea-cta-box p {
-  color: var(--text-soft); /* Usa tu gris (#475569) */
+  color: var(--text-soft); 
 }
 
 body:not(.dark) .ea-cta-box .ea-btn-primary {
   background: var(--ea-gradient);
   color: #fff;
+}
+
+
+/* --- CONFIGURACIÓN MODO OSCURO (Fondo degradado, texto blanco ultra legible) --- */
+body.dark .ea-cta-box {
+  background: var(--ea-gradient);
+  box-shadow: 0 30px 80px -20px rgba(0, 153, 255, 0.45);
+}
+
+body.dark .ea-cta-box h2 {
+  color: #ffffff !important; /* Forzamos blanco puro rompiendo cualquier herencia */
+}
+
+body.dark .ea-cta-box p {
+  color: #ffffff !important;   /* Forzamos blanco puro directo al párrafo */
+  opacity: 0.95 !important;    /* Le damos un contraste excelente sobre el degradado */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Sutil relieve para mejorar la lectura */
+}
+
+body.dark .ea-cta-box .ea-btn-primary {
+  background: #ffffff;
+  color: #0099ff;
 }
