@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diseño y UX - Peak Site Studio</title>
+  <meta name="description" content="Diseñamos experiencias digitales memorables: interfaces UI/UX, arquitectura de prototipado avanzado y validación estratégica de producto." />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/diseno-ux.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="/assets/img/logos2/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logos2/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/img/logos2/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/logos2/apple-touch-icon.png" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="light">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <img src="/assets/img/logos2/favicon-96x96.png" class="logo" alt="Peak Site Studio" />
+        <span class="brand-name">PeakSites</span>
+      </a>
+      <nav>
+        <div class="nav-links desktop-nav" id="navLinks">
+          <a href="/">Inicio</a>
+
+          <div class="nav-item">
+            <a href="/servicios.html" class="nav-link">
+              Servicios<span class="chevron"> ▼</span>
+            </a>
+            <div class="mega-menu">
+              <div class="mega-menu-content">
+                <div class="mega-grid">
+                  <div class="mega-column">
+                    <h4>Estrategia, automatización e inteligencia digital</h4>
+                    <a href="/servicios/CRM.html">Gestión y optimización de CRM</a>
+                    <a href="/servicios/consultoria.html">Consultoría estratégica de negocio</a>
+                    <a href="#">Automatización de procesos empresariales</a>
+                    <a href="#">Análisis predictivo y modelado de datos</a>
+                  </div>
+                  <div class="mega-column">
+                    <h4>Soluciones para tu negocio</h4>
+                    <a href="#">Desarrollo web a medida</a>
+                    <a href="#">Plataformas eCommerce/Tiendas Online</a>
+                    <a href="#">Sistemas de pago digital</a>
+                    <a href="#">Integraciones avanzadas y APIs</a>
+                    <a href="#">Ciberseguridad y protección de datos</a>
+                    <a href="#">Mantenimiento y optimización</a>
+                  </div>
+                  <div class="mega-column">
+                    <h4>Estrategia y crecimiento digital</h4>
+                    <a href="/servicios.html">Posicionamiento orgánico (SEO)</a>
+                    <a href="#">Gestión de publicidad digital (SEM y Social Ads)</a>
+                    <a href="#">Analítica y medición de resultados</a>
+                    <a href="#">Consultoría estratégica digital</a>
+                  </div>
+                  <div class="mega-column">
+                    <h4>Diseño y UX</h4>
+                    <a href="/servicios/ui-ux.html">Diseño de experiencia e interfaces digitales (UI/UX)</a>
+                    <a href="/servicios/arquitectura-prototipado.html">Arquitectura de interfaces y prototipado avanzado</a>
+                    <a href="/servicios/validacion-producto.html">Prototipado estratégico y validación de producto</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="/portafolio.html">Portafolio</a>
+          <a href="/nosotros.html">Nosotros</a>
+          <a href="/contacto.html">Contacto</a>
+        </div>
+
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">☰</button>
+        <button id="mobileThemeToggle" class="theme-toggle mobile-theme-btn">🌙</button>
+
+        <div id="mobileMenu" class="mobile-menu">
+          <button id="closeMenuBtn" class="close-menu-btn">✕</button>
+          <div class="mobile-menu-links">
+            <a href="/" class="mobile-link">Inicio</a>
+            <a href="/servicios.html" class="mobile-link">Servicios</a>
+            <a href="/portafolio.html" class="mobile-link">Portafolio</a>
+            <a href="/nosotros.html" class="mobile-link">Nosotros</a>
+            <a href="/contacto.html" class="mobile-link">Contacto</a>
+
+            <div class="mobile-lang-container">
+              <div class="lang-switch mobile-lang-switch">
+                <div class="lang-current">
+                  <span class="flag-wrapper">
+                    <img src="/assets/img/banderas/es.png" alt="Español" />
+                  </span>
+                  <span>ES</span>
+                  <span class="arrow">▾</span>
+                </div>
+                <div class="lang-menu">
+                  <a href="/" class="lang-option">
+                    <span class="flag-wrapper"><img src="/assets/img/banderas/es.png" alt="Español" /></span>
+                    Español
+                  </a>
+                  <a href="/en/" class="lang-option">
+                    <span class="flag-wrapper"><img src="/assets/img/banderas/en.png" alt="English" /></span>
+                    English
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="desktop-only nav-right">
+          <div class="lang-switch">
+            <div class="lang-current">
+              <span class="flag-wrapper">
+                <img src="/assets/img/banderas/es.png" alt="Español" />
+              </span>
+              <span>ES</span>
+              <span class="arrow">▾</span>
+            </div>
+            <div class="lang-menu">
+              <a href="/" class="lang-option">
+                <span class="flag-wrapper"><img src="/assets/img/banderas/es.png" alt="Español" /></span>
+                Español
+              </a>
+              <a href="/en/" class="lang-option">
+                <span class="flag-wrapper"><img src="/assets/img/banderas/en.png" alt="English" /></span>
+                English
+              </a>
+            </div>
+          </div>
+          <button id="themeToggle" class="theme-toggle">🌙</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="dux-hero">
+    <div class="dux-hero-bg" aria-hidden="true">
+      <span class="dux-orb dux-orb-1"></span>
+      <span class="dux-orb dux-orb-2"></span>
+      <span class="dux-grid"></span>
+    </div>
+    <div class="container dux-hero-inner">
+      <span class="dux-eyebrow" data-reveal>DISEÑO Y UX</span>
+      <h1 class="dux-title" data-reveal>
+        Diseñamos experiencias digitales <span class="dux-gradient">que la gente recuerda</span>.
+      </h1>
+      <p class="dux-subtitle" data-reveal>
+        Cada píxel, cada interacción y cada microanimación tienen un propósito: convertir visitantes en usuarios fieles y a tus usuarios en embajadores de marca.
+      </p>
+      <div class="dux-hero-cta" data-reveal>
+        <a href="#servicios-dux" class="dux-btn dux-btn-primary">Ver disciplinas</a>
+        <a href="/contacto.html" class="dux-btn dux-btn-ghost">Hablar con un diseñador</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="dux-intro">
+    <div class="container dux-intro-grid">
+      <div class="dux-intro-text" data-reveal>
+        <h2>El diseño no decora: <em>decide</em>.</h2>
+        <p>
+          En <strong>Peak Site Studio</strong> entendemos el diseño y la experiencia de usuario como una disciplina estratégica, no como una capa estética añadida al final del proceso. Un buen producto digital se piensa antes de dibujarse: investigamos a tus usuarios, mapeamos sus fricciones, definimos arquitecturas claras y prototipamos hipótesis antes de escribir una sola línea de código.
+        </p>
+        <p>
+          Nuestro enfoque combina <strong>investigación cualitativa, sistemas de diseño escalables y validación continua</strong>. Trabajamos con herramientas líderes (Figma, Framer, Maze, Hotjar) y metodologías probadas como Design Thinking, Lean UX y Jobs-To-Be-Done, para que cada decisión de interfaz responda a un objetivo medible: aumentar conversiones, reducir el churn, acortar el time-to-value o mejorar la percepción de marca.
+        </p>
+        <p>
+          El resultado son productos digitales <strong>claros, accesibles, rápidos y emocionalmente coherentes</strong>: interfaces que reducen la carga cognitiva, prototipos que validan ideas antes de invertir en desarrollo y experiencias que escalan con tu negocio sin perder consistencia.
+        </p>
+      </div>
+      <aside class="dux-intro-aside" data-reveal>
+        <ul class="dux-stats">
+          <li><span class="dux-stat-num" data-count="40">0</span><span class="dux-stat-plus">%</span><p>Aumento medio de conversión tras rediseño UX.</p></li>
+          <li><span class="dux-stat-num" data-count="3">0</span><span class="dux-stat-plus">×</span><p>Más rapidez para validar ideas con prototipos.</p></li>
+          <li><span class="dux-stat-num" data-count="98">0</span><span class="dux-stat-plus">%</span><p>De clientes que repiten tras la primera entrega.</p></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SERVICIOS / CARDS -->
+  <section class="dux-services" id="servicios-dux">
+    <div class="container">
+      <header class="dux-services-head" data-reveal>
+        <h2>Tres disciplinas, un mismo objetivo</h2>
+        <p>Selecciona el área que necesitas y descubre cómo trabajamos cada fase del proceso de diseño.</p>
+      </header>
+
+      <div class="dux-cards">
+        <a href="/servicios/ui-ux.html" class="dux-card" data-reveal>
+          <div class="dux-card-icon"><i data-lucide="layout-dashboard"></i></div>
+          <h3>Diseño de experiencia e interfaces digitales <span>(UI/UX)</span></h3>
+          <p>Interfaces limpias, accesibles y centradas en el usuario, fundamentadas en research y en datos reales de comportamiento.</p>
+          <span class="dux-card-cta">Explorar UI/UX <i data-lucide="arrow-up-right"></i></span>
+          <span class="dux-card-glow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/servicios/arquitectura-prototipado.html" class="dux-card" data-reveal>
+          <div class="dux-card-icon"><i data-lucide="layers"></i></div>
+          <h3>Arquitectura de interfaces y <span>prototipado avanzado</span></h3>
+          <p>Estructuramos la información, definimos flujos y construimos prototipos interactivos de alta fidelidad listos para testear.</p>
+          <span class="dux-card-cta">Ver arquitectura <i data-lucide="arrow-up-right"></i></span>
+          <span class="dux-card-glow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/servicios/validacion-producto.html" class="dux-card" data-reveal>
+          <div class="dux-card-icon"><i data-lucide="target"></i></div>
+          <h3>Prototipado estratégico y <span>validación de producto</span></h3>
+          <p>Testeamos hipótesis con usuarios reales, iteramos rápido y reducimos el riesgo antes de invertir en desarrollo.</p>
+          <span class="dux-card-cta">Validar producto <i data-lucide="arrow-up-right"></i></span>
+          <span class="dux-card-glow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="dux-process">
+    <div class="container">
+      <header class="dux-services-head" data-reveal>
+        <h2>Nuestro proceso de diseño</h2>
+        <p>Un método claro, iterativo y medible. Sin sorpresas.</p>
+      </header>
+      <ol class="dux-steps">
+        <li data-reveal><span>01</span><h4>Descubrimiento</h4><p>Entrevistas, análisis competitivo y definición de objetivos de negocio.</p></li>
+        <li data-reveal><span>02</span><h4>Arquitectura</h4><p>Flujos, sitemap y wireframes de baja fidelidad para validar estructura.</p></li>
+        <li data-reveal><span>03</span><h4>Diseño visual</h4><p>UI de alta fidelidad, design system y micro-interacciones coherentes.</p></li>
+        <li data-reveal><span>04</span><h4>Validación</h4><p>Tests con usuarios, métricas y handoff impecable a desarrollo.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="dux-cta">
+    <div class="container dux-cta-inner" data-reveal>
+      <h2>¿Listo para diseñar algo que la gente <em>quiera</em> usar?</h2>
+      <p>Cuéntanos tu proyecto y te propondremos la mejor ruta de diseño en menos de 48h.</p>
+      <a href="/contacto.html" class="dux-btn dux-btn-primary dux-btn-lg">Iniciar mi proyecto →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-pro">
+    <div class="container footer-grid">
+      <div>
+        <h4>Servicios</h4>
+        <a href="/servicios.html">Estrategia, automatización e inteligencia digital</a>
+        <a href="#">Soluciones para tu negocio</a>
+        <a href="#">Estrategia y crecimiento digital</a>
+        <a href="/Diseño y UX.html">Diseño y UX</a>
+      </div>
+      <div>
+        <h4>Recursos</h4>
+        <a href="/portafolio.html">Portafolio</a>
+        <a href="#">Casos de éxito</a>
+        <a href="#">Blog</a>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <a href="/servicios.html">Servicios</a>
+        <a href="/nosotros.html">Nosotros</a>
+        <a href="/contacto.html">Contacto</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/legal.html">Aviso legal</a>
+        <a href="/privacidad.html">Política de privacidad</a>
+        <a href="#">Política de cookies</a>
+      </div>
+      <div>
+        <h4>Conectar</h4>
+        <a href="#">Instagram ↗</a>
+        <a href="mailto:info@peaksitestudio.com">info@peaksitestudio.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2026 Peak Site Studio. Todos los derechos reservados.</p>
+      <p>Más que escalar. Nacidos para coronar.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/diseno-ux.js"></script>
+</body>
+</html>

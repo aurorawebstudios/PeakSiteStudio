@@ -1,0 +1,258 @@
+/* =========================================================
+   DISEÑO Y UX — Peak Site Studio
+   Variables compartidas (header, footer, página)
+   ========================================================= */
+:root {
+  /* Paleta */
+  --dux-bg: #ffffff;
+  --dux-bg-soft: #f6f8fb;
+  --dux-ink: #0b1220;
+  --dux-ink-soft: #475569;
+  --dux-border: #e6ebf2;
+  --dux-card: #ffffff;
+
+  /* Acento (cian de tu marca) */
+  --dux-accent: #00d4ff;
+  --dux-accent-2: #5b8cff;
+  --dux-accent-3: #8a5bff;
+  --dux-gradient: linear-gradient(135deg, #00d4ff 0%, #5b8cff 50%, #8a5bff 100%);
+
+  /* Sombras */
+  --dux-shadow-sm: 0 4px 12px rgba(10, 22, 40, 0.06);
+  --dux-shadow-md: 0 14px 40px -10px rgba(10, 22, 40, 0.18);
+  --dux-shadow-glow: 0 20px 60px -20px rgba(0, 212, 255, 0.45);
+
+  /* Radios y tipografía */
+  --dux-radius: 18px;
+  --dux-radius-sm: 12px;
+  --dux-font-display: "Space Grotesk", system-ui, sans-serif;
+  --dux-font-body: "Inter", system-ui, sans-serif;
+
+  /* Header / Footer overrides (en sintonía con tu styles.css) */
+  --dux-header-bg: rgba(255, 255, 255, 0.78);
+  --dux-footer-bg: #0b1220;
+  --dux-footer-ink: #cbd5e1;
+}
+
+body.dark {
+  --dux-bg: #070b14;
+  --dux-bg-soft: #0d1422;
+  --dux-ink: #f1f5f9;
+  --dux-ink-soft: #94a3b8;
+  --dux-border: rgba(255, 255, 255, 0.08);
+  --dux-card: #0f1726;
+  --dux-header-bg: rgba(10, 16, 28, 0.78);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.dux-hero {
+  position: relative;
+  padding: 140px 0 100px;
+  overflow: hidden;
+  background: var(--dux-bg);
+  color: var(--dux-ink);
+  font-family: var(--dux-font-body);
+}
+
+.dux-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+.dux-orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(90px); opacity: 0.55;
+  animation: duxFloat 14s ease-in-out infinite;
+}
+.dux-orb-1 { width: 480px; height: 480px; background: var(--dux-accent); top: -120px; left: -120px; }
+.dux-orb-2 { width: 420px; height: 420px; background: var(--dux-accent-3); bottom: -160px; right: -120px; animation-delay: -7s; }
+.dux-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--dux-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--dux-border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, #000 35%, transparent 75%);
+  opacity: 0.4;
+}
+@keyframes duxFloat {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(40px,-30px) scale(1.08); }
+}
+
+.dux-hero-inner { position: relative; text-align: center; max-width: 920px; margin: 0 auto; }
+.dux-eyebrow {
+  display: inline-block; font-family: var(--dux-font-display);
+  font-weight: 600; letter-spacing: 0.22em; font-size: 13px;
+  color: var(--dux-accent); padding: 8px 16px; border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--dux-accent) 35%, transparent);
+  background: color-mix(in oklab, var(--dux-accent) 10%, transparent);
+  margin-bottom: 28px;
+}
+.dux-title {
+  font-family: var(--dux-font-display);
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  font-weight: 700; line-height: 1.05; margin: 0 0 22px;
+  letter-spacing: -0.02em;
+}
+.dux-gradient {
+  background: var(--dux-gradient);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dux-subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  color: var(--dux-ink-soft); max-width: 720px; margin: 0 auto 36px;
+  line-height: 1.7;
+}
+.dux-hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+.dux-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 26px; border-radius: 999px;
+  font-family: var(--dux-font-display); font-weight: 600; font-size: 15px;
+  text-decoration: none; transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+  cursor: pointer; border: 1px solid transparent;
+}
+.dux-btn-primary { background: var(--dux-gradient); color: #fff; box-shadow: var(--dux-shadow-glow); }
+.dux-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 26px 70px -18px rgba(0,212,255,.6); }
+.dux-btn-ghost { background: transparent; color: var(--dux-ink); border-color: var(--dux-border); }
+.dux-btn-ghost:hover { background: var(--dux-bg-soft); transform: translateY(-2px); }
+.dux-btn-lg { padding: 18px 34px; font-size: 16px; }
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+.dux-intro { padding: 100px 0; background: var(--dux-bg-soft); color: var(--dux-ink); font-family: var(--dux-font-body); }
+.dux-intro-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: start; }
+.dux-intro-text h2 { font-family: var(--dux-font-display); font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.15; margin: 0 0 24px; letter-spacing: -0.01em; }
+.dux-intro-text h2 em { font-style: italic; background: var(--dux-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.dux-intro-text p { color: var(--dux-ink-soft); line-height: 1.8; margin: 0 0 18px; font-size: 1.02rem; }
+.dux-intro-text strong { color: var(--dux-ink); font-weight: 600; }
+
+.dux-intro-aside { position: sticky; top: 100px; }
+.dux-stats { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
+.dux-stats li {
+  background: var(--dux-card); border: 1px solid var(--dux-border);
+  border-radius: var(--dux-radius); padding: 26px; box-shadow: var(--dux-shadow-sm);
+  position: relative; overflow: hidden;
+}
+.dux-stats li::before {
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--dux-gradient);
+}
+.dux-stat-num { font-family: var(--dux-font-display); font-size: 2.6rem; font-weight: 700; color: var(--dux-ink); }
+.dux-stat-plus { font-family: var(--dux-font-display); font-size: 1.6rem; color: var(--dux-accent); margin-left: 4px; }
+.dux-stats li p { margin: 8px 0 0; color: var(--dux-ink-soft); font-size: .95rem; line-height: 1.55; }
+
+/* =========================================================
+   SERVICIOS / CARDS
+   ========================================================= */
+.dux-services { padding: 110px 0; background: var(--dux-bg); color: var(--dux-ink); font-family: var(--dux-font-body); }
+.dux-services-head { text-align: center; max-width: 680px; margin: 0 auto 60px; }
+.dux-services-head h2 { font-family: var(--dux-font-display); font-size: clamp(1.9rem, 3.2vw, 2.8rem); margin: 0 0 14px; letter-spacing: -0.01em; }
+.dux-services-head p { color: var(--dux-ink-soft); font-size: 1.05rem; line-height: 1.6; margin: 0; }
+
+.dux-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.dux-card {
+  position: relative; padding: 38px 32px 32px; border-radius: var(--dux-radius);
+  background: var(--dux-card); border: 1px solid var(--dux-border);
+  text-decoration: none; color: inherit; overflow: hidden;
+  transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease, border-color .3s ease;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.dux-card::before {
+  content: ""; position: absolute; inset: 0;
+  background: var(--dux-gradient); opacity: 0; transition: opacity .4s ease;
+  mix-blend-mode: overlay;
+}
+.dux-card:hover { transform: translateY(-8px); box-shadow: var(--dux-shadow-md); border-color: transparent; }
+.dux-card:hover::before { opacity: .08; }
+.dux-card:hover .dux-card-glow { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+
+.dux-card-icon {
+  width: 56px; height: 56px; border-radius: 14px;
+  display: grid; place-items: center;
+  background: color-mix(in oklab, var(--dux-accent) 14%, transparent);
+  color: var(--dux-accent);
+  transition: transform .4s ease;
+}
+.dux-card:hover .dux-card-icon { transform: rotate(-6deg) scale(1.05); }
+.dux-card-icon svg { width: 26px; height: 26px; }
+
+.dux-card h3 { font-family: var(--dux-font-display); font-size: 1.25rem; line-height: 1.3; margin: 0; letter-spacing: -0.01em; }
+.dux-card h3 span { color: var(--dux-ink-soft); font-weight: 500; }
+.dux-card p { color: var(--dux-ink-soft); line-height: 1.65; margin: 0; font-size: .98rem; flex: 1; }
+
+.dux-card-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--dux-font-display); font-weight: 600; font-size: .95rem;
+  color: var(--dux-accent); margin-top: 8px;
+}
+.dux-card-cta svg { width: 16px; height: 16px; transition: transform .3s ease; }
+.dux-card:hover .dux-card-cta svg { transform: translate(3px,-3px); }
+
+.dux-card-glow {
+  position: absolute; left: 50%; top: 100%;
+  width: 280px; height: 280px; border-radius: 50%;
+  background: var(--dux-gradient); filter: blur(60px); opacity: 0;
+  transform: translate(-50%,-50%) scale(.6); transition: opacity .5s, transform .6s;
+  pointer-events: none; z-index: 0;
+}
+.dux-card > * { position: relative; z-index: 1; }
+
+/* =========================================================
+   PROCESO
+   ========================================================= */
+.dux-process { padding: 100px 0; background: var(--dux-bg-soft); color: var(--dux-ink); font-family: var(--dux-font-body); }
+.dux-steps {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; counter-reset: step;
+}
+.dux-steps li {
+  background: var(--dux-card); border: 1px solid var(--dux-border);
+  border-radius: var(--dux-radius); padding: 28px; position: relative;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.dux-steps li:hover { transform: translateY(-4px); box-shadow: var(--dux-shadow-sm); }
+.dux-steps li span { font-family: var(--dux-font-display); font-size: 2rem; font-weight: 700; background: var(--dux-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.dux-steps li h4 { font-family: var(--dux-font-display); font-size: 1.1rem; margin: 8px 0 6px; }
+.dux-steps li p { margin: 0; color: var(--dux-ink-soft); line-height: 1.55; font-size: .92rem; }
+
+/* =========================================================
+   CTA
+   ========================================================= */
+.dux-cta { padding: 110px 0; background: var(--dux-bg); color: var(--dux-ink); font-family: var(--dux-font-body); }
+.dux-cta-inner {
+  text-align: center; padding: 70px 40px;
+  border-radius: 28px; background: var(--dux-gradient); color: #fff;
+  box-shadow: var(--dux-shadow-glow); position: relative; overflow: hidden;
+}
+.dux-cta-inner::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255,255,255,.25), transparent 50%);
+  pointer-events: none;
+}
+.dux-cta-inner h2 { font-family: var(--dux-font-display); font-size: clamp(1.8rem, 3.2vw, 2.6rem); margin: 0 0 14px; }
+.dux-cta-inner h2 em { font-style: italic; }
+.dux-cta-inner p { margin: 0 0 28px; opacity: .9; font-size: 1.05rem; }
+.dux-cta-inner .dux-btn-primary { background: #0b1220; color: #fff; box-shadow: 0 18px 40px -10px rgba(0,0,0,.45); }
+.dux-cta-inner .dux-btn-primary:hover { background: #000; }
+
+/* =========================================================
+   REVEAL ANIMATIONS
+   ========================================================= */
+[data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+[data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 980px) {
+  .dux-intro-grid { grid-template-columns: 1fr; gap: 40px; }
+  .dux-intro-aside { position: static; }
+  .dux-cards { grid-template-columns: 1fr; }
+  .dux-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .dux-hero { padding: 110px 0 70px; }
+  .dux-steps { grid-template-columns: 1fr; }
+  .dux-cta-inner { padding: 50px 24px; }
+}
